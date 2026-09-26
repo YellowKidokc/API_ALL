@@ -1,8 +1,7 @@
 # SYNTHESIS v1.0: David's existing stations and Paper Intelligence suite, mapped to the ONE_MENU plan
 
 For the online Claude/Codex working on ONE_MENU. You cannot reach David's NAS, so this is the map of what exists there.
-**v1.0 (complete)** = deep reads of the 23 active stations (4b, Part A), the Paper Intelligence suite (4c, Part B), and the grader + support systems + _DORMANT (4d, Part C);  (2026-09-26): built from folder listings, file dates and earlier reads. Deep reads of the code are running.
-A v1 with every field name will replace this file. Read with `CODEX_MASTER_PROMPT.md` (the build plan) in this repo.
+**v1.0 (complete, 2026-09-26)** = deep reads of the 23 active stations (4b, Part A), the Paper Intelligence suite (4c, Part B), and the grader + support systems + _DORMANT (4d, Part C). Read with `CODEX_MASTER_PROMPT.md` (the build plan) in this repo.
 
 ---
 
@@ -253,6 +252,29 @@ Qwen3-Embedding, roberta squad2, bert-base-NER).
 - `A_BIL\docker-compose.yml` holds a MySQL password and a WEBUI_SECRET_KEY.
 - NLP_FIS `settings.ini` and `settings.example.ini` hold a Postgres password.
 - `API 2\writing-analyzer\config.txt` holds real DeepSeek and OpenAI keys (already git-ignored).
+
+## 4e. Ten ready-made reviewer prompts (station copy of Paper Intelligence, `04_OPENAI_7Q/prompts/`, run as L13)
+
+These are already written, return JSON, and cover most of what the grader and the analytical arms need. Reuse them and route them through DeepSeek:
+- **claim_inventory**: claim, claim_type, importance, evidence_present, testability, risk_level, needs_citation
+- **equation_audit**: variables defined, dimensional_status, operational_status, role (doing_work/decorative/structural/predictive)
+- **assumption_stack**: explicit, implicit, imported, theological, scientific, philosophical, measurement, causal
+- **kill_conditions**: kill_condition, test_method, severity (fatal/wounding/minor), current_status
+- **evidence_map**: supporting evidence, evidence type and quality, counterevidence needed, gap
+- **physics_comparison**: nearest theory, similarity, difference, category-confusion risk, honest label
+- **novelty_classification**: new framing/model/prediction/derivation/empirical result, overstated-novelty flags
+- **coherence_score**: 8 dimensions (0-10 each) + review_readiness 0-100. **This is the COHERENCE arm's prompt.**
+- **overstatement_detector**: rhetorical_strength_index vs evidence_strength_index, delta, severity
+- **revision_plan**: strongest/weakest part, must-fix before publication, best next test
+- **spine_analysis** (was gpt-4o): movement chain of questions and answers, term inventory, defined-before-use, reader drop-off risk, clarity grade. **This feeds the STORY station's sequence pass.**
+
+There is also `engine_v2`, a standalone 7Q engine:
+- T = (S+E+L+D+P+C)/6 × XDM
+- 5 death tests: SELFREF, REGRESS, EMPIRICAL, INCOHERENT, EXPLAIN
+- an 18-domain isomorphism cross-check
+- a JUDGE prompt that audits a prior assessment
+
+All of these currently use OpenAI (gpt-4o-mini / gpt-4o / o3) with papers trimmed to the first 6,000 + last 2,000 characters. Move them to `engine/llm.py`, DeepSeek-first, whole document.
 
 ## 5. What to do with this (for the online build)
 
