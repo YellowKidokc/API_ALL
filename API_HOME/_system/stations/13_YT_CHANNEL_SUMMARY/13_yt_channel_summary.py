@@ -17,6 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from engine import ytnames  # noqa: E402
+from engine.comments import comments, fetch_comments  # noqa: E402
 from engine.output import markdown_to_html, page, write_xlsx  # noqa: E402
 from engine.paths import configured, external  # noqa: E402
 from engine.station import ItemResult, Station  # noqa: E402
@@ -98,14 +99,22 @@ def process(ctx):
     item = ctx.item
     channel = item.meta.get("channel", "")
     cols = columns()
+    if ctx.args.fetch_comments:
+        fetch_comments(item, ctx)
+    audience = comments(item)
+    ctx.step(f"inputs: transcript, {len(audience)} comment(s)")
     prompt = ((HERE / "PROMPT.md").read_text(encoding="utf-8")
               + "\n\nCOLUMNS (name | what to put in it):\n" + "\n".join(f"{n} | {a}" for n, a in cols)
-              + f"\n\nCHANNEL: {channel}\nVIDEO: {item.title}\nURL: {item.meta.get('url', '')}\n\nTRANSCRIPT:\n{ctx.text}")
-    reply = ctx.cached("summary", lambda: ctx.call_json("yt_channel_summary", prompt))
+              + f"\n\nCHANNEL: {channel}\nVIDEO: {item.title}\nURL: {item.meta.get('url', '')}"
+              + ("\n\nCOMMENTS (most liked first):\n" + "\n".join(audience) if audience else "\n\nCOMMENTS: none acquired")
+              + f"\n\nTRANSCRIPT:\n{ctx.text}")
+    reply = ctx.cached("summary", lambda: ctx.call_json("yt_channel_summary", prompt), extra=f"comments={len(audience)}")
     if not isinstance(reply, dict):
         return None
     keywords = [str(k).strip() for k in (reply.get("keywords") or []) if str(k).strip()][:3]
     values = reply.get("columns") or {}
+    if not audience and "audience_response" in values:
+        values["audience_response"] = "no comments acquired"   # never a guess about comments nobody read
     note, name = tidy_note(item)
     stem = note.stem if note else name.file_stem
     row = {"video_id": item.id, "title": name.title, "h1": name.h1, "number": name.number, "published": name.date,
@@ -130,5 +139,9 @@ def process(ctx):
     return ItemResult(row, page(name.h1, markdown_to_html("\n".join(md))), {"row": [{**row, **row["columns"]}]}, "\n".join(md))
 
 
+def args(p):
+    p.add_argument("--fetch-comments", action="store_true", help="download comments with yt-dlp first (needs yt-dlp)")
+
+
 if __name__ == "__main__":
-    raise SystemExit(Station(LABEL, prompt_files=["COLUMNS.md", "PROMPT.md"]).run(process))
+    raise SystemExit(Station(LABEL, extra_args=args, prompt_files=["COLUMNS.md", "PROMPT.md"]).run(process))

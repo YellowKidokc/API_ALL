@@ -6,7 +6,7 @@ The channel summary folder: per video a three-sentence summary, 2-3 keywords and
 - Script: `13_yt_channel_summary.py` (`ONE_MENU.bat 13 --channel "Gary Habermas"`)
 - Works on: videos
 - Menu options it accepts: limit, workers, provider, model, focus, redo, channel
-- Columns: `COLUMNS.md`, one line each, `column name | what to put in it` (placeholder columns until David's list)
+- Columns: `COLUMNS.md`, one line each, `column name | what to put in it`: David's youtube_specific_probes (19 cells per video; `audience_response` reads the comments, `--fetch-comments` gets them with yt-dlp)
 
 ## API goals
 

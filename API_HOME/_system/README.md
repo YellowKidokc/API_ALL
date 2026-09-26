@@ -77,7 +77,7 @@ The menu suggests candidates from your run history; the full list is always show
 | 06 | YT_WATCH | automatic chain for channels in WATCH_CHANNELS.txt | yes |
 | 07 | YT_CONVERT | SRT / VTT / JSON to .md; originals kept in `_originals` | no |
 | 12 | YT_TIDY | one uniform name (`Ch 159 - The Historical Jesus.md`) + an Obsidian note (front matter, H1, transcript) per video into `yt_markdown/<Channel>/`, one for one; originals untouched. `--watch` waits until a channel download goes quiet, then runs 07, 12 and 13 on it | no |
-| 13 | YT_CHANNEL_SUMMARY | channel summary folder: 3-sentence summary, 2-3 keywords and your `COLUMNS.md` columns per video; `<Channel> - summary.xlsx / .tsv / .md` rebuilt after every video; keywords go back into the 12 note | yes |
+| 13 | YT_CHANNEL_SUMMARY | channel summary folder: 3-sentence summary, 2-3 keywords and your 19 probe columns (`COLUMNS.md`) per video; `<Channel> - summary.xlsx / .tsv / .md` rebuilt after every video; keywords go back into the 12 note | yes |
 | 10 | CKG_THEOLOGY | theology triage after the CKG index: 17 probes, CLEAN / NOTE / FLAG / CLAIM / ??, max 3 FLAGs, rules enforced in code; argument layer for the claim graph | yes |
 | 11 | CKG_PHYSICS | physics mirror: which physics process a theological event mirrors (or the reverse), stage by stage, in order; identity / structural / analogy / none | yes |
 | 08 | YT_SUMMARY | **base layer**: your questions in `QUESTIONS.md`, one whole-transcript call per video | yes |
