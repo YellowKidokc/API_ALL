@@ -1,7 +1,7 @@
-# SYNTHESIS v0.8: David's existing stations and Paper Intelligence suite, mapped to the ONE_MENU plan
+# SYNTHESIS v1.0: David's existing stations and Paper Intelligence suite, mapped to the ONE_MENU plan
 
 For the online Claude/Codex working on ONE_MENU. You cannot reach David's NAS, so this is the map of what exists there.
-**v0.8** = deep reads of the 23 active stations (4b, Part A) and the Paper Intelligence suite (4c, Part B). The grader deep read is still pending;  (2026-09-26): built from folder listings, file dates and earlier reads. Deep reads of the code are running.
+**v1.0 (complete)** = deep reads of the 23 active stations (4b, Part A), the Paper Intelligence suite (4c, Part B), and the grader + support systems + _DORMANT (4d, Part C);  (2026-09-26): built from folder listings, file dates and earlier reads. Deep reads of the code are running.
 A v1 with every field name will replace this file. Read with `CODEX_MASTER_PROMPT.md` (the build plan) in this repo.
 
 ---
@@ -198,6 +198,61 @@ Qwen3-Embedding, roberta squad2, bert-base-NER).
   - The `fruits_scorer_v2` import points to another subnet.
   - `paper_analyzer.py` (grammar, drift, density, argument, flow, links: about 70 fields) is fully written but **not wired in**. Wire it in; it covers much of STATISTICS_WALL's "syntax / cohesion / density" families.
 - **Existing 7Q forward/reverse/promotion prompts** (verbatim structure in Part B) are strong candidates for the CKG/grader stations. Reuse them.
+
+## 4d. Grader, support systems, dormant stations (full detail: `SYNTHESIS_PART_C_GRADER_SUPPORT_DORMANT.md`)
+
+**The paper grader exists in two diverged copies. Merge them for station 43:**
+- **Station copy** (`X:\04_STATIONS\paper-proof-grader.station`) is fuller:
+  - `pipeline_legacy.py` (1,105 lines): the real grader.
+    - Claim maturity ladder 1-7: Metaphor, Analogy, Structural Correspondence, Formal Model, Machine-Checked Theorem, Empirical Support, Public Proof Claim.
+    - Q1-Q7 per claim; kill conditions; proof boundary.
+    - Grade A ≥85 GREEN_READY / B ≥65 YELLOW_REVIEW / C ≥40 ORANGE_REPAIR / D RED_REPAIR.
+    - A 5-sheet XLSX.
+  - `formal_verification.py`: claims → Lean theorem families.
+  - `run_axiom_7q_stations.py` (1,074 lines; canonical axiom registry; OpenAI **o3**, so switch it to DeepSeek).
+  - `fruits_of_spirit_bridge.py`: truth / propaganda / coherence formulas.
+  - The Docker `paper_defensibility_snapshot.py`: a 4-score dashboard with academic_readiness, framework_coherence, public_communication and risk.
+- **July copy** (`Desktop\Folders\Academic Paper Grading\paper-proof-grader`) is newer and portable, and has what the station lacks:
+  - `chi_qi_v5_metric_engine.py`: 8 metrics × 17 fields, 14 normalized vectors including chi_vector G..C, and routing flags.
+  - `nlp_deep_runner.py`.
+- **Merge plan:** station legacy grader + formal layer + axiom-7Q v2 + Fruits bridge, plus July's chi_qi_v5 + nlp_deep + portable config.
+- **Bugs:**
+  - `workflow.py` reads `claim_count`, but the grader writes `claim_candidate_count`.
+  - `expanded_report.py` and `pipeline_legacy.main()` fail on missing config keys.
+  - `fruit_dynamics._word_counts` has a double-escaped regex, so **7 of 9 fruits are always 0**.
+  - The launchers pass `--pattern`, which `run_pipeline.py` rejects.
+
+**Providers actually referenced across everything** (feeds `config/providers.json`):
+- OpenAI: gpt-4o-mini, gpt-4o, o3, gpt-4.1, o4-mini, text-embedding-3-small
+- Anthropic: claude-sonnet-4-20250514, in A_BIL `llm_hub.py`
+- DeepSeek: deepseek-chat
+- Ollama: qwen2.5:3b, mistral, moondream, llava, llama3, llama3.1:8b, llama3.2
+- LM Studio: qwen_qwq-32b
+- Cloudflare AI Gateway (vault-rater)
+- Non-LLM: Semantic Scholar, Tavily, Exa, YouTube Data v3, DuckDuckGo, SearXNG, GitHub
+
+**Per David's policy, every OpenAI/Anthropic call gets routed through `engine/llm.py`: DeepSeek primary, OpenRouter-free fallback.**
+
+**Support systems:**
+- **A_BIL:** a behavioral preference engine. River online models, a local Ollama mistral/moondream stack, the FAP paper mill with Postgres, and a Tier-2 Anthropic call. A prototype with stale paths.
+- **A_AI-RESEARCH-AGENTS:** stock clones of gpt-researcher and local-deep-researcher.
+- **A_GUI:** a read-only PySide6 dashboard MVP.
+- None of these are on the ONE_MENU critical path. List them as optional stations later.
+
+**_DORMANT has 62 stations.** Most useful for the new specs:
+- contradiction-deep, contradiction-detector and contradiction-scan (local NLI): coherence arm
+- load-bearing-claims, falsification and evidence-map: grader / CKG
+- series-flow-auditor (deterministic): STORY series pass
+- master-equation-canon: ME arm
+- sbert-embedder (MiniLM + Qdrant): embeddings, later
+- readability-rewriter: SUMMARY/READING_LEVEL
+- youtube-fetch / youtube-qa / youtube-scrape and whisper-transcribe: YouTube chain
+
+**Secrets found on the NAS (never copy these into git; David should rotate or move them):**
+- `A_AI-RESEARCH-AGENTS\gpt-researcher\.env` holds real keys in plaintext (written by `write-env.ps1`).
+- `A_BIL\docker-compose.yml` holds a MySQL password and a WEBUI_SECRET_KEY.
+- NLP_FIS `settings.ini` and `settings.example.ini` hold a Postgres password.
+- `API 2\writing-analyzer\config.txt` holds real DeepSeek and OpenAI keys (already git-ignored).
 
 ## 5. What to do with this (for the online build)
 
