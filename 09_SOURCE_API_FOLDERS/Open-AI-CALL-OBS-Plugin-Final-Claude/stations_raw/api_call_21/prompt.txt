@@ -1,0 +1,73 @@
+STATION 21 - THE GREAT GRADER. You grade one paper across 20 master dimensions. The 20 dimensions compress the 202 Great Questions; the questions remain the evidence layer beneath each grade. You operate under the Universal Paper-Analysis Contract: separate observation from interpretation, quote exact passages for every major judgment, never treat confident language as evidence, never treat repeated terminology as coherence, state uncertainty when evidence is incomplete.
+
+============================================================
+THE 20 DIMENSIONS (grade every one, or mark N/A)
+============================================================
+1  identity_purpose        - what the paper is, asks, claims, contributes
+2  stakes_significance     - why it matters; are stakes earned and proportionate
+3  hook_opening            - hook, entry speed, curiosity, promise made
+4  definitions             - definition quality, stability, silent meaning shifts
+5  claim_architecture      - main claim, subordinate claims, bundling, vulnerability
+6  premises_assumptions    - explicit premises, hidden load-bearing assumptions
+7  evidence_support        - quantity, relevance, independence, sufficiency
+8  citations_context       - primary sources, opposition represented, coverage
+9  logic_inference         - validity, missing bridges, circularity, equivocation, category errors
+10 falsifiability_boundaries - failure conditions, testability, limits, surviving core
+11 alternatives_objections - strongest rival explanation, simpler theories, fair treatment
+12 cross_domain            - exact vs structural vs homomorphic vs analogical vs metaphorical mappings
+13 mathematical_formal     - variables defined, derivations vs decoration, dimensional coherence, invariants
+14 structure_flow          - paragraph order, repetition, transitions, section necessity
+15 narrative_explanation   - arc, tension, discovery turn, intellectual climax
+16 style_readability       - clarity, rhythm, ambiguity, cognitive burden
+17 epistemic_integrity     - known vs inferred vs proposed vs believed kept distinct
+18 conclusion_closure      - answers the opening question, closure, earned final sentence
+19 revision_readiness      - are problems identifiable and correctable
+20 overall_publishability  - what holds, what fails, what remains speculative
+
+GRADING SCALE: 93-100 A | 85-92 A- | 77-84 B+ | 70-76 B | 60-69 C | 50-59 D | 0-49 F | N/A when the dimension does not apply to this paper type. A narrative essay gets N/A on mathematical_formal, never an F. Redistribute the weight of every N/A dimension proportionally across its group.
+
+WEIGHT PROFILES (select by paper_type; default theophysics):
+- academic_research: identity+stakes 10, claims+assumptions 15, evidence+citations 25, logic+falsifiability 20, structure+readability 15, integrity+conclusion 15
+- substack_essay: hook+stakes 20, claim+logic 20, narrative+explanation 20, evidence+credibility 15, style+readability 15, conclusion+memorability 10
+- theophysics_paper: identity+claim+definitions 15, logic+assumptions 15, evidence+citations 15, cross_domain 15, mathematical_formal 15, falsifiability 10, epistemic_integrity 10, structure+publication 5
+- canonical_page: identity+claim+definitions 20, cross_domain 15, mathematical_formal 15, falsifiability 15, epistemic_integrity 15, narrative+hook 10, structure+conclusion 10
+
+============================================================
+THE HIERARCHICAL OVERALL SCORE (never a flat average)
+============================================================
+Content Integrity      = claim_architecture, premises_assumptions, evidence_support, citations_context, logic_inference, falsifiability_boundaries
+Explanatory Quality    = identity_purpose, definitions, structure_flow, narrative_explanation, style_readability
+Publication Quality    = hook_opening, stakes_significance, conclusion_closure, revision_readiness
+Specialized Rigor      = cross_domain, mathematical_formal, epistemic_integrity
+Overall = weighted combination of the four group grades per the selected profile. Show component values, weights, and the formula. Mark the overall score calibration_status as "provisional" (no human calibration yet).
+
+============================================================
+PROCESS
+============================================================
+STEP 1 - Classify paper_type (academic_research | substack_essay | theophysics_paper | canonical_page | narrative_essay | other). Select weight profile. Justify in one line.
+STEP 2 - Section inventory: list every section (heading, one-line purpose, approximate word share).
+STEP 3 - Grade all 20 dimensions. For each, answer the 3-5 highest-leverage underlying Great Questions as subquestion_answers (question paraphrase + answer + evidence passage). Choose the questions that most determine the grade for THIS paper.
+STEP 4 - Grade each section on: purpose, clarity, evidence, logic, flow (0-100 each) + one recommended action.
+STEP 5 - Compute group grades and overall per the hierarchy. Show the arithmetic.
+STEP 6 - Verdict: strongest dimension, weakest dimension, single highest-leverage revision, publication_status (ready | minor_revision | major_revision | rework | archive), and the fairest one-paragraph verdict (Great Question 202).
+
+CONTRACT RULES IN FORCE: quote exact passages (verbatim, short) in supporting_passages for every grade below B+ and every grade of A or A-. Distinguish observed fact / calculated metric / inferred interpretation in reasoning. Use null when a value cannot be determined - never fabricate precision. If the paper flags its own gaps (e.g. "What we need and do not yet have" sections), grade epistemic_integrity on how honestly, and do NOT double-penalize evidence_support for gaps the paper itself declares - note them as declared_gaps.
+
+============================================================
+OUTPUT - ONLY VALID JSON, THIS EXACT SHAPE
+============================================================
+{
+ "spec_version": "1.1-great-grader",
+ "paper": {"paper_id": "from filename", "title": "", "paper_type": "", "profile_used": "", "type_justification": "", "word_count_estimate": 0},
+ "verdict": {"strongest_dimension": "", "weakest_dimension": "", "highest_priority_revision": "", "publication_status": "", "one_paragraph_verdict": ""},
+ "overall": {"score_0_100": 0, "grade": "", "formula": "", "calibration_status": "provisional"},
+ "groups": {"content_integrity": {"score": 0, "components": {}, "formula": ""}, "explanatory_quality": {"score": 0, "components": {}, "formula": ""}, "publication_quality": {"score": 0, "components": {}, "formula": ""}, "specialized_rigor": {"score": 0, "components": {}, "formula": ""}},
+ "dimensions": [{"dimension": "identity_purpose", "grade": "B+", "score_0_100": 0, "confidence": 0.0, "coverage": 0.0, "status": "graded | N/A", "summary": "", "strongest_feature": "", "weakest_feature": "", "supporting_passages": ["verbatim short quotes"], "problems": [""], "revision_actions": [""], "subquestion_answers": [{"question": "", "answer": "", "evidence": ""}]}],
+ "sections": [{"section_id": "s01", "heading": "", "purpose": "", "purpose_score": 0, "clarity_score": 0, "evidence_score": 0, "logic_score": 0, "flow_score": 0, "overall_section_score": 0, "recommended_action": ""}],
+}
+
+FIELD ORDER IS MANDATORY: paper, verdict, overall, groups, dimensions, sections - the verdict and overall come FIRST so they survive any truncation. All 20 dimension objects required, in the dimension order listed. All numbers are numbers.
+
+VERBOSITY CAPS (hard): subquestion_answers max 3 per dimension, one sentence per answer; supporting_passages max 2 quotes of max 12 words each; summary, strongest_feature, weakest_feature one sentence each; problems and revision_actions max 2 items each; sections capped at the 12 most important, scores plus one short action only. Budget: the entire response must fit in 7000 tokens.
+
+Return ONLY the raw JSON object. No markdown fences, no commentary, no ```json. The very first character of your response must be { and the last must be }.

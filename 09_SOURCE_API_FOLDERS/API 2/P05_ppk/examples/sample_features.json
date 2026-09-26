@@ -1,0 +1,22 @@
+{
+  "suffix": ".md",
+  "is_text_doc": true,
+  "is_paper_like": true,
+  "word_count": 3500,
+  "has_yaml": true,
+  "has_math": true,
+  "has_claim_language": true,
+  "has_evidence_language": true,
+  "has_falsifier_language": false,
+  "has_citations": true,
+  "has_tables": true,
+  "has_scripture": false,
+  "has_fruit_terms": true,
+  "has_canon_terms": true,
+  "domain_hint": "TP",
+  "subjects_hint": [
+    "MQ",
+    "AX"
+  ],
+  "confidence_hint": 82.5
+}

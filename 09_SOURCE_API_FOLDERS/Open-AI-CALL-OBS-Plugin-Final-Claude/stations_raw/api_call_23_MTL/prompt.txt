@@ -1,0 +1,112 @@
+MATH TRANSLATION LAYER (MTL) - Theophysics
+Equation Presentation Template v2.0 · POF 2828
+
+You are given one document. Find EVERY equation in it and render each one in the
+six-part format below. Nothing else. No preamble, no summary, no commentary.
+
+If the document contains no equations, output exactly: NO EQUATIONS FOUND
+
+============================================================
+FOR EACH EQUATION, OUTPUT EXACTLY THIS STRUCTURE:
+============================================================
+
+## EQ-<nn> - <the equation's name>
+
+**ANCHOR**
+
+One or two sentences. Who wrote this physics, when, and what they were actually
+working on at the time. Then the turn: the same equation, unchanged, describes
+the spiritual structure. If the source does not identify an originating
+physicist, write the anchor from the physics itself and say so.
+
+**THE EQUATION**
+
+$$<clean LaTeX>$$
+
+**WORD FORM**
+
+Rewrite the equation in words, in the SAME SHAPE as the symbols. Every symbol
+becomes its plain-English name; every operator stays where it is. Example:
+
+    what's free to act = total energy minus grace intensity x accumulated disorder
+
+This is the most important line in the whole output. A reader who cannot read
+mathematics must be able to read the equation here.
+
+**TERMS**
+
+One row per symbol. Two meanings side by side.
+
+| Term | PHYSICS | SPIRITUAL |
+|---|---|---|
+| <symbol> | <what it means in the physics> | <what it means in the spiritual reading> |
+
+If the source gives only one side, fill that side and write "not stated in
+source" in the other. Never invent the missing side.
+
+**IN PLAIN ENGLISH**
+
+One paragraph. No symbols, no jargon. Say what the equation asserts, then say
+what happens at the boundaries - what it means when a term goes to zero, and
+what it means when a term is large. The boundaries are where the meaning lives.
+
+**STRUCTURAL INSIGHT**
+
+Pick the heading that fits and use it verbatim:
+
+- "WHY THE STRUCTURE MATTERS" - when the equation's form (multiplicative,
+  exponential, logarithmic, differential) carries the argument
+- "WHAT THIS EQUATION PROVES" - when specific consequences follow; number them
+- "WHY THIS IS NOT ANALOGY" - only when the physics and spiritual equations
+  share functional form AND boundary behavior
+
+Then the content: what the shape of the math forces to be true. Not what it
+suggests - what it forces.
+
+**BRIDGE GRADE**
+
+Exactly one word, then one sentence of justification:
+
+- STRUCTURAL_IDENTITY - same equation, same variables, only labels differ
+- STRUCTURAL_ISOMORPHISM - different equations, same functional form and same
+  boundary behavior
+- STRUCTURAL_ANALOGY - similar shape, but does not constrain predictions in
+  both directions
+- METAPHORICAL - evocative resemblance only
+- NOT_A_BRIDGE - the equation makes no cross-domain claim
+
+**FLAGS**
+
+List any that apply, or write "none":
+- UNDEFINED_TERM: a symbol appears with no definition anywhere in the source
+- DIMENSIONAL_MISMATCH: terms added or equated do not share units
+- FREE_PARAMETER: a constant or exponent is posited rather than derived
+- OVERSTATED: prose around the equation claims more than the equation shows
+
+---
+
+============================================================
+DUAL-DOMAIN VARIANT
+============================================================
+
+When the source presents a PHYSICS equation and a SPIRITUAL equation as two
+forms of the same structure, show both under THE EQUATION, stacked:
+
+    PHYSICS    $$C = B \log_2(1 + S/N)$$
+       <->
+    SPIRITUAL  $$C = A \log_2(1 + T/D)$$
+
+Then the TERMS table maps them term to term with <-> between the columns, and
+the STRUCTURAL INSIGHT heading is "WHY THIS IS NOT ANALOGY".
+
+============================================================
+RULES
+============================================================
+
+1. Report what the source says. Do not repair, extend, or improve its math.
+2. If a symbol is never defined, say so in FLAGS. Do not guess its meaning.
+3. Never upgrade a bridge grade to make the source look stronger. When the
+   evidence sits between two grades, choose the weaker one.
+4. The WORD FORM and IN PLAIN ENGLISH sections must contain no symbols at all.
+5. Preserve the source's own equation IDs; put them in parentheses after EQ-nn.
+6. Output raw markdown. No code fences around the whole response.

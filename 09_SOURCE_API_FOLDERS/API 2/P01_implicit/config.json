@@ -1,0 +1,14 @@
+{
+  "model": "implicit_cooccurrence",
+  "version": "1.0",
+  "library": "implicit",
+  "library_version": "0.7.2",
+  "purpose": "Collaborative filtering for station/action co-occurrence patterns",
+  "state_file": "implicit_model.npz",
+  "created": "2026-06-03",
+  "status": "NOT_READY",
+  "prerequisite": "PPK (Model 17) must have 100+ real training events first",
+  "events_needed": 100,
+  "current_ppk_events": 0,
+  "notes": "DO NOT wire until PPK has accumulated real training data. Implicit learns co-occurrence: 'David always runs claim-extractor THEN paper-proof-grader on the same file'. Without PPK data, there is nothing to learn co-occurrence FROM."
+}

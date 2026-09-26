@@ -1,0 +1,25 @@
+{
+  "contract_version": "1.0.0",
+  "bundle_name": "Complete Grading Bundle",
+  "completion_rule": "six_valid_results_or_no_completed_grade",
+  "stations": [
+    "COHERENCE",
+    "MASTER_EQUATION",
+    "ATOMS",
+    "COHERENCE_SCORE",
+    "AXIOM_NODES",
+    "FRUITS"
+  ],
+  "front_page_owner": "FRUITS",
+  "source_identity": ["paper_id", "run_id", "source_sha256"],
+  "inbox_precedence": [
+    "01_PRIORITY",
+    "02_SERIES",
+    "03_GENERAL"
+  ],
+  "ignored_inbox_lanes": ["00_HOLD_NEVER_PROCESS"],
+  "recursive_discovery": true,
+  "publish_requires_all_stations_valid": true,
+  "preserve_successful_results_on_partial_failure": true,
+  "retry_failed_stations_only": true
+}

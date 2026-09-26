@@ -1,0 +1,3462 @@
+{
+  "schema": "chi_evaluator_7q.v1.1",
+  "timestamp": "2026-06-18T11:01:05Z",
+  "run": {
+    "run_id": "2026-06-18T11:01:05Z",
+    "claim_count": 1,
+    "t_score": {
+      "count": 1.0,
+      "mean": 0.079286,
+      "median": 0.079286,
+      "std": 0.0,
+      "stderr": 0.0,
+      "ci_95_low": 0.079286,
+      "ci_95_high": 0.079286,
+      "min": 0.079286,
+      "max": 0.079286,
+      "iqr": 0.0
+    },
+    "truth_score": {
+      "count": 1.0,
+      "mean": 0.3,
+      "median": 0.3,
+      "std": 0.0,
+      "stderr": 0.0,
+      "ci_95_low": 0.3,
+      "ci_95_high": 0.3,
+      "min": 0.3,
+      "max": 0.3,
+      "iqr": 0.0
+    },
+    "truth_weighted_sum": {
+      "count": 1.0,
+      "mean": 1.8,
+      "median": 1.8,
+      "std": 0.0,
+      "stderr": 0.0,
+      "ci_95_low": 1.8,
+      "ci_95_high": 1.8,
+      "min": 1.8,
+      "max": 1.8,
+      "iqr": 0.0
+    },
+    "chi_static": {
+      "count": 1.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "stderr": 0.0,
+      "ci_95_low": 0.0,
+      "ci_95_high": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "iqr": 0.0
+    },
+    "chi_gradient": {
+      "count": 1.0,
+      "mean": -0.139139,
+      "median": -0.139139,
+      "std": 0.0,
+      "stderr": 0.0,
+      "ci_95_low": -0.139139,
+      "ci_95_high": -0.139139,
+      "min": -0.139139,
+      "max": -0.139139,
+      "iqr": 0.0
+    },
+    "chi_channel_agreement": {
+      "count": 1.0,
+      "mean": 0.923974,
+      "median": 0.923974,
+      "std": 0.0,
+      "stderr": 0.0,
+      "ci_95_low": 0.923974,
+      "ci_95_high": 0.923974,
+      "min": 0.923974,
+      "max": 0.923974,
+      "iqr": 0.0
+    },
+    "fruit_score": {
+      "count": 1.0,
+      "mean": 0.427025,
+      "median": 0.427025,
+      "std": 0.0,
+      "stderr": 0.0,
+      "ci_95_low": 0.427025,
+      "ci_95_high": 0.427025,
+      "min": 0.427025,
+      "max": 0.427025,
+      "iqr": 0.0
+    },
+    "truth_formula": {
+      "S": {
+        "count": 1.0,
+        "mean": 0.5,
+        "median": 0.5,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.5,
+        "ci_95_high": 0.5,
+        "min": 0.5,
+        "max": 0.5,
+        "iqr": 0.0
+      },
+      "E": {
+        "count": 1.0,
+        "mean": 0.2,
+        "median": 0.2,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.2,
+        "ci_95_high": 0.2,
+        "min": 0.2,
+        "max": 0.2,
+        "iqr": 0.0
+      },
+      "L": {
+        "count": 1.0,
+        "mean": 0.3,
+        "median": 0.3,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.3,
+        "ci_95_high": 0.3,
+        "min": 0.3,
+        "max": 0.3,
+        "iqr": 0.0
+      },
+      "D": {
+        "count": 1.0,
+        "mean": 0.3,
+        "median": 0.3,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.3,
+        "ci_95_high": 0.3,
+        "min": 0.3,
+        "max": 0.3,
+        "iqr": 0.0
+      },
+      "P": {
+        "count": 1.0,
+        "mean": 0.5,
+        "median": 0.5,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.5,
+        "ci_95_high": 0.5,
+        "min": 0.5,
+        "max": 0.5,
+        "iqr": 0.0
+      },
+      "C": {
+        "count": 1.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.0,
+        "ci_95_high": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "iqr": 0.0
+      },
+      "fruit_score": {
+        "count": 1.0,
+        "mean": 0.427025,
+        "median": 0.427025,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.427025,
+        "ci_95_high": 0.427025,
+        "min": 0.427025,
+        "max": 0.427025,
+        "iqr": 0.0
+      }
+    },
+    "chi_direction_counts": {
+      "negative": 1
+    },
+    "chi_verdict_counts": {
+      "fragile": 1
+    },
+    "tier_counts": {
+      "INSUFFICIENT": 1
+    },
+    "coherence_decision_ci": {
+      "stable": {
+        "p": 0.0,
+        "ci_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "collapsed": {
+        "p": 0.0,
+        "ci_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "high_signal_deception": {
+        "p": 0.0,
+        "ci_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "fruit_bias_share": {
+        "p": 0.0,
+        "ci_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "channel_stats": {
+      "G": {
+        "count": 1.0,
+        "mean": 0.1,
+        "median": 0.1,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.1,
+        "ci_95_high": 0.1,
+        "min": 0.1,
+        "max": 0.1,
+        "iqr": 0.0
+      },
+      "M": {
+        "count": 1.0,
+        "mean": 0.12,
+        "median": 0.12,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.12,
+        "ci_95_high": 0.12,
+        "min": 0.12,
+        "max": 0.12,
+        "iqr": 0.0
+      },
+      "E": {
+        "count": 1.0,
+        "mean": 0.155,
+        "median": 0.155,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.155,
+        "ci_95_high": 0.155,
+        "min": 0.155,
+        "max": 0.155,
+        "iqr": 0.0
+      },
+      "S_eff": {
+        "count": 1.0,
+        "mean": 0.375,
+        "median": 0.375,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.375,
+        "ci_95_high": 0.375,
+        "min": 0.375,
+        "max": 0.375,
+        "iqr": 0.0
+      },
+      "T": {
+        "count": 1.0,
+        "mean": 0.15,
+        "median": 0.15,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.15,
+        "ci_95_high": 0.15,
+        "min": 0.15,
+        "max": 0.15,
+        "iqr": 0.0
+      },
+      "K": {
+        "count": 1.0,
+        "mean": 0.17,
+        "median": 0.17,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.17,
+        "ci_95_high": 0.17,
+        "min": 0.17,
+        "max": 0.17,
+        "iqr": 0.0
+      },
+      "R": {
+        "count": 1.0,
+        "mean": 0.12,
+        "median": 0.12,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.12,
+        "ci_95_high": 0.12,
+        "min": 0.12,
+        "max": 0.12,
+        "iqr": 0.0
+      },
+      "Q": {
+        "count": 1.0,
+        "mean": 0.12,
+        "median": 0.12,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.12,
+        "ci_95_high": 0.12,
+        "min": 0.12,
+        "max": 0.12,
+        "iqr": 0.0
+      },
+      "F": {
+        "count": 1.0,
+        "mean": 0.12,
+        "median": 0.12,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.12,
+        "ci_95_high": 0.12,
+        "min": 0.12,
+        "max": 0.12,
+        "iqr": 0.0
+      },
+      "C": {
+        "count": 1.0,
+        "mean": 0.12,
+        "median": 0.12,
+        "std": 0.0,
+        "stderr": 0.0,
+        "ci_95_low": 0.12,
+        "ci_95_high": 0.12,
+        "min": 0.12,
+        "max": 0.12,
+        "iqr": 0.0
+      }
+    },
+    "pressure_rows": [
+      {
+        "claim_id": "direct_input::1",
+        "step": "static",
+        "chi": 0.0,
+        "notes": "applied pressure state",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "compression",
+        "chi": 0.0,
+        "notes": "compressed form robustness",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "strongest_objection",
+        "chi": 0.0,
+        "notes": "no objection work present",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "time",
+        "chi": 0.0,
+        "notes": "durability terms present",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "translation",
+        "chi": 0.0,
+        "notes": "translation friction low",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "evidence",
+        "chi": 0.0,
+        "notes": "evidence terms stable",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "implementation",
+        "chi": 0.0,
+        "notes": "implementation evidence sparse",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "fruit",
+        "chi": 0.0,
+        "notes": "fruit-friendly language present",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      },
+      {
+        "claim_id": "direct_input::1",
+        "step": "falsification",
+        "chi": 0.0,
+        "notes": "no explicit kill conditions in text",
+        "chi_verdict": "fragile",
+        "claim_index": 1
+      }
+    ],
+    "workbook": {
+      "path": "X:\\06_ENGINES\\writing-analyzer\\fruit-review-orchestrator\\q7q_local\\7Q Full Method.xlsx",
+      "sheets": [
+        {
+          "title": "7Q Explained",
+          "max_row": 200,
+          "max_col": 4,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "",
+              "THE 7Q FRAMEWORK",
+              "",
+              ""
+            ],
+            [
+              "",
+              "One Tree. Seven Lenses. One Physics Example.",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Every claim is a tree. We'll take one claim from physics and walk it through all seven questions — showing the classifications, the sub-questions, and what each stage actually produces.",
+              "",
+              ""
+            ],
+            [
+              "",
+              "RUNNING EXAMPLE",
+              "\"Mass-energy curves spacetime, and objects follow geodesics through that curvature.\"",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 5
+        },
+        {
+          "title": "7Q Reverse",
+          "max_row": 250,
+          "max_col": 6,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "",
+              "7Q REVERSE — START WITH DESTRUCTION",
+              "",
+              "",
+              "SURVIVAL",
+              "TRUTH SCORE"
+            ],
+            [
+              "",
+              "Start with destruction. End with a name. If it survives, it earned the right to exist.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "The traditional method starts with a seed and hopes it grows. This method starts with a forest fire and names what's still standing.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Q0 — POSTURE (\"You do not arrive already defending.\")",
+              "",
+              "",
+              "AUTO SCORE",
+              ""
+            ],
+            [
+              "",
+              "I acknowledge this posture:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "I acknowledge this posture:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "STEP 1 — DESTROY  (from Q7: Falsification)",
+              "",
+              "",
+              "Step 1 Destroy:",
+              "⬜ Incomplete"
+            ],
+            [
+              "",
+              "unknown → vulnerable  |  \"If you can't name how it dies, you can't know if it's alive.\"",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Death Condition 1 — How could this idea die:",
+              "",
+              "",
+              "Destruction (S):",
+              "0"
+            ],
+            [
+              "",
+              "  ↳ Death Type:",
+              "",
+              "",
+              "Consequences (E):",
+              "0"
+            ],
+            [
+              "",
+              "Death Condition 2:",
+              "",
+              "",
+              "Foundations (L):",
+              "0"
+            ],
+            [
+              "",
+              "  ↳ Death Type:",
+              "",
+              "",
+              "Evidence (D):",
+              "0"
+            ],
+            [
+              "",
+              "Death Condition 3 (if applicable):",
+              "",
+              "",
+              "Assertion (P):",
+              "0"
+            ],
+            [
+              "",
+              "Branch Status:",
+              "",
+              "",
+              "Location (C):",
+              "0"
+            ],
+            [
+              "",
+              "Adversarially Tested?",
+              "",
+              "",
+              "Identity:",
+              "0"
+            ],
+            [
+              "",
+              "→ \"These are the ways this idea dies. Watch what happens next.\"",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              "REVERSE T:",
+              "—"
+            ],
+            [
+              "",
+              "STEP 2 — FORCE  (from Q6: Consequences)",
+              "",
+              "",
+              "Step 2 Force:",
+              "⬜ Incomplete"
+            ],
+            [
+              "",
+              "vulnerable → constrained  |  \"A surviving claim that generates nothing downstream explains nothing.\"",
+              "",
+              "",
+              "VERDICT:",
+              "Awaiting input"
+            ],
+            [
+              "",
+              "Necessary Consequence 1 — What it MUST produce:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Necessary Consequence 2:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Necessary Consequence 3:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Cross-Domain Prediction (if any):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Consequence Type:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "→ \"This is not a hypothesis anymore. This is what must follow.\"",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "STEP 3 — GROUND  (from Q5: Dependencies)",
+              "",
+              "",
+              "Step 3 Ground:",
+              "⬜ Incomplete"
+            ],
+            [
+              "",
+              "constrained → grounded  |  \"The reader sees the foundations — not because you claimed them, but because the structure required them.\"",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Foundation 1 — What must be true for this to stand:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Foundation 2:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Foundation 3:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Dependency Chain Terminates At:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  ↳ Terminus Type:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Hidden Assumptions / Open Wounds:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "→ \"Now you see what holds it up. You decide if those foundations are solid.\"",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "STEP 4 — SUPPORT  (from Q4: Evidence)",
+              "",
+              "",
+              "Step 4 Support:",
+              "⬜ Incomplete"
+            ],
+            [
+              "",
+              "grounded → supported  |  \"The evidence didn't build the case. It confirmed what survived.\"",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Evidence Unit 1 — What data confirms the survivor:",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 296
+        },
+        {
+          "title": "7Q Engine",
+          "max_row": 286,
+          "max_col": 6,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "",
+              "7Q ENGINE — LIVE CLAIM ANALYZER",
+              "",
+              "",
+              "COMPLETION",
+              "TRUTH SCORE"
+            ],
+            [
+              "",
+              "Type your claim below. Fill each question. The system computes the rest.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Q0 — POSTURE BEFORE INQUIRY",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "\"The inquirer cannot be the ground of inquiry. You do not arrive already decided.\"",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "I acknowledge this posture:",
+              "",
+              "",
+              "Q0 Posture:",
+              "⬜ Required"
+            ],
+            [
+              "",
+              "Q1 — WHAT IS IT?  (Identity)",
+              "",
+              "",
+              "Q1 Identity:",
+              "⬜ 3 fields left"
+            ],
+            [
+              "",
+              "Transformation: undefined → defined  |  Create the object. Name it. Classify it.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Claim ID (auto-generated):",
+              "c_8CF18010-06D7-48A4-B7DA-C2BEF95238E4",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Label (max 8 words):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Claim Type:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Tier:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Statement [SUBJECT → RELATIONSHIP → OBJECT → under CONDITIONS]:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Tags (comma-separated):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Q2 — WHERE DOES IT LIVE?  (Domain)",
+              "",
+              "",
+              "Q2 Domain:",
+              "⬜ Incomplete"
+            ],
+            [
+              "",
+              "Transformation: defined → located  |  Place the object in reality. Anchor it. Set boundaries.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Primary Domain:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Additional Domains (comma-separated):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Scale:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Isomorphism Status:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Does it appear in more than one domain? Can you swap labels and the structure survives?",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Q3 — WHAT DOES IT SAY?  (Assertion)",
+              "",
+              "",
+              "Q3 Assertion:",
+              "⬜ Incomplete"
+            ],
+            [
+              "",
+              "Transformation: located → stated  |  Force precision. No hedging. The claim commits.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Assertion (one precise sentence):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Precision:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Certainty:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Scope:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Negation (confirm the logical opposite):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "KEY TEST: \"Can a serious opponent restate this claim accurately?\" If not, it isn't precise enough.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Q4 — WHAT SUPPORTS IT?  (Evidence)",
+              "",
+              "",
+              "Q4 Evidence:",
+              "⬜ Incomplete"
+            ],
+            [
+              "",
+              "Transformation: stated → supported  |  Attach justification. Show it's not arbitrary.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Evidence Type(s):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Evidence Tier:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Source 1 — Author | Year | Finding | Significance:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Source 2 — Author | Year | Finding | Significance:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Source 3 — Author | Year | Finding | Significance:",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 536
+        },
+        {
+          "title": "Evidence Protocol",
+          "max_row": 64,
+          "max_col": 7,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "EVIDENCE CLASSIFICATION PROTOCOL — COMPLETE SPECIFICATION",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "A claim is only as strong as its evidence — and evidence is only as strong as its explanation. Companion to the 7Q Engine Specification v1.0",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "THE THREE CHANNELS — Independent axes that multiply, not add",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Channel",
+              "Abbreviation",
+              "Weight",
+              "Core Question",
+              "Components",
+              "Formula",
+              "What Current Science Rewards vs. What This Adds"
+            ],
+            [
+              "CH1: Phenomenon Strength",
+              "PS",
+              "Primary",
+              "\"What do we reliably observe?\"",
+              "reproducibility (0.4) + effect_size (0.3) + measurement_quality (0.3)",
+              "PS = Σ(component × weight)",
+              "Science already does this well. Measurement, replication, signal detection."
+            ],
+            [
+              "CH2: Explanatory Depth",
+              "ED",
+              "Gate",
+              "\"Do we understand WHY?\"",
+              "mechanism_clarity (0.4) + constraint_consistency (0.3) + scope (0.3)",
+              "ED = Σ(component × weight)",
+              "Science systematically avoids this. The Why-Penalty enforces it. ED=0 caps evidence at 50%."
+            ],
+            [
+              "CH3: Experiential Coherence",
+              "EC",
+              "Gate",
+              "\"Stable patterns across time, behavior, agents?\"",
+              "internal_consistency (0.25) + longitudinal_stability (0.25) + behavioral_transformation (0.25) + intersubjective_pattern (0.25)",
+              "EC = Σ(component × weight)",
+              "Not \"I feel strongly.\" Does evidence produce consistent downstream effects in lived systems?"
+            ],
+            [
+              "COMPLETENESS FORMULA:  CF = (0.5 + 0.5 × ED) × (0.5 + 0.5 × EC)  →  E_final = PS × CF  |  The Why-Penalty: ED=0 caps evidence at 50% no matter how repeatable.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "SCENARIO TABLE — How the three channels interact",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Scenario",
+              "PS",
+              "ED",
+              "EC",
+              "CF",
+              "E_final",
+              "What It Means"
+            ],
+            [
+              "Strong + explained + lived",
+              "0.9",
+              "0.8",
+              "0.9",
+              "0.86",
+              "0.77",
+              "Full weight earned — all three channels strong"
+            ],
+            [
+              "Strong + unexplained",
+              "0.9",
+              "0.1",
+              "0.5",
+              "0.41",
+              "0.37",
+              "CAPPED — repeatable but blind. Why-Penalty active."
+            ],
+            [
+              "Weak + well-explained",
+              "0.3",
+              "0.9",
+              "0.5",
+              "0.71",
+              "0.21",
+              "Explanation can't save weak data"
+            ],
+            [
+              "Personal + stable + unexplained",
+              "0.2",
+              "0.3",
+              "0.85",
+              "0.6",
+              "0.12",
+              "Modest but not dismissed"
+            ],
+            [
+              "Personal + stable + explained",
+              "0.2",
+              "0.7",
+              "0.85",
+              "0.78",
+              "0.16",
+              "Stronger — mechanism helps"
+            ],
+            [
+              "Strong + explained + no lived",
+              "0.9",
+              "0.8",
+              "0",
+              "0.45",
+              "0.41",
+              "Lab-only — untested in life"
+            ],
+            [
+              "Noise",
+              "0.1",
+              "0.1",
+              "0.1",
+              "0.28",
+              "0.03",
+              "Collapses as it should"
+            ],
+            [
+              "THE FIVE GATES — Every evidence unit passes through all five before entering the system",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Gate",
+              "Field Name",
+              "Type",
+              "Required",
+              "Description",
+              "YAML Key",
+              "Dropdown Values / Notes"
+            ],
+            [
+              "GATE 1: IDENTITY",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "E1 — Identity",
+              "id",
+              "UUID",
+              "Auto",
+              "Unique evidence identifier",
+              "e1_identity.id",
+              "Auto-generated"
+            ],
+            [
+              "",
+              "label",
+              "String (max 8)",
+              "✓",
+              "Short name for this evidence",
+              "e1_identity.label",
+              ""
+            ],
+            [
+              "",
+              "evidence_format",
+              "Enum",
+              "✓",
+              "What form does this evidence take?",
+              "e1_identity.evidence_format",
+              "dataset | paper | observation | proof | protocol | prediction_result | isomorphism | testimony | synthesis"
+            ],
+            [
+              "GATE 2: TYPE",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "E2 — Type",
+              "epistemic_class",
+              "Enum",
+              "✓",
+              "What channel of knowledge?",
+              "e2_type.epistemic_class",
+              "empirical | logical | structural | experiential"
+            ],
+            [
+              "",
+              "evidence_type",
+              "Enum",
+              "✓",
+              "How was it obtained?",
+              "e2_type.evidence_type",
+              "experimental | observational | statistical | mathematical | logical | historical | scriptural | testimonial | inferential | isomorphic"
+            ],
+            [
+              "",
+              "reliability",
+              "Enum",
+              "✓",
+              "How solid is the source?",
+              "e2_type.reliability",
+              "replicated | single_study | anecdotal | simulated | inferred"
+            ],
+            [
+              "GATE 3: STRENGTH (Three Channels — see scoring tables above)",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "E3 — PS",
+              "reproducibility",
+              "Enum → 0-1",
+              "✓",
+              "Has it been replicated?",
+              "e3.ps.reproducibility",
+              "none(0) | single(0.3) | partial(0.6) | replicated(0.8) | massive(1.0)"
+            ],
+            [
+              "",
+              "effect_size",
+              "Enum → 0-1",
+              "✓",
+              "How large is the effect?",
+              "e3.ps.effect_size",
+              "noise(0) | weak(0.3) | moderate(0.6) | strong(0.8) | overwhelming(1.0)"
+            ],
+            [
+              "",
+              "measurement_quality",
+              "Enum → 0-1",
+              "✓",
+              "Direct, proxy, or inferred?",
+              "e3.ps.measurement_quality",
+              "inferred(0.2) | proxy(0.5) | direct(0.8) | precision(1.0)"
+            ],
+            [
+              "E3 — ED",
+              "mechanism_clarity",
+              "Enum → 0-1",
+              "✓",
+              "Is there a causal pathway?",
+              "e3.ed.mechanism_clarity",
+              "unknown(0) | speculative(0.2) | partial(0.5) | clear(0.8) | mechanistic(1.0)"
+            ],
+            [
+              "",
+              "constraint_consistency",
+              "Enum → 0-1",
+              "✓",
+              "Survives known physics/logic?",
+              "e3.ed.constraint_consistency",
+              "contradicts(0) | untested(0.3) | compatible(0.6) | derived(0.9)"
+            ],
+            [
+              "",
+              "scope",
+              "Enum → 0-1",
+              "✓",
+              "Explains adjacent cases?",
+              "e3.ed.scope",
+              "this_case(0.2) | domain(0.5) | cross_domain(0.8) | universal(1.0)"
+            ],
+            [
+              "E3 — EC",
+              "internal_consistency",
+              "Enum → 0-1",
+              "✓",
+              "Does the experience contradict itself?",
+              "e3.ec.internal_consistency",
+              "contradictory(0) | partial(0.4) | stable(0.7) | maximal(1.0)"
+            ],
+            [
+              "",
+              "longitudinal_stability",
+              "Enum → 0-1",
+              "✓",
+              "Persists over time?",
+              "e3.ec.longitudinal_stability",
+              "fluctuates(0.1) | recent(0.3) | years(0.6) | lifetime(0.9)"
+            ],
+            [
+              "",
+              "behavioral_transformation",
+              "Enum → 0-1",
+              "✓",
+              "Produces measurable behavior change?",
+              "e3.ec.behavioral_transformation",
+              "none(0) | minor(0.3) | significant(0.6) | total(0.9)"
+            ]
+          ],
+          "non_empty_cells_capped": 276
+        },
+        {
+          "title": "Evidence Calculator",
+          "max_row": 73,
+          "max_col": 6,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "",
+              "EVIDENCE CLASSIFICATION PROTOCOL — LIVE CALCULATOR",
+              "",
+              "",
+              "CHANNELS",
+              "SCORES"
+            ],
+            [
+              "",
+              "A claim is only as strong as its evidence — and evidence is only as strong as its explanation.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Five gates. Three channels. One formula. No raw evidence enters unstructured.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "GATE 1 — EVIDENCE IDENTITY (E1)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "\"What IS this piece of evidence?\" — Not the claim — the evidence itself.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Evidence ID (auto-generated):",
+              "e_2687D420-3DB4-4E33-811A-978597CEA322",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Evidence Label (max 8 words):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Evidence Format:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Brief Description (what is it, where from, what it shows):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "GATE 2 — EVIDENCE TYPE (E2)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "\"What kind of knowing is this?\" — Two layers: epistemic class + evidence type.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Epistemic Class:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Evidence Type:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Reliability Class:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "GATE 3 — STRENGTH SCORING (E3)  ·  Three Channels",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "\"How strong is each channel?\" — Three independent channels multiply through completeness gates.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "CHANNEL 1: PHENOMENON STRENGTH (PS)",
+              "",
+              "",
+              "PS (Phenomenon):",
+              "—"
+            ],
+            [
+              "",
+              "  Reproducibility (weight: 0.4):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  Effect Size (weight: 0.3):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  Measurement Quality (weight: 0.3):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  → PS Score:",
+              "—",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "CHANNEL 2: EXPLANATORY DEPTH (ED)",
+              "",
+              "",
+              "ED (Explanatory):",
+              "—"
+            ],
+            [
+              "",
+              "  Mechanism Clarity (weight: 0.4):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  Constraint Consistency (weight: 0.3):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  Scope (weight: 0.3):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  → ED Score:",
+              "—",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "CHANNEL 3: EXPERIENTIAL COHERENCE (EC)",
+              "",
+              "",
+              "EC (Experiential):",
+              "—"
+            ],
+            [
+              "",
+              "  Internal Consistency (weight: 0.25):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  Longitudinal Stability (weight: 0.25):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  Behavioral Transformation (weight: 0.25):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  Intersubjective Pattern (weight: 0.25):",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "  → EC Score:",
+              "—",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "THE COMPLETENESS FORMULA",
+              "",
+              "",
+              "CF:",
+              "—"
+            ],
+            [
+              "",
+              "CF = (0.5 + 0.5 × ED) × (0.5 + 0.5 × EC)  |  E_final = PS × CF",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 89
+        },
+        {
+          "title": "7Q Framework",
+          "max_row": 123,
+          "max_col": 8,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "7Q ENGINE — COMPLETE FIELD SPECIFICATION",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Seven questions forward: classify anything. Seven questions reversed: prove anything. Q0: arrive humble or don't arrive at all.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "David Lowe | POF 2828 | Theophysics  •  v1.0  •  Obsidian Forge Plugin Spec",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Question / Section",
+              "Field Name",
+              "Type",
+              "Required",
+              "UX Element",
+              "Description / AI Prompt",
+              "YAML Key",
+              "Dropdown Values / Notes"
+            ],
+            [
+              "Q0 — POSTURE BEFORE INQUIRY  ·  \"The inquirer cannot be the ground of inquiry\"",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Not a question. A precondition. Displayed once at note creation. Cannot be skipped. No AI assist — this is human-only.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Q0 — Posture",
+              "q0_acknowledged",
+              "Boolean",
+              "✓ REQUIRED",
+              "Checkbox",
+              "User acknowledges: \"You do not arrive already decided.\" Must be checked before Q1 unlocks.",
+              "q0_acknowledged: true",
+              "true / false only"
+            ],
+            [
+              "Transformation: undecided → receptive  |  Function: Prevent motivated reasoning before it starts",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Q1 — WHAT IS IT?  ·  Identity  ·  \"Create the object. Name it. Classify it.\"",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Transformation: undefined → defined  |  Function: Create the object. Name it. Classify it. Prevent category confusion from the start.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Q1 — Identity",
+              "id",
+              "UUID v4",
+              "Auto",
+              "Hidden, auto-generated",
+              "Unique identifier for the claim. System generates on creation.",
+              "q1_identity.id",
+              "Auto-generated UUID"
+            ],
+            [
+              "Q1 — Identity",
+              "label",
+              "String (max 8 words)",
+              "✓ REQUIRED",
+              "Text box",
+              "Short clear label summarizing the claim. Max 8 words.",
+              "q1_identity.label",
+              "e.g. \"Consciousness affects physical systems\""
+            ],
+            [
+              "Q1 — Identity",
+              "claim_type",
+              "Enum",
+              "✓ REQUIRED",
+              "Dropdown",
+              "Classify the claim into exactly one type. Determines how evidence and logic apply.",
+              "q1_identity.claim_type",
+              "descriptive | causal | ontological | mathematical | mechanistic | predictive | normative"
+            ],
+            [
+              "Q1 — Identity",
+              "tier",
+              "Enum",
+              "Optional",
+              "Dropdown",
+              "Where the claim sits in the hierarchy of knowledge.",
+              "q1_identity.tier",
+              "foundational | derived | constraint | support | connection"
+            ],
+            [
+              "Q1 — Identity",
+              "statement",
+              "Structured sentence",
+              "✓ REQUIRED",
+              "Guided builder",
+              "Composed via: [SUBJECT] → [RELATIONSHIP] → [OBJECT] → under [CONDITIONS]. System assembles the sentence.",
+              "q1_identity.statement",
+              "Builder removes ambiguity by forcing structure"
+            ],
+            [
+              "Q1 — Identity",
+              "tags",
+              "String[]",
+              "Auto-suggest",
+              "Tag input + autocomplete",
+              "3-6 concise tags capturing core concepts. System suggests from vault.",
+              "q1_identity.tags",
+              "e.g. [observer-effect, consciousness, PEAR]"
+            ],
+            [
+              "Q1 — Identity",
+              "relations",
+              "Object[]",
+              "Optional",
+              "Link picker",
+              "Relationships to other claims in vault: supports, contradicts, depends_on, equivalent_to.",
+              "q1_identity.relations",
+              "type + target claim ID"
+            ],
+            [
+              "Q1 AI PROMPTS",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "  Label Generator",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"Generate a short clear label (max 8 words) summarizing this claim.\"",
+              "",
+              "Targets: label field"
+            ],
+            [
+              "  Type Classifier",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"Classify this statement into exactly one of: descriptive, causal, ontological, mathematical, mechanistic, predictive, normative. Return only the word.\"",
+              "",
+              "Targets: claim_type field"
+            ],
+            [
+              "  Statement Refiner",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"Rewrite into a single precise sentence using: [subject] → [relationship] → [object] (under conditions). Remove all ambiguity. One sentence only.\"",
+              "",
+              "Targets: statement field"
+            ],
+            [
+              "  Tag Generator",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"Generate 3-6 concise tags capturing core concepts. Return as comma-separated list.\"",
+              "",
+              "Targets: tags field"
+            ],
+            [
+              "  Relation Suggester",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"Given this claim and existing claims in the vault, suggest relationships (supports, contradicts, depends_on, equivalent_to). Return only high-confidence matches.\"",
+              "",
+              "Targets: relations field"
+            ],
+            [
+              "Q2 — WHERE DOES IT LIVE?  ·  Domain  ·  \"Place the object in reality. Anchor it.\"",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Transformation: defined → located  |  Function: Anchor the claim in a domain, scale, and cross-domain status. Isomorphisms are detected here.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Q2 — Domain",
+              "primary_domain",
+              "Enum",
+              "✓ REQUIRED",
+              "Dropdown",
+              "The single primary domain this claim belongs to.",
+              "q2_domain.primary",
+              "physics | biology | psychology | mathematics | philosophy | theology | information | social | computational | moral | consciousness"
+            ],
+            [
+              "Q2 — Domain",
+              "additional_domains",
+              "Enum[]",
+              "Optional",
+              "Multi-select dropdown",
+              "Any additional domains where this claim also operates. Triggers isomorphism check.",
+              "q2_domain.additional",
+              "Same enum as primary_domain — multi-select"
+            ],
+            [
+              "Q2 — Domain",
+              "scale",
+              "Enum",
+              "✓ REQUIRED",
+              "Dropdown",
+              "The scale at which this claim operates.",
+              "q2_domain.scale",
+              "quantum | molecular | neural | individual | social | civilizational | cosmic | universal"
+            ],
+            [
+              "Q2 — Domain",
+              "isomorphism_status",
+              "Enum",
+              "Conditional",
+              "Dropdown (appears if 2+ domains)",
+              "Cross-domain structural relationship. Only visible when additional_domains is populated.",
+              "q2_domain.isomorphism_status",
+              "none | ISO-analogy | ISO-parallel | ISO-confirmed"
+            ],
+            [
+              "SUB-QUESTIONS:  ① Does it appear in more than one domain?  ② If cross-domain: is it analogy or isomorphism? (Can you swap labels and the structure survives?)  ③ At what scale does it operate?",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Q2 AI PROMPTS",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "  Domain Classifier",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"Identify the primary domain this claim belongs to. Choose from: physics, biology, psychology, mathematics, philosophy, theology, information, social, computational, moral, consciousness. Then identify any additional domains.\"",
+              "",
+              "Targets: primary_domain, additional_domains"
+            ],
+            [
+              "  Scale Detector",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"At what scale does this claim operate? Choose from: quantum, molecular, neural, individual, social, civilizational, cosmic, universal. Return one.\"",
+              "",
+              "Targets: scale"
+            ],
+            [
+              "  Isomorphism Scanner",
+              "",
+              "",
+              "",
+              "Per-field button",
+              "\"Does this claim appear structurally in more than one domain? If yes, is the mapping an analogy (surface similarity) or isomorphism (structural identity that survives variable substitution)? Return: none, analogy, parallel, or confirmed.\"",
+              "",
+              "Targets: isomorphism_status"
+            ],
+            [
+              "Q3 — WHAT DOES IT SAY?  ·  Assertion  ·  \"Force precision. No hedging. The claim commits.\"",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Transformation: located → stated  |  Function: The claim commits to a precise assertion. Generates its own negation for Q7 kill testing.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 490
+        },
+        {
+          "title": "Disciplines",
+          "max_row": 28,
+          "max_col": 12,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "Physics",
+              "physics",
+              "quantum, molecular, cosmic, universal",
+              "causal, mechanistic, mathematical, predictive",
+              "tier_1 dominant",
+              "experimental, mathematical, observational",
+              "empirical_contradiction, logical_incoherence",
+              "axiom (mathematical axioms, conservation laws)"
+            ],
+            [
+              "Chemistry",
+              "physics",
+              "molecular, quantum",
+              "mechanistic, causal, descriptive, predictive",
+              "tier_1 dominant",
+              "experimental, mathematical, observational",
+              "empirical_contradiction",
+              "axiom (quantum mechanics, thermodynamics)"
+            ],
+            [
+              "Biology",
+              "biology",
+              "molecular, neural, individual, social",
+              "causal, mechanistic, descriptive, predictive",
+              "tier_1 to tier_2",
+              "experimental, observational, inferential",
+              "empirical_contradiction, explanatory_failure",
+              "brute_fact (evolution by natural selection)"
+            ],
+            [
+              "Neuroscience",
+              "biology",
+              "molecular, neural, individual",
+              "mechanistic, causal, descriptive",
+              "tier_1 to tier_2",
+              "experimental, observational, inferential",
+              "empirical_contradiction, explanatory_failure",
+              "brute_fact (neural correlates exist)"
+            ],
+            [
+              "Psychology",
+              "psychology",
+              "individual, social, neural",
+              "causal, descriptive, predictive",
+              "tier_2 dominant",
+              "experimental, observational, inferential",
+              "empirical_contradiction, explanatory_failure",
+              "brute_fact (behavior is measurable)"
+            ],
+            [
+              "Sociology",
+              "social",
+              "individual, social, civilizational",
+              "descriptive, causal, predictive",
+              "tier_2 to tier_3",
+              "observational, historical, inferential",
+              "empirical_contradiction, explanatory_failure",
+              "brute_fact (social structures exist and are measurable)"
+            ],
+            [
+              "Anthropology",
+              "social",
+              "individual, social, civilizational",
+              "descriptive, causal, ontological",
+              "tier_2 to tier_3",
+              "observational, historical, inferential",
+              "explanatory_failure, empirical_contradiction",
+              "brute_fact (cultural variation exists)"
+            ],
+            [
+              "Economics",
+              "social",
+              "individual, social, civilizational",
+              "predictive, causal, mathematical, normative",
+              "tier_2 to tier_3",
+              "observational, mathematical, inferential, historical",
+              "empirical_contradiction, explanatory_failure",
+              "axiom (rational agent assumptions) or brute_fact"
+            ],
+            [
+              "Mathematics",
+              "mathematics",
+              "universal (scale-independent)",
+              "mathematical, ontological, descriptive",
+              "tier_1 (proof-based)",
+              "mathematical, logical",
+              "self_refutation, logical_incoherence",
+              "axiom (ZFC, Peano, chosen axiom system)"
+            ],
+            [
+              "Computer Science",
+              "computational",
+              "individual, social, universal",
+              "mathematical, mechanistic, predictive",
+              "tier_1 (proof + experimental)",
+              "mathematical, logical, experimental",
+              "logical_incoherence, empirical_contradiction",
+              "axiom (Church-Turing thesis, complexity assumptions)"
+            ],
+            [
+              "Philosophy",
+              "philosophy",
+              "universal (scale-independent)",
+              "ontological, normative, descriptive, causal",
+              "tier_3 dominant",
+              "logical, inferential, historical",
+              "self_refutation, infinite_regress, logical_incoherence",
+              "axiom (first principles) or circularity ⚠"
+            ],
+            [
+              "Theology",
+              "theology",
+              "individual, social, cosmic, universal",
+              "ontological, normative, causal, descriptive",
+              "tier_2 to tier_3",
+              "scriptural, historical, logical, inferential, observational",
+              "self_refutation, logical_incoherence, explanatory_failure",
+              "axiom (revealed truth, first principles) or brute_fact"
+            ],
+            [
+              "Medicine",
+              "biology",
+              "molecular, neural, individual",
+              "causal, mechanistic, predictive, descriptive",
+              "tier_1 dominant (RCT gold standard)",
+              "experimental, observational, inferential",
+              "empirical_contradiction",
+              "brute_fact (biological mechanisms exist)"
+            ],
+            [
+              "Ecology",
+              "biology",
+              "individual, social, civilizational, cosmic",
+              "causal, descriptive, predictive, mechanistic",
+              "tier_2 dominant",
+              "observational, experimental, inferential",
+              "empirical_contradiction, explanatory_failure",
+              "brute_fact (ecosystems exist and interact)"
+            ],
+            [
+              "Astronomy / Cosmology",
+              "physics",
+              "cosmic, universal",
+              "causal, mechanistic, descriptive, mathematical, predictive",
+              "tier_1 to tier_2",
+              "observational, mathematical, inferential",
+              "empirical_contradiction, logical_incoherence",
+              "axiom (GR, QFT, cosmological principle)"
+            ],
+            [
+              "Linguistics",
+              "information",
+              "neural, individual, social",
+              "descriptive, mechanistic, causal, ontological",
+              "tier_2 dominant",
+              "observational, experimental, inferential",
+              "empirical_contradiction, explanatory_failure",
+              "brute_fact (language exists) or axiom (universal grammar)"
+            ],
+            [
+              "Political Science",
+              "social",
+              "individual, social, civilizational",
+              "descriptive, causal, predictive, normative",
+              "tier_2 to tier_3",
+              "observational, historical, inferential",
+              "empirical_contradiction, explanatory_failure",
+              "brute_fact (political institutions exist)"
+            ],
+            [
+              "History",
+              "social",
+              "individual, social, civilizational",
+              "descriptive, causal, ontological",
+              "tier_3 dominant",
+              "historical, inferential, observational",
+              "explanatory_failure, empirical_contradiction",
+              "brute_fact (events occurred)"
+            ],
+            [
+              "Engineering",
+              "computational",
+              "molecular, individual, social",
+              "mechanistic, predictive, mathematical, descriptive",
+              "tier_1 (performance-based)",
+              "experimental, mathematical, observational",
+              "empirical_contradiction",
+              "axiom (physics, materials science, thermodynamics)"
+            ],
+            [
+              "Consciousness Studies",
+              "consciousness",
+              "quantum, neural, individual, universal",
+              "ontological, causal, mechanistic, descriptive",
+              "tier_2 to tier_3",
+              "observational, inferential, experimental, logical",
+              "explanatory_failure, self_refutation, logical_incoherence",
+              "open ⚠ or brute_fact (the hard problem)"
+            ],
+            [
+              "DOMAIN FAMILY COLOR KEY",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "🔵 Physical Sciences",
+              "🟢 Life Sciences",
+              "🟠 Social Sciences",
+              "🟣 Formal Sciences",
+              "⬛ Humanities & Meta",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 246
+        },
+        {
+          "title": "Truth Score",
+          "max_row": 87,
+          "max_col": 11,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "7Q ENGINE — TRUTH SCORE (EMERGENT EVALUATION)",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "The user does not fill out a scoring rubric. They answer seven questions. The score falls out of the answers. Not imposed — emergent from structure.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "T = w₁·S + w₂·E + w₃·L + w₄·D + w₅·P + w₆·C     |     Normalized to 0–1     |     Weights adjustable (default: equal at 1/6 each)     |     All variables derived from fields user already filled",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "THE SIX VARIABLES — All Derived from 7Q Fields",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Variable",
+              "Source Question",
+              "What It Measures",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "S — Survivability",
+              "Q7: death_conditions + branch_status",
+              "How many kill conditions it survived. Alive vs dead vs problematic. Has it been adversarially tested?",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "E — Evidence",
+              "Q4: evidence_tier + replication + sources",
+              "Source quality, replication status, significance levels. Tier 1 replicated = maximum.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "L — Logic",
+              "Q4: evidence_type (math/logical) + Q3: precision",
+              "Internal consistency, proof strength, formal validity. Mathematical proof = maximum.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "D — Dependencies",
+              "Q5: chain_terminus + fragility",
+              "Foundation stability. Axiom terminus + survive independently = maximum. Circularity = near-zero.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "P — Predictions",
+              "Q6: predicts + untested_predictions",
+              "Does it generate correct predictions? Confirmed/total ratio. Zero predictions = inert = 0.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "C — Coherence",
+              "Q2: isomorphism_status + Q6: cross_domain_force",
+              "Cross-domain survival. ISO-confirmed across 2+ domains = maximum. Single domain = neutral.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "S — SURVIVABILITY COMPUTATION",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Condition",
+              "Score",
+              "",
+              "Condition",
+              "Score",
+              "",
+              ""
+            ],
+            [
+              "",
+              "branch_status = alive AND adversarial_tested = true",
+              "S = 1.0",
+              "",
+              "axiom + survive_independently",
+              "D = 1.0",
+              "",
+              ""
+            ],
+            [
+              "",
+              "branch_status = alive AND adversarial_tested = false",
+              "S = 0.6",
+              "",
+              "axiom + degrade_gracefully",
+              "D = 0.8",
+              "",
+              ""
+            ],
+            [
+              "",
+              "branch_status = problematic",
+              "S = 0.3",
+              "",
+              "brute_fact (any fragility)",
+              "D = 0.5",
+              "",
+              ""
+            ],
+            [
+              "",
+              "branch_status = dead",
+              "S = 0.0",
+              "",
+              "circularity ⚠",
+              "D = 0.1",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              "open ⚠ (chain doesn't terminate)",
+              "D = 0.0",
+              "",
+              ""
+            ],
+            [
+              "",
+              "E — EVIDENCE COMPUTATION",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Condition",
+              "Score",
+              "",
+              "Condition",
+              "Score",
+              "",
+              ""
+            ],
+            [
+              "",
+              "tier_1 + replicated",
+              "E = 1.0",
+              "",
+              "All predictions confirmed",
+              "P = 1.0",
+              "",
+              ""
+            ],
+            [
+              "",
+              "tier_1 + partial replication",
+              "E = 0.8",
+              "",
+              "Confirmed / total ratio (each untested = 0.5)",
+              "P = ratio",
+              "",
+              ""
+            ],
+            [
+              "",
+              "tier_2 + replicated",
+              "E = 0.7",
+              "",
+              "Zero predictions (claim is inert)",
+              "P = 0.0",
+              "",
+              ""
+            ],
+            [
+              "",
+              "tier_2 + unreplicated",
+              "E = 0.4",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "tier_3 (any replication status)",
+              "E = 0.2",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "no sources",
+              "E = 0.0",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "L — LOGIC COMPUTATION",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Condition",
+              "Score",
+              "",
+              "Condition",
+              "Score",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Has mathematical proof",
+              "L = 1.0",
+              "",
+              "ISO-confirmed across 2+ domains",
+              "C = 1.0",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Has logical proof",
+              "L = 0.8",
+              "",
+              "ISO-parallel (structural similarity, untested)",
+              "C = 0.6",
+              "",
+              ""
+            ],
+            [
+              "",
+              "Precision = mathematical or precise → add bonus",
+              "L += 0.2",
+              "",
+              "ISO-analogy (surface similarity only)",
+              "C = 0.3",
+              "",
+              ""
+            ],
+            [
+              "",
+              "No formal proof, internally consistent",
+              "L = 0.3",
+              "",
+              "Single domain, no cross-domain force",
+              "C = 0.0 (neutral)",
+              "",
+              ""
+            ],
+            [
+              "",
+              "No formal proof, incoherent",
+              "L = 0.0",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "CONFIDENCE CLASSIFICATION — Auto-derived from T",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 196
+        },
+        {
+          "title": "Enums & Dropdowns",
+          "max_row": 123,
+          "max_col": 6,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "7Q ENGINE — ENUMS & DROPDOWN VALUES (MACHINE-READABLE)",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Every enum, dropdown value, and classification used across the 7Q system. Directly exportable to TypeScript, JSON, YAML, or PostgreSQL enums for plugin development.",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Question",
+              "Field Name",
+              "Enum Value",
+              "Display Label / Description",
+              "Plugin Key",
+              "Notes"
+            ],
+            [
+              "Q1 — Identity",
+              "claim_type",
+              "descriptive",
+              "Describes what is — observations, measurements, classifications",
+              "q1.claim_type.descriptive",
+              ""
+            ],
+            [
+              "",
+              "",
+              "causal",
+              "Asserts X causes Y — mechanism may or may not be specified",
+              "q1.claim_type.causal",
+              ""
+            ],
+            [
+              "",
+              "",
+              "ontological",
+              "Claims about what exists, the nature of being or reality",
+              "q1.claim_type.ontological",
+              ""
+            ],
+            [
+              "",
+              "",
+              "mathematical",
+              "Formal proof-based — theorem, equation, derivation",
+              "q1.claim_type.mathematical",
+              ""
+            ],
+            [
+              "",
+              "",
+              "mechanistic",
+              "Explains HOW something works — the internal process",
+              "q1.claim_type.mechanistic",
+              ""
+            ],
+            [
+              "",
+              "",
+              "predictive",
+              "Forecasts future states or unobserved values",
+              "q1.claim_type.predictive",
+              ""
+            ],
+            [
+              "",
+              "",
+              "normative",
+              "Claims about what SHOULD be — ethical, prescriptive",
+              "q1.claim_type.normative",
+              ""
+            ],
+            [
+              "Q1 — Identity",
+              "tier",
+              "foundational",
+              "Axiom, postulate, or definition — the ground floor",
+              "q1.tier.foundational",
+              ""
+            ],
+            [
+              "",
+              "",
+              "derived",
+              "Theorem, corollary, or hypothesis — built from foundations",
+              "q1.tier.derived",
+              ""
+            ],
+            [
+              "",
+              "",
+              "constraint",
+              "Boundary condition — limits rather than asserts",
+              "q1.tier.constraint",
+              ""
+            ],
+            [
+              "",
+              "",
+              "support",
+              "Evidence bundle — backs another claim, not standalone",
+              "q1.tier.support",
+              ""
+            ],
+            [
+              "",
+              "",
+              "connection",
+              "Bridge or relationship — links two other claims",
+              "q1.tier.connection",
+              ""
+            ],
+            [
+              "Q2 — Domain",
+              "primary_domain",
+              "physics",
+              "Physical laws, forces, particles, fields, spacetime",
+              "q2.domain.physics",
+              ""
+            ],
+            [
+              "",
+              "",
+              "biology",
+              "Living systems, evolution, genetics, organisms",
+              "q2.domain.biology",
+              ""
+            ],
+            [
+              "",
+              "",
+              "psychology",
+              "Mind, behavior, cognition, perception",
+              "q2.domain.psychology",
+              ""
+            ],
+            [
+              "",
+              "",
+              "mathematics",
+              "Numbers, proofs, structures, formal systems",
+              "q2.domain.mathematics",
+              ""
+            ],
+            [
+              "",
+              "",
+              "philosophy",
+              "Existence, knowledge, ethics, logic, metaphysics",
+              "q2.domain.philosophy",
+              ""
+            ],
+            [
+              "",
+              "",
+              "theology",
+              "God, revelation, sacred texts, divine action",
+              "q2.domain.theology",
+              ""
+            ],
+            [
+              "",
+              "",
+              "information",
+              "Data, signals, entropy, computation, communication",
+              "q2.domain.information",
+              ""
+            ],
+            [
+              "",
+              "",
+              "social",
+              "Societies, institutions, cultures, collective behavior",
+              "q2.domain.social",
+              ""
+            ],
+            [
+              "",
+              "",
+              "computational",
+              "Algorithms, machines, complexity, artificial systems",
+              "q2.domain.computational",
+              ""
+            ],
+            [
+              "",
+              "",
+              "moral",
+              "Right/wrong, justice, virtue, ethical frameworks",
+              "q2.domain.moral",
+              ""
+            ],
+            [
+              "",
+              "",
+              "consciousness",
+              "Awareness, qualia, experience, the hard problem",
+              "q2.domain.consciousness",
+              ""
+            ],
+            [
+              "Q2 — Domain",
+              "scale",
+              "quantum",
+              "Subatomic particles, wavefunctions, Planck scale",
+              "q2.scale.quantum",
+              ""
+            ],
+            [
+              "",
+              "",
+              "molecular",
+              "Atoms, molecules, chemical reactions, proteins",
+              "q2.scale.molecular",
+              ""
+            ],
+            [
+              "",
+              "",
+              "neural",
+              "Neurons, synapses, brain circuits, neural networks",
+              "q2.scale.neural",
+              ""
+            ],
+            [
+              "",
+              "",
+              "individual",
+              "Single organism, person, agent, entity",
+              "q2.scale.individual",
+              ""
+            ],
+            [
+              "",
+              "",
+              "social",
+              "Groups, communities, organizations, networks",
+              "q2.scale.social",
+              ""
+            ],
+            [
+              "",
+              "",
+              "civilizational",
+              "Nations, cultures, historical epochs, global systems",
+              "q2.scale.civilizational",
+              ""
+            ],
+            [
+              "",
+              "",
+              "cosmic",
+              "Stars, galaxies, clusters, large-scale structure",
+              "q2.scale.cosmic",
+              ""
+            ],
+            [
+              "",
+              "",
+              "universal",
+              "The entire universe, fundamental laws, scale-independent",
+              "q2.scale.universal",
+              ""
+            ],
+            [
+              "Q2 — Domain",
+              "isomorphism_status",
+              "none",
+              "Single domain — no cross-domain mapping",
+              "q2.iso.none",
+              "Default for single-domain claims"
+            ],
+            [
+              "",
+              "",
+              "ISO-analogy",
+              "Surface similarity across domains — labels overlap but structure may not",
+              "q2.iso.analogy",
+              "Lowest cross-domain level"
+            ],
+            [
+              "",
+              "",
+              "ISO-parallel",
+              "Structural similarity across domains — untested whether structure truly matches",
+              "q2.iso.parallel",
+              "Needs testing to confirm"
+            ],
+            [
+              "",
+              "",
+              "ISO-confirmed",
+              "Structural identity confirmed — variable substitution preserves the claim",
+              "q2.iso.confirmed",
+              "Highest cross-domain status"
+            ]
+          ],
+          "non_empty_cells_capped": 395
+        },
+        {
+          "title": "Settings",
+          "max_row": 47,
+          "max_col": 13,
+          "non_empty_cells": 0,
+          "sample_rows": [
+            [
+              "7Q ENGINE — SETTINGS & DROPDOWN VALUES",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "These lists power the dropdown menus in the 7Q Engine. Each column is one dropdown field. Add values to extend the system for your discipline.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Q1: Claim Type",
+              "Q1: Tier",
+              "Q1: Relation Type",
+              "Q2: Domain",
+              "Q2: Scale",
+              "Q2: Isomorphism",
+              "Q3: Precision",
+              "Q3: Certainty"
+            ],
+            [
+              "descriptive",
+              "foundational",
+              "supports",
+              "physics",
+              "quantum",
+              "none",
+              "vague",
+              "proven"
+            ],
+            [
+              "causal",
+              "derived",
+              "contradicts",
+              "biology",
+              "molecular",
+              "ISO-analogy",
+              "basic",
+              "derived"
+            ],
+            [
+              "ontological",
+              "constraint",
+              "depends_on",
+              "psychology",
+              "neural",
+              "ISO-parallel",
+              "detailed",
+              "well_supported"
+            ],
+            [
+              "mathematical",
+              "support",
+              "equivalent_to",
+              "mathematics",
+              "individual",
+              "ISO-confirmed",
+              "mathematical",
+              "tentative"
+            ],
+            [
+              "mechanistic",
+              "connection",
+              "extends",
+              "philosophy",
+              "social",
+              "",
+              "precise",
+              "speculative"
+            ],
+            [
+              "predictive",
+              "",
+              "restricts",
+              "theology",
+              "civilizational",
+              "",
+              "",
+              "unknown"
+            ],
+            [
+              "normative",
+              "",
+              "",
+              "information",
+              "cosmic",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "social",
+              "universal",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "computational",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "moral",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "consciousness",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Q5: Fragility",
+              "Q7: Death Type",
+              "Q7: Branch Status",
+              "Q7: Proof Status",
+              "Q7: Severity",
+              "",
+              "",
+              ""
+            ],
+            [
+              "collapse_immediately",
+              "self_refutation",
+              "alive",
+              "open",
+              "fatal",
+              "",
+              "",
+              ""
+            ],
+            [
+              "degrade_gracefully",
+              "infinite_regress",
+              "dead",
+              "argued",
+              "major",
+              "",
+              "",
+              ""
+            ],
+            [
+              "survive_independently",
+              "empirical_contradiction",
+              "problematic",
+              "derived",
+              "minor",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "logical_incoherence",
+              "terminal",
+              "tested",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "explanatory_failure",
+              "untested",
+              "survived_adversary",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "EVIDENCE CLASSIFICATION PROTOCOL — Dropdown Values",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "E1: Evidence Format",
+              "E2: Epistemic Class",
+              "E2: Evidence Type",
+              "E2: Reliability",
+              "PS: Reproducibility",
+              "PS: Effect Size",
+              "PS: Measurement Quality",
+              "ED: Mechanism Clarity"
+            ],
+            [
+              "dataset",
+              "empirical",
+              "experimental",
+              "replicated",
+              "none (0.0)",
+              "noise (0.0)",
+              "inferred (0.2)",
+              "unknown (0.0)"
+            ],
+            [
+              "paper",
+              "logical",
+              "observational",
+              "single_study",
+              "single (0.3)",
+              "weak (0.3)",
+              "proxy (0.5)",
+              "speculative (0.2)"
+            ],
+            [
+              "observation",
+              "structural",
+              "statistical",
+              "anecdotal",
+              "partial (0.6)",
+              "moderate (0.6)",
+              "direct (0.8)",
+              "partial (0.5)"
+            ],
+            [
+              "proof",
+              "experiential",
+              "mathematical",
+              "simulated",
+              "replicated (0.8)",
+              "strong (0.8)",
+              "precision (1.0)",
+              "clear (0.8)"
+            ],
+            [
+              "protocol",
+              "",
+              "logical",
+              "inferred",
+              "massively_replicated (1.0)",
+              "overwhelming (1.0)",
+              "",
+              "mechanistic (1.0)"
+            ],
+            [
+              "prediction_result",
+              "",
+              "historical",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "isomorphism",
+              "",
+              "scriptural",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "testimony",
+              "",
+              "testimonial",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "synthesis",
+              "",
+              "inferential",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "isomorphic",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "non_empty_cells_capped": 217
+        }
+      ]
+    }
+  },
+  "claims": [
+    {
+      "id": "claim-1",
+      "source": "direct_input",
+      "claim_index": 1,
+      "claim_text": "Fellow-Citizens of the Senate and of the House of Representatives:  Among the vicissitudes incident to life no event could have filled me with greater anxieties than that of which the notification was transmitted by your order, and received on the 14",
+      "q0": 0.6,
+      "q1": 0.7,
+      "q2": 0.5,
+      "q3": 0.58,
+      "q4": 0.025,
+      "q5": 0.16,
+      "q6": 0.2,
+      "q7": 0.0,
+      "t_score": 0.079286,
+      "tier": "INSUFFICIENT",
+      "evidence_score": 0.025,
+      "S": 0.5,
+      "E": 0.2,
+      "L": 0.3,
+      "D": 0.3,
+      "P": 0.5,
+      "C": 0.0,
+      "truth_score": 0.3,
+      "truth_confidence": "SPECULATIVE",
+      "truth_formula_version": "7Q Baseline v1 (fixed, no external tuning)",
+      "truth_weighted_sum": 1.8,
+      "truth_component_disagreement": 0.173205,
+      "truth_component_agreement": 0.826795,
+      "truth_component_breakdown": {
+        "S": {
+          "value": 0.5,
+          "weight": 1.0,
+          "reason": "Branch 'open' uses fallback baseline"
+        },
+        "E": {
+          "value": 0.2,
+          "weight": 1.0,
+          "reason": "Tier-3 baseline evidence"
+        },
+        "L": {
+          "value": 0.3,
+          "weight": 1.0,
+          "reason": "Precision is 'basic'"
+        },
+        "D": {
+          "value": 0.3,
+          "weight": 1.0,
+          "reason": "Dependency path fallback for terminus 'theoretical'"
+        },
+        "P": {
+          "value": 0.5,
+          "weight": 1.0,
+          "reason": "Predictions: confirmed=0, untested=1, failed=0, total=1",
+          "coverage": 1.0
+        },
+        "C": {
+          "value": 0.0,
+          "weight": 1.0,
+          "reason": "ISO status 'NONE'"
+        }
+      },
+      "chi_enabled": true,
+      "chi_static": 0.0,
+      "chi_gradient": -0.139139,
+      "chi_log_gradient": 0.0,
+      "chi_direction": "negative",
+      "chi_verdict": "fragile",
+      "fruit_score": 0.427025,
+      "fruit_bias_strength": -0.072975,
+      "fruit_dominant_fruits": "",
+      "fruit_dominant_antifruits": "",
+      "fruit_notes": "anti-Fruit: mean 0.427",
+      "weakest_channels": "G,M,R",
+      "strongest_channels": "S_eff,K,E",
+      "zero_channels": "",
+      "chi_effective_mean": 0.155,
+      "chi_effective_std": 0.076026,
+      "chi_pos_mean": 0.155,
+      "chi_neg_mean": 0.0,
+      "chi_confidence_mean": 0.5945,
+      "chi_channel_agreement": 0.923974,
+      "claims_timestamp": "2026-06-18T11:01:04Z",
+      "flags": "why_penalty|no_lived|unfalsifiable",
+      "errors": "",
+      "warnings": "",
+      "channel_trace": {
+        "per_channel": {
+          "G": {
+            "name": "External input / dependency honesty",
+            "v_pos": 0.1,
+            "v_neg": 0.0,
+            "effective_score": 0.1,
+            "confidence": 0.55,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Add explicit external references, datasets, and known counterexamples.",
+            "reasoning": "credits/penalizes dependence openness; v_pos=0.100, v_neg=0.000, eff=0.100; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=1.00 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "M": {
+            "name": "Alignment / reference standard",
+            "v_pos": 0.12,
+            "v_neg": 0.0,
+            "effective_score": 0.12,
+            "confidence": 0.55,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Anchor to a clear external standard instead of self-declared verification.",
+            "reasoning": "external alignment against internal circularity; v_pos=0.120, v_neg=0.000, eff=0.120; pressure=compression pos_factor=0.98 neg_factor=1.00; pressure=strongest_objection pos_factor=1.00 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "E": {
+            "name": "Truth / signal fidelity",
+            "v_pos": 0.155,
+            "v_neg": 0.0,
+            "effective_score": 0.155,
+            "confidence": 0.595,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Separate claims from interpretations; define falsifiable observables.",
+            "reasoning": "signal clarity and anti-ambiguity checks; v_pos=0.155, v_neg=0.000, eff=0.155; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=0.80 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "S_eff": {
+            "name": "Entropy / disorder cost",
+            "v_pos": 0.375,
+            "v_neg": 0.0,
+            "effective_score": 0.375,
+            "confidence": 0.75,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Resolve contradictions and tighten exception handling.",
+            "reasoning": "tracks contradiction density and ordering pressure; v_pos=0.375, v_neg=0.000, eff=0.375; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=0.75 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "T": {
+            "name": "Temporal persistence",
+            "v_pos": 0.15,
+            "v_neg": 0.0,
+            "effective_score": 0.15,
+            "confidence": 0.55,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Show persistence when urgency and recency cues are removed.",
+            "reasoning": "checks dependence on urgency/recency; v_pos=0.150, v_neg=0.000, eff=0.150; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=1.00 neg_factor=1.00; pressure=time pos_factor=1.08 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "K": {
+            "name": "Compression / wisdom density",
+            "v_pos": 0.17,
+            "v_neg": 0.0,
+            "effective_score": 0.17,
+            "confidence": 0.75,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Attempt one-sentence compression; preserve meaning under compression.",
+            "reasoning": "compressibility with low explanatory loss; v_pos=0.170, v_neg=0.000, eff=0.170; pressure=compression pos_factor=1.00 neg_factor=1.10; pressure=strongest_objection pos_factor=1.00 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "R": {
+            "name": "Phase transition / justified regime change",
+            "v_pos": 0.12,
+            "v_neg": 0.0,
+            "effective_score": 0.12,
+            "confidence": 0.55,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Justify regime change with explicit failure of the old frame.",
+            "reasoning": "justified transition vs abrupt rupture; v_pos=0.120, v_neg=0.000, eff=0.120; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=1.00 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "Q": {
+            "name": "Free will / invitation vs coercion",
+            "v_pos": 0.12,
+            "v_neg": 0.0,
+            "effective_score": 0.12,
+            "confidence": 0.55,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Remove coercive framing; invite audits, objections, and revision.",
+            "reasoning": "measures invitation to dissent and freedom under pressure; v_pos=0.120, v_neg=0.000, eff=0.120; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=0.58 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=0.90 neg_factor=1.00"
+          },
+          "F": {
+            "name": "Cross-context binding",
+            "v_pos": 0.12,
+            "v_neg": 0.0,
+            "effective_score": 0.12,
+            "confidence": 0.55,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Test claim in multiple domains and communities.",
+            "reasoning": "cross-context survivability check; v_pos=0.120, v_neg=0.000, eff=0.120; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=1.00 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=1.00 neg_factor=1.00; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          },
+          "C": {
+            "name": "Integration / whole-system coherence",
+            "v_pos": 0.12,
+            "v_neg": 0.0,
+            "effective_score": 0.12,
+            "confidence": 0.55,
+            "gradient": 0.0,
+            "failure_mode": "",
+            "repair_path": "Integrate missing edge-case constraints and avoid strategic exclusions.",
+            "reasoning": "whole-system consistency vs selective consistency; v_pos=0.120, v_neg=0.000, eff=0.120; pressure=compression pos_factor=1.00 neg_factor=1.00; pressure=strongest_objection pos_factor=1.00 neg_factor=1.00; pressure=time pos_factor=1.00 neg_factor=1.00; pressure=translation pos_factor=1.00 neg_factor=1.00; pressure=evidence pos_factor=1.00 neg_factor=1.00; pressure=implementation pos_factor=0.95 neg_factor=1.08; pressure=fruit pos_factor=1.00 neg_factor=1.00; pressure=falsification pos_factor=1.00 neg_factor=1.00"
+          }
+        }
+      },
+      "pressure_count": 9,
+      "claim_heading": "Claim 1",
+      "claim_text_snippet": "Fellow-Citizens of the Senate and of the House of Representatives:  Among the vicissitudes incident to life no event could have filled me with greater anxieties than that of which the notification was transmitted by your order, and received on the 14"
+    }
+  ]
+}

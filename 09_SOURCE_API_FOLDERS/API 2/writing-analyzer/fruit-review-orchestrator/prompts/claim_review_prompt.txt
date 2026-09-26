@@ -1,0 +1,35 @@
+You are reviewing one claim from a structured coherence+7Q packet.
+
+Use only the packet values provided below. You are not allowed to use the original Python formulas or hidden scoring rules.
+
+Input packet:
+```
+{{packet_json}}
+```
+
+Your task:
+1. Choose a coherence score from 1.0 to 10.0.
+2. Choose a fruit-bias score from -1.0 (strong anti-fruit risk) to +1.0 (strong fruit coherence).
+3. Choose a confidence score from 0.0 to 1.0.
+4. Return a final label from: coherent | borderline | incoherent | fragile | unclear.
+
+Rules:
+- Weight evidence you see in the packet over your intuition.
+- Explain in 3–7 short bullet points why you picked that rating.
+- Include one sentence about the #1 strongest risk and one sentence about the #1 strongest strength.
+- Do not reveal hidden equations or the exact scoring formula.
+- Keep the structure exactly as valid JSON:
+
+{
+  "coherence_score": <float>,
+  "fruit_bias_score": <float>,
+  "confidence": <float>,
+  "label": "<coherent|borderline|incoherent|fragile|unclear>",
+  "rationale": [
+    "...",
+    "..."
+  ],
+  "dominant_signal": "<word>",
+  "dominant_risk": "<word>"
+}
+

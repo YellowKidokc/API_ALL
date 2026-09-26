@@ -1,0 +1,41 @@
+# ============================================================
+#  DeepSeek API Configuration
+# ============================================================
+#  COPY this file to  config.txt  and paste your real key below.
+#  Get one at: https://platform.deepseek.com/api_keys
+# ============================================================
+
+DEEPSEEK_API_KEY=sk-PASTE-YOUR-KEY-HERE
+
+# ============================================================
+#  Model Selection
+# ============================================================
+#  Options:  deepseek-chat  |  deepseek-reasoner
+#  deepseek-chat   = DeepSeek-V3  (fast, cheap, great all-rounder)
+#  deepseek-reasoner = DeepSeek-R1  (slow, deep chain-of-thought reasoning)
+# ============================================================
+
+MODEL=deepseek-chat
+
+# ============================================================
+#  Max Tokens for the response (higher = longer answers, more cost)
+#  Set to 0 for the model's default maximum.
+# ============================================================
+
+MAX_TOKENS=4096
+
+# ============================================================
+#  Temperature  (0.0 = deterministic, 1.0 = creative, 2.0 = wild)
+# ============================================================
+
+TEMPERATURE=0.7
+
+# ============================================================
+#  Vector Search (RAG)  —  requires running VECTORIZE.bat first
+#  Set USE_VECTORDB=true to search your local ChromaDB and
+#  automatically inject relevant chunks into the prompt.
+# ============================================================
+
+USE_VECTORDB=false
+COLLECTION_NAME=my_docs
+TOP_K=5

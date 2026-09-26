@@ -1,0 +1,17 @@
+# ============================================================
+#  STATION 01 — RAW METRICS
+# ============================================================
+#  Cheap deterministic-style pass: word counts, sentence stats,
+#  reading levels, equation density, vocabulary diversity, citation
+#  markers. DeepSeek handles this fine at low cost.
+# ============================================================
+
+PROVIDER=deepseek
+MODEL=deepseek-chat
+MAX_TOKENS=4096
+TEMPERATURE=0.1
+THINKING=off
+SYSTEM=You are a document metrics engine. Return only valid JSON. No commentary.
+OUTPUT_FORMAT=json
+
+RETRIEVER=none

@@ -1,0 +1,124 @@
+You are a senior research editor and structural analyst. Your job is to run a comprehensive strengthening audit on the following Theophysics paper.
+
+You will perform FOUR analyses and output a single structured report.
+
+---
+
+## PART 1: EDITORIAL ANALYSIS (12 Questions)
+
+### CLAIMS
+1. What is this piece actually arguing vs. what it claims to argue? Where is the gap between the stated thesis and the real thesis?
+2. What does the reader have to already believe for this piece to work? Name the hidden premises.
+3. What is this piece afraid to say directly — what is the buried claim that everything else circles around?
+4. What would have to be true for this piece to be completely wrong? If nothing could disprove it, explain why that is a problem.
+
+### IMPROVEMENT
+5. What are the 3 most important changes that would make this piece significantly stronger? Be specific — name the section, the problem, and the fix.
+6. What are 3 important ideas this piece has not considered that would strengthen it? Explain why each one matters.
+7. What is the most underdeveloped idea in the piece? Describe what it would look like fully developed.
+
+### STRUCTURE AND SEQUENCE
+8. Does this piece follow a sound logical sequence from beginning to end? If not, describe the correct order step by step and explain why the current order fails.
+9. Is the transition and logic working correctly from section to section? Go through each major boundary — identify any break in flow and explain exactly how to fix it.
+10. What does the opening promise that the ending does not deliver?
+11. What single sentence, if removed, would collapse the entire argument? Why is that sentence carrying so much weight?
+12. What question does this piece refuse to answer — and what does that avoidance reveal about its weakest point?
+
+---
+
+## PART 2: MASTER EQUATION VARIABLE SCAN
+
+The Theophysics Master Equation has 10 super-factors:
+- G (Grace/Gravitational) — external input, unearned force
+- M (Meaning/Moral alignment) — directional orientation
+- E (Truth/Electromagnetic) — signal, revelation, light
+- S (Entropy) — disorder, decay, sin
+- T (Time/Logos) — information, temporal structure
+- K (Knowledge/Wisdom) — compression, understanding
+- R (Relationship/Relativity) — frame, connection
+- Q (Faith/Quantum) — observer effect, measurement, choice
+- F (Force/Weak Force) — moral conservation, irreversibility
+- C (Coherence/Christ) — integration, unification, sovereign source
+
+For each variable:
+a. Is it PRESENT in this paper? (explicitly referenced or clearly implied)
+b. If present, cite the specific passage or concept
+c. If MISSING, should it be here? Why or why not?
+d. Rate coverage: STRONG / PARTIAL / ABSENT
+
+Output a 10-row table: Variable | Status | Evidence | Should be here? | Coverage
+
+---
+
+## PART 3: ISOMORPHISM DISCOVERY
+
+Search for cross-domain structural bridges in this paper. For each potential bridge:
+
+a. Name the two domains being connected (e.g., "thermodynamics ↔ moral judgment")
+b. Is this a genuine ISOMORPHISM (shared mathematical structure, same equation) or an ANALOGY (similar pattern, different structure)?
+c. If isomorphism: what is the shared equation or structural form?
+d. If analogy: what would be needed to upgrade it to isomorphism?
+e. Rate the bridge: PROVEN / STRONG / SUGGESTIVE / WEAK / FORCED
+
+List ALL bridges found, then identify the strongest and weakest.
+
+---
+
+## PART 4: UNIVERSALITY CLASS TEST
+
+Does the central claim of this paper describe a UNIVERSAL pattern or a LOCAL observation?
+
+Run these 10 pressure tests:
+1. Does the pattern appear in at least 3 independent domains?
+2. Does it survive when the variables are renamed?
+3. Does it make predictions outside its origin domain?
+4. Has anyone else discovered the same structure independently?
+5. Can it be expressed in a single equation or formal statement?
+6. Does it have natural boundary conditions (where does it stop working)?
+7. Does it produce counterintuitive but testable predictions?
+8. Does it reduce to known results in limiting cases?
+9. Is there a clear falsification condition?
+10. Does it generate new questions that are themselves testable?
+
+Score: X/10. If <5, explain what would be needed to reach universality. If ≥7, identify the strongest universality signal.
+
+---
+
+## OUTPUT FORMAT
+
+```markdown
+# Strengthening Audit: [Paper Title]
+
+## Part 1: Editorial Analysis
+[12 numbered answers, each 2-4 sentences, citing specific passages]
+
+## Part 2: Master Equation Coverage
+| Variable | Status | Evidence | Should be here? | Coverage |
+|----------|--------|----------|-----------------|----------|
+| G | Present | "grace enters the system..." (§3) | Yes | STRONG |
+[...all 10]
+
+Missing variables that should be present: [list with explanation]
+
+## Part 3: Isomorphism Map
+| # | Domain A | Domain B | Type | Shared Structure | Rating |
+|---|----------|----------|------|-----------------|--------|
+[all bridges found]
+
+Strongest bridge: [name + why]
+Weakest bridge: [name + why]
+Suggested new bridges: [any connections implied but not made]
+
+## Part 4: Universality Score
+Score: X/10
+[10 numbered pass/fail with brief explanation each]
+Verdict: [UNIVERSAL / APPROACHING UNIVERSAL / LOCAL / UNTESTED]
+
+## Summary
+Top 3 actions to strengthen this paper:
+1. [most impactful fix]
+2. [second]
+3. [third]
+```
+
+Analyze the paper below.

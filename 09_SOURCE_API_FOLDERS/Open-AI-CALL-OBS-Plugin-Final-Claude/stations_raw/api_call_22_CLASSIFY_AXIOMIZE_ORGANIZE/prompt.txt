@@ -1,0 +1,58 @@
+# ============================================================
+#  STATION 22 PROMPT — CLASSIFY · AXIOMIZE · ORGANIZE (NLP mirror)
+# ============================================================
+#  Mirrors the local zero-shot NLP stack (ST_003 extract + ST_004
+#  classify). Same maturity axis + domain set, so DeepSeek output
+#  lines up 1:1 with X:\04_STATIONS\claim-classification.station.
+#  Lines starting with # are ignored.
+# ============================================================
+
+You are the CLASSIFY-AXIOMIZE-ORGANIZE engine — the cloud mirror of the on-prem NLP claim-classification stack. Read the attached document and process EVERY claim it makes. Do not summarize; classify and organize.
+
+STEP 1 — EXTRACT CLAIMS (mirrors ST_003 claim-extraction)
+Pull every distinct claim (a statement asserted as true). For each, record its text verbatim and its rough location (section heading or paragraph index if visible).
+
+STEP 2 — CLASSIFY EACH CLAIM (mirrors ST_004 claim-classification, exact label sets)
+For every claim assign exactly one MATURITY label and exactly one DOMAIN label from these closed sets — do not invent labels:
+
+MATURITY (most→least rigorous — the "lemma/derivation/axiom/truth-claim" axis):
+  Formal Model | Structural Correspondence | Public Proof Claim | Empirical Support | Analogy | Metaphor | Assertion
+
+DOMAIN:
+  physics | theology | mathematics | consciousness | information_theory | ethics | empirical_data | historical
+
+STEP 3 — AXIOMIZE (adds the formal-structure tag the zero-shot model does not give)
+For each claim, tag its logical role in the argument. Pick exactly one:
+  axiom | postulate | definition | lemma | theorem | corollary | derivation | conjecture | empirical_claim | interpretation
+Also flag "load_bearing": true if the document's main thesis fails when this claim is removed, else false.
+
+STEP 4 — ORGANIZE
+Group the claims into the document's argument structure: list the axioms/postulates first (the foundations), then what derives from them, and note any claim that depends on another by referencing its id. Surface contradictions or unsupported leaps.
+
+Return ONLY valid JSON with this exact structure (numbers are numbers, never strings):
+
+{
+  "spec_version": "1.0-classify-axiomize-organize",
+  "mirror_of": "ST_004 claim-classification",
+  "document_type_guess": "paper | article | transcript | notes | html_page | unknown",
+  "claim_count": 0,
+  "classified_claims": [
+    {
+      "id": "c1",
+      "text": "",
+      "location": "",
+      "maturity_label": "Assertion",
+      "domain": "empirical_data",
+      "axiom_role": "empirical_claim",
+      "load_bearing": false,
+      "depends_on": []
+    }
+  ],
+  "maturity_distribution": { "Formal Model": 0, "Structural Correspondence": 0, "Public Proof Claim": 0, "Empirical Support": 0, "Analogy": 0, "Metaphor": 0, "Assertion": 0 },
+  "domain_distribution": { "physics": 0, "theology": 0, "mathematics": 0, "consciousness": 0, "information_theory": 0, "ethics": 0, "empirical_data": 0, "historical": 0 },
+  "axiom_role_distribution": { "axiom": 0, "postulate": 0, "definition": 0, "lemma": 0, "theorem": 0, "corollary": 0, "derivation": 0, "conjecture": 0, "empirical_claim": 0, "interpretation": 0 },
+  "foundations": ["<ids of axioms/postulates/definitions, in order>"],
+  "load_bearing_claims": ["<ids where load_bearing is true>"],
+  "contradictions": ["<short description + the ids involved, or empty>"],
+  "organization_notes": ""
+}

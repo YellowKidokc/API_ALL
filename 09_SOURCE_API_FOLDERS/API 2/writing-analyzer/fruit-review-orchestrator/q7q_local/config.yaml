@@ -1,0 +1,17 @@
+system_id: "7Q_ENGINE"
+system_name: "Seven Questions System"
+system_version: "2.0.0-minimal"
+default_model: "gpt-4o-mini"
+max_chars: 12000
+input_extensions:
+  - ".md"
+  - ".txt"
+  - ".json"
+  - ".yaml"
+  - ".html"
+default_mode: "forward"
+why_penalty_threshold: 0.3
+evidence_tier_weights:
+  tier_1: 1.0
+  tier_2: 0.6
+  tier_3: 0.2

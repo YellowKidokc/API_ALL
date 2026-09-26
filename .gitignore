@@ -4,3 +4,7 @@ __pycache__/
 *.local.*
 keys.local.json
 config/paths.json
+
+# real keys live here locally; never commit
+09_SOURCE_API_FOLDERS/API 2/writing-analyzer/config.txt
+**/writing-analyzer/config.txt

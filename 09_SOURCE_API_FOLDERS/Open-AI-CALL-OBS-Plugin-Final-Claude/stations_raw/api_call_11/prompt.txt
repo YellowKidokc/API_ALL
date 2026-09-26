@@ -1,0 +1,66 @@
+Classify the attached document into domain percentages.
+
+DOMAINS (use these exact keys):
+- physics: quantum mechanics, field theory, entropy, thermodynamics, relativity, gravity, cosmology, Maxwell, measurement
+- theology: God, Christ, Spirit, grace, sin, salvation, cross, resurrection, Trinity, Logos, Scripture
+- epistemology: truth, knowledge, axioms, foundations, method, falsifiability, prediction, evidence
+- morality: good, evil, justice, moral reasoning, virtue, accountability, obligation
+- consciousness: observer, experience, qualia, mind, cognition, subjective perception
+- information_theory: information, signal, noise, channel, Shannon, compression, encoding, fidelity
+- history: historical records, documents, dating, transmission, events, timelines
+- psychology: behavior, addiction, habit, willpower, emotion, anxiety, identity, trauma
+- sociology: society, institutions, civilization, culture, community, collapse, family
+- formal_math: equations, theorems, proofs, operators, Lean 4, variables, models, derivations
+
+RULES:
+1. Percentages MUST sum to exactly 100
+2. Include ONLY domains with >= 3% presence
+3. Round to whole numbers
+4. If a domain has less than 3%, redistribute its share proportionally among included domains
+5. A document can span 2-7 domains typically
+6. The largest domain should reflect the PRIMARY subject matter
+
+Also classify by the Ten Laws (which Laws are most active):
+- L01_Gravity_Grace
+- L02_Motion_Will
+- L03_EM_Truth
+- L04_Strong_Love
+- L05_Thermo_Justice
+- L06_Info_Logos
+- L07_Quantum_Faith
+- L08_Relativity_Grace
+- L09_Weak_Conservation
+- L10_Coherence_Christ
+
+Return JSON:
+{
+  "domains": {
+    "physics": <int>,
+    "theology": <int>,
+    ...
+  },
+  "domains_total": 100,
+  "primary_domain": "...",
+  "secondary_domain": "...",
+  "domain_count": <int>,
+  "laws_active": [
+    {"law": "L01_Gravity_Grace", "strength": "strong | moderate | weak", "regime": "constructive | destructive | mixed"}
+  ],
+  "primary_law": "...",
+  "classification_bar_css": "linear-gradient(to right, #color1 0% X%, #color2 X% Y%, ...)",
+  "article_id": "<extracted from filename or content>"
+}
+
+COLOR MAP for classification bar CSS:
+- physics: #4A90D9 (blue)
+- theology: #D4A843 (gold)
+- epistemology: #7B68EE (purple)
+- morality: #E8553D (red-orange)
+- consciousness: #50C878 (emerald)
+- information_theory: #20B2AA (teal)
+- history: #CD853F (tan)
+- psychology: #DA70D6 (orchid)
+- sociology: #FF6347 (tomato)
+- formal_math: #708090 (slate)
+
+Return ONLY valid JSON. No markdown fences.

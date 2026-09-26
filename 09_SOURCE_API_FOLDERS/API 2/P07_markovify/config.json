@@ -1,0 +1,13 @@
+{
+  "model": "markovify_slug",
+  "version": "1.0",
+  "library": "markovify",
+  "library_version": "0.9.4",
+  "purpose": "Markov chain text prediction for file slug generation",
+  "corpus_file": "approved_slugs.jsonl",
+  "min_corpus_size": 20,
+  "created": "2026-06-03",
+  "status": "initialized",
+  "corpus_entries": 0,
+  "notes": "Corpus grows with every approved rename. After 20 entries, Markovify can predict slugs. Each line is a JSON object with: name, domain, reward, timestamp."
+}

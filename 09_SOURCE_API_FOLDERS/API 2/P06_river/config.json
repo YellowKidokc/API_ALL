@@ -1,0 +1,12 @@
+{
+  "model": "river_naming",
+  "version": "1.0",
+  "library": "river",
+  "library_version": "0.21.2",
+  "purpose": "Online learning for file naming preferences",
+  "state_file": "river_naming_state.pkl",
+  "created": "2026-06-03",
+  "status": "initialized",
+  "events_seen": 0,
+  "notes": "State file created automatically on first learn event. River builds weights incrementally from every approve/reject signal through FIS on port 8420."
+}

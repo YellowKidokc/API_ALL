@@ -1,0 +1,12 @@
+{
+  "model": "portable_preference_kernel",
+  "version": "1.0",
+  "purpose": "Portable compressed preference weights — copy to any machine",
+  "naming_ppk_file": "naming_ppk.json",
+  "station_ppk_file": "portable_preference_kernel.json",
+  "created": "2026-06-03",
+  "status": "initialized",
+  "naming_events": 0,
+  "station_events": 0,
+  "notes": "Two PPK outputs live here: naming_ppk.json (exported from River Model 18 every 50 naming events) and portable_preference_kernel.json (station routing, built by fis_addons/portable_preference_kernel.py). Both are tiny JSON files. Copy them to any machine."
+}

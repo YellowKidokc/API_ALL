@@ -1,0 +1,35 @@
+=== Batch Rewrite — 2026-06-23T23:40:53.867030 ===
+OK  easy consciousness-chi-field-action.canonical.md in=7923 out=7689
+OK  easy consciousness-coherence-bridge.canonical.md in=4873 out=4383
+OK  easy consciousness-constraint-argument.canonical.md in=6825 out=6265
+OK  easy consciousness-evidence-predictions.canonical.md in=3365 out=2670
+OK  easy consciousness-free-will-evil.canonical.md in=7743 out=6968
+OK  easy consciousness-grace-source-term.canonical.md in=9090 out=8192
+OK  easy consciousness-ontological-taxonomy.canonical.md in=3630 out=3110
+OK  easy consciousness-parallel-laws.canonical.md in=3806 out=3325
+OK  easy consciousness-reality-assessment.canonical.md in=6372 out=6329
+OK  easy consciousness-scientific-convergence.canonical.md in=7838 out=5265
+OK  easy index.canonical.md in=1628 out=890
+OK  academic consciousness-chi-field-action.canonical.md in=7101 out=6999
+OK  academic consciousness-coherence-bridge.canonical.md in=4051 out=4172
+OK  academic consciousness-constraint-argument.canonical.md in=6003 out=6746
+OK  academic consciousness-evidence-predictions.canonical.md in=2543 out=3716
+OK  academic consciousness-free-will-evil.canonical.md in=6921 out=7610
+OK  academic consciousness-grace-source-term.canonical.md in=8268 out=8192
+OK  academic consciousness-ontological-taxonomy.canonical.md in=2808 out=5350
+OK  academic consciousness-parallel-laws.canonical.md in=2984 out=4066
+OK  academic consciousness-reality-assessment.canonical.md in=5550 out=6291
+OK  academic consciousness-scientific-convergence.canonical.md in=7016 out=8105
+OK  academic index.canonical.md in=806 out=3214
+
+============================================================
+BATCH REWRITE SUMMARY
+============================================================
+Succeeded:        22
+Failed:           0
+Total input tok:  117,144
+Total output tok: 119,547
+Total cost:       $0.1631
+Easy output:      \\192.168.2.50\brain\06_ENGINES\writing-analyzer\Easy Academic Layer\Deep Seek Call\outbox\easy
+Academic output:  \\192.168.2.50\brain\06_ENGINES\writing-analyzer\Easy Academic Layer\Deep Seek Call\outbox\academic
+============================================================

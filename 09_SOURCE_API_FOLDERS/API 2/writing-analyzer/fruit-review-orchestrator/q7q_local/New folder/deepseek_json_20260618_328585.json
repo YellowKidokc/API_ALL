@@ -1,0 +1,40 @@
+{
+  "document_score": {
+    "χ": 0.342,
+    "truth_score_T": 0.742,
+    "confidence_label": "WELL SUPPORTED",
+    "gradient_direction": "positive",
+    "S": 0.8,
+    "E": 0.7,
+    "L": 0.9,
+    "D": 0.6,
+    "P": 0.5,
+    "C": 0.8,
+    "channel_scores": {
+      "G": 0.45,
+      "M": 0.32,
+      "E": 0.51,
+      "S": 0.28,
+      "T": 0.43,
+      "K": 0.52,
+      "R": 0.30,
+      "Q": 0.18,
+      "F": 0.47,
+      "C": 0.36
+    },
+    "dominant_law": "Gravity ↔ Grace",
+    "weakest_channel": "Q (Free Will / Observer)",
+    "strongest_channel": "K (Knowledge / Logos)",
+    "sentence_count": 14
+  },
+  "sentence_breakdown": [
+    {
+      "sentence": "This is a sample claim...",
+      "fruit": 0.32,
+      "anti_fruit": 0.05,
+      "grounding": 0.78,
+      ...
+    },
+    ...
+  ]
+}
