@@ -1,0 +1,8 @@
+{
+  "_note": "A layer is a named bundle of focus numbers. Pick a layer by its letter in the focus menu (e.g. 'C 7'). Edit freely.",
+  "A": {"title": "Arguments (CKG)", "focus": [2, 8, 9, 16], "ask": ""},
+  "C": {"title": "Christianity / teaching", "focus": [5, 6, 14, 16], "ask": ""},
+  "S": {"title": "Science and Theophysics", "focus": [3, 7, 12, 13], "ask": ""},
+  "W": {"title": "One-world / conspiracy claims", "focus": [17, 7, 10, 15], "ask": ""},
+  "K": {"title": "Content and clips", "focus": [1, 4, 5], "ask": ""}
+}

@@ -1,0 +1,4983 @@
+{
+  "schema_version": "paper-metric-inventory/1.0",
+  "root": "X:\\Python API",
+  "source_script_count": 114,
+  "focused_scripts": 36,
+  "groups": [
+    {
+      "folder": "text_and_readability",
+      "scripts": [
+        {
+          "script": "text_analyzer.py",
+          "sha256": "989606cb991c6d613eb7e2202ff58217622259c38e72c7c8621c58a887ea84ce",
+          "api_analyzer": "text-statistics",
+          "execution_state": "WIRED",
+          "questions": [
+            "How many words, paragraphs, keywords, and reading-grade estimates does the paper have?"
+          ],
+          "declared_field_candidates": [
+            "automated_readability",
+            "avg_paragraph_words",
+            "coleman_liau",
+            "dale_chall",
+            "flesch_kincaid_grade",
+            "flesch_reading_ease",
+            "gunning_fog",
+            "header_count",
+            "keybert_keywords",
+            "lexicon_count",
+            "paragraph_count",
+            "reading_time_min",
+            "sentence_count",
+            "smog_index",
+            "syllable_count",
+            "text_standard",
+            "top_bigrams",
+            "top_trigrams",
+            "unique_word_count",
+            "vocab_richness",
+            "word_count",
+            "yake_keywords"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "linguistic_analyzer.py",
+          "sha256": "4fc81615e3f5ab4076f384e28f6b57e0017f0a8d224f7bbd5d18421fec7916e7",
+          "api_analyzer": "linguistic-depth",
+          "execution_state": "WIRED",
+          "questions": [
+            "How complex are the sentences, vocabulary, and syntax?"
+          ],
+          "declared_field_candidates": [
+            "lr_cttr",
+            "lr_error",
+            "lr_hdd",
+            "lr_mattr",
+            "lr_mtld",
+            "lr_rttr",
+            "lr_terms",
+            "lr_ttr",
+            "lr_words",
+            "textdescriptives_status"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "idea_density_analyzer.py",
+          "sha256": "f7a16b58d407039c7e7d3c5a60ad80cb49dabde7fd9f18cbc16446038b22cf7c",
+          "api_analyzer": "idea-density",
+          "execution_state": "WIRED",
+          "questions": [
+            "What is the text's estimated idea density?"
+          ],
+          "declared_field_candidates": [
+            "idea_density_error",
+            "idea_density_level",
+            "idea_density_max",
+            "idea_density_mean",
+            "idea_density_min",
+            "idea_density_status",
+            "idea_density_std",
+            "idea_paragraphs_analyzed",
+            "idea_total_propositions"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "paper_analyzer.py",
+          "sha256": "917bfa596dd041b438df1660c2f0d18bcf61185e8a27acc4b3b1b387e7b13084",
+          "api_analyzer": "paper-structure",
+          "execution_state": "WIRED",
+          "questions": [
+            "What are the paper's structural, grammatical, argument, flow, and link metrics?"
+          ],
+          "declared_field_candidates": [
+            "adj_pct",
+            "adv_pct",
+            "argument_grade",
+            "assertive_verb_count",
+            "avg_dependency_depth",
+            "avg_sentences_per_paragraph",
+            "avg_words_per_sentence",
+            "claim_count",
+            "claim_density_per1k",
+            "cognitive_load",
+            "cognitive_load_error",
+            "coherence_flag",
+            "compression_ratio",
+            "cross_domain_bridges",
+            "density_label",
+            "evidence_count",
+            "evidence_density_per1k",
+            "evidence_to_claim_ratio",
+            "external_links",
+            "falsifiability_markers",
+            "flesch_kincaid_grade",
+            "flow_label",
+            "fluff_flag",
+            "gunning_fog",
+            "header_count",
+            "internal_external_ratio",
+            "internal_links",
+            "link_citation",
+            "link_concept",
+            "link_density_per1k",
+            "link_dependency",
+            "link_evidence",
+            "link_navigation",
+            "link_quality_score",
+            "max_dependency_depth",
+            "modal_verb_count",
+            "modal_vs_assertive_ratio",
+            "noun_pct",
+            "overlink_flag",
+            "paragraph_count",
+            "passive_pct",
+            "passive_voice_count",
+            "pos_note",
+            "prep_pct",
+            "readability_note",
+            "reading_time_min",
+            "semantic_error",
+            "semantic_note",
+            "sentence_count",
+            "signal_noise_ratio",
+            "smog_index",
+            "stopword_ratio",
+            "text_standard",
+            "topic_drift_avg",
+            "topic_drift_max",
+            "topic_drift_scores",
+            "total_links",
+            "transition_count",
+            "transition_density_pct",
+            "trigram_redundancy",
+            "ttr",
+            "underlink_flag",
+            "unique_word_count",
+            "verb_pct",
+            "weight_signal",
+            "word_count"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "nlp_analyzer.py",
+          "sha256": "26881e734446fc260dbf39b6321d84485aaff361399de2fc8555440c86c7563e",
+          "api_analyzer": "nlp-deep",
+          "execution_state": "WIRED",
+          "questions": [
+            "Which entities, topics, and key sentences are detected?"
+          ],
+          "declared_field_candidates": [
+            "entity_concepts",
+            "entity_count",
+            "entity_orgs",
+            "entity_people",
+            "entity_types_found",
+            "topic_count"
+          ],
+          "schema_fields": []
+        }
+      ]
+    },
+    {
+      "folder": "academic_claims_evidence",
+      "scripts": [
+        {
+          "script": "academic_scorer.py",
+          "sha256": "5bc5215e1db7ef3d79abc5d8b6963ce62e454a62e2ee2a0f06bdb4431b3dae7c",
+          "api_analyzer": "academic-markers",
+          "execution_state": "WIRED",
+          "questions": [
+            "What academic claims, citations, and overstatements does the paper contain?"
+          ],
+          "declared_field_candidates": [
+            "absolute_claim_count",
+            "absolute_density_per1k",
+            "academic_grade",
+            "academic_rubric_grade",
+            "academic_rubric_total",
+            "academic_signal_count",
+            "academic_signal_density",
+            "author_year_citation_count",
+            "citation_count",
+            "citation_density_per1k",
+            "claim_candidate_1",
+            "claim_candidate_2",
+            "claim_candidate_3",
+            "claim_density_per1k",
+            "claim_marker_count",
+            "counterargument_count",
+            "definition_marker_count",
+            "doi_references",
+            "equation_count",
+            "equation_density_per1k",
+            "evidence_candidate_1",
+            "evidence_candidate_2",
+            "evidence_density_per1k",
+            "evidence_marker_count",
+            "evidence_to_claim_ratio",
+            "external_theories",
+            "external_theory_count",
+            "falsifiability_density_per1k",
+            "falsifiability_marker_count",
+            "footnote_count",
+            "has_abstract",
+            "has_conclusion",
+            "has_discussion",
+            "has_introduction",
+            "has_methodology",
+            "has_references_section",
+            "has_results",
+            "heading_count",
+            "hedge_count",
+            "hedge_density_per1k",
+            "hedge_to_absolute_ratio",
+            "limitation_count",
+            "novelty_marker_count",
+            "numeric_citation_count",
+            "quantitative_marker_count",
+            "reference_entry_count",
+            "rubric_claim_points",
+            "rubric_falsifiability_points",
+            "rubric_grounding_points",
+            "rubric_quantitative_points",
+            "rubric_structure_points",
+            "structure_score",
+            "title_detected",
+            "url_references"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "claim_inventory.py",
+          "sha256": "2ab3346c4664c1f8e053ccf25b58c422e014238aec6d1c9c918ae3071157280b",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What exact assertions are candidates for claim review?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "evidence_map.py",
+          "sha256": "2649e5c5b2152a3fe93e7318e67aec11bfca090c572ed6965e3d426e726eb929",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which evidence statements are linked to which claims?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "kill_conditions.py",
+          "sha256": "ab65d8061fa3c554162136678793e02db2434841d840f264097dfb919cdfdf3e",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What would defeat each exact claim?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "equation_audit.py",
+          "sha256": "119fb6997f8488b1ecfab44d31b410d339044c1b11652ccbfba0b76105ad10e1",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What equations and assumptions need mathematical review?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "assumption_stack.py",
+          "sha256": "e3a0275dbd962dac937edc37ccbb5dffd7a0cfa50bdc343f6063195fc3f2f206",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which assumptions does each argument require?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "overstatement_detector.py",
+          "sha256": "12994a0c7189c9bb7eaa4ac458dc1f5399e0a4bfdc8c6ca882c0930970289d72",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Where does wording exceed the available evidence?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "coherence_score.py",
+          "sha256": "939eb8698af8dcf1770ebe3532b65af9af689c7341fbe9cecbca9384c16529e1",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What consistency analysis is proposed for the text?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        }
+      ]
+    },
+    {
+      "folder": "framework_and_truth_heuristics",
+      "scripts": [
+        {
+          "script": "theophysics_scorer.py",
+          "sha256": "a0edab0831e2c79d23411225c727b23e9b8343de1f9fb04db01e9267b50b9db3",
+          "api_analyzer": "theophysics-lexical",
+          "execution_state": "WIRED",
+          "questions": [
+            "Which framework terms appear, as lexical signals only?"
+          ],
+          "declared_field_candidates": [
+            "anti_fruits_composite",
+            "anti_fruits_detail",
+            "chi_score",
+            "chi_status",
+            "ckg_raw",
+            "ckg_tier",
+            "cross_domain_bridges",
+            "dominant_anti_fruit",
+            "dominant_fruit",
+            "fruits_composite",
+            "fruits_detail",
+            "fruits_net_score",
+            "knowledge_score",
+            "me_avg_score",
+            "me_dominant_variable",
+            "scripture_refs",
+            "wisdom_score",
+            "wk_ratio",
+            "wk_status"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "truth_runner.py",
+          "sha256": "bf155115cd1b3805929a27dfc2cc2668b2c56278d229b02a4030d6c8fc48b42e",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which scanner metrics are returned for the document?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "truth_coherence_scanner.py",
+          "sha256": "5953481105c5a7cda5d9a5ae26cc4b70d66f711d31a937e350f59f981ff88fe4",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which text markers does the heuristic scanner label?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": [
+            "ClaimRecord.absolute_overreach",
+            "ClaimRecord.claim_index",
+            "ClaimRecord.claim_kind",
+            "ClaimRecord.claim_score",
+            "ClaimRecord.claim_status",
+            "ClaimRecord.claim_text",
+            "ClaimRecord.dependency_present",
+            "ClaimRecord.evidence_present",
+            "ClaimRecord.falsifiability_present",
+            "ClaimRecord.hedge_present",
+            "ClaimRecord.local_contradiction",
+            "ClaimRecord.paragraph_index",
+            "ClaimRecord.precision_present",
+            "ClaimRecord.sentence_index",
+            "ClaimRecord.source",
+            "ClaimRecord.support_status",
+            "DocumentRecord.absolute_pressure",
+            "DocumentRecord.anchored_claims",
+            "DocumentRecord.anti_fruit_pressure",
+            "DocumentRecord.anti_fruits_vector",
+            "DocumentRecord.character_attributes",
+            "DocumentRecord.character_posture",
+            "DocumentRecord.character_profile",
+            "DocumentRecord.claim_count",
+            "DocumentRecord.coherence_score",
+            "DocumentRecord.combined_score",
+            "DocumentRecord.contradiction_flags",
+            "DocumentRecord.contradictory_claims",
+            "DocumentRecord.discipline_score",
+            "DocumentRecord.evidence_density",
+            "DocumentRecord.falsifiability_density",
+            "DocumentRecord.falsifiable_claims",
+            "DocumentRecord.fruit_integrity_score",
+            "DocumentRecord.fruits_vector",
+            "DocumentRecord.hedge_density",
+            "DocumentRecord.integrity_profiles",
+            "DocumentRecord.overstated_claims",
+            "DocumentRecord.paragraph_count",
+            "DocumentRecord.rhetorical_force",
+            "DocumentRecord.section_count",
+            "DocumentRecord.sentence_count",
+            "DocumentRecord.source",
+            "DocumentRecord.source_type",
+            "DocumentRecord.speculative_claims",
+            "DocumentRecord.title",
+            "DocumentRecord.top_risky_sentences",
+            "DocumentRecord.top_supported_sentences",
+            "DocumentRecord.truth_score",
+            "DocumentRecord.under_supported_claims",
+            "DocumentRecord.warmth_score",
+            "SentenceScore.absolute_pressure",
+            "SentenceScore.claim_strength",
+            "SentenceScore.contradiction_pressure",
+            "SentenceScore.dependency_signal",
+            "SentenceScore.evidence_anchor",
+            "SentenceScore.falsifiability_signal",
+            "SentenceScore.hedge_pressure",
+            "SentenceScore.index",
+            "SentenceScore.precision_signal",
+            "SentenceScore.text",
+            "SentenceScore.truth_score",
+            "SentenceScore.truth_status"
+          ]
+        },
+        {
+          "script": "chi_computation.py",
+          "sha256": "9fd2572e4181c173553cb3c504d841837604510a1fd380f9751cecefab15db84",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which inputs would a chi calculation require?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": [
+            "ChiTimeSeries.C_CRIT",
+            "ChiTimeSeries.a_values",
+            "ChiTimeSeries.chi_values",
+            "ChiTimeSeries.dchi_dt",
+            "ChiTimeSeries.lambda_values",
+            "ChiTimeSeries.pi_values",
+            "ChiTimeSeries.years",
+            "DomainData.metrics",
+            "DomainData.name",
+            "DomainData.triad",
+            "DomainData.values",
+            "DomainData.years",
+            "TriadScore.domains",
+            "TriadScore.name",
+            "TriadScore.values",
+            "TriadScore.years"
+          ]
+        },
+        {
+          "script": "heartbeat_analyzer.py",
+          "sha256": "1cadeb86d4b4aac1cc9c7d16f5358945ec0d4d6aed3bc683a3a2c0dbd4fe0d8d",
+          "api_analyzer": "heartbeat",
+          "execution_state": "WIRED",
+          "questions": [
+            "What structural motifs recur across the paper?"
+          ],
+          "declared_field_candidates": [
+            "chi",
+            "chi_composite",
+            "chi_dominant",
+            "chi_keys",
+            "chi_max",
+            "chi_mean",
+            "chi_min",
+            "chi_std",
+            "combined",
+            "combined_mean",
+            "combined_std",
+            "critique_words",
+            "defense_words",
+            "excluded_sections",
+            "fruit_composite",
+            "fruit_dominant",
+            "fruit_keys",
+            "fruit_max",
+            "fruit_mean",
+            "fruit_min",
+            "fruit_std",
+            "fruits",
+            "grade",
+            "heartbeat",
+            "heartbeat_error",
+            "idx",
+            "index",
+            "interpretation",
+            "negative_hits",
+            "normalized_score",
+            "peak_score",
+            "peak_sentence",
+            "peak_text",
+            "positive_hits",
+            "score",
+            "section",
+            "section_boundaries",
+            "section_idx",
+            "sentence_count",
+            "structural",
+            "structural_net",
+            "summary",
+            "theory_words",
+            "tier",
+            "total_score",
+            "v2_structural",
+            "valley_score",
+            "valley_sentence",
+            "valley_text",
+            "word_count"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "word_level_mapper.py",
+          "sha256": "a37940eb4175b87a72e1f40eb0c25ed0b2ea61f844eda4b25ed72a44b03eeb86",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which words or sentences match supplied anchor sets?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        }
+      ]
+    },
+    {
+      "folder": "emotion_and_fruit_text_signals",
+      "scripts": [
+        {
+          "script": "emotion_analyzer.py",
+          "sha256": "c6d878a7cd2d1f4d40eb6fe163d449abf5a91b7b69babeaa7f8300b307e032ae",
+          "api_analyzer": "emotion-profile",
+          "execution_state": "WIRED",
+          "questions": [
+            "Which emotion terms or model labels appear in the text?"
+          ],
+          "declared_field_candidates": [
+            "anti_emo_composite",
+            "betrayal",
+            "conflict",
+            "corruption",
+            "cruelty",
+            "despair",
+            "emo_dominant",
+            "emo_sentence_count",
+            "emo_top_5",
+            "faithfulness",
+            "fruit_emo_composite",
+            "fruit_emo_net",
+            "fruit_emo_strongest",
+            "fruit_emo_weakest",
+            "gentleness",
+            "goemotions_status",
+            "goodness",
+            "harshness",
+            "hatred",
+            "impatience",
+            "indulgence",
+            "joy",
+            "kindness",
+            "love",
+            "nrc_status",
+            "nrc_top_emotions",
+            "patience",
+            "peace",
+            "self_control"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "heartbeat_analyzer.py",
+          "sha256": "1cadeb86d4b4aac1cc9c7d16f5358945ec0d4d6aed3bc683a3a2c0dbd4fe0d8d",
+          "api_analyzer": "heartbeat",
+          "execution_state": "WIRED",
+          "questions": [
+            "What structural motifs recur across the paper?"
+          ],
+          "declared_field_candidates": [
+            "chi",
+            "chi_composite",
+            "chi_dominant",
+            "chi_keys",
+            "chi_max",
+            "chi_mean",
+            "chi_min",
+            "chi_std",
+            "combined",
+            "combined_mean",
+            "combined_std",
+            "critique_words",
+            "defense_words",
+            "excluded_sections",
+            "fruit_composite",
+            "fruit_dominant",
+            "fruit_keys",
+            "fruit_max",
+            "fruit_mean",
+            "fruit_min",
+            "fruit_std",
+            "fruits",
+            "grade",
+            "heartbeat",
+            "heartbeat_error",
+            "idx",
+            "index",
+            "interpretation",
+            "negative_hits",
+            "normalized_score",
+            "peak_score",
+            "peak_sentence",
+            "peak_text",
+            "positive_hits",
+            "score",
+            "section",
+            "section_boundaries",
+            "section_idx",
+            "sentence_count",
+            "structural",
+            "structural_net",
+            "summary",
+            "theory_words",
+            "tier",
+            "total_score",
+            "v2_structural",
+            "valley_score",
+            "valley_sentence",
+            "valley_text",
+            "word_count"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "word_level_mapper.py",
+          "sha256": "a37940eb4175b87a72e1f40eb0c25ed0b2ea61f844eda4b25ed72a44b03eeb86",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which words or sentences match supplied anchor sets?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        }
+      ]
+    },
+    {
+      "folder": "corpus_and_graph",
+      "scripts": [
+        {
+          "script": "graph_builder.py",
+          "sha256": "88e126ebff06dea5a596aca55f442b76c6101a0aab3be863cc5a686ff62908fa",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [],
+          "declared_field_candidates": [
+            "betweenness",
+            "centrality",
+            "chi_score",
+            "cluster",
+            "cluster_count",
+            "combined_score",
+            "degree",
+            "dominant_variable",
+            "edge_count",
+            "edges",
+            "label",
+            "most_central",
+            "node_count",
+            "node_data",
+            "nodes",
+            "stats",
+            "target",
+            "topic_1",
+            "truth_score",
+            "truth_tier",
+            "weight",
+            "wk_ratio",
+            "word_count"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "co_term_density.py",
+          "sha256": "74200f9375bd6baa30bc2bc37828bde0f08789ca35ae3960d9a12963d4899efe",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which concepts co-occur within a chosen text window?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "cooccurrence_analyzer.py",
+          "sha256": "a68d056b53a6892c2cf1af5173982eb2c9906c5098831c10e837efff9c56f8cf",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which concepts co-occur across the indexed corpus?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "correlation_engine.py",
+          "sha256": "f00664d7dccb2f78ab07e7ef248a94a9534b55a738ba2dcc8d837465e00ad875",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What cross-document term correspondence is suggested?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "paper_compare.py",
+          "sha256": "c5fe0b50f5eb8821159dd80a70d0cc48b34338c493bd46f699ea456085354951",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "How do two or more papers differ on measured features?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": [
+            "PaperStats.chars",
+            "PaperStats.citations",
+            "PaperStats.concepts",
+            "PaperStats.domains",
+            "PaperStats.equations",
+            "PaperStats.integration_order",
+            "PaperStats.lines",
+            "PaperStats.paper_id",
+            "PaperStats.path",
+            "PaperStats.sections",
+            "PaperStats.title",
+            "PaperStats.words"
+          ]
+        },
+        {
+          "script": "run_series_analytics.py",
+          "sha256": "eda0de1c1f76abc2be1d3265d7fa78a788bba8972d1f68c3fc4b3fcc8b363e4a",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What patterns emerge across a paper series?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        }
+      ]
+    },
+    {
+      "folder": "physics_and_theory",
+      "scripts": [
+        {
+          "script": "physics.py",
+          "sha256": "3ea78d45a5cad2341c5abddc36ad0abb719a602a1a085832c234f43b787ddbe9",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which physics analogies and kill tests are proposed?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "physics_comparison.py",
+          "sha256": "907ca165d9dfbf0537b1617c2fde5386eeb1f1b046229ca7fdfb740f131aaa1d",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What claimed physics mapping needs a boundary check?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "matter_analysis.py",
+          "sha256": "6c70eec194f69fd4701202c15f8a2b643e2abdbd08a4ec703a046e5969ec65d2",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What matter-related analysis does the script define?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "novelty_classification.py",
+          "sha256": "219729a72cd6286a120df3062b29e515a6307385433b408c65d4ec266c51eb53",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which claims are new relative to the reviewed corpus?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "overlap_calculator.py",
+          "sha256": "17bc422581876a6ef9e849d5bfcc00bafc79263278995ca81fb74791ca9b3c11",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "How much do two supplied proposition sets overlap?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        }
+      ]
+    },
+    {
+      "folder": "schema_and_review",
+      "scripts": [
+        {
+          "script": "snapshot_schema.py",
+          "sha256": "c11932449a52eeb9cfbe6fd132936f4ab5f89341d5052867cd83b237dde557cc",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [],
+          "declared_field_candidates": [],
+          "schema_fields": [
+            "AssumptionStack.causal",
+            "AssumptionStack.explicit",
+            "AssumptionStack.implicit",
+            "AssumptionStack.imported",
+            "AssumptionStack.measurement",
+            "AssumptionStack.philosophical",
+            "AssumptionStack.scientific",
+            "AssumptionStack.theological",
+            "CitationNode.cited",
+            "CitationNode.confidence",
+            "CitationNode.relation",
+            "Claim.claim",
+            "Claim.claim_type",
+            "Claim.evidence_present",
+            "Claim.importance",
+            "Claim.needs_citation",
+            "Claim.notes",
+            "Claim.risk_level",
+            "Claim.testability",
+            "CoherenceScore.ai_confidence",
+            "CoherenceScore.citation_adequacy",
+            "CoherenceScore.claim_discipline",
+            "CoherenceScore.definition_clarity",
+            "CoherenceScore.domain_separation",
+            "CoherenceScore.equation_coherence",
+            "CoherenceScore.falsifiability",
+            "CoherenceScore.reader_burden",
+            "CoherenceScore.review_readiness",
+            "CoherenceScore.scope_control",
+            "EquationEntry.dimensional_status",
+            "EquationEntry.equation",
+            "EquationEntry.issues",
+            "EquationEntry.operational_status",
+            "EquationEntry.purpose",
+            "EquationEntry.role",
+            "EquationEntry.variable_definitions",
+            "EquationEntry.variables_defined",
+            "EvidenceEntry.claim",
+            "EvidenceEntry.counterevidence_needed",
+            "EvidenceEntry.evidence_quality",
+            "EvidenceEntry.evidence_type",
+            "EvidenceEntry.gap",
+            "EvidenceEntry.supporting_evidence",
+            "KillCondition.claim",
+            "KillCondition.current_status",
+            "KillCondition.kill_condition",
+            "KillCondition.severity",
+            "KillCondition.test_method",
+            "NoveltyClassification.honest_label",
+            "NoveltyClassification.novelty_levels",
+            "NoveltyClassification.overstated_novelty_flags",
+            "NoveltyClassification.primary_novelty",
+            "OverstatementDetector.delta",
+            "OverstatementDetector.evidence_strength_index",
+            "OverstatementDetector.overstated_passages",
+            "OverstatementDetector.rhetorical_strength_index",
+            "OverstatementDetector.severity",
+            "PaperIdentity.author",
+            "PaperIdentity.date",
+            "PaperIdentity.domain",
+            "PaperIdentity.paper_id",
+            "PaperIdentity.paper_type",
+            "PaperIdentity.series",
+            "PaperIdentity.title",
+            "PaperIdentity.version",
+            "PhysicsComparison.category_confusion_risk",
+            "PhysicsComparison.difference",
+            "PhysicsComparison.does_paper_outperform",
+            "PhysicsComparison.nearest_theory",
+            "PhysicsComparison.similarity",
+            "ProofExplorerSnapshot.assumptions",
+            "ProofExplorerSnapshot.citations",
+            "ProofExplorerSnapshot.claim_inventory",
+            "ProofExplorerSnapshot.coherence",
+            "ProofExplorerSnapshot.equations",
+            "ProofExplorerSnapshot.evidence_map",
+            "ProofExplorerSnapshot.generated_at",
+            "ProofExplorerSnapshot.identity",
+            "ProofExplorerSnapshot.kill_conditions",
+            "ProofExplorerSnapshot.novelty",
+            "ProofExplorerSnapshot.overstatement",
+            "ProofExplorerSnapshot.paper_id",
+            "ProofExplorerSnapshot.physics_comparison",
+            "ProofExplorerSnapshot.pipeline_metrics",
+            "ProofExplorerSnapshot.revision",
+            "ProofExplorerSnapshot.schema_version",
+            "ProofExplorerSnapshot.spine_analysis",
+            "ProofExplorerSnapshot.theophysics",
+            "ProofExplorerSnapshot.thesis",
+            "RevisionPlan.best_next_test",
+            "RevisionPlan.must_fix_before_publication",
+            "RevisionPlan.needs_expert_review",
+            "RevisionPlan.strongest_part",
+            "RevisionPlan.weakest_part",
+            "TheophysicsOverlay.ckg_score",
+            "TheophysicsOverlay.decision_tree_status",
+            "TheophysicsOverlay.declared_axioms",
+            "TheophysicsOverlay.fruits_score",
+            "TheophysicsOverlay.lean_file_path",
+            "TheophysicsOverlay.seven_q_grid",
+            "TheophysicsOverlay.spine_mappings",
+            "TheophysicsOverlay.swap_test",
+            "Thesis.ai_confidence",
+            "Thesis.one_sentence"
+          ]
+        },
+        {
+          "script": "snapshot_merge.py",
+          "sha256": "5745afdfcbcc008932c9836a6a17e6528d3752fbf38dbf2f57b32fe300a6e25e",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        },
+        {
+          "script": "validation_scaffold.py",
+          "sha256": "eef31605a770837b6cdfd63595dc3338c69e67cf31d47143d614a9f056fdbc72",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "Which indexed claims still lack validation?"
+          ],
+          "declared_field_candidates": [
+            "analogy",
+            "contradicts",
+            "related",
+            "supports"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "spine_analysis.py",
+          "sha256": "1886fd3e8d7ace345f1b46f1715c707a681b8226f24fcb3a0d14bd23afbc0602",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What thesis and dependency spine does the paper present?"
+          ],
+          "declared_field_candidates": [
+            "content",
+            "role",
+            "section",
+            "type"
+          ],
+          "schema_fields": []
+        },
+        {
+          "script": "revision_plan.py",
+          "sha256": "4d47227d701fdca846d23fd651c2bbc4a4c7ad288c550239751ae94aa397056a",
+          "api_analyzer": null,
+          "execution_state": "INVENTORY_ONLY",
+          "questions": [
+            "What revisions would address identified gaps?"
+          ],
+          "declared_field_candidates": [],
+          "schema_fields": []
+        }
+      ]
+    }
+  ],
+  "channel_definitions": {
+    "word_level_mapper.py": {
+      "GOEMOTIONS_LABELS": [
+        "admiration",
+        "amusement",
+        "anger",
+        "annoyance",
+        "approval",
+        "caring",
+        "confusion",
+        "curiosity",
+        "desire",
+        "disappointment",
+        "disapproval",
+        "disgust",
+        "embarrassment",
+        "excitement",
+        "fear",
+        "gratitude",
+        "grief",
+        "joy",
+        "love",
+        "nervousness",
+        "optimism",
+        "pride",
+        "realization",
+        "relief",
+        "remorse",
+        "sadness",
+        "surprise",
+        "neutral"
+      ],
+      "FRUIT_BLEND": [
+        "love",
+        "joy",
+        "peace",
+        "patience",
+        "kindness",
+        "goodness",
+        "faithfulness",
+        "gentleness",
+        "self_control"
+      ],
+      "ANTI_FRUIT_MAP": [
+        "hatred",
+        "despair",
+        "conflict",
+        "impatience",
+        "cruelty",
+        "corruption",
+        "betrayal",
+        "harshness",
+        "indulgence"
+      ]
+    },
+    "canonical_anchors.py": {
+      "PROPERTIES_24": [
+        "P04_simple",
+        "P05_consistent",
+        "P12_true",
+        "P13_rational",
+        "P23_generative",
+        "P24_judging",
+        "P01_necessary",
+        "P02_eternal",
+        "P03_immutable",
+        "P06_universal",
+        "P07_immaterial",
+        "P08_foundational",
+        "P09_self_existent",
+        "P10_infinite",
+        "P11_perfect",
+        "P14_order_giving",
+        "P15_law_giving",
+        "P16_intelligible",
+        "P17_necessary_for_knowledge",
+        "P18_invariant",
+        "P19_non_local",
+        "P20_transcendent",
+        "P21_objective",
+        "P22_unified"
+      ],
+      "LAWS_CONSTRUCTIVE": [
+        "L01_gravitation_grace",
+        "L02_motion_grace_force",
+        "L03_electromagnetism_truth",
+        "L04_strong_force_love",
+        "L05_thermodynamics_harvest",
+        "L06_information_logos",
+        "L07_quantum_faith",
+        "L08_relativity_eternal_frame",
+        "L09_cosmology_omega",
+        "L10_coherence_christ"
+      ],
+      "LAWS_DESTRUCTIVE": [
+        "L01_gravitation_sin",
+        "L02_motion_sin_nature",
+        "L03_electromagnetism_deception",
+        "L04_strong_force_captivity",
+        "L05_thermodynamics_judgment",
+        "L06_information_chaos",
+        "L07_quantum_false_observation",
+        "L08_relativity_frame_lock",
+        "L09_cosmology_heat_death",
+        "L10_decoherence"
+      ],
+      "FRUITS_PHYSICS": [
+        "fruit_love",
+        "fruit_joy",
+        "fruit_peace",
+        "fruit_patience",
+        "fruit_kindness",
+        "fruit_goodness",
+        "fruit_faithfulness",
+        "fruit_gentleness",
+        "fruit_self_control"
+      ],
+      "ANTI_FRUITS_PHYSICS": [
+        "anti_love",
+        "anti_joy",
+        "anti_peace",
+        "anti_patience",
+        "anti_kindness",
+        "anti_goodness",
+        "anti_faithfulness",
+        "anti_gentleness",
+        "anti_self_control"
+      ],
+      "ARMOR": [
+        "armor_belt_truth",
+        "armor_breastplate_righteousness",
+        "armor_shoes_peace",
+        "armor_shield_faith",
+        "armor_helmet_salvation",
+        "armor_sword_spirit"
+      ],
+      "BEATITUDES": [
+        "beat_poor_spirit",
+        "beat_mourn",
+        "beat_meek",
+        "beat_hunger_righteousness",
+        "beat_merciful",
+        "beat_pure_heart",
+        "beat_peacemakers",
+        "beat_persecuted"
+      ],
+      "GIFTS": [
+        "gift_wisdom",
+        "gift_knowledge",
+        "gift_faith",
+        "gift_healing",
+        "gift_miracles",
+        "gift_prophecy",
+        "gift_discernment",
+        "gift_tongues",
+        "gift_interpretation"
+      ],
+      "COUPLINGS": [
+        "coupling_faith",
+        "coupling_mercy",
+        "coupling_hope",
+        "coupling_wisdom",
+        "coupling_covenant",
+        "coupling_salvation",
+        "coupling_worship",
+        "coupling_conscience"
+      ]
+    },
+    "heartbeat_analyzer.py": {
+      "FRUIT_ANCHORS": [
+        "love",
+        "joy",
+        "peace",
+        "patience",
+        "kindness",
+        "goodness",
+        "faithfulness",
+        "gentleness",
+        "self_control"
+      ],
+      "CHI_ANCHORS": [
+        "G",
+        "M",
+        "E",
+        "S",
+        "T",
+        "K",
+        "R",
+        "Q",
+        "F",
+        "C"
+      ],
+      "STRUCTURAL_PATTERNS": [
+        "definition",
+        "derivation",
+        "scope_bound",
+        "prediction",
+        "evidence",
+        "equation",
+        "edge_case",
+        "modularity",
+        "steelman",
+        "overclaim",
+        "cross_domain"
+      ]
+    }
+  },
+  "metric_questions": [
+    {
+      "script": "text_analyzer.py",
+      "field": "automated_readability",
+      "question": "What value, method, and status does text_analyzer.py report for automated_readability on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "avg_paragraph_words",
+      "question": "What value, method, and status does text_analyzer.py report for avg_paragraph_words on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "coleman_liau",
+      "question": "What value, method, and status does text_analyzer.py report for coleman_liau on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "dale_chall",
+      "question": "What value, method, and status does text_analyzer.py report for dale_chall on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "flesch_kincaid_grade",
+      "question": "What value, method, and status does text_analyzer.py report for flesch_kincaid_grade on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "flesch_reading_ease",
+      "question": "What value, method, and status does text_analyzer.py report for flesch_reading_ease on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "gunning_fog",
+      "question": "What value, method, and status does text_analyzer.py report for gunning_fog on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "header_count",
+      "question": "What value, method, and status does text_analyzer.py report for header_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "keybert_keywords",
+      "question": "What value, method, and status does text_analyzer.py report for keybert_keywords on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "lexicon_count",
+      "question": "What value, method, and status does text_analyzer.py report for lexicon_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "paragraph_count",
+      "question": "What value, method, and status does text_analyzer.py report for paragraph_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "reading_time_min",
+      "question": "What value, method, and status does text_analyzer.py report for reading_time_min on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "sentence_count",
+      "question": "What value, method, and status does text_analyzer.py report for sentence_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "smog_index",
+      "question": "What value, method, and status does text_analyzer.py report for smog_index on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "syllable_count",
+      "question": "What value, method, and status does text_analyzer.py report for syllable_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "text_standard",
+      "question": "What value, method, and status does text_analyzer.py report for text_standard on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "top_bigrams",
+      "question": "What value, method, and status does text_analyzer.py report for top_bigrams on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "top_trigrams",
+      "question": "What value, method, and status does text_analyzer.py report for top_trigrams on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "unique_word_count",
+      "question": "What value, method, and status does text_analyzer.py report for unique_word_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "vocab_richness",
+      "question": "What value, method, and status does text_analyzer.py report for vocab_richness on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "word_count",
+      "question": "What value, method, and status does text_analyzer.py report for word_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "field": "yake_keywords",
+      "question": "What value, method, and status does text_analyzer.py report for yake_keywords on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_cttr",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_cttr on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_error",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_error on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_hdd",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_hdd on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_mattr",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_mattr on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_mtld",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_mtld on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_rttr",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_rttr on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_terms",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_terms on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_ttr",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_ttr on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "lr_words",
+      "question": "What value, method, and status does linguistic_analyzer.py report for lr_words on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "field": "textdescriptives_status",
+      "question": "What value, method, and status does linguistic_analyzer.py report for textdescriptives_status on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_density_error",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_density_error on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_density_level",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_density_level on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_density_max",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_density_max on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_density_mean",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_density_mean on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_density_min",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_density_min on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_density_status",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_density_status on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_density_std",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_density_std on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_paragraphs_analyzed",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_paragraphs_analyzed on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "field": "idea_total_propositions",
+      "question": "What value, method, and status does idea_density_analyzer.py report for idea_total_propositions on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "adj_pct",
+      "question": "What value, method, and status does paper_analyzer.py report for adj_pct on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "adv_pct",
+      "question": "What value, method, and status does paper_analyzer.py report for adv_pct on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "argument_grade",
+      "question": "What value, method, and status does paper_analyzer.py report for argument_grade on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "assertive_verb_count",
+      "question": "What value, method, and status does paper_analyzer.py report for assertive_verb_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "avg_dependency_depth",
+      "question": "What value, method, and status does paper_analyzer.py report for avg_dependency_depth on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "avg_sentences_per_paragraph",
+      "question": "What value, method, and status does paper_analyzer.py report for avg_sentences_per_paragraph on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "avg_words_per_sentence",
+      "question": "What value, method, and status does paper_analyzer.py report for avg_words_per_sentence on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "claim_count",
+      "question": "What value, method, and status does paper_analyzer.py report for claim_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "claim_density_per1k",
+      "question": "What value, method, and status does paper_analyzer.py report for claim_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "cognitive_load",
+      "question": "What value, method, and status does paper_analyzer.py report for cognitive_load on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "cognitive_load_error",
+      "question": "What value, method, and status does paper_analyzer.py report for cognitive_load_error on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "coherence_flag",
+      "question": "What value, method, and status does paper_analyzer.py report for coherence_flag on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "compression_ratio",
+      "question": "What value, method, and status does paper_analyzer.py report for compression_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "cross_domain_bridges",
+      "question": "What value, method, and status does paper_analyzer.py report for cross_domain_bridges on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "density_label",
+      "question": "What value, method, and status does paper_analyzer.py report for density_label on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "evidence_count",
+      "question": "What value, method, and status does paper_analyzer.py report for evidence_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "evidence_density_per1k",
+      "question": "What value, method, and status does paper_analyzer.py report for evidence_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "evidence_to_claim_ratio",
+      "question": "What value, method, and status does paper_analyzer.py report for evidence_to_claim_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "external_links",
+      "question": "What value, method, and status does paper_analyzer.py report for external_links on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "falsifiability_markers",
+      "question": "What value, method, and status does paper_analyzer.py report for falsifiability_markers on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "flesch_kincaid_grade",
+      "question": "What value, method, and status does paper_analyzer.py report for flesch_kincaid_grade on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "flow_label",
+      "question": "What value, method, and status does paper_analyzer.py report for flow_label on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "fluff_flag",
+      "question": "What value, method, and status does paper_analyzer.py report for fluff_flag on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "gunning_fog",
+      "question": "What value, method, and status does paper_analyzer.py report for gunning_fog on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "header_count",
+      "question": "What value, method, and status does paper_analyzer.py report for header_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "internal_external_ratio",
+      "question": "What value, method, and status does paper_analyzer.py report for internal_external_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "internal_links",
+      "question": "What value, method, and status does paper_analyzer.py report for internal_links on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "link_citation",
+      "question": "What value, method, and status does paper_analyzer.py report for link_citation on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "link_concept",
+      "question": "What value, method, and status does paper_analyzer.py report for link_concept on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "link_density_per1k",
+      "question": "What value, method, and status does paper_analyzer.py report for link_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "link_dependency",
+      "question": "What value, method, and status does paper_analyzer.py report for link_dependency on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "link_evidence",
+      "question": "What value, method, and status does paper_analyzer.py report for link_evidence on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "link_navigation",
+      "question": "What value, method, and status does paper_analyzer.py report for link_navigation on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "link_quality_score",
+      "question": "What value, method, and status does paper_analyzer.py report for link_quality_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "max_dependency_depth",
+      "question": "What value, method, and status does paper_analyzer.py report for max_dependency_depth on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "modal_verb_count",
+      "question": "What value, method, and status does paper_analyzer.py report for modal_verb_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "modal_vs_assertive_ratio",
+      "question": "What value, method, and status does paper_analyzer.py report for modal_vs_assertive_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "noun_pct",
+      "question": "What value, method, and status does paper_analyzer.py report for noun_pct on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "overlink_flag",
+      "question": "What value, method, and status does paper_analyzer.py report for overlink_flag on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "paragraph_count",
+      "question": "What value, method, and status does paper_analyzer.py report for paragraph_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "passive_pct",
+      "question": "What value, method, and status does paper_analyzer.py report for passive_pct on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "passive_voice_count",
+      "question": "What value, method, and status does paper_analyzer.py report for passive_voice_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "pos_note",
+      "question": "What value, method, and status does paper_analyzer.py report for pos_note on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "prep_pct",
+      "question": "What value, method, and status does paper_analyzer.py report for prep_pct on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "readability_note",
+      "question": "What value, method, and status does paper_analyzer.py report for readability_note on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "reading_time_min",
+      "question": "What value, method, and status does paper_analyzer.py report for reading_time_min on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "semantic_error",
+      "question": "What value, method, and status does paper_analyzer.py report for semantic_error on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "semantic_note",
+      "question": "What value, method, and status does paper_analyzer.py report for semantic_note on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "sentence_count",
+      "question": "What value, method, and status does paper_analyzer.py report for sentence_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "signal_noise_ratio",
+      "question": "What value, method, and status does paper_analyzer.py report for signal_noise_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "smog_index",
+      "question": "What value, method, and status does paper_analyzer.py report for smog_index on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "stopword_ratio",
+      "question": "What value, method, and status does paper_analyzer.py report for stopword_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "text_standard",
+      "question": "What value, method, and status does paper_analyzer.py report for text_standard on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "topic_drift_avg",
+      "question": "What value, method, and status does paper_analyzer.py report for topic_drift_avg on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "topic_drift_max",
+      "question": "What value, method, and status does paper_analyzer.py report for topic_drift_max on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "topic_drift_scores",
+      "question": "What value, method, and status does paper_analyzer.py report for topic_drift_scores on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "total_links",
+      "question": "What value, method, and status does paper_analyzer.py report for total_links on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "transition_count",
+      "question": "What value, method, and status does paper_analyzer.py report for transition_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "transition_density_pct",
+      "question": "What value, method, and status does paper_analyzer.py report for transition_density_pct on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "trigram_redundancy",
+      "question": "What value, method, and status does paper_analyzer.py report for trigram_redundancy on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "ttr",
+      "question": "What value, method, and status does paper_analyzer.py report for ttr on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "underlink_flag",
+      "question": "What value, method, and status does paper_analyzer.py report for underlink_flag on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "unique_word_count",
+      "question": "What value, method, and status does paper_analyzer.py report for unique_word_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "verb_pct",
+      "question": "What value, method, and status does paper_analyzer.py report for verb_pct on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "weight_signal",
+      "question": "What value, method, and status does paper_analyzer.py report for weight_signal on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "field": "word_count",
+      "question": "What value, method, and status does paper_analyzer.py report for word_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "nlp_analyzer.py",
+      "field": "entity_concepts",
+      "question": "What value, method, and status does nlp_analyzer.py report for entity_concepts on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "nlp_analyzer.py",
+      "field": "entity_count",
+      "question": "What value, method, and status does nlp_analyzer.py report for entity_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "nlp_analyzer.py",
+      "field": "entity_orgs",
+      "question": "What value, method, and status does nlp_analyzer.py report for entity_orgs on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "nlp_analyzer.py",
+      "field": "entity_people",
+      "question": "What value, method, and status does nlp_analyzer.py report for entity_people on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "nlp_analyzer.py",
+      "field": "entity_types_found",
+      "question": "What value, method, and status does nlp_analyzer.py report for entity_types_found on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "nlp_analyzer.py",
+      "field": "topic_count",
+      "question": "What value, method, and status does nlp_analyzer.py report for topic_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "absolute_claim_count",
+      "question": "What value, method, and status does academic_scorer.py report for absolute_claim_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "absolute_density_per1k",
+      "question": "What value, method, and status does academic_scorer.py report for absolute_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "academic_grade",
+      "question": "What value, method, and status does academic_scorer.py report for academic_grade on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "academic_rubric_grade",
+      "question": "What value, method, and status does academic_scorer.py report for academic_rubric_grade on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "academic_rubric_total",
+      "question": "What value, method, and status does academic_scorer.py report for academic_rubric_total on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "academic_signal_count",
+      "question": "What value, method, and status does academic_scorer.py report for academic_signal_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "academic_signal_density",
+      "question": "What value, method, and status does academic_scorer.py report for academic_signal_density on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "author_year_citation_count",
+      "question": "What value, method, and status does academic_scorer.py report for author_year_citation_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "citation_count",
+      "question": "What value, method, and status does academic_scorer.py report for citation_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "citation_density_per1k",
+      "question": "What value, method, and status does academic_scorer.py report for citation_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "claim_candidate_1",
+      "question": "What value, method, and status does academic_scorer.py report for claim_candidate_1 on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "claim_candidate_2",
+      "question": "What value, method, and status does academic_scorer.py report for claim_candidate_2 on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "claim_candidate_3",
+      "question": "What value, method, and status does academic_scorer.py report for claim_candidate_3 on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "claim_density_per1k",
+      "question": "What value, method, and status does academic_scorer.py report for claim_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "claim_marker_count",
+      "question": "What value, method, and status does academic_scorer.py report for claim_marker_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "counterargument_count",
+      "question": "What value, method, and status does academic_scorer.py report for counterargument_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "definition_marker_count",
+      "question": "What value, method, and status does academic_scorer.py report for definition_marker_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "doi_references",
+      "question": "What value, method, and status does academic_scorer.py report for doi_references on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "equation_count",
+      "question": "What value, method, and status does academic_scorer.py report for equation_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "equation_density_per1k",
+      "question": "What value, method, and status does academic_scorer.py report for equation_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "evidence_candidate_1",
+      "question": "What value, method, and status does academic_scorer.py report for evidence_candidate_1 on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "evidence_candidate_2",
+      "question": "What value, method, and status does academic_scorer.py report for evidence_candidate_2 on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "evidence_density_per1k",
+      "question": "What value, method, and status does academic_scorer.py report for evidence_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "evidence_marker_count",
+      "question": "What value, method, and status does academic_scorer.py report for evidence_marker_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "evidence_to_claim_ratio",
+      "question": "What value, method, and status does academic_scorer.py report for evidence_to_claim_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "external_theories",
+      "question": "What value, method, and status does academic_scorer.py report for external_theories on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "external_theory_count",
+      "question": "What value, method, and status does academic_scorer.py report for external_theory_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "falsifiability_density_per1k",
+      "question": "What value, method, and status does academic_scorer.py report for falsifiability_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "falsifiability_marker_count",
+      "question": "What value, method, and status does academic_scorer.py report for falsifiability_marker_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "footnote_count",
+      "question": "What value, method, and status does academic_scorer.py report for footnote_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "has_abstract",
+      "question": "What value, method, and status does academic_scorer.py report for has_abstract on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "has_conclusion",
+      "question": "What value, method, and status does academic_scorer.py report for has_conclusion on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "has_discussion",
+      "question": "What value, method, and status does academic_scorer.py report for has_discussion on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "has_introduction",
+      "question": "What value, method, and status does academic_scorer.py report for has_introduction on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "has_methodology",
+      "question": "What value, method, and status does academic_scorer.py report for has_methodology on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "has_references_section",
+      "question": "What value, method, and status does academic_scorer.py report for has_references_section on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "has_results",
+      "question": "What value, method, and status does academic_scorer.py report for has_results on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "heading_count",
+      "question": "What value, method, and status does academic_scorer.py report for heading_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "hedge_count",
+      "question": "What value, method, and status does academic_scorer.py report for hedge_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "hedge_density_per1k",
+      "question": "What value, method, and status does academic_scorer.py report for hedge_density_per1k on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "hedge_to_absolute_ratio",
+      "question": "What value, method, and status does academic_scorer.py report for hedge_to_absolute_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "limitation_count",
+      "question": "What value, method, and status does academic_scorer.py report for limitation_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "novelty_marker_count",
+      "question": "What value, method, and status does academic_scorer.py report for novelty_marker_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "numeric_citation_count",
+      "question": "What value, method, and status does academic_scorer.py report for numeric_citation_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "quantitative_marker_count",
+      "question": "What value, method, and status does academic_scorer.py report for quantitative_marker_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "reference_entry_count",
+      "question": "What value, method, and status does academic_scorer.py report for reference_entry_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "rubric_claim_points",
+      "question": "What value, method, and status does academic_scorer.py report for rubric_claim_points on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "rubric_falsifiability_points",
+      "question": "What value, method, and status does academic_scorer.py report for rubric_falsifiability_points on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "rubric_grounding_points",
+      "question": "What value, method, and status does academic_scorer.py report for rubric_grounding_points on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "rubric_quantitative_points",
+      "question": "What value, method, and status does academic_scorer.py report for rubric_quantitative_points on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "rubric_structure_points",
+      "question": "What value, method, and status does academic_scorer.py report for rubric_structure_points on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "structure_score",
+      "question": "What value, method, and status does academic_scorer.py report for structure_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "title_detected",
+      "question": "What value, method, and status does academic_scorer.py report for title_detected on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "field": "url_references",
+      "question": "What value, method, and status does academic_scorer.py report for url_references on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "anti_fruits_composite",
+      "question": "What value, method, and status does theophysics_scorer.py report for anti_fruits_composite on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "anti_fruits_detail",
+      "question": "What value, method, and status does theophysics_scorer.py report for anti_fruits_detail on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "chi_score",
+      "question": "What value, method, and status does theophysics_scorer.py report for chi_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "chi_status",
+      "question": "What value, method, and status does theophysics_scorer.py report for chi_status on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "ckg_raw",
+      "question": "What value, method, and status does theophysics_scorer.py report for ckg_raw on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "ckg_tier",
+      "question": "What value, method, and status does theophysics_scorer.py report for ckg_tier on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "cross_domain_bridges",
+      "question": "What value, method, and status does theophysics_scorer.py report for cross_domain_bridges on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "dominant_anti_fruit",
+      "question": "What value, method, and status does theophysics_scorer.py report for dominant_anti_fruit on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "dominant_fruit",
+      "question": "What value, method, and status does theophysics_scorer.py report for dominant_fruit on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "fruits_composite",
+      "question": "What value, method, and status does theophysics_scorer.py report for fruits_composite on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "fruits_detail",
+      "question": "What value, method, and status does theophysics_scorer.py report for fruits_detail on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "fruits_net_score",
+      "question": "What value, method, and status does theophysics_scorer.py report for fruits_net_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "knowledge_score",
+      "question": "What value, method, and status does theophysics_scorer.py report for knowledge_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "me_avg_score",
+      "question": "What value, method, and status does theophysics_scorer.py report for me_avg_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "me_dominant_variable",
+      "question": "What value, method, and status does theophysics_scorer.py report for me_dominant_variable on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "scripture_refs",
+      "question": "What value, method, and status does theophysics_scorer.py report for scripture_refs on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "wisdom_score",
+      "question": "What value, method, and status does theophysics_scorer.py report for wisdom_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "wk_ratio",
+      "question": "What value, method, and status does theophysics_scorer.py report for wk_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "field": "wk_status",
+      "question": "What value, method, and status does theophysics_scorer.py report for wk_status on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi_composite",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi_composite on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi_dominant",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi_dominant on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi_keys",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi_keys on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi_max",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi_max on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi_mean",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi_mean on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi_min",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi_min on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "chi_std",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for chi_std on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "combined",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for combined on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "combined_mean",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for combined_mean on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "combined_std",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for combined_std on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "critique_words",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for critique_words on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "defense_words",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for defense_words on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "excluded_sections",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for excluded_sections on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruit_composite",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruit_composite on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruit_dominant",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruit_dominant on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruit_keys",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruit_keys on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruit_max",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruit_max on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruit_mean",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruit_mean on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruit_min",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruit_min on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruit_std",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruit_std on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "fruits",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for fruits on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "grade",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for grade on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "heartbeat",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for heartbeat on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "heartbeat_error",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for heartbeat_error on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "idx",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for idx on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "index",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for index on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "interpretation",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for interpretation on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "negative_hits",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for negative_hits on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "normalized_score",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for normalized_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "peak_score",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for peak_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "peak_sentence",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for peak_sentence on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "peak_text",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for peak_text on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "positive_hits",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for positive_hits on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "score",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "section",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for section on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "section_boundaries",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for section_boundaries on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "section_idx",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for section_idx on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "sentence_count",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for sentence_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "structural",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for structural on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "structural_net",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for structural_net on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "summary",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for summary on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "theory_words",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for theory_words on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "tier",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for tier on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "total_score",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for total_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "v2_structural",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for v2_structural on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "valley_score",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for valley_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "valley_sentence",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for valley_sentence on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "valley_text",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for valley_text on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "field": "word_count",
+      "question": "What value, method, and status does heartbeat_analyzer.py report for word_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "anti_emo_composite",
+      "question": "What value, method, and status does emotion_analyzer.py report for anti_emo_composite on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "betrayal",
+      "question": "What value, method, and status does emotion_analyzer.py report for betrayal on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "conflict",
+      "question": "What value, method, and status does emotion_analyzer.py report for conflict on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "corruption",
+      "question": "What value, method, and status does emotion_analyzer.py report for corruption on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "cruelty",
+      "question": "What value, method, and status does emotion_analyzer.py report for cruelty on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "despair",
+      "question": "What value, method, and status does emotion_analyzer.py report for despair on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "emo_dominant",
+      "question": "What value, method, and status does emotion_analyzer.py report for emo_dominant on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "emo_sentence_count",
+      "question": "What value, method, and status does emotion_analyzer.py report for emo_sentence_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "emo_top_5",
+      "question": "What value, method, and status does emotion_analyzer.py report for emo_top_5 on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "faithfulness",
+      "question": "What value, method, and status does emotion_analyzer.py report for faithfulness on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "fruit_emo_composite",
+      "question": "What value, method, and status does emotion_analyzer.py report for fruit_emo_composite on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "fruit_emo_net",
+      "question": "What value, method, and status does emotion_analyzer.py report for fruit_emo_net on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "fruit_emo_strongest",
+      "question": "What value, method, and status does emotion_analyzer.py report for fruit_emo_strongest on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "fruit_emo_weakest",
+      "question": "What value, method, and status does emotion_analyzer.py report for fruit_emo_weakest on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "gentleness",
+      "question": "What value, method, and status does emotion_analyzer.py report for gentleness on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "goemotions_status",
+      "question": "What value, method, and status does emotion_analyzer.py report for goemotions_status on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "goodness",
+      "question": "What value, method, and status does emotion_analyzer.py report for goodness on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "harshness",
+      "question": "What value, method, and status does emotion_analyzer.py report for harshness on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "hatred",
+      "question": "What value, method, and status does emotion_analyzer.py report for hatred on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "impatience",
+      "question": "What value, method, and status does emotion_analyzer.py report for impatience on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "indulgence",
+      "question": "What value, method, and status does emotion_analyzer.py report for indulgence on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "joy",
+      "question": "What value, method, and status does emotion_analyzer.py report for joy on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "kindness",
+      "question": "What value, method, and status does emotion_analyzer.py report for kindness on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "love",
+      "question": "What value, method, and status does emotion_analyzer.py report for love on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "nrc_status",
+      "question": "What value, method, and status does emotion_analyzer.py report for nrc_status on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "nrc_top_emotions",
+      "question": "What value, method, and status does emotion_analyzer.py report for nrc_top_emotions on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "patience",
+      "question": "What value, method, and status does emotion_analyzer.py report for patience on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "peace",
+      "question": "What value, method, and status does emotion_analyzer.py report for peace on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "field": "self_control",
+      "question": "What value, method, and status does emotion_analyzer.py report for self_control on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "betweenness",
+      "question": "What value, method, and status does graph_builder.py report for betweenness on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "centrality",
+      "question": "What value, method, and status does graph_builder.py report for centrality on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "chi_score",
+      "question": "What value, method, and status does graph_builder.py report for chi_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "cluster",
+      "question": "What value, method, and status does graph_builder.py report for cluster on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "cluster_count",
+      "question": "What value, method, and status does graph_builder.py report for cluster_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "combined_score",
+      "question": "What value, method, and status does graph_builder.py report for combined_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "degree",
+      "question": "What value, method, and status does graph_builder.py report for degree on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "dominant_variable",
+      "question": "What value, method, and status does graph_builder.py report for dominant_variable on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "edge_count",
+      "question": "What value, method, and status does graph_builder.py report for edge_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "edges",
+      "question": "What value, method, and status does graph_builder.py report for edges on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "label",
+      "question": "What value, method, and status does graph_builder.py report for label on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "most_central",
+      "question": "What value, method, and status does graph_builder.py report for most_central on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "node_count",
+      "question": "What value, method, and status does graph_builder.py report for node_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "node_data",
+      "question": "What value, method, and status does graph_builder.py report for node_data on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "nodes",
+      "question": "What value, method, and status does graph_builder.py report for nodes on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "stats",
+      "question": "What value, method, and status does graph_builder.py report for stats on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "target",
+      "question": "What value, method, and status does graph_builder.py report for target on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "topic_1",
+      "question": "What value, method, and status does graph_builder.py report for topic_1 on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "truth_score",
+      "question": "What value, method, and status does graph_builder.py report for truth_score on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "truth_tier",
+      "question": "What value, method, and status does graph_builder.py report for truth_tier on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "weight",
+      "question": "What value, method, and status does graph_builder.py report for weight on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "wk_ratio",
+      "question": "What value, method, and status does graph_builder.py report for wk_ratio on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "graph_builder.py",
+      "field": "word_count",
+      "question": "What value, method, and status does graph_builder.py report for word_count on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "validation_scaffold.py",
+      "field": "analogy",
+      "question": "What value, method, and status does validation_scaffold.py report for analogy on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "validation_scaffold.py",
+      "field": "contradicts",
+      "question": "What value, method, and status does validation_scaffold.py report for contradicts on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "validation_scaffold.py",
+      "field": "related",
+      "question": "What value, method, and status does validation_scaffold.py report for related on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "validation_scaffold.py",
+      "field": "supports",
+      "question": "What value, method, and status does validation_scaffold.py report for supports on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "spine_analysis.py",
+      "field": "content",
+      "question": "What value, method, and status does spine_analysis.py report for content on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "spine_analysis.py",
+      "field": "role",
+      "question": "What value, method, and status does spine_analysis.py report for role on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "spine_analysis.py",
+      "field": "section",
+      "question": "What value, method, and status does spine_analysis.py report for section on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    },
+    {
+      "script": "spine_analysis.py",
+      "field": "type",
+      "question": "What value, method, and status does spine_analysis.py report for type on this paper?",
+      "state": "FIELD_DECLARED_NOT_COMPUTED"
+    }
+  ],
+  "all_scripts": [
+    {
+      "script": "_run_boundary_question.py",
+      "path": "X:\\Python API\\_run_boundary_question.py",
+      "sha256": "1810c778fc26b42eff958d249a6bbf9edd1960379aa0b45a817f7a159077a48e",
+      "role": "fixture_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "_runner.py",
+      "path": "X:\\Python API\\_runner.py",
+      "sha256": "b72bdb84a00eb9675931940db37c93c516de9de0249f3521616070f9060dc088",
+      "role": "fixture_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "trim_content",
+        "call_openai_json",
+        "_import_prompt_modules",
+        "run_all"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "_test_fixture.py",
+      "path": "X:\\Python API\\_test_fixture.py",
+      "sha256": "b08415a2b3df353cac658d6bd558ee1a12e03787ede28bd6bb58aa7cba047762",
+      "role": "fixture_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "academic_scorer.py",
+      "path": "X:\\Python API\\academic_scorer.py",
+      "sha256": "5bc5215e1db7ef3d79abc5d8b6963ce62e454a62e2ee2a0f06bdb4431b3dae7c",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_split_sentences",
+        "_count_patterns",
+        "_extract_reference_section",
+        "_count_reference_entries",
+        "_sentence_score",
+        "_top_sentences",
+        "semantic_scholar_lookup",
+        "analyze"
+      ],
+      "paper_questions": [
+        "What academic claims, citations, and overstatements does the paper contain?"
+      ],
+      "callable_analyzer": "academic-markers",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "academic_scorer_v2.py",
+      "path": "X:\\Python API\\academic_scorer_v2.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "add_all_missing_sections.py",
+      "path": "X:\\Python API\\add_all_missing_sections.py",
+      "sha256": "264a5bf35049528533fd6b912b0445166f264e7aa7cccfd6d90ad2c6f919c816",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "find_paper_boundaries",
+        "get_individual_paper_file",
+        "extract_section_by_patterns",
+        "extract_all_sections_from_paper",
+        "standardize_section_header",
+        "check_section_exists",
+        "add_missing_sections"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "add_missing_sections_final.py",
+      "path": "X:\\Python API\\add_missing_sections_final.py",
+      "sha256": "3121bd8142f9a7ccd08d819da3b69d9d647f8062efd805e8848d4cb4bd3fb61f",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "find_paper_boundaries",
+        "extract_section_from_content",
+        "get_individual_paper_file",
+        "check_section_exists",
+        "clean_encoding_issues",
+        "add_missing_sections"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "add_yaml_frontmatter.py",
+      "path": "X:\\Python API\\add_yaml_frontmatter.py",
+      "sha256": "d4d609358b5e1e12f52ed35700429f836b5ef296f881ccc3db97b77c0ea5c01d",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "read_yaml_file",
+        "has_yaml_frontmatter",
+        "add_yaml_to_file",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "analyze_coherence.py",
+      "path": "X:\\Python API\\analyze_coherence.py",
+      "sha256": "f9b28b1d1304ae7d8b8a7ccbd23d2d13d0c0f54fe7e0f54298e6423531e49ff1",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [
+        "How consistent are concepts across a paper series?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "analyze_paper.py",
+      "path": "X:\\Python API\\analyze_paper.py",
+      "sha256": "2fc77f109abf1ed56d96dfdda4cf41e3e214c069f21c1ed8f54d664d03a76125",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [
+        "What does the local paper analyzer report?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "app.py",
+      "path": "X:\\Python API\\app.py",
+      "sha256": "3dcfe41d00ae0cb1cb5d55707383d414af03d38b54d7e0596c1a8e5f5d53d3f2",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_slug",
+        "_new_paper_id",
+        "_load_meta",
+        "_save_meta",
+        "_extract_pdf_text",
+        "_build_markdown",
+        "_set_status",
+        "_run_pipeline_job",
+        "intake_form",
+        "submit",
+        "status",
+        "report",
+        "raw_markdown",
+        "healthz"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "assumption_stack.py",
+      "path": "X:\\Python API\\assumption_stack.py",
+      "sha256": "e3a0275dbd962dac937edc37ccbb5dffd7a0cfa50bdc343f6063195fc3f2f206",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "Which assumptions does each argument require?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "auto_linker.py",
+      "path": "X:\\Python API\\auto_linker.py",
+      "sha256": "c18e39a290043fb11a33333e5049f54d2902f3e11206baf480093439ddbf63d9",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "jaccard",
+        "load_notes",
+        "infer_relation",
+        "write_edges",
+        "update_yaml_links",
+        "run",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "build_all_paper_mappings.py",
+      "path": "X:\\Python API\\build_all_paper_mappings.py",
+      "sha256": "f3c6de2226ee397b80c266e67347adebe7add7483ba389d246b80e03f71f59b3",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "build_mermaid.py",
+      "path": "X:\\Python API\\build_mermaid.py",
+      "sha256": "a357964c3f69e362f281a3ea417da237db42b598f75a275e794de70881c78179",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "load_json",
+        "generate_axiom_flowchart",
+        "generate_tag_network",
+        "generate_link_diagram",
+        "update_mermaid_dashboard",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "canonical_anchors.py",
+      "path": "X:\\Python API\\canonical_anchors.py",
+      "sha256": "1bbe1d460cf438fa3bf3d0d5133a63b27bee39e9122b0998874115c7f7113272",
+      "role": "identity_schema_or_validation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "get_all_anchors",
+        "get_anchor_groups"
+      ],
+      "paper_questions": [
+        "Which canonical anchors are relevant for review?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "check_and_fix_assembled.py",
+      "path": "X:\\Python API\\check_and_fix_assembled.py",
+      "sha256": "a9f911cdda4824471f5e17f6453fbefb5cd0913d317c37d183bcc11cd8f80b8c",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "find_paper_boundaries",
+        "extract_section_content",
+        "check_encoding_issues",
+        "check_paper_sections",
+        "get_individual_paper_path",
+        "extract_sections_from_individual"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "check_missing_sections.py",
+      "path": "X:\\Python API\\check_missing_sections.py",
+      "sha256": "3db6cb5f5a79e2365a250b1485cca9a6c0cedd1ea813de3db1607f447214049e",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "check_paper_sections",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "chi_computation.py",
+      "path": "X:\\Python API\\chi_computation.py",
+      "sha256": "9fd2572e4181c173553cb3c504d841837604510a1fd380f9751cecefab15db84",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [
+        "Which inputs would a chi calculation require?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "claim_inventory.py",
+      "path": "X:\\Python API\\claim_inventory.py",
+      "sha256": "2ab3346c4664c1f8e053ccf25b58c422e014238aec6d1c9c918ae3071157280b",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "What exact assertions are candidates for claim review?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "clean_concepts.py",
+      "path": "X:\\Python API\\clean_concepts.py",
+      "sha256": "9bcb552a2c6ad7342ea570d6c4cdd967bde3a06e53a0a20aafc5b64547f77204",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "co_term_density.py",
+      "path": "X:\\Python API\\co_term_density.py",
+      "sha256": "74200f9375bd6baa30bc2bc37828bde0f08789ca35ae3960d9a12963d4899efe",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "calculate_co_term_density"
+      ],
+      "paper_questions": [
+        "Which concepts co-occur within a chosen text window?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "coherence_score.py",
+      "path": "X:\\Python API\\coherence_score.py",
+      "sha256": "939eb8698af8dcf1770ebe3532b65af9af689c7341fbe9cecbca9384c16529e1",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "What consistency analysis is proposed for the text?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "concept_hub_generator.py",
+      "path": "X:\\Python API\\concept_hub_generator.py",
+      "sha256": "4eaf1193a6f44d9482464f9b61dc951252c569e90678cd786d42aa79cda84a73",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "top_comentions",
+        "recent_notes",
+        "backlinks_approx",
+        "generate",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "consolidate_p01.py",
+      "path": "X:\\Python API\\consolidate_p01.py",
+      "sha256": "082825fa104c6aad058e9d494a23cf5339190a5041ad2dc613e5d7cf48d552bd",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "consolidate_papers.py",
+      "path": "X:\\Python API\\consolidate_papers.py",
+      "sha256": "efb59c51fcba2fbb6eff959b0f8006983ef2512f0c985d65b7f915859b4af98d",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "consolidate_folder",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "cooccurrence_analyzer.py",
+      "path": "X:\\Python API\\cooccurrence_analyzer.py",
+      "sha256": "a68d056b53a6892c2cf1af5173982eb2c9906c5098831c10e837efff9c56f8cf",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "compute",
+        "main"
+      ],
+      "paper_questions": [
+        "Which concepts co-occur across the indexed corpus?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "correlation_engine.py",
+      "path": "X:\\Python API\\correlation_engine.py",
+      "sha256": "f00664d7dccb2f78ab07e7ef248a94a9534b55a738ba2dcc8d837465e00ad875",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "clean_brackets",
+        "extract_links_from_text_pure_string",
+        "extract_blocks_internal",
+        "load_json_list",
+        "create_term_vector",
+        "analyze_correlation_semantic"
+      ],
+      "paper_questions": [
+        "What cross-document term correspondence is suggested?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "cosmic_fate_curves.py",
+      "path": "X:\\Python API\\cosmic_fate_curves.py",
+      "sha256": "4389f1f99dddc872ea4de6347f69374f73eff3983cc75b1e422e1e6b72afdcec",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "create_master_1-14.py",
+      "path": "X:\\Python API\\create_master_1-14.py",
+      "sha256": "7a04b2aec38802d7bddca74fa653db4c3e902f2a11c30eb2bf316ccf93bac3ef",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "create_remaining_sections.py",
+      "path": "X:\\Python API\\create_remaining_sections.py",
+      "sha256": "d96858d38e1959b12c28a202cafeb2eb33533a1d021fd0f1aa55d75e4e87e80b",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "dashboard_generator.py",
+      "path": "X:\\Python API\\dashboard_generator.py",
+      "sha256": "b91cd141eb121b36388638b82e22aed280dca0573d1289c74cb66bfc41e50f76",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "deep_workbook.py",
+      "path": "X:\\Python API\\deep_workbook.py",
+      "sha256": "3c30cf9e4231ca49437bc47fecdbcc9cef8004425b2ce4c46bdca36c7faafa06",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_sanitize_title",
+        "_cell",
+        "_matching_keys",
+        "_expand_columns",
+        "_write_sheet",
+        "_overview",
+        "_layer_health",
+        "_all_metrics",
+        "write_deep_workbook",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "destroy.py",
+      "path": "X:\\Python API\\destroy.py",
+      "sha256": "2c4244b5bb7824fe514097d2284c1bed6f71260acd71d03b51fc308fb7f69b5d",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "phase_ingest",
+        "phase_q7_kill",
+        "phase_q6_predictions",
+        "phase_q5_dependencies",
+        "phase_q4_evidence",
+        "phase_q3_assertion",
+        "phase_q2_location",
+        "phase_q1_identity",
+        "run_backward_destruction"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "dns_calculator.py",
+      "path": "X:\\Python API\\dns_calculator.py",
+      "sha256": "f1f9b595eb228672f67a63031e0ece7aaaf23572c345861940a94e222a46cab0",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "calculate_dns",
+        "interpret_dns"
+      ],
+      "paper_questions": [
+        "How does the defined semantic novelty formula score an input?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "docker_entrypoint.py",
+      "path": "X:\\Python API\\docker_entrypoint.py",
+      "sha256": "dc04d0aaf0e3dd872df643b8e1f113a197c62afdd4c8f2afce7500ec064746bf",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run",
+        "find_papers",
+        "load_orchestrator",
+        "layer_health",
+        "grade_series",
+        "run_ollama_7q",
+        "write_schema_copy",
+        "generate_html_report",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "duplicate_finder.py",
+      "path": "X:\\Python API\\duplicate_finder.py",
+      "sha256": "7c9822c32ed541f3d1f7299b933dc6a6d65bb2ffedf07bd7fdd3651dc6274d74",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "normalize",
+        "load_notes",
+        "read_file",
+        "ensure_table",
+        "find_duplicates",
+        "main"
+      ],
+      "paper_questions": [
+        "Which indexed notes may be duplicates?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "emotion_analyzer.py",
+      "path": "X:\\Python API\\emotion_analyzer.py",
+      "sha256": "c6d878a7cd2d1f4d40eb6fe163d449abf5a91b7b69babeaa7f8300b307e032ae",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_get_goemotions",
+        "_split_sentences",
+        "analyze"
+      ],
+      "paper_questions": [
+        "Which emotion terms or model labels appear in the text?"
+      ],
+      "callable_analyzer": "emotion-profile",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "engine.py",
+      "path": "X:\\Python API\\engine.py",
+      "sha256": "6a7e1a34a218e0d5fecbc7265dfdbfde4c87675844daddfb330acab0315807c5",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "equation_audit.py",
+      "path": "X:\\Python API\\equation_audit.py",
+      "sha256": "119fb6997f8488b1ecfab44d31b410d339044c1b11652ccbfba0b76105ad10e1",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "What equations and assumptions need mathematical review?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "evidence_map.py",
+      "path": "X:\\Python API\\evidence_map.py",
+      "sha256": "2649e5c5b2152a3fe93e7318e67aec11bfca090c572ed6965e3d426e726eb929",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "Which evidence statements are linked to which claims?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "extract_missing_sections.py",
+      "path": "X:\\Python API\\extract_missing_sections.py",
+      "sha256": "a673806f981a858e5ff622c6f6559fd28d0dc502e32fe762bb5fe139774fd5d1",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "find_section",
+        "extract_and_save_section",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "extract_text.py",
+      "path": "X:\\Python API\\extract_text.py",
+      "sha256": "a644d4d1053eef53fd4bc51dd1910768fb02cbb3c109623ce55e5a4bbc1e6e96",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "strip_html",
+        "read_paper",
+        "_looks_like_css_or_chrome"
+      ],
+      "paper_questions": [
+        "What visible paper text can be extracted without changing the source?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "generate_paper4_visualizations.py",
+      "path": "X:\\Python API\\generate_paper4_visualizations.py",
+      "sha256": "6aa215620a1e453f1790f75dded620c8864d1ed6ea9a2fad378b652e6294e6d5",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "create_v1_binary_states",
+        "create_v2_impossibility_of_works",
+        "create_v3_grace_operator",
+        "create_v4_magnitude_vs_sign",
+        "create_v5_null_state"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "generate_report.py",
+      "path": "X:\\Python API\\generate_report.py",
+      "sha256": "79127dbd04921dddc7303001c9f99a5fb312d3923ca3f0aeedb48ca9b710b834",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_bar",
+        "_fruit_row",
+        "_esc",
+        "_is_snapshot",
+        "_flatten_pipeline",
+        "_tab_claims",
+        "_tab_equations",
+        "_tab_assumptions",
+        "_tab_evidence",
+        "_tab_kills",
+        "_tab_comparison",
+        "_tab_weak_points",
+        "_tab_revision",
+        "_build_peer_review",
+        "_peer_review_styles",
+        "_peer_review_script",
+        "generate_paper_html",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "grace_vault_manager.py",
+      "path": "X:\\Python API\\grace_vault_manager.py",
+      "sha256": "2926b3487b9eb57a335cf2a56ab2e4cff51fe908f0328f8be0ca52a00f9aded8",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run_cmd",
+        "cli",
+        "gui"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "graph_builder.py",
+      "path": "X:\\Python API\\graph_builder.py",
+      "sha256": "88e126ebff06dea5a596aca55f442b76c6101a0aab3be863cc5a686ff62908fa",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "build_graph"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "heartbeat_analyzer.py",
+      "path": "X:\\Python API\\heartbeat_analyzer.py",
+      "sha256": "1cadeb86d4b4aac1cc9c7d16f5358945ec0d4d6aed3bc683a3a2c0dbd4fe0d8d",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_get_model",
+        "_cosine_sim",
+        "_score_structural",
+        "_extract_sentences_with_sections",
+        "analyze",
+        "generate_heartbeat_html"
+      ],
+      "paper_questions": [
+        "What structural motifs recur across the paper?"
+      ],
+      "callable_analyzer": "heartbeat",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "html_report.py",
+      "path": "X:\\Python API\\html_report.py",
+      "sha256": "2beaff3351931018c9208c32888104c4466e6fcf4b2003d032cfb9ef93f929f8",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_label",
+        "_score_color",
+        "_bar_html",
+        "_death_icon",
+        "_death_color",
+        "build_tree_svg",
+        "build_html_report",
+        "write_html_report"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "id_system.py",
+      "path": "X:\\Python API\\id_system.py",
+      "sha256": "469ef57314128fa497ec27f8d37255fb2bc6eeb4136e395a286eb7cc8d994ec0",
+      "role": "identity_schema_or_validation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "get_confidence_class",
+        "get_weight"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "idea_density_analyzer.py",
+      "path": "X:\\Python API\\idea_density_analyzer.py",
+      "sha256": "f7a16b58d407039c7e7d3c5a60ad80cb49dabde7fd9f18cbc16446038b22cf7c",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "analyze"
+      ],
+      "paper_questions": [
+        "What is the text's estimated idea density?"
+      ],
+      "callable_analyzer": "idea-density",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "intake.py",
+      "path": "X:\\Python API\\intake.py",
+      "sha256": "942dd387e0f55ef741fb1a8a5fdcb6fec640e3b5414380289264c6bb73cecc56",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "banner",
+        "show_options",
+        "pick_one",
+        "pick_many",
+        "ask_float",
+        "ask_yn",
+        "ask_text",
+        "step_baseline",
+        "step_q0",
+        "step_q1",
+        "step_q2",
+        "step_q3",
+        "step_q4",
+        "step_q5",
+        "step_q6",
+        "step_q7",
+        "run_forward_intake"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "kill_conditions.py",
+      "path": "X:\\Python API\\kill_conditions.py",
+      "sha256": "ab65d8061fa3c554162136678793e02db2434841d840f264097dfb919cdfdf3e",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "What would defeat each exact claim?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "law1_visualizations.py",
+      "path": "X:\\Python API\\law1_visualizations.py",
+      "sha256": "27524e96ac277f0f1067f24bf8f097607531b72531826139ac0559923b366d1f",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "linguistic_analyzer.py",
+      "path": "X:\\Python API\\linguistic_analyzer.py",
+      "sha256": "4fc81615e3f5ab4076f384e28f6b57e0017f0a8d224f7bbd5d18421fec7916e7",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_get_nlp",
+        "analyze"
+      ],
+      "paper_questions": [
+        "How complex are the sentences, vocabulary, and syntax?"
+      ],
+      "callable_analyzer": "linguistic-depth",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "llm_bridge.py",
+      "path": "X:\\Python API\\llm_bridge.py",
+      "sha256": "9117749a82327803bc7e60c93df0245cb18d98301540e55081b9d7630fff9298",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "call_openai",
+        "run_full_analysis",
+        "run_compact_analysis",
+        "run_judge",
+        "parse_scoring_block",
+        "parse_knowledge_graph",
+        "batch_analyze"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "main.py",
+      "path": "X:\\Python API\\main.py",
+      "sha256": "061b5770afdfdbe0d4593de176079161af2e19ac5816517750afe63d2cb25a1a",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "print_usage",
+        "mode_forward",
+        "mode_backward",
+        "mode_llm_full",
+        "mode_llm_judge",
+        "mode_test",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "master_equation_network.py",
+      "path": "X:\\Python API\\master_equation_network.py",
+      "sha256": "1ba83cdb8737ffd65b7ecf340129eb90ada5a89ba31ceb343515d2fcec2e61a9",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [
+        "Which master equation variables are referenced or mapped?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "matter_analysis.py",
+      "path": "X:\\Python API\\matter_analysis.py",
+      "sha256": "6c70eec194f69fd4701202c15f8a2b643e2abdbd08a4ec703a046e5969ec65d2",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [
+        "What matter-related analysis does the script define?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "nlp_analyzer.py",
+      "path": "X:\\Python API\\nlp_analyzer.py",
+      "sha256": "26881e734446fc260dbf39b6321d84485aaff361399de2fc8555440c86c7563e",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "strip_md",
+        "tokenize",
+        "extract_entities",
+        "extract_key_sentences",
+        "build_corpus_model",
+        "get_paper_topics",
+        "analyze"
+      ],
+      "paper_questions": [
+        "Which entities, topics, and key sentences are detected?"
+      ],
+      "callable_analyzer": "nlp-deep",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "novelty_classification.py",
+      "path": "X:\\Python API\\novelty_classification.py",
+      "sha256": "219729a72cd6286a120df3062b29e515a6307385433b408c65d4ec266c51eb53",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "Which claims are new relative to the reviewed corpus?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "obsidian_pipeline.py",
+      "path": "X:\\Python API\\obsidian_pipeline.py",
+      "sha256": "f700bc66c6eb9beab992162f46cb78aa06d76bf0c24c331d4801d7e835b7a7eb",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_now",
+        "_timestamp_slug",
+        "_safe_slug",
+        "_normalize_text",
+        "_contains_phrase",
+        "_clean_inline_markdown",
+        "_humanize_stem",
+        "_is_generic_title",
+        "_is_meta_heading",
+        "_read_text",
+        "_parse_frontmatter",
+        "_extract_tags",
+        "_infer_tags",
+        "_extract_wikilinks",
+        "_extract_heading_title",
+        "_extract_title",
+        "_is_summary_paragraph",
+        "_clean_summary_paragraph",
+        "_summarize_text",
+        "_map_status",
+        "_map_frontmatter_type",
+        "_infer_domain",
+        "_infer_status",
+        "_infer_knowledge_type",
+        "_confidence",
+        "_parse_canvas",
+        "_json_ready",
+        "_scan_file",
+        "_iter_vault_files",
+        "_ensure_paths",
+        "_write_json",
+        "_write_jsonl",
+        "_write_csv",
+        "_html_table_rows",
+        "_render_html",
+        "_published_filename",
+        "_publish_html_outputs",
+        "run_obsidian_sync",
+        "load_latest_obsidian_summary",
+        "load_latest_obsidian_html"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "obsidian_writer.py",
+      "path": "X:\\Python API\\obsidian_writer.py",
+      "sha256": "574dd6ab9b12e30fbb0392c6ce0792b2c97231d98a4fcc147463a57974aa177e",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "ensure_output_dir",
+        "_label",
+        "_weight",
+        "build_frontmatter",
+        "build_overview_strip",
+        "callout_q0",
+        "callout_q1",
+        "callout_q2",
+        "callout_q3",
+        "callout_q4",
+        "callout_q5",
+        "callout_q6",
+        "callout_q7",
+        "callout_verdict",
+        "callout_graph",
+        "section_machine_block",
+        "build_full_note",
+        "write_note"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "ollama_7q_runner.py",
+      "path": "X:\\Python API\\ollama_7q_runner.py",
+      "sha256": "615b4422ad5cc3e8e18adbe6a74ce6d24a4aa954b2fd3a0cb04209400671914f",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "trim_content",
+        "call_ollama_json",
+        "parse_jsonish",
+        "import_prompt_module",
+        "run_prompt_section",
+        "run_paper",
+        "write_markdown",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "openai_8_prompts.py",
+      "path": "X:\\Python API\\openai_8_prompts.py",
+      "sha256": "6db55501b04a084b4fb6399cdcb9492bdf24a614b55ae054a8f93aa1d362fa21",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_call_o3",
+        "run_prompt",
+        "run_core",
+        "run_publish",
+        "run_all",
+        "write_intel_report"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "openai_mda_two_lane.py",
+      "path": "X:\\Python API\\openai_mda_two_lane.py",
+      "sha256": "49629acf65c73bb00ad39608afd21d448df720d9f00410daa4b35781e324c812",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "trim_content",
+        "read_text",
+        "cache_key",
+        "call_openai",
+        "run_lane",
+        "write_report",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "openai_paper_intel.py",
+      "path": "X:\\Python API\\openai_paper_intel.py",
+      "sha256": "1e5812690b6ad6dcc3a72775e2b176b1f3ac044dc5daa6056fc9f37973d5483b",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "analyze_paper_strategic",
+        "score_sentences_openai",
+        "_normalize_result",
+        "_empty_result",
+        "_safe_float",
+        "_safe_list",
+        "_safe_list_int",
+        "write_strategic_markdown"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "openai_sentence_scorer.py",
+      "path": "X:\\Python API\\openai_sentence_scorer.py",
+      "sha256": "2d3dfcb7900274c9517e1b43e23913b255f734da1131afdac2aa7db12aa82215",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_build_batch_prompt",
+        "score_sentences",
+        "_normalize_result",
+        "_empty_result",
+        "_safe_float",
+        "_safe_list"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "overlap_calculator.py",
+      "path": "X:\\Python API\\overlap_calculator.py",
+      "sha256": "17bc422581876a6ef9e849d5bfcc00bafc79263278995ca81fb74791ca9b3c11",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "calculate_overlap"
+      ],
+      "paper_questions": [
+        "How much do two supplied proposition sets overlap?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "overstatement_detector.py",
+      "path": "X:\\Python API\\overstatement_detector.py",
+      "sha256": "12994a0c7189c9bb7eaa4ac458dc1f5399e0a4bfdc8c6ca882c0930970289d72",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "Where does wording exceed the available evidence?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "paper_analyzer.py",
+      "path": "X:\\Python API\\paper_analyzer.py",
+      "sha256": "917bfa596dd041b438df1660c2f0d18bcf61185e8a27acc4b3b1b387e7b13084",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "strip_md",
+        "get_sentences",
+        "get_paragraphs",
+        "l1_structural",
+        "l2_grammar",
+        "l3_semantic",
+        "l4_density",
+        "l5_readability",
+        "l6_argument",
+        "l7_flow",
+        "l8_links",
+        "analyze"
+      ],
+      "paper_questions": [
+        "What are the paper's structural, grammatical, argument, flow, and link metrics?"
+      ],
+      "callable_analyzer": "paper-structure",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "paper_atom_api.py",
+      "path": "X:\\Python API\\paper_atom_api.py",
+      "sha256": "6695f0a2dcd2f9ca1c93fa9d5cbb7253ed5abb0f937936261543f3f20f53bf15",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "paper_compare.py",
+      "path": "X:\\Python API\\paper_compare.py",
+      "sha256": "c5fe0b50f5eb8821159dd80a70d0cc48b34338c493bd46f699ea456085354951",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "analyze_paper",
+        "compare_papers",
+        "print_comparison"
+      ],
+      "paper_questions": [
+        "How do two or more papers differ on measured features?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "paper_i_filler.py",
+      "path": "X:\\Python API\\paper_i_filler.py",
+      "sha256": "497f3664d01ff5271b8c4eefd19d612ca961ae3d234fa8b12ce9a186522bfe15",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "build_infobox",
+        "fill_paper_i_template"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "paper_metric_inventory.py",
+      "path": "X:\\Python API\\paper_metric_inventory.py",
+      "sha256": "a489f76622f789d0e22b91f4c9fe2fc3749e21b86a6a4605d596c456719e41e9",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "physics.py",
+      "path": "X:\\Python API\\physics.py",
+      "sha256": "3ea78d45a5cad2341c5abddc36ad0abb719a602a1a085832c234f43b787ddbe9",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "get_relevant_isomorphisms",
+        "get_kill_tests",
+        "suggest_dependencies"
+      ],
+      "paper_questions": [
+        "Which physics analogies and kill tests are proposed?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "physics_comparison.py",
+      "path": "X:\\Python API\\physics_comparison.py",
+      "sha256": "907ca165d9dfbf0537b1617c2fde5386eeb1f1b046229ca7fdfb740f131aaa1d",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "What claimed physics mapping needs a boundary check?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "pipeline.py",
+      "path": "X:\\Python API\\pipeline.py",
+      "sha256": "41aec9c0c8cd80e2e4a68ace7499111df8afcda7381f1b4156b6808675fa5d91",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_resolve",
+        "load_config",
+        "setup_logging",
+        "find_inputs",
+        "validate_input",
+        "choose_nlp",
+        "_read_input_payload",
+        "process_one",
+        "write_artifact",
+        "update_job_card",
+        "handoff",
+        "archive_input",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "pipeline_101124.py",
+      "path": "X:\\Python API\\pipeline_101124.py",
+      "sha256": "30f56290643fc1e583666ca9a699121dd630493b7f517d2ebc29227817bfad60",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_resolve",
+        "load_config",
+        "setup_logging",
+        "find_inputs",
+        "validate_input",
+        "choose_nlp",
+        "_read_input_payload",
+        "process_one",
+        "write_artifact",
+        "update_job_card",
+        "handoff",
+        "archive_input",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "pipeline_legacy.py",
+      "path": "X:\\Python API\\pipeline_legacy.py",
+      "sha256": "1abc08157d51a03f4f485c955d6ab03d2fd7925c59aa1e23453a2863d2260344",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_resolve",
+        "load_config",
+        "setup_logging",
+        "find_inputs",
+        "validate_input",
+        "load_config",
+        "setup_logging",
+        "find_inputs",
+        "validate_input",
+        "choose_nlp",
+        "_read_input_payload",
+        "process_one",
+        "write_artifact",
+        "update_job_card",
+        "handoff",
+        "archive_input",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "promotion_pass.py",
+      "path": "X:\\Python API\\promotion_pass.py",
+      "sha256": "1ca534edf9857e94636f58f424803c867ae08cfd56aa1e99da54b28df8e818b3",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "build_promotion_prompt",
+        "run_promotion_pass"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "prompts_smoketest.py",
+      "path": "X:\\Python API\\prompts_smoketest.py",
+      "sha256": "2cb049e73c5477baf969628f6ddc55e181357a93da3a353e9c8689b82a0996b0",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "quick_stats.py",
+      "path": "X:\\Python API\\quick_stats.py",
+      "sha256": "dc17b7523dd6acc5e7799d1429109502e8dd26b9d873216b94e5f6b5cabd7c1c",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "scan"
+      ],
+      "paper_questions": [
+        "What counts exist in a specified vault?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "render_integrated_information.py",
+      "path": "X:\\Python API\\render_integrated_information.py",
+      "sha256": "333cbf0476e4d9debcd414205b245625330d64095df1de2150c719273a72fd6c",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "plot_glowing_line"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "render_soul_field_potential.py",
+      "path": "X:\\Python API\\render_soul_field_potential.py",
+      "sha256": "85bc678fe04434e310756612f5aabbd616e5654fc081d7e0d1b5164ebf8d9df7",
+      "role": "renderer_or_generator",
+      "parse_status": "SyntaxError",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "render_three_stage_collapse.py",
+      "path": "X:\\Python API\\render_three_stage_collapse.py",
+      "sha256": "dcef12b540bdb5b2fb54f38e6fcf9c706e35b3821f38d322c1f06308a9e68a5e",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "render_three_stage_collapse_v2.py",
+      "path": "X:\\Python API\\render_three_stage_collapse_v2.py",
+      "sha256": "101f9a29db52bc02f3a44780736bfd2fda9398d97e5446e5c4c66009ce85b552",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "render_yukawa_coupling.py",
+      "path": "X:\\Python API\\render_yukawa_coupling.py",
+      "sha256": "d288367c0c56dd7cb15f23d595bc5bfae0edb996d870ae85826ac6537ef9ac1a",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "create_sphere_with_glow"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "revision_plan.py",
+      "path": "X:\\Python API\\revision_plan.py",
+      "sha256": "4d47227d701fdca846d23fd651c2bbc4a4c7ad288c550239751ae94aa397056a",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "What revisions would address identified gaps?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_baseline.py",
+      "path": "X:\\Python API\\run_baseline.py",
+      "sha256": "f9a489e7aa946bc7be424ede7ec658c061ed280223b7edcf53359bc1009942f7",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_brain_alignment.py",
+      "path": "X:\\Python API\\run_brain_alignment.py",
+      "sha256": "88af0f49435ec5f73412a2418dc65d0e73f324bd27d4a6ce8ac9b5fcdac38abb",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_slugify",
+        "_normalize_path",
+        "_load_json",
+        "_iter_markdown_files",
+        "_write_json",
+        "_write_csv",
+        "_ensure_folder",
+        "_run_paper_side",
+        "_run_brain_side",
+        "run_paper_only",
+        "run_brain_only",
+        "run_alignment",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_convergence_batch.py",
+      "path": "X:\\Python API\\run_convergence_batch.py",
+      "sha256": "a4f670e974d5eac7ca1c7ee8435608ee32aab1f527fcc949b2a855c34142756f",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "should_skip",
+        "write_vault_markdown",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_drop_zone.py",
+      "path": "X:\\Python API\\run_drop_zone.py",
+      "sha256": "160c53d71d33c33e5be3518f8216bce68ca59f5642aa1df4539d432cfbff7860",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_slugify",
+        "_write_json",
+        "_iter_markdown_files",
+        "_read_fetch_source",
+        "_resolve_input",
+        "_stage_file",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_full_series_suite.py",
+      "path": "X:\\Python API\\run_full_series_suite.py",
+      "sha256": "36d8f518501cfd56bcb23f464989762a32dd353007bf7f87234f33296245a97e",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_obsidian_brain.py",
+      "path": "X:\\Python API\\run_obsidian_brain.py",
+      "sha256": "90ed23446fbb14d736585cdf8cb6d4509a4da8ca8094870330d6c4a3c3311c6b",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_slugify",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_pipeline.py",
+      "path": "X:\\Python API\\run_pipeline.py",
+      "sha256": "4d6d655c38ad95f29b826e6e125efd6eaf65f8a60eb1ff4ef7d4b9d70dd43cec",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "log_status",
+        "run_layer",
+        "_check_layer_result",
+        "_stable_paper_id",
+        "_slugify",
+        "analyze_paper",
+        "analyze_series",
+        "_aggregate_layer_health",
+        "_flatten_for_excel",
+        "_collect_all_keys",
+        "_ordered_excel_columns",
+        "_header_fill_for_key",
+        "_write_deep_workbook_safe",
+        "write_excel"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "run_series_analytics.py",
+      "path": "X:\\Python API\\run_series_analytics.py",
+      "sha256": "eda0de1c1f76abc2be1d3265d7fa78a788bba8972d1f68c3fc4b3fcc8b363e4a",
+      "role": "orchestrator_or_intake",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "count_concepts",
+        "domains_in_text",
+        "detect_breakthroughs",
+        "tag_proximity"
+      ],
+      "paper_questions": [
+        "What patterns emerge across a paper series?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "scorer.py",
+      "path": "X:\\Python API\\scorer.py",
+      "sha256": "2ad99565dc83c8295c9316ccb7f94f838ed39f4ee4a0abefffc9f792f0cd310f",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "score_evidence_item",
+        "score_all_evidence",
+        "compute_S",
+        "compute_L",
+        "compute_D",
+        "compute_P",
+        "compute_C",
+        "compute_truth_score",
+        "score_summary",
+        "machine_block"
+      ],
+      "paper_questions": [
+        "How does the defined 7Q scoring model combine supplied inputs?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "seven_q_runner.py",
+      "path": "X:\\Python API\\seven_q_runner.py",
+      "sha256": "d3e359a0e1cb7b444faa79616fbb550a625a7b35a7bda4d406d30b67462c321e",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "call_openai",
+        "run_paper",
+        "_write_markdown",
+        "run_folder"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "smart_breakthrough_detector.py",
+      "path": "X:\\Python API\\smart_breakthrough_detector.py",
+      "sha256": "8d9a78105475f953e7907b94a08b8fa32f56091e3068722239e98f7b4f4b3f4a",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [
+        "Which passages are candidate breakthroughs for human review?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "snapshot_merge.py",
+      "path": "X:\\Python API\\snapshot_merge.py",
+      "sha256": "5745afdfcbcc008932c9836a6a17e6528d3752fbf38dbf2f57b32fe300a6e25e",
+      "role": "identity_schema_or_validation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_filter_to_dataclass",
+        "merge_sections_into_snapshot",
+        "build_snapshot"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "snapshot_schema.py",
+      "path": "X:\\Python API\\snapshot_schema.py",
+      "sha256": "c11932449a52eeb9cfbe6fd132936f4ab5f89341d5052867cd83b237dde557cc",
+      "role": "identity_schema_or_validation",
+      "parse_status": "OK",
+      "top_level_functions": [],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "spine_analysis.py",
+      "path": "X:\\Python API\\spine_analysis.py",
+      "sha256": "1886fd3e8d7ace345f1b46f1715c707a681b8226f24fcb3a0d14bd23afbc0602",
+      "role": "llm_or_prompt",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "run"
+      ],
+      "paper_questions": [
+        "What thesis and dependency spine does the paper present?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "sync_to_postgres.py",
+      "path": "X:\\Python API\\sync_to_postgres.py",
+      "sha256": "aba0f5df6fda15599defaa4162384e5f61f5586ccf6d159435c9411735be8c38",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "sync_breakthrough_to_postgres",
+        "sync_notes",
+        "sync_concepts",
+        "sync_co_mentions",
+        "sync_edges",
+        "sync_metrics",
+        "sync_duplicates",
+        "verify_sync"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "template_filler.py",
+      "path": "X:\\Python API\\template_filler.py",
+      "sha256": "2dac9e0a8995c853d2a3c437892a01b67035451a6203973c4a7c53c011d888ce",
+      "role": "renderer_or_generator",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "get_template",
+        "safe",
+        "list_to_bullets",
+        "normalize_conf",
+        "compute_tscore",
+        "get_domains",
+        "get_assumptions",
+        "get_citations",
+        "get_missing",
+        "fill_node_template",
+        "process_json_file",
+        "run_batch"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "text_analyzer.py",
+      "path": "X:\\Python API\\text_analyzer.py",
+      "sha256": "989606cb991c6d613eb7e2202ff58217622259c38e72c7c8621c58a887ea84ce",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_get_keybert",
+        "strip_markdown",
+        "readability_suite",
+        "keybert_keywords",
+        "yake_keywords",
+        "ngrams",
+        "analyze"
+      ],
+      "paper_questions": [
+        "How many words, paragraphs, keywords, and reading-grade estimates does the paper have?"
+      ],
+      "callable_analyzer": "text-statistics",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "theophysics_scorer.py",
+      "path": "X:\\Python API\\theophysics_scorer.py",
+      "sha256": "a0edab0831e2c79d23411225c727b23e9b8343de1f9fb04db01e9267b50b9db3",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_term_pattern",
+        "_count_terms",
+        "analyze"
+      ],
+      "paper_questions": [
+        "Which framework terms appear, as lexical signals only?"
+      ],
+      "callable_analyzer": "theophysics-lexical",
+      "execution_state": "WIRED_READ_ONLY"
+    },
+    {
+      "script": "toolkit_manager.py",
+      "path": "X:\\Python API\\toolkit_manager.py",
+      "sha256": "071c04f0530de25373a8feda6f25f007feecfc0e4e224b390f0f17bce8a174b8",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "backup",
+        "restore",
+        "deploy",
+        "list_backups"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "truth_coherence_scanner.py",
+      "path": "X:\\Python API\\truth_coherence_scanner.py",
+      "sha256": "5953481105c5a7cda5d9a5ae26cc4b70d66f711d31a937e350f59f981ff88fe4",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_get_nlp",
+        "_doc_entity_strings",
+        "_ner_anchor_for_sentence",
+        "clamp",
+        "normalize_whitespace",
+        "read_text_from_path",
+        "fetch_url_text",
+        "html_to_text",
+        "split_sections",
+        "split_paragraphs",
+        "split_sentences",
+        "tokenize",
+        "contains_phrase",
+        "count_terms",
+        "count_lexicon_hits",
+        "sentence_truth",
+        "classify_claim_kind",
+        "is_claim_sentence",
+        "claim_status_from_score",
+        "extract_claim_records",
+        "term_overlap",
+        "heading_alignment_score",
+        "fruits_vector",
+        "anti_fruits_vector",
+        "analyze_character_attributes",
+        "derive_character_posture",
+        "average",
+        "derive_integrity_profiles",
+        "analyze_document",
+        "collect_local_targets",
+        "write_outputs",
+        "main"
+      ],
+      "paper_questions": [
+        "Which text markers does the heuristic scanner label?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "truth_runner.py",
+      "path": "X:\\Python API\\truth_runner.py",
+      "sha256": "bf155115cd1b3805929a27dfc2cc2668b2c56278d229b02a4030d6c8fc48b42e",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_flatten_record",
+        "score_paper"
+      ],
+      "paper_questions": [
+        "Which scanner metrics are returned for the document?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "uid_generator.py",
+      "path": "X:\\Python API\\uid_generator.py",
+      "sha256": "a6dd575e17c6c25319a111da1392606a336c70735d80eca0de22a5146bf48247",
+      "role": "identity_schema_or_validation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "slugify",
+        "ensure_tables",
+        "next_index",
+        "generate_uid"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "validation_scaffold.py",
+      "path": "X:\\Python API\\validation_scaffold.py",
+      "sha256": "eef31605a770837b6cdfd63595dc3338c69e67cf31d47143d614a9f056fdbc72",
+      "role": "identity_schema_or_validation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "compute",
+        "main"
+      ],
+      "paper_questions": [
+        "Which indexed claims still lack validation?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "vault_refresh.py",
+      "path": "X:\\Python API\\vault_refresh.py",
+      "sha256": "18263c0834bc6d04d2b0b5551a91b8897389f3c093c48ab9202d305b7e6055fe",
+      "role": "source_or_vault_mutation",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "sha1_text",
+        "parse_frontmatter",
+        "extract_title",
+        "ensure_db",
+        "upsert_note",
+        "add_concepts",
+        "words_count",
+        "discover_concepts",
+        "scan_vault",
+        "main"
+      ],
+      "paper_questions": [],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    },
+    {
+      "script": "word_level_mapper.py",
+      "path": "X:\\Python API\\word_level_mapper.py",
+      "sha256": "a37940eb4175b87a72e1f40eb0c25ed0b2ea61f844eda4b25ed72a44b03eeb86",
+      "role": "candidate_analysis_or_helper",
+      "parse_status": "OK",
+      "top_level_functions": [
+        "_tokenize_to_words",
+        "_run_goemotions",
+        "_encode_anchor_group",
+        "_score_sentences_vs_anchors",
+        "_run_sbert",
+        "_run_structural_wordlevel",
+        "write_word_matrix"
+      ],
+      "paper_questions": [
+        "Which words or sentences match supplied anchor sets?"
+      ],
+      "callable_analyzer": null,
+      "execution_state": "INVENTORIED_NOT_WIRED"
+    }
+  ],
+  "interpretation": {
+    "declared_field_candidates": "Static keys found in output functions; not guaranteed runtime fields.",
+    "schema_fields": "Typed fields declared in source; may be empty in a paper.",
+    "questions": "Candidate questions, not completed answers.",
+    "scores": "Text similarity, emotion labels, and lexical rubrics do not measure truth, grace, holiness, or proof."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "station_version": "0.3.0",
+  "input_dir": "..\\..\\PROCESSED_ORIGINALS",
+  "output_dir": "..\\Fruits_of_the_Spirit_Grading",
+  "rubric_file": "scripts\\rubric\\fruits_rubric_v0.3.0.json",
+  "schema_file": "scripts\\schema\\fruits_report_v0.3.0.schema.json",
+  "system_prompt_file": "scripts\\prompts\\fruits_system_v0.3.0.txt",
+  "canonical_spec_candidates": [
+    "..\\Fruits_of_the_Spirit_Epistemic_Rating_System_Canonical.md",
+    "scripts\\reference\\Fruits_of_the_Spirit_Epistemic_Rating_System_Canonical.md",
+    "..\\..\\..\\..\\..\\Folders\\Master EXCEL OK\\Fruits_of_the_Spirit_Epistemic_Rating_System_Canonical.md"
+  ],
+  "workbook_directory": "\\\\192.168.2.50\\h\\_hp\\Desktop\\Folders\\Master EXCEL OK",
+  "workbook_patterns": [
+    "lexicons_master_enhanced*.xlsx",
+    "Fruits*.xlsx"
+  ],
+  "include_extensions": [".md", ".txt", ".docx", ".pdf", ".html", ".htm"],
+  "exclude_name_contains": [".fruits.", "~$"],
+  "max_input_characters": 90000,
+  "request_timeout_seconds": 240,
+  "retry_count": 2,
+  "default_workers": 2,
+  "default_limit": 2,
+  "aggregation_mode": "gated_profile",
+  "providers": [
+    {
+      "name": "openai",
+      "api_kind": "chat_completions",
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-5",
+      "model_env": "FRUITS_OPENAI_MODEL",
+      "api_key_env": "OPENAI_API_KEY",
+      "temperature": null,
+      "max_output_tokens": 12000,
+      "output_token_parameter": "max_completion_tokens"
+    },
+    {
+      "name": "deepseek",
+      "api_kind": "chat_completions",
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "model_env": "FRUITS_DEEPSEEK_MODEL",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.1,
+      "max_output_tokens": 12000,
+      "output_token_parameter": "max_tokens"
+    }
+  ]
+}

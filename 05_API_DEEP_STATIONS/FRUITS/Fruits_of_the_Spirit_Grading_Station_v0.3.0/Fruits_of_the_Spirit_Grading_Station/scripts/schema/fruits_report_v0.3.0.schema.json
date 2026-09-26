@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://faiththroughphysics.local/schema/fruits_report_v0.3.0.schema.json",
+  "title": "Fruits of the Spirit Evaluation Report",
+  "type": "object",
+  "required": ["spec_version", "target", "gate_results", "fruit_profile", "contradictions", "aggregation", "epistemic_status", "system_status", "confidence", "missing_evidence", "repair_path", "falsifier", "limitations"],
+  "properties": {
+    "spec_version": {"const": "0.3.0"},
+    "target": {
+      "type": "object",
+      "required": ["type", "title", "domain", "unit", "comparison_class", "population_boundary"],
+      "properties": {
+        "type": {"type": "string"}, "title": {"type": "string"}, "domain": {"type": "string"}, "unit": {"type": "string"},
+        "comparison_class": {"type": "string"}, "population_boundary": {"type": "string"}, "time_window": {"type": ["string", "object", "null"]}
+      }
+    },
+    "gate_results": {"type":"array", "minItems":7, "items":{"type":"object", "required":["gate_id","status","hard","rationale","evidence_refs"], "properties":{"gate_id":{"type":"string"},"status":{"enum":["PASS","WARN","FAIL","UNKNOWN"]},"hard":{"type":"boolean"},"rationale":{"type":"string"},"evidence_refs":{"type":"array","items":{"type":"string"}},"resolution":{"type":["string","null"]}}}},
+    "fruit_profile": {"type":"array", "minItems":9, "maxItems":9, "items":{"type":"object", "required":["fruit_id","score","confidence","mechanism","positive_evidence","counterevidence","evidence_coverage","stress_tests","counterfeit","rationale"], "properties":{"fruit_id":{"type":"string"},"score":{"type":"integer","minimum":0,"maximum":4},"confidence":{"type":"number","minimum":0,"maximum":1},"mechanism":{"type":"string"},"positive_evidence":{"type":"array","items":{"$ref":"#/$defs/evidence"}},"counterevidence":{"type":"array","items":{"$ref":"#/$defs/evidence"}},"evidence_coverage":{"type":"number","minimum":0,"maximum":1},"stress_tests":{"type":"object"},"counterfeit":{"type":"object","required":["flag","claimed_label","missing_companion","anti_fruit_output"],"properties":{"flag":{"type":"boolean"},"claimed_label":{"type":["string","null"]},"missing_companion":{"type":["string","null"]},"anti_fruit_output":{"type":["string","null"]},"severity":{"enum":["NONE","LOW","MODERATE","SEVERE"]}}},"rationale":{"type":"string"}}}},
+    "contradictions": {"type":"array", "items":{"type":"object", "required":["classification","load_bearing","resolved","evidence_refs","fruit_relation","consequence"], "properties":{"classification":{"enum":["APPARENT","LOCAL","DIALECTICAL_PRODUCTIVE","ACKNOWLEDGED_REPAIRED","UNRESOLVED","LOAD_BEARING"]},"load_bearing":{"type":"boolean"},"resolved":{"type":"boolean"},"evidence_refs":{"type":"array","items":{"type":"string"}},"fruit_relation":{"type":"string"},"consequence":{"type":"string"}}}},
+    "counterfeit_flags": {"type":"array"}, "anti_fruit_pressure":{"type":"array"}, "stakeholder_divergence":{"type":"array"},
+    "aggregation": {"type":"object", "required":["mode"], "properties":{"mode":{"enum":["profile","multiplicative","gated_profile"]},"arithmetic_summary":{"type":["number","null"]},"geometric_balance":{"type":["number","null"]},"multiplicative_coherence":{"type":["number","null"]},"minimum_fruit":{"type":["object","null"]},"vetoes":{"type":"array","items":{"type":"string"}}}},
+    "epistemic_status":{"enum":["SUPPORTED","CONDITIONAL","MODEL_WITNESSED","UNRESOLVED","CONTRADICTED"]},
+    "system_status":{"enum":["ROBUST","COHERENT_BUT_FRAGILE","REPAIRABLE","HIGH_SIGNAL_DECEPTION","BLOCKED"]},
+    "confidence":{"type":"number","minimum":0,"maximum":1}, "missing_evidence":{"type":"array","items":{"type":"string"}},
+    "repair_path":{"type":"array","items":{"type":"string"}}, "falsifier":{"type":"string"}, "limitations":{"type":"array","items":{"type":"string"}},
+    "formal_receipt":{"type":"object"}
+  },
+  "$defs": {
+    "evidence": {"type":"object", "required":["ref_id","quote_or_event","location","evidence_type","link_reason"], "properties":{"ref_id":{"type":"string"},"quote_or_event":{"type":"string"},"location":{"type":"string"},"evidence_type":{"enum":["STATED_INTENT","MECHANISM","PROCESS","OUTPUT","DOWNSTREAM_OUTCOME","COUNTEREXAMPLE","MISSING"]},"link_reason":{"type":"string"},"source_ref":{"type":["string","null"]},"time_window":{"type":["string","null"]}}}
+  }
+}

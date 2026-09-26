@@ -1,0 +1,391 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nerve.local/schemas/axiom-candidate-packet-1.0.json",
+  "title": "Axiom Candidate Packet",
+  "description": "Faith Through Physics — structured Atom Meaning Block for foundational axioms (10-section canonical structure + 5 governing questions). Compatible with the Consilience Atlas import path and the Nerve Sync API /api/axioms intake.",
+  "type": "object",
+  "required": [
+    "packet_type",
+    "schema_version",
+    "identity",
+    "meaning_block",
+    "warrant",
+    "dependency_spine",
+    "admission"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "packet_type": {
+      "const": "axiom-candidate-packet"
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pipeline": { "type": "string" },
+        "run_id": { "type": "string" },
+        "generator": { "type": "string" }
+      }
+    },
+
+    "identity": {
+      "description": "Section 1 — Atom Identity",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_id", "uuid", "atlas_object_type", "domain", "status"],
+      "properties": {
+        "canonical_id": {
+          "type": "string",
+          "pattern": "^A\\d+\\.\\d+$",
+          "description": "Canonical axiom ID, e.g. A1.0, A1.1, A1.2"
+        },
+        "uuid": { "type": "string" },
+        "legacy_id": { "type": "string" },
+        "semantic_code": { "type": "string" },
+        "atlas_object_type": { "const": "AXIOM" },
+        "domain": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["PRIMITIVE", "CANDIDATE", "ADMITTED", "RETIRED"]
+        },
+        "human_label": { "type": "string" },
+        "publication_state": {
+          "type": "string",
+          "enum": ["primitive", "candidate", "admitted", "retired"]
+        },
+        "version": { "type": "string" }
+      }
+    },
+
+    "meaning_block": {
+      "description": "Section 0 — Meaning Block & Governing Questions (the 5 governing questions are indexed query fields)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "formal_definition",
+        "common_sense_meaning",
+        "governing_questions"
+      ],
+      "properties": {
+        "formal_definition": { "type": "string" },
+        "mathematical_form": { "type": "string" },
+        "common_sense_meaning": { "type": "string" },
+        "governing_questions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "question_answered",
+            "problem_solved",
+            "kill_condition",
+            "downstream_license",
+            "unresolved"
+          ],
+          "properties": {
+            "question_answered": { "type": "string" },
+            "problem_solved": { "type": "string" },
+            "kill_condition": { "type": "string" },
+            "downstream_license": { "type": "string" },
+            "unresolved": { "type": "string" }
+          }
+        },
+        "why_it_matters": { "type": "string" },
+        "candidate_canon_boundary": {
+          "type": "string",
+          "enum": ["PRIMITIVE", "CANDIDATE", "ADMITTED", "REVIEW_REQUIRED"]
+        }
+      }
+    },
+
+    "nabla": {
+      "description": "Section 2 — Nabla / Periodic-15 Position",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "address": { "type": "string" },
+        "coordinate": { "type": "string" },
+        "breadcrumb": { "type": "string" },
+        "vector": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "G": { "type": "integer" }, "M": { "type": "integer" },
+            "E": { "type": "integer" }, "S": { "type": "integer" },
+            "T": { "type": "integer" }, "K": { "type": "integer" },
+            "R": { "type": "integer" }, "Q": { "type": "integer" },
+            "F": { "type": "integer" }, "C": { "type": "integer" }
+          }
+        },
+        "hash": { "type": "string" }
+      }
+    },
+
+    "dependency_spine": {
+      "description": "Section 3 — Dependency Spine",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "upstream": { "type": "array", "items": { "type": "string" } },
+        "downstream": { "type": "array", "items": { "type": "string" } },
+        "graph_degree": { "type": "integer" },
+        "blast_radius": {
+          "type": "string",
+          "enum": ["INERT", "LOCAL", "STRUCTURAL"]
+        }
+      }
+    },
+
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "statement": { "type": "string" },
+        "register": {
+          "type": "string",
+          "enum": ["FORMAL", "PHILOSOPHICAL", "EMPIRICAL", "THEOLOGICAL", "BRIDGE"]
+        },
+        "scope": { "type": "string" }
+      }
+    },
+
+    "warrant": {
+      "description": "Section 4 — Warrant Panel",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim"],
+      "properties": {
+        "claim": { "type": "string" },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "type": { "type": "string" },
+              "summary": { "type": "string" },
+              "source": { "type": "string" }
+            },
+            "required": ["id", "summary"]
+          }
+        },
+        "proof_test": { "type": "string" },
+        "counterevidence": { "type": "array", "items": { "type": "string" } },
+        "kill_conditions": { "type": "array", "items": { "type": "string" } },
+        "assumptions": { "type": "array", "items": { "type": "string" } },
+        "evidence_strength": { "type": "number" },
+        "evidence_coverage": { "type": "number" }
+      }
+    },
+
+    "dynamics": {
+      "description": "Section 5 — Dynamics Panel (The 7 Dynamics)",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "coherence": { "type": "string" },
+        "degradation": { "type": "string" },
+        "measurement": { "type": "string" },
+        "threshold": { "type": "string" },
+        "asymmetry": { "type": "string" },
+        "restoration": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "self": { "type": "string" },
+            "external": { "type": "string" }
+          }
+        },
+        "counterexample": { "type": "string" }
+      }
+    },
+
+    "orientation": {
+      "description": "Section 6 — Orientation Panel (Ascent | Translation | Descent)",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ascent": { "type": "array", "items": { "type": "string" } },
+        "translation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "preserved": { "type": "array", "items": { "type": "string" } },
+            "lost": { "type": "array", "items": { "type": "string" } },
+            "introduced": { "type": "array", "items": { "type": "string" } },
+            "forbidden": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "descent": { "type": "array", "items": { "type": "string" } },
+        "meeting_state": { "type": "string" }
+      }
+    },
+
+    "bridges": {
+      "description": "Section 7 — Bridges",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "source_domain", "target_domain", "direction", "state"],
+        "properties": {
+          "id": { "type": "string" },
+          "source_domain": { "type": "string" },
+          "target_domain": { "type": "string" },
+          "direction": { "type": "string" },
+          "state": { "type": "string" },
+          "preserved": { "type": "array", "items": { "type": "string" } },
+          "lost": { "type": "array", "items": { "type": "string" } },
+          "introduced": { "type": "array", "items": { "type": "string" } },
+          "negative_controls": { "type": "array", "items": { "type": "string" } },
+          "ablation": { "type": "string" }
+        }
+      }
+    },
+
+    "reality_mirror": {
+      "description": "Section 8 — Reality Mirror",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "class": {
+          "type": "string",
+          "enum": ["N", "F", "H", "T"]
+        },
+        "status": { "type": "string" },
+        "anchor_object": { "type": "string" },
+        "provenance": { "type": "string" },
+        "closed_loop_warning": { "type": "string" },
+        "identification_state": { "type": "string" }
+      }
+    },
+
+    "receipts": {
+      "description": "Section 9 — Receipts / Runs",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "human": { "$ref": "#/$defs/lane_receipt" },
+        "python": { "$ref": "#/$defs/lane_receipt" },
+        "api": { "$ref": "#/$defs/lane_receipt" },
+        "model_engine": { "type": "string" },
+        "input_hash": { "type": "string" },
+        "output_hash": { "type": "string" },
+        "lean_convergence": { "type": "string" },
+        "review_state": { "type": "string" }
+      }
+    },
+
+    "formal_verification": {
+      "description": "Formal Verification & Certification Rail (Lean 4, Z3 SMT, Framework Coherence)",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lean": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["LEAN_CERTIFIED", "VERIFIED", "CANDIDATE", "IN_PROGRESS", "FAILED", "NOT_ATTEMPTED"]
+            },
+            "theorem_name": { "type": "string" },
+            "code": { "type": "string" },
+            "mathlib_dependencies": { "type": "array", "items": { "type": "string" } },
+            "convergence_receipt": { "type": "string" }
+          }
+        },
+        "z3": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["Z3_CERTIFIED", "SATISFIABLE", "VALIDATED", "COUNTERMODEL_DETECTED", "UNCHECKED"]
+            },
+            "smt_script": { "type": "string" },
+            "check_result": { "type": "string" }
+          }
+        },
+        "framework_coherence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["COHERENT", "INDEPENDENT_PRIMITIVE", "TENSION_DETECTED", "CONTRADICTION_BLOCKED", "UNCHECKED"]
+            },
+            "root_anchor": { "type": "string" },
+            "blast_radius": { "type": "string", "enum": ["INERT", "LOCAL", "STRUCTURAL"] },
+            "coherence_notes": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "explanatory_lenses": {
+      "description": "Section 4 — Six-Layer Explanatory Lens",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "human": { "type": "string" },
+        "metaphysical": { "type": "string" },
+        "theological": { "type": "string" },
+        "scientific": { "type": "string" },
+        "formal": { "type": "string" },
+        "external": { "type": "string" }
+      }
+    },
+
+    "crosswalk": {
+      "description": "Section 10 — Crosswalk Links",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "public_paper_link": { "type": "string" },
+        "generated_node_record": { "type": "string" },
+        "lean_derivation_record": { "type": "string" },
+        "related_upstream": { "type": "array", "items": { "type": "string" } },
+        "related_downstream": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "admission": {
+      "description": "Candidate/canon boundary — nothing is admitted by intake",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": ["candidate_draft", "in_review", "admitted", "rejected"]
+        },
+        "include": { "type": "string", "enum": ["PENDING", "YES", "NO"] },
+        "decision": { "type": "string", "enum": ["PENDING", "ADMIT", "REJECT"] },
+        "import_status": {
+          "type": "string",
+          "enum": ["PENDING_REVIEW", "IMPORTED", "REJECTED"]
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "lane_receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lane": { "type": "string", "enum": ["H", "P", "A"] },
+        "result": { "type": "string" },
+        "model": { "type": "string" },
+        "timestamp": { "type": "string" }
+      }
+    }
+  }
+}

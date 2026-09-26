@@ -1,0 +1,614 @@
+<title>Paper Information Matrix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --plane:#f5f5f2; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10); --wash:rgba(42,120,214,.07);
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --g3:#104281; --g2:#2a78d6; --g1:#86b6ef; --mid:#e4e3de; --b1:#f0a39d; --b2:#e34948; --b3:#a8292a;
+  --q1:#cde2fb; --q2:#86b6ef; --q3:#2a78d6; --q4:#184f95;
+  --knock:#fcfcfb; --good:#0ca30c; --warn:#fab219; --crit:#d03b3b;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --cond:"IBM Plex Sans Condensed","IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --plane:#0f0f0e; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10); --wash:rgba(57,135,229,.10);
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --g3:#9ec5f4; --g2:#3987e5; --g1:#1c5cab; --mid:#383835; --b1:#7d2a28; --b2:#e66767; --b3:#f4aaa6;
+    --q1:#184f95; --q2:#256abf; --q3:#3987e5; --q4:#86b6ef;
+    --knock:#1a1a19;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --plane:#0f0f0e; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10); --wash:rgba(57,135,229,.10);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --g3:#9ec5f4; --g2:#3987e5; --g1:#1c5cab; --mid:#383835; --b1:#7d2a28; --b2:#e66767; --b3:#f4aaa6;
+  --q1:#184f95; --q2:#256abf; --q3:#3987e5; --q4:#86b6ef;
+  --knock:#1a1a19;
+}
+*{box-sizing:border-box}
+body{background:var(--plane);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px;padding-block:22px 60px;display:grid;gap:26px}
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font-family:var(--cond);font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.01em;line-height:1.1}
+h2{font-family:var(--cond);font-weight:600;font-size:20px}
+h3{font-size:13px;font-weight:600}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sub{color:var(--ink2);max-width:72ch}
+.mono,.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+header.top{display:grid;gap:10px}
+.demo{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  border:1px dashed var(--axis);color:var(--ink2);padding:3px 8px;border-radius:3px;width:max-content;max-width:100%}
+.counts{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.counts b{color:var(--ink);font-weight:500}
+section.panel{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:18px;display:grid;gap:14px;min-width:0}
+.panel-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px}
+.panel-head .sub{font-size:13px}
+/* headline tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:1px;background:var(--grid);border:1px solid var(--grid);border-radius:4px;overflow:hidden}
+.tile{background:var(--surface);padding:12px 12px 10px;display:grid;gap:4px;align-content:start}
+.tile .k{font-size:12px;color:var(--ink2);line-height:1.25;min-height:30px}
+.tile .v{font-size:24px;font-weight:500;letter-spacing:-.01em}
+.tile .v small{font-size:12px;color:var(--muted);font-weight:400;margin-left:3px}
+.pbar{position:relative;height:6px;background:var(--grid);border-radius:3px;margin-top:4px}
+.pbar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+.pbar u{position:absolute;top:-3px;width:2px;height:12px;background:var(--ink2)}
+.tile .p{font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;justify-content:space-between}
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--axis);border-radius:4px;overflow:hidden}
+.seg button{font:inherit;font-size:12px;background:transparent;color:var(--ink2);border:0;padding:5px 10px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--axis)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.seg button:focus-visible,input:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+.ctl-label{font-size:11px;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;margin-right:6px}
+input[type=search]{font:inherit;font-size:13px;background:var(--plane);color:var(--ink);border:1px solid var(--axis);border-radius:4px;padding:5px 9px;width:220px;max-width:100%}
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:12px;color:var(--ink2);align-items:center}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.ramp{display:inline-flex;height:10px;border-radius:2px;overflow:hidden}
+.ramp i{width:16px}
+/* matrix */
+#matrix{width:100%;display:block}
+.two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.charts{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+@media (max-width:420px){.charts{grid-template-columns:1fr}}
+.chart{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:14px;display:grid;gap:6px;align-content:start;min-width:0}
+.chart .what{font-size:12px;color:var(--ink2)}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart .mini-legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:var(--ink2)}
+.chart .mini-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+svg text{font-family:var(--sans);fill:var(--ink2);font-size:10px}
+svg .t-ink{fill:var(--ink)} svg .t-mut{fill:var(--muted)} svg .t-mono{font-family:var(--mono)}
+.read{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 22px;font-size:13px;color:var(--ink2)}
+.read b{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
+/* the wall */
+#wall{columns:5 200px;column-gap:18px;font-family:var(--mono);font-size:10.5px;line-height:1.5;color:var(--ink2)}
+#wall .fam{break-after:avoid;font-family:var(--cond);font-size:12px;font-weight:600;color:var(--ink);margin-top:8px;padding-top:4px;border-top:1px solid var(--grid)}
+#wall div.r{display:flex;justify-content:space-between;gap:6px;break-inside:avoid}
+#wall div.r span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#wall div.r .v{color:var(--ink)}
+#wall .dim{opacity:.18}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:2px}
+#tip{position:fixed;z-index:10;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--border);
+  box-shadow:0 6px 20px rgba(0,0,0,.14);border-radius:5px;padding:8px 10px;font-size:12px;max-width:280px;line-height:1.4}
+#tip .t1{font-weight:600} #tip .t2{font-family:var(--mono);font-size:11px;color:var(--ink2)}
+footer{font-size:12px;color:var(--muted);display:grid;gap:4px}
+@media (prefers-reduced-motion:no-preference){ .fade{animation:fade .5s ease-out both} @keyframes fade{from{opacity:.4}to{opacity:1}} }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Paper statistics · information matrix · prototype</div>
+    <h1 id="paperTitle">The Resurrection as Information Preserved</h1>
+    <span class="demo">DEMO NUMBERS · generated to show the layout, not a real run</span>
+    <p class="sub">Every statistic the pipeline computes for one paper, arranged so the good, the weak and the unusual show up before you read a single number. Compared two ways: against academic norms, and against David's own corpus.</p>
+    <div class="counts" id="counts"></div>
+  </header>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div><h2>Headline strip</h2><div class="sub">Twelve numbers picked as a starting point. The marker on each bar is the corpus median.</div></div>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div><h2>The matrix</h2><div class="sub">One band per family of statistics, surface at the top, depth at the bottom. One circle per statistic. Hover any circle.</div></div>
+      <div class="controls">
+        <span><span class="ctl-label">Compare to</span><span class="seg" id="frameSeg"><button type="button" data-v="co" aria-pressed="true">David's corpus</button><button type="button" data-v="ac" aria-pressed="false">Academic norm</button></span></span>
+        <span><span class="ctl-label">Order</span><span class="seg" id="sortSeg"><button type="button" data-v="good" aria-pressed="true">Weak → strong</button><button type="button" data-v="z" aria-pressed="false">Most pronounced</button><button type="button" data-v="az" aria-pressed="false">A–Z</button></span></span>
+        <input type="search" id="q" placeholder="Find a statistic (e.g. entropy)" aria-label="Find a statistic">
+      </div>
+    </div>
+    <div class="legend" id="legend">
+      <span><span class="ramp" id="rampKey"></span>&nbsp;needs work → typical → strong</span>
+      <span><svg width="46" height="18" viewBox="0 0 46 18" aria-hidden="true"><circle cx="5" cy="9" r="3" fill="var(--muted)"/><circle cx="18" cy="9" r="5.5" fill="var(--muted)"/><circle cx="36" cy="9" r="8.5" fill="var(--muted)"/></svg>size = how far from the norm</span>
+      <span><svg width="64" height="18" viewBox="0 0 64 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="var(--q3)"/><circle cx="9" cy="9" r="2.4" fill="var(--knock)"/><circle cx="31" cy="9" r="8" fill="var(--q3)"/><rect x="28.2" y="6.2" width="5.6" height="5.6" transform="rotate(45 31 9)" fill="var(--knock)"/><circle cx="53" cy="9" r="8" fill="var(--q3)"/><circle cx="53" cy="9" r="3.4" fill="none" stroke="var(--knock)" stroke-width="1.6"/></svg>dot computed · diamond AI-judged · ring low agreement</span>
+      <span><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="2 2"/></svg>no academic benchmark</span>
+    </div>
+    <svg id="matrix" role="img" aria-label="Matrix of all statistics by family"></svg>
+  </section>
+
+  <div class="two">
+    <section class="panel">
+      <div class="panel-head"><div><h2>Family map</h2><div class="sub">Each family placed by how it scores against academic norms (across) and against your own corpus (up). The filled core is the share of that family's statistics rated strong.</div></div></div>
+      <svg id="fammap" viewBox="0 0 560 470" role="img" aria-label="Family map"></svg>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><div><h2>How to read it in one minute</h2></div></div>
+      <div class="read">
+        <div><b>1. Look at colour first.</b>A band that is mostly blue is a strength. A band with a red left end has a few weak spots; a band that is red most of the way needs work.</div>
+        <div><b>2. Then look at size.</b>Big circles are the statistics furthest from normal, good or bad. Those are the ones worth reading.</div>
+        <div><b>3. Flip the comparison.</b>Switch between your corpus and academic norms. A family that turns red only under academic norms is your house style, not a flaw in this paper.</div>
+        <div><b>4. Check the inner shape.</b>Diamonds were judged by the AI, dots were computed. A ring means the two AI runs disagreed, so treat that number with care.</div>
+        <div><b>5. Use the family map for the verdict.</b>Top right is strong on both counts. Top left is strong for you but weak academically. The dashed lane holds families that have no academic benchmark at all.</div>
+        <div id="verdict"></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="panel-head"><div><h2>Specialised views</h2><div class="sub">Fifteen statistics that need their own chart form. Each chart is drawn for the question it answers.</div></div></div>
+    <div class="charts" id="charts"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div><h2>The wall</h2><div class="sub">Every statistic, printed. Value, then percentile against your corpus (c) and against academic norms (a).</div></div>
+      <input type="search" id="wq" placeholder="Filter the wall" aria-label="Filter the wall">
+    </div>
+    <div id="wall"></div>
+  </section>
+
+  <footer>
+    <div>Methods: percentiles are ranks among graded papers; "how far from the norm" is |z| from the corpus median; AI-judged statistics are run twice and agreement is reported.</div>
+    <div>Prototype for the Statistics Wall spec (STATISTICS_WALL_V1). Every number on this page is generated demo data.</div>
+  </footer>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+(function(){
+"use strict";
+/* ---------- deterministic demo data ---------- */
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;var t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+var R=rng(20260925);
+function nrm(){var u=R()||1e-9,v=R();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function clamp(x,a,b){return Math.max(a,Math.min(b,x));}
+function zOf(p){var q=clamp(p/100,.005,.995);var t=Math.sqrt(-2*Math.log(q<.5?q:1-q));var z=t-(2.515517+.802853*t+.010328*t*t)/(1+1.432788*t+.189269*t*t+.001308*t*t*t);return q<.5?-z:z;}
+
+var SECT=["Whole paper","§1 Opening","§2 Problem","§3 Evidence","§4 Model","§5 Objections","§6 Scripture","§7 Implications","§8 Close"];
+/* [name, dir hi|lo|band, lo, hi, decimals, unit] */
+var FAM=[
+ {k:"text",n:"Text and size",src:"L",sect:true,co:60,ac:62,m:[["Word count","band",3800,6200,0,"words"],["Sentences","band",180,320,0,""],["Paragraphs","band",40,90,0,""],["Mean words per sentence","band",14,28,1,""],["Longest sentence","lo",38,90,0,"words"],["Type-token ratio","hi",.28,.52,3,""],["Stopword ratio","band",.38,.55,3,""],["Questions","band",2,30,0,""],["Quotations","band",3,40,0,""],["Parentheticals","lo",4,50,0,""],["Reading time","band",14,28,1,"min"],["Speaking time","band",25,42,1,"min"]]},
+ {k:"read",n:"Readability",src:"L",sect:true,co:55,ac:58,m:[["Flesch reading ease","band",30,70,1,""],["Flesch–Kincaid grade","band",8,16,1,""],["Gunning fog","band",10,19,1,""],["SMOG","band",9,17,1,""],["Coleman–Liau","band",9,16,1,""],["ARI","band",9,17,1,""],["Dale–Chall","band",7,11,2,""],["LIX","band",38,62,1,""],["RIX","band",3,9,2,""],["Linsear Write","band",9,18,1,""],["Spache","band",5,9,2,""],["FORCAST","band",9,12,2,""],["McAlpine EFLAW","lo",20,35,1,""],["Consensus grade","band",9,15,0,""]]},
+ {k:"lex",n:"Vocabulary richness",src:"L",sect:true,co:72,ac:66,m:[["MTLD","hi",55,120,1,""],["MATTR (w=50)","hi",.68,.84,3,""],["HD-D","hi",.78,.9,3,""],["vocd-D","hi",60,120,1,""],["Yule's K","lo",80,180,1,""],["Simpson's D","lo",.004,.012,4,""],["Honoré's R","hi",900,1500,0,""],["Brunet's W","lo",12,16,2,""],["Herdan's C","hi",.8,.9,3,""],["Maas a²","lo",.017,.023,4,""],["Hapax ratio","hi",.35,.6,3,""],["Dis legomena ratio","hi",.08,.16,3,""],["Zipf slope","band",-1.2,-.85,3,""],["Zipf R²","hi",.9,.99,3,""],["Heaps β","hi",.5,.75,3,""]]},
+ {k:"syn",n:"Sentence structure",src:"L",sect:true,co:58,ac:49,m:[["Mean dependency distance","band",2.2,3.4,2,""],["Parse-tree depth","band",4,9,1,""],["Clauses per sentence","band",1.4,3,2,""],["Subordination index","band",.2,.6,2,""],["Passive voice ratio","lo",.05,.3,3,""],["Nominalization ratio","lo",.02,.09,3,""],["Noun share","band",.22,.32,3,""],["Verb share","band",.14,.22,3,""],["Adjective share","band",.06,.12,3,""],["Adverb share","band",.03,.08,3,""],["Pronoun share","band",.05,.12,3,""],["Lexical density","hi",.45,.6,3,""],["Mean word length","band",4.4,5.4,2,"chars"],["Long-word share","band",.2,.34,3,""]]},
+ {k:"coh",n:"Cohesion",src:"L",sect:true,co:64,ac:61,m:[["Noun overlap, adjacent","hi",.18,.5,3,""],["Argument overlap","hi",.3,.65,3,""],["Sentence similarity mean","hi",.32,.55,3,""],["Sentence similarity SD","lo",.09,.2,3,""],["Paragraph similarity","hi",.4,.7,3,""],["Causal connectives","hi",4,16,1,"/1k"],["Adversative connectives","band",2,10,1,"/1k"],["Temporal connectives","band",2,9,1,"/1k"],["Additive connectives","band",8,22,1,"/1k"],["Conditional connectives","band",1,7,1,"/1k"],["Given/new ratio","band",.4,.8,2,""],["Topic drift start→end","lo",.1,.45,3,""]]},
+ {k:"info",n:"Information theory",src:"L",sect:true,co:79,ac:70,m:[["Unigram entropy","hi",8.8,10.4,2,"bits"],["Bigram entropy","hi",12,15.5,2,"bits"],["Conditional entropy","band",3.2,5.4,2,"bits"],["Redundancy","lo",.12,.3,3,""],["gzip ratio","band",.3,.42,3,""],["bz2 ratio","band",.26,.38,3,""],["lzma ratio","band",.28,.4,3,""],["Surprisal mean","band",5.5,8,2,"bits"],["Surprisal SD","band",2,3.6,2,"bits"],["Perplexity","band",28,90,1,""],["Key-term mutual info","hi",1.1,3.2,2,"bits"],["Information per sentence","hi",60,140,1,"bits"]]},
+ {k:"stance",n:"Stance and hedging",src:"L",sect:true,co:52,ac:34,m:[["Hedges","band",4,18,1,"/1k"],["Boosters","lo",3,16,1,"/1k"],["Attitude markers","band",2,12,1,"/1k"],["Self-mentions","band",1,14,1,"/1k"],["Engagement markers","band",3,15,1,"/1k"],["Hedge:booster ratio","hi",.4,2.2,2,""],["Absolutes (always/never/proves)","lo",1,9,1,"/1k"],["Certainty index","band",.3,.8,2,""]]},
+ {k:"emo",n:"Emotion and tone",src:"L",sect:true,co:66,ac:63,m:[["VADER compound","band",-.2,.6,3,""],["Positive share","band",.08,.2,3,""],["Negative share","lo",.03,.12,3,""],["Valence","band",.45,.7,3,""],["Arousal","band",.35,.6,3,""],["Dominance","band",.4,.65,3,""],["Joy","band",.02,.09,3,""],["Trust","hi",.04,.12,3,""],["Fear","lo",.01,.06,3,""],["Anger","lo",.005,.04,3,""],["Sadness","band",.01,.05,3,""],["Anticipation","band",.02,.08,3,""],["Arc fit (man-in-a-hole)","hi",.4,.92,2,""]]},
+ {k:"claim",n:"Claims and evidence",src:"A",sect:false,co:63,ac:47,m:[["Claims","band",40,120,0,""],["Claim:evidence ratio","lo",.8,3.2,2,""],["Unsupported claims","lo",.05,.4,3,""],["Claims carrying a caveat","hi",.05,.35,3,""],["Premise depth","band",2,6,1,""],["Longest inference chain","band",3,9,0,"steps"],["Branching factor","band",1.2,2.6,2,""],["Objections raised","hi",2,14,0,""],["Objections answered","hi",.3,1,3,""],["Counter-argument ratio","hi",.05,.3,3,""],["Fallacy flags","lo",0,9,0,""],["Overstatements","lo",0,14,0,""],["Descriptive claims","band",10,40,0,""],["Causal claims","band",5,25,0,""],["Theological claims","band",5,40,0,""],["Empirical claims","band",3,25,0,""],["Historical claims","band",2,20,0,""],["Mathematical claims","band",0,15,0,""]]},
+ {k:"cite",n:"Citations and sources",src:"L",sect:false,co:81,ac:21,m:[["References","hi",5,60,0,""],["References per 1k words","hi",1,9,2,""],["DOI coverage","hi",.05,.9,3,""],["Median reference year","hi",1975,2022,0,""],["Price index (last 5 yrs)","hi",.02,.45,3,""],["Peer-reviewed share","hi",.05,.7,3,""],["Book share","band",.1,.6,3,""],["Web share","lo",.05,.5,3,""],["Self-citation share","lo",.05,.6,3,""],["Scripture references","band",4,60,0,""],["OT:NT ratio","band",.2,1.6,2,""],["Citation density §3","hi",1,12,1,"/1k"],["Citation density §5","hi",0,10,1,"/1k"],["Primary-source share","hi",.05,.5,3,""]]},
+ {k:"math",n:"Math and formal proof",src:"L",sect:false,co:57,ac:44,m:[["Equations","band",0,30,0,""],["Unique symbols","band",4,60,0,""],["Undefined variables","lo",0,12,0,""],["Missing units","lo",0,10,0,""],["Dimensional checks passed","hi",.3,1,3,""],["Equations referenced in text","hi",.2,1,3,""],["Lean theorems linked","hi",0,14,0,""],["Lean sorry count","lo",0,6,0,""],["Kernel-verified share","hi",0,1,3,""],["Formal maturity level","hi",1,6,0,"/7"],["Kill conditions stated","hi",0,9,0,""],["Testable predictions","hi",0,8,0,""]]},
+ {k:"sem",n:"Topics and novelty",src:"L",sect:false,co:74,ac:null,m:[["Topic count","band",3,14,0,""],["Topic entropy","band",1.2,3.4,2,"bits"],["Novelty vs your corpus","hi",.1,.6,3,""],["Similarity to series centroid","band",.5,.9,3,""],["Similarity to corpus centroid","band",.4,.85,3,""],["Near-duplicate sentences (internal)","lo",0,12,0,""],["Near-duplicates vs corpus","lo",0,25,0,""],["New terms introduced","band",0,20,0,""],["Series coverage","hi",.2,.9,3,""]]},
+ {k:"graph",n:"Concept graph",src:"L",sect:false,co:62,ac:null,m:[["Concept nodes","band",40,220,0,""],["Edges","band",80,700,0,""],["Density","band",.02,.12,3,""],["Modularity","hi",.2,.7,3,""],["Clustering coefficient","hi",.1,.5,3,""],["Diameter","band",4,12,0,""],["Connected components","lo",1,9,0,""],["Bridge concepts","hi",1,14,0,""],["Hub concepts","band",2,12,0,""],["PageRank of thesis term","hi",.01,.09,3,""]]},
+ {k:"obs",n:"Obsidian vault",src:"L",sect:false,co:48,ac:null,m:[["Wikilinks out","hi",0,60,0,""],["Backlinks in","hi",0,40,0,""],["Unresolved links","lo",0,20,0,""],["Embeds","band",0,12,0,""],["Block references","band",0,10,0,""],["Tags","band",0,20,0,""],["Frontmatter completeness","hi",.2,1,3,""],["Heading depth","band",2,5,0,""],["Callouts","band",0,12,0,""],["Orphan status","lo",0,1,0,""],["Vault graph degree","hi",0,50,0,""],["Revisions (git)","band",1,30,0,""]]},
+ {k:"fruit",n:"Fruits of the Spirit",src:"A",sect:true,co:83,ac:null,m:[["Love, mean","hi",-.3,1.1,2,""],["Joy, mean","hi",-.3,.9,2,""],["Peace, mean","hi",-.3,.9,2,""],["Patience, mean","hi",-.3,.9,2,""],["Kindness, mean","hi",-.4,.9,2,""],["Goodness, mean","hi",-.3,1,2,""],["Faithfulness, mean","hi",-.2,1,2,""],["Gentleness, mean","hi",-.5,.9,2,""],["Self-control, mean","hi",-.3,.9,2,""],["Spikes toward love","hi",0,14,0,""],["Spikes away from love","lo",0,10,0,""],["Counterfeit sentences","lo",0,9,0,""],["Hidden-fruit sentences","hi",0,12,0,""]]},
+ {k:"me",n:"Master equation",src:"A",sect:false,co:69,ac:null,m:[["Slot coverage","hi",2,10,0,"/10"],["Product test (multiplicative)","hi",0,1,0,""],["G fit","hi",0,3,0,""],["M fit","hi",0,3,0,""],["E fit","hi",0,3,0,""],["S_eff fit","hi",0,3,0,""],["T fit","hi",0,3,0,""],["K fit","hi",0,3,0,""],["R fit","hi",0,3,0,""],["Q fit","hi",0,3,0,""],["F fit","hi",0,3,0,""],["C fit","hi",0,3,0,""],["Analog strength","hi",0,5,0,"/5"],["Run agreement","hi",.4,1,2,""]]},
+ {k:"ax",n:"Axiom nodes",src:"A",sect:false,co:71,ac:null,m:[["Nodes engaged","band",3,30,0,""],["AX_CORE touched","hi",0,7,0,"/7"],["AX_DERIVED touched","band",0,5,0,""],["AX_SCAFFOLD touched","band",0,20,0,""],["FW_EXTENDED touched","band",0,30,0,""],["HY_EVIDENCE touched","band",0,15,0,""],["Directly asserted","band",0,12,0,""],["Supported","hi",0,20,0,""],["Contested","band",0,6,0,""],["Unmapped claims","lo",0,20,0,""]]},
+ {k:"cohs",n:"Coherence",src:"A",sect:false,co:67,ac:52,m:[["Coherence score","hi",3,9.5,1,"/10"],["Internal consistency","hi",3,10,1,"/10"],["Definitional stability","hi",3,10,1,"/10"],["Inferential connectedness","hi",3,10,1,"/10"],["Register boundary respect","hi",3,10,1,"/10"],["Structural contradictions","lo",0,4,0,""],["Local contradictions","lo",0,9,0,""],["Tensions","band",0,10,0,""],["Missing definitions","lo",0,12,0,""]]},
+ {k:"rel",n:"Reliability",src:"A",sect:false,co:61,ac:58,m:[["Cohen's κ, claim types","hi",.4,.92,2,""],["ICC, fruit scores","hi",.5,.95,2,""],["ICC, coherence","hi",.4,.95,2,""],["κ, axiom alignment","hi",.35,.9,2,""],["Mean 95% CI width, love","lo",.08,.4,2,""],["Mean 95% CI width, surprisal","lo",.1,.6,2,""],["Runs compared","band",2,2,0,""],["Quote-verification rate","hi",.7,1,3,""]]}
+];
+var METRICS=[];
+FAM.forEach(function(f,fi){
+  var secs=f.sect?SECT:["Whole paper"];
+  f.bias=clamp(f.co+nrm()*3,5,95);
+  f.abias=f.ac==null?null:clamp(f.ac+nrm()*3,5,95);
+  f.m.forEach(function(b){
+    secs.forEach(function(s,si){
+      var spread=si===0?10:17;
+      var gc=clamp(f.bias+nrm()*spread,1,99), ga=f.abias==null?null:clamp(f.abias+nrm()*spread,1,99);
+      var dir=b[1], pc;
+      if(dir==="hi")pc=gc;else if(dir==="lo")pc=100-gc;else pc=clamp(50+(R()<.5?-1:1)*(100-gc)/2,1,99);
+      var val=b[2]+(b[3]-b[2])*pc/100;
+      var src=f.src; if(f.k==="cite"&&/Peer|Primary|Book|Web|OT/.test(b[0]))src="A";
+      var low=src==="A"&&R()<.12;
+      METRICS.push({fam:fi,name:b[0],sec:s,dir:dir,unit:b[5],dec:b[4],val:val,gc:gc,ga:ga,pc:pc,
+        z:Math.abs(zOf(pc)),src:src,low:low,series:clamp(pc+nrm()*12,1,99),dv:nrm()*8});
+    });
+  });
+});
+var N=METRICS.length;
+
+/* ---------- helpers ---------- */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+var NS="http://www.w3.org/2000/svg";
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+function txt(parent,x,y,s,attrs){var t=el("text",Object.assign({x:x,y:y},attrs||{}),parent);t.textContent=s;return t;}
+function fmt(m){var v=m.val;if(m.dec===0)return Math.round(v).toLocaleString();return v.toFixed(m.dec);}
+function goodColor(g){ if(g==null)return css("--mid");
+  if(g<15)return css("--b3");if(g<30)return css("--b2");if(g<42)return css("--b1");if(g<58)return css("--mid");if(g<70)return css("--g1");if(g<85)return css("--g2");return css("--g3");}
+function ord(n){n=Math.round(n);var s=["th","st","nd","rd"],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0]);}
+var tip=document.getElementById("tip");
+function showTip(e,html){tip.innerHTML=html;tip.hidden=false;var w=tip.offsetWidth,h=tip.offsetHeight;var x=e.clientX+14,y=e.clientY+14;if(x+w>innerWidth-8)x=e.clientX-w-14;if(y+h>innerHeight-8)y=e.clientY-h-14;tip.style.left=x+"px";tip.style.top=y+"px";}
+function hideTip(){tip.hidden=true;}
+function metricTip(m){var f=FAM[m.fam];return '<div class="t1">'+m.name+'</div><div class="t2">'+f.n+' · '+m.sec+'</div>'+
+  '<div style="margin-top:4px"><span class="num" style="font-size:15px">'+fmt(m)+'</span> '+(m.unit||'')+'</div>'+
+  '<div class="t2">corpus '+ord(m.gc)+' good-pct · academic '+(m.ga==null?'no benchmark':ord(m.ga))+'</div>'+
+  '<div class="t2">'+(m.src==="A"?'AI-judged':'computed locally')+(m.low?' · runs disagreed':'')+' · |z| '+m.z.toFixed(2)+'</div>';}
+
+/* ---------- counts ---------- */
+var numbers=N*5;
+document.getElementById("counts").innerHTML='<span><b>'+N.toLocaleString()+'</b> statistics</span><span><b>'+FAM.length+'</b> families</span><span><b>9</b> scopes (whole paper + 8 sections)</span><span><b>'+numbers.toLocaleString()+'</b> numbers incl. percentiles and deltas</span><span><b>'+METRICS.filter(function(m){return m.src==="A";}).length+'</b> AI-judged</span>';
+
+/* ---------- state ---------- */
+var state={frame:"co",sort:"good",q:""};
+try{var saved=JSON.parse(localStorage.getItem("pim-state")||"null");if(saved){state.frame=saved.frame||"co";state.sort=saved.sort||"good";}}catch(e){}
+function save(){try{localStorage.setItem("pim-state",JSON.stringify({frame:state.frame,sort:state.sort}));}catch(e){}}
+function gOf(m){return state.frame==="co"?m.gc:m.ga;}
+function famGood(fi,frame){var s=0,n=0;METRICS.forEach(function(m){if(m.fam===fi){var g=frame==="co"?m.gc:m.ga;if(g!=null){s+=g;n++;}}});return n?s/n:null;}
+
+/* ---------- tiles ---------- */
+function find(fk,name){for(var i=0;i<N;i++){var m=METRICS[i];if(FAM[m.fam].k===fk&&m.name===name&&m.sec==="Whole paper")return m;}}
+function renderTiles(){
+  var overall=Math.round(METRICS.reduce(function(a,m){return a+m.gc;},0)/N);
+  var picks=[
+    {k:"Overall grade (all statistics)",v:overall,u:"/100",g:overall},
+    {k:"Love, mean per sentence",m:find("fruit","Love, mean"),u:"−2…+2"},
+    {k:"Coherence score",m:find("cohs","Coherence score"),u:"/10"},
+    {k:"Claims left unsupported",m:find("claim","Unsupported claims"),pct:true},
+    {k:"Master-equation slots filled",m:find("me","Slot coverage"),u:"/10"},
+    {k:"Reading grade (Flesch–Kincaid)",m:find("read","Flesch–Kincaid grade"),u:"grade"},
+    {k:"Vocabulary richness (MTLD)",m:find("lex","MTLD")},
+    {k:"Information per sentence",m:find("info","Information per sentence"),u:"bits"},
+    {k:"Peer-reviewed sources",m:find("cite","Peer-reviewed share"),pct:true},
+    {k:"Kill conditions stated",m:find("math","Kill conditions stated")},
+    {k:"Novelty vs your corpus",m:find("sem","Novelty vs your corpus"),pct:true},
+    {k:"AI agreement (κ)",m:find("rel","Cohen's κ, claim types")}
+  ];
+  var host=document.getElementById("tiles");host.innerHTML="";
+  picks.forEach(function(p){
+    var g=p.m?gOf(p.m):p.g; if(g==null)g=p.m.gc;
+    var val=p.m?(p.pct?Math.round(p.m.val*100)+"%":fmt(p.m)):p.v;
+    var d=document.createElement("div");d.className="tile";
+    d.innerHTML='<div class="k">'+p.k+'</div><div class="v num">'+val+(p.u?'<small>'+p.u+'</small>':'')+'</div>'+
+      '<div class="pbar"><i style="width:'+g.toFixed(0)+'%;background:'+goodColor(g)+'"></i><u style="left:50%"></u></div>'+
+      '<div class="p"><span>'+(state.frame==="co"?"vs corpus":"vs academic")+'</span><span>'+ord(g)+' pct</span></div>';
+    host.appendChild(d);
+  });
+}
+
+/* ---------- matrix ---------- */
+var matrixSvg=document.getElementById("matrix");
+function renderMatrix(){
+  var W=matrixSvg.parentNode.clientWidth-36; if(W<300)W=300;
+  var narrow=W<640, labelW=narrow?0:208, cell=narrow?13:15, rowGap=10;
+  var perLine=Math.max(8,Math.floor((W-labelW-8)/cell));
+  while(matrixSvg.firstChild)matrixSvg.removeChild(matrixSvg.firstChild);
+  var y=4, q=state.q.toLowerCase();
+  FAM.forEach(function(f,fi){
+    var ms=METRICS.filter(function(m){return m.fam===fi;});
+    ms.sort(state.sort==="az"?function(a,b){return (a.name+a.sec).localeCompare(b.name+b.sec);}:
+            state.sort==="z"?function(a,b){return b.z-a.z;}:
+            function(a,b){var ga=gOf(a),gb=gOf(b);if(ga==null)ga=a.gc;if(gb==null)gb=b.gc;return ga-gb;});
+    var lines=Math.ceil(ms.length/perLine), h=lines*cell;
+    var g=el("g",{},matrixSvg);
+    if(narrow){ var t=txt(g,0,y+11,f.n,{"class":"t-ink","font-weight":"600","font-size":"12"}); y+=16; }
+    var fc=famGood(fi,"co"), fa=famGood(fi,"ac");
+    if(!narrow){
+      txt(g,0,y+11,f.n,{"class":"t-ink","font-weight":"600","font-size":"12"});
+      txt(g,0,y+25,"corpus "+Math.round(fc)+"%  ·  academic "+(fa==null?"—":Math.round(fa)+"%"),{"class":"t-mono t-mut","font-size":"10"});
+      txt(g,0,y+38,ms.length+" stats",{"class":"t-mut","font-size":"10"});
+    }
+    el("rect",{x:labelW-4,y:y-3,width:W-labelW+4,height:Math.max(h,narrow?h:42)+6,fill:fi%2?css("--wash"):"transparent",rx:3},g);
+    ms.forEach(function(m,i){
+      var cx=labelW+(i%perLine)*cell+cell/2, cy=y+Math.floor(i/perLine)*cell+cell/2;
+      var gv=gOf(m), noBench=gv==null;
+      var r=clamp(2.2+m.z*2.3,2.4,cell/2-.4);
+      var dim=q&&(m.name+" "+f.n).toLowerCase().indexOf(q)<0;
+      var c=el("circle",{cx:cx,cy:cy,r:r,fill:noBench?"none":goodColor(gv),stroke:noBench?css("--muted"):"none","stroke-width":noBench?1.2:0,"stroke-dasharray":noBench?"2 1.6":"none","data-i":METRICS.indexOf(m),opacity:dim?.12:1},g);
+      if(!noBench&&r>=4.2&&!dim){
+        var kn=css("--knock"), s=r*.34;
+        if(m.low) el("circle",{cx:cx,cy:cy,r:s*1.25,fill:"none",stroke:kn,"stroke-width":1.3,"pointer-events":"none"},g);
+        else if(m.src==="A") el("rect",{x:cx-s*.8,y:cy-s*.8,width:s*1.6,height:s*1.6,transform:"rotate(45 "+cx+" "+cy+")",fill:kn,"pointer-events":"none"},g);
+        else el("circle",{cx:cx,cy:cy,r:s*.85,fill:kn,"pointer-events":"none"},g);
+      }
+    });
+    y+=Math.max(h,narrow?h:42)+rowGap;
+  });
+  matrixSvg.setAttribute("viewBox","0 0 "+W+" "+y);
+  matrixSvg.setAttribute("height",y);
+}
+matrixSvg.addEventListener("mousemove",function(e){var i=e.target.getAttribute&&e.target.getAttribute("data-i");if(i!=null){showTip(e,metricTip(METRICS[+i]));}else hideTip();});
+matrixSvg.addEventListener("mouseleave",hideTip);
+
+/* ---------- family map ---------- */
+function renderFamMap(){
+  var s=document.getElementById("fammap");while(s.firstChild)s.removeChild(s.firstChild);
+  var L=54,T=20,Wd=380,Hd=380,lane=L+Wd+34;
+  var X=function(v){return L+v/100*Wd;},Y=function(v){return T+Hd-v/100*Hd;};
+  el("rect",{x:X(50),y:T,width:Wd/2,height:Hd/2,fill:css("--wash")},s);
+  [0,25,50,75,100].forEach(function(v){
+    el("line",{x1:X(v),x2:X(v),y1:T,y2:T+Hd,stroke:css("--grid"),"stroke-width":1},s);
+    el("line",{x1:L,x2:L+Wd,y1:Y(v),y2:Y(v),stroke:css("--grid"),"stroke-width":1},s);
+    txt(s,X(v),T+Hd+14,v+"%",{"text-anchor":"middle","class":"t-mono t-mut"});
+    txt(s,L-6,Y(v)+3,v+"%",{"text-anchor":"end","class":"t-mono t-mut"});
+  });
+  el("line",{x1:X(50),x2:X(50),y1:T,y2:T+Hd,stroke:css("--axis"),"stroke-width":1.2},s);
+  el("line",{x1:L,x2:L+Wd,y1:Y(50),y2:Y(50),stroke:css("--axis"),"stroke-width":1.2},s);
+  txt(s,L+Wd/2,T+Hd+32,"vs academic norm →",{"text-anchor":"middle","class":"t-ink","font-size":"11"});
+  var yl=txt(s,14,T+Hd/2,"vs your corpus →",{"text-anchor":"middle","class":"t-ink","font-size":"11",transform:"rotate(-90 14 "+(T+Hd/2)+")"});
+  txt(s,X(97),T+12,"strong both ways",{"text-anchor":"end","class":"t-mut"});
+  txt(s,X(3),T+12,"your style, weak academically",{"class":"t-mut"});
+  txt(s,X(3),T+Hd-6,"needs work",{"class":"t-mut"});
+  txt(s,X(97),T+Hd-6,"academic, unlike you",{"text-anchor":"end","class":"t-mut"});
+  el("rect",{x:lane-18,y:T,width:94,height:Hd,fill:"none",stroke:css("--axis"),"stroke-dasharray":"3 3",rx:4},s);
+  txt(s,lane+29,T+Hd+14,"no academic",{"text-anchor":"middle","class":"t-mut"});
+  txt(s,lane+29,T+Hd+26,"benchmark",{"text-anchor":"middle","class":"t-mut"});
+  FAM.forEach(function(f,fi){
+    var ms=METRICS.filter(function(m){return m.fam===fi;});
+    var co=famGood(fi,"co"),ac=famGood(fi,"ac");
+    var strong=ms.filter(function(m){return m.gc>=65;}).length/ms.length;
+    var r=clamp(Math.sqrt(ms.length)*1.55,7,22);
+    var cx=ac==null?lane+29:X(ac), cy=Y(co);
+    var g=el("g",{"data-f":fi,style:"cursor:default"},s);
+    el("circle",{cx:cx,cy:cy,r:r,fill:css("--surface"),stroke:goodColor(co),"stroke-width":2.2,"stroke-dasharray":ac==null?"3 2":"none"},g);
+    el("circle",{cx:cx,cy:cy,r:Math.max(1.5,r*Math.sqrt(strong)),fill:goodColor(Math.max(co,58))},g);
+    g.addEventListener("mousemove",function(e){showTip(e,'<div class="t1">'+f.n+'</div><div class="t2">'+ms.length+' statistics</div><div>corpus <b class="num">'+Math.round(co)+'%</b> · academic <b class="num">'+(ac==null?'no benchmark':Math.round(ac)+'%')+'</b></div><div class="t2">'+Math.round(strong*100)+'% of its statistics rated strong</div>');});
+    g.addEventListener("mouseleave",hideTip);
+  });
+  // direct labels, nudged to avoid overlap
+  var labs=FAM.map(function(f,fi){var ac=famGood(fi,"ac"),co=famGood(fi,"co");var n=METRICS.filter(function(m){return m.fam===fi;}).length;var r=clamp(Math.sqrt(n)*1.55,7,22);return {t:f.n,x:(ac==null?lane+29:X(ac)),y:Y(co),r:r,lane:ac==null};});
+  labs.sort(function(a,b){return a.y-b.y;});
+  var used=[];
+  labs.forEach(function(l){var ly=l.y+3;var lx=l.lane?l.x:l.x+l.r+4;var anchor="start";
+    if(l.lane){ly=l.y+l.r+11;anchor="middle";}
+    for(var k=0;k<used.length;k++){var u=used[k];if(Math.abs(u.y-ly)<11&&Math.abs(u.x-lx)<90){ly=u.y+11;}}
+    used.push({x:lx,y:ly});
+    txt(s,lx,ly,l.t,{"text-anchor":anchor,"class":"t-ink","font-size":"10"});});
+}
+
+/* ---------- verdict text ---------- */
+function renderVerdict(){
+  var rows=FAM.map(function(f,fi){return {n:f.n,co:famGood(fi,"co"),ac:famGood(fi,"ac")};});
+  var best=rows.slice().sort(function(a,b){return b.co-a.co;})[0];
+  var gap=rows.filter(function(r){return r.ac!=null;}).sort(function(a,b){return (b.co-b.ac)-(a.co-a.ac);})[0];
+  var weak=rows.slice().sort(function(a,b){return a.co-b.co;})[0];
+  document.getElementById("verdict").innerHTML='<b>What this demo paper shows.</b>Strongest family: '+best.n+' ('+Math.round(best.co)+'% vs corpus). Biggest gap between your norms and academic ones: '+gap.n+' ('+Math.round(gap.co)+'% corpus vs '+Math.round(gap.ac)+'% academic). Weakest family: '+weak.n+'.';
+}
+
+/* ---------- specialised charts ---------- */
+var charts=document.getElementById("charts");
+function card(title,what,build){var d=document.createElement("div");d.className="chart";d.innerHTML='<h3>'+title+'</h3><div class="what">'+what+'</div>';var s=el("svg",{},null);d.appendChild(s);var extra=build(s,d);charts.appendChild(d);return d;}
+var FR=["Love","Joy","Peace","Patience","Kindness","Goodness","Faithfulness","Gentleness","Self-control"];
+var SENT=240, sv=[];(function(){var base=[.55,.3,.35,.2,.25,.45,.5,.15,.3];for(var i=0;i<SENT;i++){var row=[];var wave=Math.sin(i/19)*.6+(i>150&&i<168?-1.4:0)+(i>60&&i<72?1.1:0);for(var j=0;j<9;j++){row.push(clamp(Math.round(base[j]+wave*(j===0?1:.6)+nrm()*.8),-2,2));}sv.push(row);}})();
+function hover(node,html){node.addEventListener("mousemove",function(e){showTip(e,html);});node.addEventListener("mouseleave",hideTip);}
+function renderCharts(){
+  charts.innerHTML="";
+  var s1=css("--s1"),s2=css("--s2"),s3=css("--s3"),mu=css("--muted"),gr=css("--grid"),ax=css("--axis"),ink=css("--ink"),sur=css("--surface");
+  function divColor(v){return v<=-2?css("--b3"):v===-1?css("--b1"):v===0?css("--mid"):v===1?css("--g1"):css("--g3");}
+
+  /* 1 radar */
+  card("Nine fruits, profile","Mean per-sentence score for each fruit. Solid: this paper. Dashed: corpus median.",function(s,d){
+    s.setAttribute("viewBox","0 0 340 290");var cx=170,cy=146,R=108;
+    var paper=FR.map(function(f,i){var m=find("fruit",f+", mean");return m?m.val:0;}), corp=[.45,.3,.32,.25,.28,.4,.45,.22,.3];
+    function pt(i,v){var a=-Math.PI/2+i*2*Math.PI/9, rr=R*(v+.5)/1.7;return [cx+rr*Math.cos(a),cy+rr*Math.sin(a)];}
+    [-.5,0,.6,1.2].forEach(function(v){var p=FR.map(function(_,i){return pt(i,v).join(",");}).join(" ");el("polygon",{points:p,fill:"none",stroke:v===0?ax:gr,"stroke-width":1},s);});
+    FR.forEach(function(f,i){var e=pt(i,1.2);el("line",{x1:cx,y1:cy,x2:e[0],y2:e[1],stroke:gr},s);var l=pt(i,1.45);txt(s,l[0],l[1]+3,f,{"text-anchor":"middle","font-size":"10"});});
+    el("polygon",{points:corp.map(function(v,i){return pt(i,v).join(",");}).join(" "),fill:"none",stroke:mu,"stroke-width":1.5,"stroke-dasharray":"4 3"},s);
+    el("polygon",{points:paper.map(function(v,i){return pt(i,v).join(",");}).join(" "),fill:s1,"fill-opacity":.14,stroke:s1,"stroke-width":2},s);
+    paper.forEach(function(v,i){var p=pt(i,v);var c=el("circle",{cx:p[0],cy:p[1],r:4,fill:s1,stroke:sur,"stroke-width":2},s);hover(c,'<div class="t1">'+FR[i]+'</div><div class="num">'+v.toFixed(2)+' mean</div><div class="t2">corpus median '+corp[i].toFixed(2)+'</div>');});
+    txt(s,cx+3,cy-3,"0",{"class":"t-mono t-mut"});
+  });
+
+  /* 2 heat strip */
+  card("Sentence by sentence, all nine fruits","Every sentence is a column. Blue moves toward the fruit, red moves away. The red block near sentence 150 is where the paper turns on its opponents.",function(s){
+    var W=340,cw=W/SENT,rh=13,H=9*rh+26;s.setAttribute("viewBox","0 0 "+(W+62)+" "+H);
+    FR.forEach(function(f,j){txt(s,58,j*rh+10,f,{"text-anchor":"end","font-size":"9"});});
+    for(var i=0;i<SENT;i++)for(var j=0;j<9;j++){el("rect",{x:62+i*cw,y:j*rh,width:cw+.05,height:rh-1.5,fill:divColor(sv[i][j])},s);}
+    var hit=el("rect",{x:62,y:0,width:W,height:9*rh,fill:"transparent"},s);
+    hit.addEventListener("mousemove",function(e){var b=hit.getBoundingClientRect();var i=clamp(Math.floor((e.clientX-b.left)/b.width*SENT),0,SENT-1);showTip(e,'<div class="t1">Sentence S'+String(i+1).padStart(3,"0")+'</div>'+FR.map(function(f,j){return '<div class="t2">'+f+' '+(sv[i][j]>0?"+":"")+sv[i][j]+'</div>';}).join(""));});
+    hit.addEventListener("mouseleave",hideTip);
+    [1,60,120,180,240].forEach(function(n){txt(s,62+(n-1)*cw,9*rh+14,"S"+n,{"text-anchor":"middle","class":"t-mono t-mut","font-size":"9"});});
+  });
+
+  /* 3 counterfeit scatter */
+  card("Words vs meaning: counterfeit and hidden fruit","Each dot is a sentence. Across: how many love words it uses. Up: what it actually does for love. Many love words doing harm is a counterfeit. Love done without the words is hidden fruit.",function(s){
+    s.setAttribute("viewBox","0 0 340 250");var L=36,T=12,W=290,H=196;
+    var X=function(v){return L+v/6*W;},Y=function(v){return T+H-(v+2)/4*H;};
+    el("rect",{x:X(3),y:Y(0),width:W/2,height:H/2,fill:css("--b1"),"fill-opacity":.25},s);
+    el("rect",{x:L,y:T,width:W/2,height:H/2,fill:css("--g1"),"fill-opacity":.22},s);
+    [-2,-1,0,1,2].forEach(function(v){el("line",{x1:L,x2:L+W,y1:Y(v),y2:Y(v),stroke:v===0?ax:gr},s);txt(s,L-6,Y(v)+3,(v>0?"+":"")+v,{"text-anchor":"end","class":"t-mono t-mut"});});
+    [0,2,4,6].forEach(function(v){txt(s,X(v),T+H+13,v,{"text-anchor":"middle","class":"t-mono t-mut"});});
+    txt(s,L+W/2,T+H+27,"love words in the sentence",{"text-anchor":"middle","font-size":"10"});
+    for(var i=0;i<SENT;i++){var w=Math.max(0,Math.round(Math.abs(nrm())*1.3+(sv[i][0]>0?.8:0)+(i>150&&i<168?2.4:0)));w=Math.min(6,w);var v=sv[i][0]+nrm()*.18;
+      var c=el("circle",{cx:X(w)+nrm()*4,cy:Y(clamp(v,-2,2)),r:3,fill:s1,"fill-opacity":.55,stroke:sur,"stroke-width":.8},s);
+      (function(i,w,v){hover(c,'<div class="t1">S'+String(i+1).padStart(3,"0")+'</div><div class="t2">'+w+' love words · meaning '+(sv[i][0]>0?"+":"")+sv[i][0]+'</div>');})(i,w,v);}
+    txt(s,X(5.9),Y(-1.85),"counterfeit",{"text-anchor":"end","class":"t-ink","font-weight":"600"});
+    txt(s,X(.1),Y(1.75),"hidden fruit",{"class":"t-ink","font-weight":"600"});
+  });
+
+  /* 4 bullet: readability */
+  card("Readability against the target band","Grey band: the target for a general educated reader. Bar: this paper. Tick: corpus median.",function(s){
+    var rows=[["Flesch–Kincaid grade",8,16,[10,13]],["Gunning fog",10,19,[11,14]],["SMOG",9,17,[10,13]],["Coleman–Liau",9,16,[10,13]],["ARI",9,17,[10,13]],["Consensus grade",9,15,[10,13]]];
+    var W=210,L=112,rh=30;s.setAttribute("viewBox","0 0 340 "+(rows.length*rh+18));
+    rows.forEach(function(r,i){var m=find("read",r[0]);var y=i*rh+4;var X=function(v){return L+(v-6)/14*W;};
+      txt(s,L-8,y+13,r[0],{"text-anchor":"end","font-size":"10"});
+      el("rect",{x:L,y:y+4,width:W,height:14,fill:gr,rx:2},s);
+      el("rect",{x:X(r[3][0]),y:y+4,width:X(r[3][1])-X(r[3][0]),height:14,fill:ax,rx:2},s);
+      var inBand=m.val>=r[3][0]&&m.val<=r[3][1];
+      var b=el("rect",{x:L,y:y+8,width:Math.max(2,X(m.val)-L),height:6,fill:inBand?s1:css("--b2"),rx:3},s);
+      el("line",{x1:X(r[3][0]+1.2),x2:X(r[3][0]+1.2),y1:y+1,y2:y+21,stroke:ink,"stroke-width":2},s);
+      txt(s,X(m.val)+4,y+16,m.val.toFixed(1),{"class":"t-mono t-ink","font-size":"10"});
+      hover(b,'<div class="t1">'+r[0]+'</div><div class="num">'+m.val.toFixed(1)+'</div><div class="t2">target '+r[3][0]+'–'+r[3][1]+(inBand?' · inside':' · outside')+'</div>');});
+    [6,10,14,18].forEach(function(v){txt(s,L+(v-6)/14*W,rows.length*rh+14,v,{"text-anchor":"middle","class":"t-mono t-mut","font-size":"9"});});
+  });
+
+  /* 5 dumbbell */
+  card("Since the last version","Hollow: version 2. Filled: this version. Longer bars moved more.",function(s){
+    var rows=[["Coherence score","cohs"],["Love, mean","fruit"],["MTLD","lex"],["Unsupported claims","claim"],["Price index (last 5 yrs)","cite"],["Topic drift start→end","coh"],["Absolutes (always/never/proves)","stance"],["Slot coverage","me"]];
+    var L=150,W=170,rh=24;s.setAttribute("viewBox","0 0 340 "+(rows.length*rh+20));
+    rows.forEach(function(r,i){var m=find(r[1],r[0]);var now=m.gc,prev=clamp(now-m.dv*2.2,2,98);var y=i*rh+12;var X=function(v){return L+v/100*W;};
+      txt(s,L-8,y+4,r[0],{"text-anchor":"end","font-size":"10"});
+      el("line",{x1:L,x2:L+W,y1:y,y2:y,stroke:gr},s);
+      el("line",{x1:X(prev),x2:X(now),y1:y,y2:y,stroke:now>=prev?s1:css("--b2"),"stroke-width":2.5},s);
+      el("circle",{cx:X(prev),cy:y,r:4.5,fill:sur,stroke:mu,"stroke-width":1.8},s);
+      var c=el("circle",{cx:X(now),cy:y,r:5,fill:now>=prev?s1:css("--b2"),stroke:sur,"stroke-width":2},s);
+      hover(c,'<div class="t1">'+r[0]+'</div><div class="t2">v2 '+ord(prev)+' → now '+ord(now)+' good-pct</div>');});
+    [0,50,100].forEach(function(v){txt(s,L+v/100*W,rows.length*rh+16,v+"%",{"text-anchor":"middle","class":"t-mono t-mut","font-size":"9"});});
+  });
+
+  /* 6 waffle */
+  card("What kind of claims","One square is one percent of all claims.",function(s,d){
+    var cats=[["Descriptive",28,s1],["Theological",24,s2],["Causal",17,s3],["Empirical",14,css("--s4")],["Historical",11,css("--s5")],["Mathematical",6,css("--s7")]];
+    s.setAttribute("viewBox","0 0 340 180");var k=0,sz=15,gap=2;
+    cats.forEach(function(c){for(var n=0;n<c[1];n++,k++){var col=Math.floor(k/10),row=k%10;var r=el("rect",{x:4+col*(sz+gap),y:4+row*(sz+gap)-row*0,width:sz,height:sz,rx:2,fill:c[2]},s);hover(r,'<div class="t1">'+c[0]+'</div><div class="num">'+c[1]+'%</div>');}});
+    cats.forEach(function(c,i){el("rect",{x:190,y:14+i*22,width:10,height:10,rx:2,fill:c[2]},s);txt(s,206,23+i*22,c[0]+"  "+c[1]+"%",{"class":"t-ink","font-size":"11"});});
+  });
+
+  /* 7 ME ring */
+  card("Master equation, ten slots","Each segment is one factor of χ. Darker is a closer fit. Grey means the paper has nothing in that role.",function(s){
+    s.setAttribute("viewBox","0 0 340 250");var cx=120,cy=124,ro=96,ri=60;var slots=["G","M","E","S_eff","T","K","R","Q","F","C"];
+    var fitNames=["absent","stretched","analogous","direct"],fitCol=[css("--mid"),css("--q2"),css("--q3"),css("--q4")];var filled=0;
+    slots.forEach(function(sl,i){var m=find("me",sl+" fit");var f=Math.round(m.val);if(f>0)filled++;
+      var a0=-Math.PI/2+i*2*Math.PI/10+.025,a1=a0+2*Math.PI/10-.05;function P(r,a){return (cx+r*Math.cos(a)).toFixed(2)+" "+(cy+r*Math.sin(a)).toFixed(2);}
+      var p=el("path",{d:"M"+P(ro,a0)+" A"+ro+" "+ro+" 0 0 1 "+P(ro,a1)+" L"+P(ri,a1)+" A"+ri+" "+ri+" 0 0 0 "+P(ri,a0)+" Z",fill:fitCol[f]},s);
+      var am=(a0+a1)/2;txt(s,cx+(ro+13)*Math.cos(am),cy+(ro+13)*Math.sin(am)+3,sl,{"text-anchor":"middle","class":"t-ink","font-size":"10"});
+      hover(p,'<div class="t1">Slot '+sl+'</div><div class="t2">fit: '+fitNames[f]+'</div>');});
+    txt(s,cx,cy+2,filled+"/10",{"text-anchor":"middle","class":"t-ink","font-size":"24","font-weight":"500"});
+    txt(s,cx,cy+18,"slots filled",{"text-anchor":"middle","class":"t-mut","font-size":"10"});
+    fitNames.slice().reverse().forEach(function(n,i){el("rect",{x:250,y:70+i*22,width:12,height:12,rx:2,fill:fitCol[3-i]},s);txt(s,268,80+i*22,n,{"font-size":"11"});});
+  });
+
+  /* 8 lollipop diverging */
+  card("Hedging and certainty vs your norm","Difference from your corpus median, per 1,000 words. Right of centre means more than usual.",function(s){
+    var rows=["Hedges","Boosters","Attitude markers","Self-mentions","Engagement markers","Absolutes (always/never/proves)"];
+    var L=150,W=170,rh=26,mid=L+W/2;s.setAttribute("viewBox","0 0 340 "+(rows.length*rh+22));
+    el("line",{x1:mid,x2:mid,y1:0,y2:rows.length*rh,stroke:ax,"stroke-width":1.2},s);
+    rows.forEach(function(r,i){var m=find("stance",r);var d=(m.pc-50)/50*6;var y=i*rh+13;var x=mid+d/6*(W/2);
+      txt(s,L-8,y+4,r,{"text-anchor":"end","font-size":"10"});
+      el("line",{x1:mid,x2:x,y1:y,y2:y,stroke:d>=0?s2:s1,"stroke-width":2},s);
+      var c=el("circle",{cx:x,cy:y,r:5,fill:d>=0?s2:s1,stroke:sur,"stroke-width":2},s);
+      hover(c,'<div class="t1">'+r+'</div><div class="num">'+(d>=0?"+":"")+d.toFixed(1)+' per 1k vs your median</div>');});
+    txt(s,mid,rows.length*rh+16,"your median",{"text-anchor":"middle","class":"t-mut","font-size":"9"});
+  });
+
+  /* 9 zipf */
+  card("Word frequency, log–log","Rank against frequency for every distinct word. A straight line is Zipf's law; the slope is in the matrix.",function(s){
+    s.setAttribute("viewBox","0 0 340 240");var L=40,T=10,W=286,H=190;var X=function(r){return L+Math.log10(r)/3.3*W;},Y=function(f){return T+H-Math.log10(f)/2.6*H;};
+    [1,10,100,1000].forEach(function(v){el("line",{x1:X(v),x2:X(v),y1:T,y2:T+H,stroke:gr},s);txt(s,X(v),T+H+13,v,{"text-anchor":"middle","class":"t-mono t-mut"});});
+    [1,10,100].forEach(function(v){el("line",{x1:L,x2:L+W,y1:Y(v),y2:Y(v),stroke:gr},s);txt(s,L-6,Y(v)+3,v,{"text-anchor":"end","class":"t-mono t-mut"});});
+    for(var r=1;r<1900;r=Math.ceil(r*1.06)){var f=Math.max(1,360/Math.pow(r,.98)*Math.exp(nrm()*.12));el("circle",{cx:X(r),cy:Y(f),r:2.6,fill:s1,"fill-opacity":.6},s);}
+    el("line",{x1:X(1),y1:Y(360),x2:X(1900),y2:Y(360/Math.pow(1900,.98)),stroke:ink,"stroke-width":1.2,"stroke-dasharray":"4 3"},s);
+    txt(s,L+W/2,T+H+28,"rank",{"text-anchor":"middle","font-size":"10"});
+  });
+
+  /* 10 treemap */
+  card("Where the sources come from","Area is the share of all references.",function(s){
+    var items=[["Peer-reviewed",find("cite","Peer-reviewed share").val,s1],["Books",find("cite","Book share").val,s2],["Scripture",.18,s3],["Web",find("cite","Web share").val,css("--s4")],["Self",find("cite","Self-citation share").val*.6,css("--s5")]];
+    var tot=items.reduce(function(a,b){return a+b[1];},0);items.forEach(function(i){i[1]/=tot;});items.sort(function(a,b){return b[1]-a[1];});
+    s.setAttribute("viewBox","0 0 340 190");var x=0,y=0,W=340,H=190;
+    items.forEach(function(it,k){var rest=items.slice(k).reduce(function(a,b){return a+b[1];},0);var vert=(W-x)>(H-y);var share=it[1]/rest;
+      var w=vert?(W-x)*share:(W-x),h=vert?(H-y):(H-y)*share;
+      var r=el("rect",{x:x+1,y:y+1,width:Math.max(0,w-2),height:Math.max(0,h-2),rx:3,fill:it[2]},s);
+      if(w>52&&h>30){txt(s,x+8,y+18,it[0],{"font-size":"11","font-weight":"600",fill:sur,style:"fill:"+sur});txt(s,x+8,y+32,Math.round(it[1]*100)+"%",{"class":"t-mono","font-size":"11",style:"fill:"+sur});}
+      hover(r,'<div class="t1">'+it[0]+'</div><div class="num">'+Math.round(it[1]*100)+'% of references</div>');
+      if(vert)x+=w;else y+=h;});
+  });
+
+  /* 11 interval plot coherence */
+  card("Coherence, with its uncertainty","Dot: score. Whisker: the range across two independent AI runs.",function(s){
+    var rows=["Internal consistency","Definitional stability","Inferential connectedness","Register boundary respect","Coherence score"];
+    var L=150,W=170,rh=28;s.setAttribute("viewBox","0 0 340 "+(rows.length*rh+22));
+    rows.forEach(function(r,i){var m=find("cohs",r);var v=m.val,e=.3+Math.abs(nrm())*.7;var y=i*rh+14;var X=function(v){return L+v/10*W;};
+      txt(s,L-8,y+4,r,{"text-anchor":"end","font-size":"10","font-weight":i===rows.length-1?"600":"400"});
+      el("line",{x1:L,x2:L+W,y1:y,y2:y,stroke:gr},s);
+      el("line",{x1:X(v-e),x2:X(Math.min(10,v+e)),y1:y,y2:y,stroke:mu,"stroke-width":2},s);
+      [v-e,Math.min(10,v+e)].forEach(function(t){el("line",{x1:X(t),x2:X(t),y1:y-5,y2:y+5,stroke:mu,"stroke-width":2},s);});
+      var c=el("circle",{cx:X(v),cy:y,r:5,fill:s1,stroke:sur,"stroke-width":2},s);hover(c,'<div class="t1">'+r+'</div><div class="num">'+v.toFixed(1)+' ± '+e.toFixed(1)+'</div>');});
+    [0,5,10].forEach(function(v){txt(s,L+v/10*W,rows.length*rh+16,v,{"text-anchor":"middle","class":"t-mono t-mut","font-size":"9"});});
+  });
+
+  /* 12 axiom dot matrix */
+  card("Axiom nodes engaged, by layer","One dot per node the paper engages. Blue supports, darker is stated outright, red contests.",function(s){
+    var modes=[["AX_CORE",5],["AX_DERIVED",3],["AX_SCAFFOLD",9],["FW_EXTENDED",14],["HY_EVIDENCE",6]];var L=100,rh=30;s.setAttribute("viewBox","0 0 340 "+(modes.length*rh+36));
+    var kinds=[["stated outright",css("--q4")],["supported",css("--q2")],["relevant only",css("--mid")],["contested",css("--b2")]];
+    modes.forEach(function(m,i){var y=i*rh+14;txt(s,L-8,y+4,m[0],{"text-anchor":"end","class":"t-mono","font-size":"10"});
+      for(var k=0;k<m[1];k++){var r=R();var kk=r<.22?0:r<.7?1:r<.9?2:3;var c=el("circle",{cx:L+6+k*15,cy:y,r:5.5,fill:kinds[kk][1],stroke:sur,"stroke-width":1.5},s);hover(c,'<div class="t1">'+m[0]+' node '+(k+1)+'</div><div class="t2">'+kinds[kk][0]+'</div>');}});
+    kinds.forEach(function(k,i){var x=8+i*84;el("circle",{cx:x+5,cy:modes.length*rh+24,r:5,fill:k[1]},s);txt(s,x+14,modes.length*rh+28,k[0],{"font-size":"10"});});
+  });
+
+  /* 13 strip plot sentence lengths */
+  card("Sentence lengths","Every sentence as a tick, with the middle half boxed. The dashed line is your corpus median.",function(s){
+    s.setAttribute("viewBox","0 0 340 120");var L=10,W=320;var X=function(v){return L+v/70*W;};var ls=[];for(var i=0;i<SENT;i++)ls.push(clamp(Math.round(19+nrm()*8+(R()<.05?25:0)),3,70));ls.sort(function(a,b){return a-b;});
+    var q1=ls[Math.floor(SENT*.25)],q2=ls[Math.floor(SENT*.5)],q3=ls[Math.floor(SENT*.75)];
+    el("rect",{x:X(q1),y:22,width:X(q3)-X(q1),height:44,fill:css("--wash"),stroke:ax},s);
+    ls.forEach(function(v){el("line",{x1:X(v)+nrm()*.6,x2:X(v)+nrm()*.6,y1:30+R()*28,y2:34+R()*28,stroke:s1,"stroke-opacity":.5,"stroke-width":1.4},s);});
+    el("line",{x1:X(q2),x2:X(q2),y1:18,y2:70,stroke:ink,"stroke-width":2},s);
+    el("line",{x1:X(21),x2:X(21),y1:12,y2:76,stroke:mu,"stroke-width":1.5,"stroke-dasharray":"4 3"},s);
+    txt(s,X(q2),12,"median "+q2,{"text-anchor":"middle","class":"t-ink t-mono","font-size":"10"});
+    [0,20,40,60].forEach(function(v){txt(s,X(v),94,v,{"text-anchor":"middle","class":"t-mono t-mut","font-size":"9"});});
+    txt(s,L+W/2,110,"words per sentence",{"text-anchor":"middle","font-size":"10"});
+  });
+
+  /* 14 emotional arc */
+  card("Emotional arc","Rolling tone across the paper, with the best-fitting of the six classic story shapes dashed.",function(s){
+    s.setAttribute("viewBox","0 0 340 170");var L=26,T=10,W=304,H=130;var X=function(i){return L+i/(SENT-1)*W;},Y=function(v){return T+H/2-v*H/2.4;};
+    el("line",{x1:L,x2:L+W,y1:Y(0),y2:Y(0),stroke:ax},s);
+    var pts=[],acc=0;for(var i=0;i<SENT;i++){var w=0,n=0;for(var k=Math.max(0,i-8);k<=Math.min(SENT-1,i+8);k++){w+=sv[k][0];n++;}pts.push([X(i),Y(w/n/1.4)]);}
+    el("path",{d:"M"+X(0)+" "+Y(0)+" L"+pts.map(function(p){return p.join(" ");}).join(" L")+" L"+X(SENT-1)+" "+Y(0)+" Z",fill:s1,"fill-opacity":.12},s);
+    el("path",{d:"M"+pts.map(function(p){return p.join(" ");}).join(" L"),fill:"none",stroke:s1,"stroke-width":2},s);
+    var arc=[];for(var i=0;i<SENT;i+=4)arc.push(X(i)+" "+Y(.45*Math.cos(i/SENT*2*Math.PI)+.05));
+    el("path",{d:"M"+arc.join(" L"),fill:"none",stroke:ink,"stroke-width":1.2,"stroke-dasharray":"4 3"},s);
+    txt(s,L+W-2,T+10,"fit: man in a hole",{"text-anchor":"end","class":"t-ink","font-size":"10"});
+    [1,120,240].forEach(function(n){txt(s,X(n-1),T+H+16,"S"+n,{"text-anchor":"middle","class":"t-mono t-mut","font-size":"9"});});
+  });
+
+  /* 15 series position dot plot */
+  card("Where it sits in its series","Each row: the nine papers of the series on one statistic. The filled dot is this paper.",function(s){
+    var rows=[["Coherence score","cohs"],["Love, mean","fruit"],["MTLD","lex"],["Peer-reviewed share","cite"],["Novelty vs your corpus","sem"],["Slot coverage","me"]];
+    var L=150,W=170,rh=26;s.setAttribute("viewBox","0 0 340 "+(rows.length*rh+22));
+    rows.forEach(function(r,i){var m=find(r[1],r[0]);var y=i*rh+13;var X=function(v){return L+v/100*W;};
+      txt(s,L-8,y+4,r[0],{"text-anchor":"end","font-size":"10"});el("line",{x1:L,x2:L+W,y1:y,y2:y,stroke:gr},s);
+      for(var k=0;k<8;k++){el("circle",{cx:X(clamp(50+nrm()*20,3,97)),cy:y,r:4,fill:"none",stroke:mu,"stroke-width":1.4},s);}
+      var c=el("circle",{cx:X(m.series),cy:y,r:5.5,fill:s1,stroke:sur,"stroke-width":2},s);hover(c,'<div class="t1">'+r[0]+'</div><div class="t2">'+ord(m.series)+' within the series</div>');});
+    [0,50,100].forEach(function(v){txt(s,L+v/100*W,rows.length*rh+16,v+"th",{"text-anchor":"middle","class":"t-mono t-mut","font-size":"9"});});
+  });
+}
+
+/* ---------- the wall ---------- */
+function renderWall(){
+  var w=document.getElementById("wall"),q=(document.getElementById("wq").value||"").toLowerCase();var h=[];
+  FAM.forEach(function(f,fi){h.push('<div class="fam">'+f.n+'</div>');
+    METRICS.forEach(function(m){if(m.fam!==fi)return;var hit=!q||(m.name+" "+m.sec+" "+f.n).toLowerCase().indexOf(q)>=0;
+      h.push('<div class="r'+(hit?'':' dim')+'"><span title="'+m.name+' · '+m.sec+'"><span class="dot" style="background:'+goodColor(m.gc)+'"></span>'+m.name+(m.sec!=="Whole paper"?" "+m.sec.split(" ")[0]:"")+'</span><span><span class="v">'+fmt(m)+'</span> c'+Math.round(m.gc)+(m.ga==null?'':' a'+Math.round(m.ga))+'</span></div>');});});
+  w.innerHTML=h.join("");
+}
+
+/* ---------- ramp key ---------- */
+function renderRamp(){var k=document.getElementById("rampKey");k.innerHTML="";[5,20,35,50,64,78,92].forEach(function(g){var i=document.createElement("i");i.style.background=goodColor(g);k.appendChild(i);});}
+
+/* ---------- wiring ---------- */
+function syncSeg(id,val){document.querySelectorAll("#"+id+" button").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-v")===val?"true":"false");});}
+document.getElementById("frameSeg").addEventListener("click",function(e){var v=e.target.getAttribute("data-v");if(!v)return;state.frame=v;syncSeg("frameSeg",v);save();renderMatrix();renderTiles();});
+document.getElementById("sortSeg").addEventListener("click",function(e){var v=e.target.getAttribute("data-v");if(!v)return;state.sort=v;syncSeg("sortSeg",v);save();renderMatrix();});
+document.getElementById("q").addEventListener("input",function(e){state.q=e.target.value.trim();renderMatrix();});
+document.getElementById("wq").addEventListener("input",renderWall);
+function all(){syncSeg("frameSeg",state.frame);syncSeg("sortSeg",state.sort);renderRamp();renderTiles();renderMatrix();renderFamMap();renderVerdict();renderCharts();renderWall();}
+all();
+var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(renderMatrix,120);});
+try{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",all);}catch(e){}
+new MutationObserver(all).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+})();
+</script>

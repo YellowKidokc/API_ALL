@@ -1,0 +1,9 @@
+{
+  "workflow": "MeaningIntake",
+  "canon_status": "candidate_draft",
+  "preserve_input_in_place": true,
+  "append_complete_source": true,
+  "ask_when_confidence_below": 0.65,
+  "semantic_provider": "deepseek",
+  "allowed_extensions": [".md", ".txt", ".html", ".htm"]
+}

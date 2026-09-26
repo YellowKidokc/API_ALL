@@ -1,0 +1,2040 @@
+[
+ {
+  "file": "01_THE_STORY_COMPLETE_SERIES_GRAND_OVERVIEW.lean",
+  "sha256": "0e7cfb1e4e0cfe8c64ea4007906613a8742041fdb916d9f88311e0b25f0354af",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\01_THE_STORY_COMPLETE_SERIES_GRAND_OVERVIEW.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "8909AA_GeneralizeProofs.lean",
+  "sha256": "8909aad2265f2d90e7202e3ba43a59a5096e11160f87bff66e1771c191f66b14",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\8909AA_GeneralizeProofs.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\8909\\GeneralizeProofs.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\8909AA_GeneralizeProofs.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\8909AA_GeneralizeProofs.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 3,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:32",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "913670_exfalso.lean",
+  "sha256": "913670573cc4480f79933bd4a8a8d612dadd8e2ad103e04e277d47bc4ca14a64",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\913670_exfalso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\9136\\exfalso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\913670_exfalso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\913670_exfalso.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:32",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_01_FL_01_GOD_AS_ROOT.lean",
+  "sha256": "03b65b14c2c425033c18398b77d76be1014c7e38fc65ea06351729b65b872b8d",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_01_FL_01_GOD_AS_ROOT.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_02_FL_01_TRUTH_BEFORE_ARGUMENT.lean",
+  "sha256": "7d8b7c5185734cb4877801875fb6555d5c40357ac3d040cde15f672804a763f1",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_02_FL_01_TRUTH_BEFORE_ARGUMENT.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_03_FL_01.lean",
+  "sha256": "1cff892cc5d297e5c2d698740bcbd25fec658d025a2a47fc029d7f35d9c00fbc",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_03_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_04_FL_01.lean",
+  "sha256": "fe8c393758f4350cfdae89a5979fcb9a25120a47db6c814d952f63f328c50e69",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_04_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_05_FL_01_TRINITY_AND_TRUTH.lean",
+  "sha256": "6e8b1e2cb16ecbe9a11640488f15533d75a79ed74e262d72987170cf0d5a1f99",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_05_FL_01_TRINITY_AND_TRUTH.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_06_FL_01.lean",
+  "sha256": "b19dc3d9ef45d039a8ce53ba98d9703330732cfa1e13732994336ce43304c78a",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_06_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_07_FL_01_CREATION_AS_ORDERED_GIFT.lean",
+  "sha256": "3f50309b52ccd18a33b828753e3bf9bd75dfdc84f603d609b38c3bd5761ee7b5",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_07_FL_01_CREATION_AS_ORDERED_GIFT.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_08_FL_01.lean",
+  "sha256": "3941af65b5ca8c5a4981b065b8f85f0b193ac156b21e29212efca71a67748d96",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_08_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_09_FL_01_CONSCIOUSNESS_AS_WITNESS.lean",
+  "sha256": "ebb3d13795eade07d953e6e12b874df1b1c2052affaae65bfd38caca88dfe99a",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_09_FL_01_CONSCIOUSNESS_AS_WITNESS.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_10_FL_01.lean",
+  "sha256": "d32fa940bb6c071378b1effdb27176f3dd9b46196bbbe1b8d810b6b2792134a4",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_10_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_11_FL_01.lean",
+  "sha256": "13ab5332bd463547505a6d4ffb068ec2b50de305fa32b4212a14168ebba919e0",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_11_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_12_FL_01_EVIL_VANDALIZES.lean",
+  "sha256": "cff21d3aaaa6778e260c33924f871dce229df2b64e6cacd6329b9a54991b3da7",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_12_FL_01_EVIL_VANDALIZES.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_13_FL_01.lean",
+  "sha256": "848867b1ba32f8d22292d81ac53682f7592ba4b393a9fdda36d26dcbb6c1226a",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_13_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_14_FL_01_GRACE_AS_EXTERNAL_REPAIR.lean",
+  "sha256": "ab421f50907d57ba1eef3e134dd52e1e8aa46a576d48ff53c0061472960487cb",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_14_FL_01_GRACE_AS_EXTERNAL_REPAIR.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_15_FL_01_CHRIST_ENTERS_THE_COST.lean",
+  "sha256": "a39739cf80f1d09ada97e2be09870f9e3c06203065959d8a0ed81f5c30b3d126",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_15_FL_01_CHRIST_ENTERS_THE_COST.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_16_FL_01.lean",
+  "sha256": "b78d28413b47305556322691e21a0c30ade6603a9e5a95d6ac7951b981991007",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_16_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_17_FL_01.lean",
+  "sha256": "c079d579b925bfe672b778f62d2f91e3b2d8f3263266ebbaf031b8daa90dd796",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_17_FL_01.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_18_FL_01_FRUITS_AS_RESTORED_LIFE.lean",
+  "sha256": "2ac19483391ffed5fd3cc50f2322e91e2af848f9d2f20271ec0ed71e58f1f2e7",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_18_FL_01_FRUITS_AS_RESTORED_LIFE.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_19_FL_01_FRUITS_AND_COUNTERFEITS.lean",
+  "sha256": "def3353a7639492257a02e40d11c98331f6cb96ff3a29de0b0920af46cc0aced",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_19_FL_01_FRUITS_AND_COUNTERFEITS.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "AX_GI_20_FL_01_WHAT_SURVIVED_THE_PRESSURE.lean",
+  "sha256": "b3c8013e717ce3368b1b4fb17053fde73f6e004751e19f61f8b941da6573407c",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\AX_GI_20_FL_01_WHAT_SURVIVED_THE_PRESSURE.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "Algebra.lean",
+  "sha256": "76c294c2f49dcf35d15ad6f449685a67b1c7782dbab3ca1e392834ba1ddae5f7",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\76C2\\Algebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\76C294_Algebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\76C294_Algebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\76C294_Algebra.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "ApplyFun.lean",
+  "sha256": "b07f19ac4b1001d8b5af4d3afec24be5e017e929f1f9d462fb4242b52fb62fb8",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\B07F\\ApplyFun.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\B07F19_ApplyFun.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\02_MASTER_EQUATION_AND_UNIFICATION\\B07F19_ApplyFun.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\B07F19_ApplyFun.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\B07F19_ApplyFun.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 5,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "AuxLemma.lean",
+  "sha256": "5220b6b0b2b4b1a6c8f570ebd47880b713e89478687ccfac06487adc327472a1",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\5220\\AuxLemma.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\5220B6_AuxLemma.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\5220B6_AuxLemma.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\5220B6_AuxLemma.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "AxiomChain.lean",
+  "sha256": "6249e000ee6510e18aef5f561e1a54bcf8264415859bbfa1bc168a93c77dad0a",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_Theophysics_v3\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\Theophysics\\AxiomChain.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_Theophysics_v5\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\Theophysics\\AxiomChain.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_Theophysics_v3\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\Theophysics\\AxiomChain.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_Theophysics_v5\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\Theophysics\\AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\6249E0_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\03_Fall_Mechanics_Entropy\\6249E0_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\6249E0_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\6249\\AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\_superseded\\99_UNSORTED_36__distinction-assumptions-and-external-input-reduce-disorder__2thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\FROM_Z\\Gemini_Production_Vault\\01_CANON\\AXIOMS\\01_Layer_1_Strict_Lean4_Core\\Theophysics\\AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\6249E0_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\6249E0_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\6249E0_AxiomChain.lean"
+  ],
+  "project": null,
+  "axioms": 5,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 2,
+  "copies": 13,
+  "newest": "2026-04-26 16:13",
+  "library_reason": null
+ },
+ {
+  "file": "AxiomChain__v2.lean",
+  "sha256": "e088d41d39174b6d078ce61c86d4befbca1b3d53886ae490eb0bea8cab007a9b",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_Theophysics_v3\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\AxiomChain.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_Theophysics_v5\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\AxiomChain.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_Theophysics_v3\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\AxiomChain.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_Theophysics_v5\\00_AXIOMS\\01_Layer_1_Strict_Lean4_Core\\AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\E088D4_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\03_Fall_Mechanics_Entropy\\E088D4_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\E088D4_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\E088\\AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\99_UNSORTED_08__distinction-assumptions-and-external-input-reduce-disorder__2thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\FROM_Z\\Gemini_Production_Vault\\01_CANON\\AXIOMS\\01_Layer_1_Strict_Lean4_Core\\AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\E088D4_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\E088D4_AxiomChain.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\E088D4_AxiomChain.lean"
+  ],
+  "project": null,
+  "axioms": 5,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 2,
+  "copies": 13,
+  "newest": "2026-04-26 09:47",
+  "library_reason": null
+ },
+ {
+  "file": "Axioms.lean",
+  "sha256": "c3ef8fe2ae8ef1de859415d2461d3645514d86be4c22c073d40602bccade3f47",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Axioms.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 6,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 3,
+  "copies": 1,
+  "newest": "2026-09-14 17:01",
+  "library_reason": null
+ },
+ {
+  "file": "Axioms__v3.lean",
+  "sha256": "47852e4061e8e2cc1e633ae3d8029425abd40be204a07cfec7430e948325b69a",
+  "origins": [
+   "S:/Theophysics_Lean\\TheophysicsAxioms\\Layer1\\Axioms.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\NEW UNSORTED\\Theophysics_Lean\\TheophysicsAxioms\\Layer1\\Axioms.lean"
+  ],
+  "project": "S:/Theophysics_Lean",
+  "axioms": 3,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 3,
+  "versions_of_name": 3,
+  "copies": 2,
+  "newest": "2026-04-22 14:27",
+  "library_reason": null
+ },
+ {
+  "file": "B4F95D_lint_simpNF.lean",
+  "sha256": "b4f95dac1321e034450dac84210ceaf9c5c4368605863c1698ae2ef5456e16ed",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\B4F95D_lint_simpNF.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\B4F9\\lint_simpNF.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\B4F95D_lint_simpNF.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\B4F95D_lint_simpNF.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 8,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:32",
+  "library_reason": null
+ },
+ {
+  "file": "Basic__v10.lean",
+  "sha256": "f957642d6c0ceccaf7783c4d922e25eb93389799dc5d381a9d074b232e80f74b",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\F957\\Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\F95764_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\F95764_Basic.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 10,
+  "versions_of_name": 29,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Basic__v11.lean",
+  "sha256": "25b493b0f48e34ff752adb8f11ae2b5feddb54b26f4d1d283355ca030d796899",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\25B4\\Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\25B493_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\25B493_Basic.lean"
+  ],
+  "project": null,
+  "axioms": 9,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 11,
+  "versions_of_name": 29,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Basic__v12.lean",
+  "sha256": "5658897cc0544e786f2a6ab2e7a330a9f8279f4f3be447f4c8106072da7c2583",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\5658\\Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\565889_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\565889_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\565889_Basic.lean"
+  ],
+  "project": null,
+  "axioms": 4,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 12,
+  "versions_of_name": 29,
+  "copies": 4,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "Basic__v17.lean",
+  "sha256": "198e04b2dc7a1f185a822f6f4541487d85a4d351c346102e80866bbdaa9b4058",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\198E\\Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\198E04_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\198E04_Basic.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 46,
+  "sorry": 1,
+  "version_rank": 17,
+  "versions_of_name": 29,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Basic__v21.lean",
+  "sha256": "c9887aa6c75ae80c408e9807cb6878391e4b4a2744994820332b0fe9f9c2c020",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\C988\\Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\C9887A_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\C9887A_Basic.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 21,
+  "versions_of_name": 29,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Basic__v22.lean",
+  "sha256": "d390253c94c590d04fada063329a3479cbaa5507001d6362ab9013f9b6cc3d34",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\D390\\Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\D39025_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\D39025_Basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\D39025_Basic.lean"
+  ],
+  "project": null,
+  "axioms": 8,
+  "theorems": 12,
+  "sorry": 1,
+  "version_rank": 22,
+  "versions_of_name": 29,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "BiblicalIdentityV1.lean",
+  "sha256": "1f36550d7c510d842ba091af587a9ddd33d94e551bc26e340e8ad915c4d6ef63",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\00_ Production\\00_ Production\\00_THE_STORY\\03_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_DISCLOSURE_REORDER_2026-09-08\\05_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_REORDER_2026-09-08\\04_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04D_LEAN_4_SOURCE\\BiblicalIdentityV1.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\50_ Social media_ Publishing\\AXIOM\\03_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\00_THE_STORY\\03_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\01_GOD_AXIOM\\01_THE_ONE_STORY\\03_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_DISCLOSURE_REORDER_2026-09-08\\05_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_REORDER_2026-09-08\\04_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04D_LEAN_4_SOURCE\\BiblicalIdentityV1.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\50_ Social media_ Publishing\\AXIOM\\03_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "C:/Users/David/CrossDevice\\David's Z Fold6 (1)\\storage\\Documents\\OBS\\00_ Production\\01_GOD_AXIOM\\01_THE_ONE_STORY\\04_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\1F3655_BiblicalIdentityV1.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\1F36\\1F36550D_BiblicalIdentityV1.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\1F36\\BiblicalIdentityV1.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\99_UNSORTED_01__assumed-divine-identity-entails-truthful-speech__3thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\faiththruphysics.com\\00_ Production\\00_ Production\\01_GOD_AXIOM\\01_THE_ONE_STORY\\04_I_AM\\01_CLAIMS_AND_EVIDENCE\\I_AM_DISCLOSURE_SOURCE_COPIES_2026-09-03\\BiblicalIdentityV1.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\faiththruphysics.com\\01_WORKING\\___AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04D_LEAN_4_SOURCE\\BiblicalIdentityV1.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\1F3655_BiblicalIdentityV1.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\1F3655_BiblicalIdentityV1.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 3,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 20,
+  "newest": "2026-09-01 03:48",
+  "library_reason": null
+ },
+ {
+  "file": "CancelDenoms.lean",
+  "sha256": "59ad43bcf31ff8345a4c04ff69e7d5910ae5b5953478e187b0951d232a56777c",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\59AD\\CancelDenoms.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\59AD43_CancelDenoms.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\59AD43_CancelDenoms.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\59AD43_CancelDenoms.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "CanonOneAxiomProbe.lean",
+  "sha256": "e2ab50c3e554010e7c1b0651db2cd982965659e8a1fdf3ca9da459e6b6cbeb36",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-logos-fresh\\Numbers-in-God\\LEAN\\PILOTS\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\E2AB50_CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\E2AB\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\04_TRINITY\\04_TRINITY_02__one-assumed-trinity-supplies-root-properties__7thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-logos-fresh\\Numbers-in-God\\LEAN\\PILOTS\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\E2AB50_CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\E2AB50_CanonOneAxiomProbe.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 7,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 7,
+  "newest": "2026-08-04 18:45",
+  "library_reason": null
+ },
+ {
+  "file": "Check.lean",
+  "sha256": "62574b9642ee76822a6f961b0d8659c5c07fa392e29012f1ab3c79b821fc8ccf",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\6257\\Check.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\62574B_Check.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\62574B_Check.lean"
+  ],
+  "project": null,
+  "axioms": 3,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "CoherenceAlgebra.lean",
+  "sha256": "14bb7aef777ddda582b9eedc68eaa379b6ae48138ade1539a8cfadfed4b2137d",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\14BB7A_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\14BB7A_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\06_Unification_And_Cosmology\\14BB7A_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\14BB\\CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\07_GRACE_COHERENCE\\07_GRACE_COHERENCE_43__restoring-collapsed-systems-requires-outside-action__3thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\14BB7A_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\14BB7A_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\14BB7A_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\14BB7A_CoherenceAlgebra.lean"
+  ],
+  "project": "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test",
+  "axioms": 3,
+  "theorems": 3,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 4,
+  "copies": 11,
+  "newest": "2026-08-02 19:23",
+  "library_reason": null
+ },
+ {
+  "file": "CoherenceAlgebra__v2.lean",
+  "sha256": "b793bbd14476adc0df1773e38fbcd7f281775789d8be31e625eca4300b9fa82e",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_compile_test\\extracted\\CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\B793BB_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\B793BB_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\06_Unification_And_Cosmology\\B793BB_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\B793\\CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\07_GRACE_COHERENCE\\_superseded\\07_GRACE_COHERENCE_59__restoring-collapsed-systems-requires-outside-action__2thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_compile_test\\extracted\\CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\B793BB_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\B793BB_CoherenceAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\B793BB_CoherenceAlgebra.lean"
+  ],
+  "project": null,
+  "axioms": 3,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 4,
+  "copies": 10,
+  "newest": "2026-07-11 14:51",
+  "library_reason": null
+ },
+ {
+  "file": "CoherenceAlgebra__v3.lean",
+  "sha256": "20ad9919a0699c5a479911ae815db66c68087df7e7335752a9e263d4e811739d",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\CoherenceAlgebra.lean"
+  ],
+  "project": "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS",
+  "axioms": 3,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 3,
+  "versions_of_name": 4,
+  "copies": 8,
+  "newest": "2026-05-18 01:59",
+  "library_reason": null
+ },
+ {
+  "file": "CongrM.lean",
+  "sha256": "3249947c5d569593e74333b4d7c9e04a30fdf26c50e75f23f95c3d67e3d408ff",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\3249\\CongrM.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\324994_CongrM.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\324994_CongrM.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\324994_CongrM.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "Conv.lean",
+  "sha256": "a014055f37bcebdfb1ce82ba02e9433e19c95d3729d0b46256c0e975d2064c1c",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\A014\\Conv.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\A01405_Conv.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\A01405_Conv.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 2,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "D__CanonOneAxiomProbe.lean",
+  "sha256": "de3606006c6b1f9d45007d37fd05898790bb74be88030bbd7eaa7b5ba45e4cb2",
+  "origins": [
+   "C:/Users/David/Documents\\AXIOM_STAGING\\DUPLICATES\\D__CanonOneAxiomProbe.lean",
+   "C:/Users/David/Documents\\AXIOM_STAGING\\DUPLICATES\\H__CanonOneAxiomProbe.lean",
+   "C:/Users/David/Documents\\AXIOM_STAGING\\FROM_D\\CHI PARTS\\Math\\theophysics-lean-main\\CanonOneAxiomProbe.lean",
+   "C:/Users/David/Documents\\AXIOM_STAGING\\FROM_D\\GitHub\\ai-crew\\Numbers-in-God\\LEAN\\PILOTS\\CanonOneAxiomProbe.lean",
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\outputs\\pilot_em_consciousness_20260804T033202Z\\lean\\CanonOneAxiomProbe.lean",
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-clean\\Numbers-in-God\\LEAN\\PILOTS\\CanonOneAxiomProbe.lean",
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\lean\\CanonOneAxiomProbe.lean",
+   "C:/theophysics\\OPUS\\Numbers in God\\LEAN\\PILOTS\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\DE3606_D__CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\DE36\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\DE36\\DE360600_CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\DE36\\D__CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\DE36\\H__CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\04_TRINITY\\04_TRINITY_01__assumed-trinity-supplies-distinction-and-relation__7thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\DUPLICATES\\D__CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\DUPLICATES\\H__CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\FROM_D\\CHI PARTS\\Math\\theophysics-lean-main\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\FROM_D\\GitHub\\ai-crew\\Numbers-in-God\\LEAN\\PILOTS\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\outputs\\pilot_em_consciousness_20260804T033202Z\\lean\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-clean\\Numbers-in-God\\LEAN\\PILOTS\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\lean\\CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\DE3606_D__CanonOneAxiomProbe.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\DE3606_D__CanonOneAxiomProbe.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 7,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 23,
+  "newest": "2026-08-03 22:16",
+  "library_reason": null
+ },
+ {
+  "file": "DefEqAbuse.lean",
+  "sha256": "cbf05dda5415c23ba4d3d1399b2f327085c87635cb0aa25fc1f7f080f66bdba9",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\CBF0\\DefEqAbuse.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\CBF05D_DefEqAbuse.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\02_MASTER_EQUATION_AND_UNIFICATION\\CBF05D_DefEqAbuse.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\CBF05D_DefEqAbuse.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\CBF05D_DefEqAbuse.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\CBF05D_DefEqAbuse.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 6,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "DefEqTransformations.lean",
+  "sha256": "cdeecec0cd196fa4f0de76d1236151237ebc2a4943a9255033612e195e123dd6",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\CDEE\\DefEqTransformations.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\CDEECE_DefEqTransformations.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\CDEECE_DefEqTransformations.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "DharmaMirror.lean",
+  "sha256": "d2aa1e1aeea364b5eca24d04de5205c4d7b0cf44dc1dbc1a5d30eba648cd7728",
+  "origins": [
+   "D:/TEMP_LEAN_ZIP\\GPT\\IN\\D_dharma_mirror_lean\\DharmaMirror.lean",
+   "D:/TEMP_LEAN_ZIP\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\DharmaMirror.lean",
+   "D:/TEMP_LEAN_ZIP\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\dharma-mirror-lean\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT\\IN\\D_dharma_mirror_lean\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\dharma-mirror-lean\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT\\IN\\D_dharma_mirror_lean\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\dharma-mirror-lean\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\IN\\D_dharma_mirror_lean\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\dharma-mirror-lean\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\D2AA\\D2AA1E1A_DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\D2AA\\DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\07_GRACE_COHERENCE\\07_GRACE_COHERENCE_05__different-religious-labels-share-coherence-equations__11thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\D2AA1E_DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\D2AA1E_DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\D2AA1E_DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\D2AA1E_DharmaMirror.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\D2AA1E_DharmaMirror.lean"
+  ],
+  "project": "D:/TEMP_LEAN_ZIP\\GPT\\IN\\D_dharma_mirror_lean",
+  "axioms": 10,
+  "theorems": 11,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 20,
+  "newest": "2026-07-02 14:13",
+  "library_reason": null
+ },
+ {
+  "file": "EAAN_LEAN_SPEC_CODEX2.lean",
+  "sha256": "5e360df93ed230f8f6cafe5e7c31f3f6323f33ec67f1b12f939d03317fbd26fb",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-clean\\Numbers-in-God\\PROOFS\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-logos-fresh\\Numbers-in-God\\PROOFS\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\5E360D_EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\5E36\\5E360DF9_EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\5E36\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\99_UNSORTED_14__naturalism-reliability-objections-remain-assumed__0thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-clean\\Numbers-in-God\\PROOFS\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\ai-crew-pr3-logos-fresh\\Numbers-in-God\\PROOFS\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\5E360D_EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\5E360D_EAAN_LEAN_SPEC_CODEX2.lean"
+  ],
+  "project": null,
+  "axioms": 30,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 2,
+  "copies": 10,
+  "newest": "2026-08-04 18:45",
+  "library_reason": null
+ },
+ {
+  "file": "EAAN_LEAN_SPEC_CODEX2__v2.lean",
+  "sha256": "d21840ca2aa949b13b7a4e5d1d5796a0d5e42243dd57cd5c0d89004bab163c4f",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\epistemology_comparison_codex2\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "C:/theophysics\\OPUS\\Numbers in God\\LEAN\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\D21840_EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\D218\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\_superseded\\99_UNSORTED_39__naturalism-reliability-objections-remain-assumed__0thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\work\\epistemology_comparison_codex2\\EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\D21840_EAAN_LEAN_SPEC_CODEX2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\D21840_EAAN_LEAN_SPEC_CODEX2.lean"
+  ],
+  "project": null,
+  "axioms": 30,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 2,
+  "copies": 8,
+  "newest": "2026-08-04 17:34",
+  "library_reason": null
+ },
+ {
+  "file": "FBinop.lean",
+  "sha256": "f678697649a84a45c3dc06096b7b0eb76cce2d609db76ea95bc8ac3e67c18d82",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\F678\\FBinop.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\F67869_FBinop.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\F67869_FBinop.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\F67869_FBinop.lean"
+  ],
+  "project": null,
+  "axioms": 2,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "FastInstance.lean",
+  "sha256": "97accb07232fb66c5e61755736fd4b29cfd4ed96c107c2465d1cf458e4fb5eb9",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\97AC\\FastInstance.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\97ACCB_FastInstance.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\97ACCB_FastInstance.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 1,
+  "sorry": 2,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Finiteness.lean",
+  "sha256": "7e2682694a8d7b69635f776312f5b613b4c53966dc162495b80957ee098836ad",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\7E26\\Finiteness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\7E2682_Finiteness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\7E2682_Finiteness.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "GodCannotLie_SingleRoot.lean",
+  "sha256": "07d77e745232072f973bc27c9c4b3e22271f79a7c364ce9ae79f0e6d72293f65",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04D_LEAN_4_SOURCE\\GodCannotLie_SingleRoot.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04D_LEAN_4_SOURCE\\GodCannotLie_SingleRoot.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\07D77E_GodCannotLie_SingleRoot.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\07D7\\GodCannotLie_SingleRoot.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\99_UNSORTED_02__assumed-truthful-god-cannot-speak-falsehood__2thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\faiththruphysics.com\\01_WORKING\\___AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04D_LEAN_4_SOURCE\\GodCannotLie_SingleRoot.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\07D77E_GodCannotLie_SingleRoot.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 7,
+  "newest": "2026-09-01 02:41",
+  "library_reason": null
+ },
+ {
+  "file": "Inhabit.lean",
+  "sha256": "7e7f306dc6c8b644f6b3430f858066b2f286aefb4411ac3f836fef7be28795f9",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\7E7F\\Inhabit.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\7E7F30_Inhabit.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\7E7F30_Inhabit.lean"
+  ],
+  "project": null,
+  "axioms": 2,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "InstanceTransparency.lean",
+  "sha256": "cf64ff4dededd85bdec0bc2a7b94d8603ff01fa648691bbaa54d1c7aa7000905",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\CF64\\InstanceTransparency.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\CF64FF_InstanceTransparency.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\CF64FF_InstanceTransparency.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "LEVEL5_LEAN4_SPECS.lean",
+  "sha256": "1d90ae366a39ae03f4efd6040bbd60b60bf4730c3bb17c5a1ff143a2a6ff607d",
+  "origins": [
+   "D:/TEMP_LEAN_ZIP\\GPT\\IN\\single_files\\LEVEL5_LEAN4_SPECS.lean",
+   "D:/TEMP_LEAN_ZIP\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\LEVEL5_LEAN4_SPECS.lean",
+   "C:/theophysics\\OPUS\\Master EQ\\ZZZ_Archive\\DELETE\\INBOX_D_DRIVE_REVIEW\\GitHub_faiththruphysics_site_data_incoming_publishable_ready_20260710__LEVEL5_LEAN4_SPECS.lean",
+   "C:/theophysics\\OPUS\\Master EQ\\ZZZ_Archive\\DELETE\\INBOX_D_DRIVE_REVIEW\\GitHub_faiththruphysics_site_data_incoming_publishable_sorted_20260710__LEVEL5_LEAN4_SPECS.lean",
+   "C:/theophysics\\OPUS\\Master EQ\\ZZZ_Archive\\DELETE\\INBOX_D_DRIVE_REVIEW\\GitHub_faiththruphysics_site_data_lean4_incoming_publishable_20260710__LEVEL5_LEAN4_SPECS.lean",
+   "C:/theophysics\\OPUS\\Master EQ\\ZZZ_Archive\\DELETE\\INBOX_D_DRIVE_REVIEW\\GitHub_faiththruphysics_site_data_MUST_DO__LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT\\IN\\single_files\\LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT\\IN\\single_files\\LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\IN\\single_files\\LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\1D90\\1D90AE36_LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\1D90\\LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\07_GRACE_COHERENCE\\07_GRACE_COHERENCE_41__restoration-toward-perfection-remains-a-proof-target__11thm__GAPS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\1D90AE_LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\1D90AE_LEVEL5_LEAN4_SPECS.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\1D90AE_LEVEL5_LEAN4_SPECS.lean"
+  ],
+  "project": "D:/TEMP_LEAN_ZIP\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED",
+  "axioms": 10,
+  "theorems": 11,
+  "sorry": 10,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 18,
+  "newest": "2026-07-04 21:11",
+  "library_reason": null
+ },
+ {
+  "file": "LinearCombination.lean",
+  "sha256": "0438b511251dd600a8cfd8f8840197e8437dad146087ee72e1e3abab367d7c0d",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\0438\\LinearCombination.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\0438B5_LinearCombination.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\0438B5_LinearCombination.lean"
+  ],
+  "project": null,
+  "axioms": 8,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "LinearCombinationPrime.lean",
+  "sha256": "28bd293b1d9fe4dde329d62431b42aaa534b31dbe7a4165f4acd7376b086008a",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\28BD\\LinearCombinationPrime.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\28BD29_LinearCombinationPrime.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\28BD29_LinearCombinationPrime.lean"
+  ],
+  "project": null,
+  "axioms": 8,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "ModCases.lean",
+  "sha256": "54f701430690ef321f931bb3d01443084ff1d9efbceefa4c6b098426d359b352",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\54F7\\ModCases.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\54F701_ModCases.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\54F701_ModCases.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "NoetherCommandments.lean",
+  "sha256": "d4d734bef3fc48f3b396d8005f2dea74e4e604c0d104d795457177b19d2e0239",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test\\Theophysics_Formal\\NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\D4D734_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\03_Fall_Mechanics_Entropy\\D4D734_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\D4D734_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\06_Unification_And_Cosmology\\D4D734_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\D4D7\\NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\05_MASTER_EQUATION\\05_MASTER_EQUATION_14__product-preserving-symmetry-preserves-a-unified-state__1thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test\\Theophysics_Formal\\NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\D4D734_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\D4D734_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\D4D734_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\D4D734_NoetherCommandments.lean"
+  ],
+  "project": "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test",
+  "axioms": 1,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 4,
+  "copies": 12,
+  "newest": "2026-08-02 19:26",
+  "library_reason": null
+ },
+ {
+  "file": "NoetherCommandments__v2.lean",
+  "sha256": "832e903dc729480290be97f92a478c44e5eedf123f1aada5f8a1d8b529320476",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_compile_test\\extracted\\NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\832E90_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\03_Fall_Mechanics_Entropy\\832E90_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\832E90_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\06_Unification_And_Cosmology\\832E90_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\832E\\NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\05_MASTER_EQUATION\\_superseded\\05_MASTER_EQUATION_24__product-preserving-symmetry-preserves-a-unified-state__1thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_compile_test\\extracted\\NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\832E90_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\832E90_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\832E90_NoetherCommandments.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\832E90_NoetherCommandments.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 4,
+  "copies": 12,
+  "newest": "2026-07-11 14:54",
+  "library_reason": null
+ },
+ {
+  "file": "NoetherCommandments__v3.lean",
+  "sha256": "114002d22dd06b133f713f5a5e08eef1c308c71b82f3747ee59a3db6dab2b6bf",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\Theophysics_Formal\\NoetherCommandments.lean"
+  ],
+  "project": "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS",
+  "axioms": 1,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 3,
+  "versions_of_name": 4,
+  "copies": 8,
+  "newest": "2026-05-18 01:59",
+  "library_reason": null
+ },
+ {
+  "file": "Nontriviality.lean",
+  "sha256": "02afc429079db5607f60f415806598df328dd4466fc6b2c1bc3d198ab6a0bea5",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\02AF\\Nontriviality.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\02AFC4_Nontriviality.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\05_GENESIS_QUANTUM_AND_PARTICLES\\02AFC4_Nontriviality.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\02AFC4_Nontriviality.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\02AFC4_Nontriviality.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 3,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 5,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "NthRewrite.lean",
+  "sha256": "38d27f7edecb13b568e8f14606c2bc51c207f30c91b037dfd42441e5c3e42786",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\38D2\\NthRewrite.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\38D27F_NthRewrite.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\38D27F_NthRewrite.lean"
+  ],
+  "project": null,
+  "axioms": 7,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "P01_GOD_AS_ROOT_Targets.lean",
+  "sha256": "dde5c88572d29c0426e624a6672f53b4963e1314e3266e19ac6bd5b0781e504a",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P01_GOD_AS_ROOT_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P02_TRUTH_BEFORE_ARGUMENT_Targets.lean",
+  "sha256": "1ede5cb63e30d308c0828b3bfdb36659e8d5b798b69fbe1ac3fb85b318c83944",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P02_TRUTH_BEFORE_ARGUMENT_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P03_I_AM_Targets.lean",
+  "sha256": "df2bd461b121fcabe03efff86e5947ba03199d997ed7573debbc63c9e604c048",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P03_I_AM_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P04_FOUR_DEBTS_Targets.lean",
+  "sha256": "62a09bf0e41506ca5106d483ce0f1f0b253cd58902aee6deced564e6cd3affba",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P04_FOUR_DEBTS_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P05_TRINITY_AND_TRUTH_Targets.lean",
+  "sha256": "590e2a6b5bd80fb33f376b113b78fc7226151fba8c3f258f4b687f0e41a4c839",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P05_TRINITY_AND_TRUTH_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P06_LOGOS_WORD_INFORMATION_Targets.lean",
+  "sha256": "6f612d4cb7655b47866af1e477bb27ffaea153cd5fb4e80714ee5e728a2e0518",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P06_LOGOS_WORD_INFORMATION_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P07_CREATION_ORDERED_GIFT_Targets.lean",
+  "sha256": "28b1bb86f7e23adb1e7b722830c7e889defaa580de80f560af270e60ad79aaf6",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P07_CREATION_ORDERED_GIFT_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P08_SCIENCE_AS_WITNESS_Targets.lean",
+  "sha256": "8e31a8c79eb70e8f89451296c6917a1ac19b5d3de65eb4c2c16e84e155bc07d9",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P08_SCIENCE_AS_WITNESS_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P09_CONSCIOUSNESS_AS_WITNESS_Targets.lean",
+  "sha256": "34e53535c14963d237672a11f3f53795114c8a58cd92604c207d762b5e3b7775",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P09_CONSCIOUSNESS_AS_WITNESS_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P10_FREEDOM_TRUST_SPACE_Targets.lean",
+  "sha256": "887bec304b5a21b4472d9735e57b832f0dc827b9724b3936b2c54b177fcff171",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P10_FREEDOM_TRUST_SPACE_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P11_FALL_DAMAGED_RECEIVER_Targets.lean",
+  "sha256": "0ab55aaf7a0c251c4c7c31e8085cb5228b7c6e1ef8bd2d9955124ae4e4f239ce",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P11_FALL_DAMAGED_RECEIVER_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P12_EVIL_VANDALIZES_Targets.lean",
+  "sha256": "3fade5f8036a5d2f876d00879f396cfbd3f8d672014290da228e3e38079d35c8",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P12_EVIL_VANDALIZES_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P13_COST_JUSTICE_MERCY_Targets.lean",
+  "sha256": "d235ab69f4510c9c928d687966f69bb7770835792de71c2321ba6b34187b34f5",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P13_COST_JUSTICE_MERCY_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P14_GRACE_EXTERNAL_REPAIR_Targets.lean",
+  "sha256": "b4c02f2f606414e7ef641c748fd94385ec6c41834b4a5aba1ac00d355de67768",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P14_GRACE_EXTERNAL_REPAIR_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P15_CHRIST_ENTERS_COST_Targets.lean",
+  "sha256": "d499f959a978c7346026124e1baad11132ef1414451c7edc333e8205b5a97f0d",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P15_CHRIST_ENTERS_COST_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P16_REDEMPTION_WITHOUT_ERASURE_Targets.lean",
+  "sha256": "f0499a446dbbefafda2a5095085d7a579ee7da4c782238eda4c7b4118ce27738",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P16_REDEMPTION_WITHOUT_ERASURE_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P17_RESURRECTION_IDENTITY_Targets.lean",
+  "sha256": "938594a334848580df8753edc5dea8e18a4167dd63118fd974bc47867f77c4b0",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P17_RESURRECTION_IDENTITY_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P18_FRUITS_RESTORED_LIFE_Targets.lean",
+  "sha256": "376c77221d4a047ff778d5c902894f5c50a23b9fc47bbb643c4228eb87ee7707",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P18_FRUITS_RESTORED_LIFE_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P19_FRUITS_COUNTERFEITS_Targets.lean",
+  "sha256": "40698a61e1fe201e406accfd15ed8b65a6bb50842166b8f7f04844b0bff40fe1",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P19_FRUITS_COUNTERFEITS_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "P20_SURVIVED_PRESSURE_Targets.lean",
+  "sha256": "f6b130687db4d2c958059b93523c59d50d1a7bac57b1fa349430de087e13d717",
+  "origins": [
+   "D:/GitHub\\Canonizationv1\\FaithThruPhysics\\Theorems\\GodIs_Unproven\\P20_SURVIVED_PRESSURE_Targets.lean"
+  ],
+  "project": "D:/GitHub\\Canonizationv1",
+  "axioms": 7,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 1,
+  "newest": "2026-09-19 01:09",
+  "library_reason": null
+ },
+ {
+  "file": "Preconditions.lean",
+  "sha256": "234c320113ca0bf3be2a09e759780c02a0f323d441a9ec8978e6ba54a50e9642",
+  "origins": [
+   "S:/Theophysics_Lean\\TheophysicsAxioms\\Layer0\\Preconditions.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\NEW UNSORTED\\Theophysics_Lean\\TheophysicsAxioms\\Layer0\\Preconditions.lean"
+  ],
+  "project": "S:/Theophysics_Lean",
+  "axioms": 16,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 2,
+  "newest": "2026-04-22 14:27",
+  "library_reason": null
+ },
+ {
+  "file": "Real__v3.lean",
+  "sha256": "03c132768c0fe9319422b78813e3cd89a1fc395966663eca18fd1438d187c89c",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\03C1\\Real.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\03C132_Real.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\03C132_Real.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 5,
+  "version_rank": 3,
+  "versions_of_name": 3,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "Ring.lean",
+  "sha256": "bb97e1c2baa7bd7e9bc9afdaf7430eafe4b90802744b4a7e6e59db5f5ef7bb46",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\BB97\\Ring.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\BB97E1_Ring.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\BB97E1_Ring.lean"
+  ],
+  "project": null,
+  "axioms": 5,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 3,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Ring__v2.lean",
+  "sha256": "eb9b6fd8bb131bb4b1ae4843e05e4f1cfaa91c5978e1d93e6929a3706ee71d67",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\EB9B\\Ring.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\EB9B6F_Ring.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\EB9B6F_Ring.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\EB9B6F_Ring.lean"
+  ],
+  "project": null,
+  "axioms": 4,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 3,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "RwQuestionMark.lean",
+  "sha256": "0083884fe4dfc05b5baeaff0648193e643455259db0d111ef610d0b092c27a76",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\0083\\RwQuestionMark.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\008388_RwQuestionMark.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\008388_RwQuestionMark.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\008388_RwQuestionMark.lean"
+  ],
+  "project": null,
+  "axioms": 7,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "SignAlgebra.lean",
+  "sha256": "7981204bb61153905f435f210de940adb8eb2c3f4d4a498c48ad36f1d46999e6",
+  "origins": [
+   "S:/Theophysics_Lean\\TheophysicsAxioms\\Tests\\SignAlgebra.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\NEW UNSORTED\\Theophysics_Lean\\TheophysicsAxioms\\Tests\\SignAlgebra.lean"
+  ],
+  "project": "S:/Theophysics_Lean",
+  "axioms": 1,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 2,
+  "newest": "2026-04-22 14:34",
+  "library_reason": null
+ },
+ {
+  "file": "SignAlgebra2.lean",
+  "sha256": "4efdc7cccb28ffcd2b1b5b679d5d42c40a4546ce9d2aa3c1e29811d30a889802",
+  "origins": [
+   "S:/Theophysics_Lean\\TheophysicsAxioms\\Tests\\SignAlgebra2.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\NEW UNSORTED\\Theophysics_Lean\\TheophysicsAxioms\\Tests\\SignAlgebra2.lean"
+  ],
+  "project": "S:/Theophysics_Lean",
+  "axioms": 1,
+  "theorems": 8,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 2,
+  "newest": "2026-04-22 14:48",
+  "library_reason": null
+ },
+ {
+  "file": "SlimCheck.lean",
+  "sha256": "e7995b8abe1bb8cd60a85d5c35769649b0383b981daa5395f4d3df67b256260f",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\E799\\SlimCheck.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\E7995B_SlimCheck.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\E7995B_SlimCheck.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\E7995B_SlimCheck.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Spread.lean",
+  "sha256": "0e678a2bd1ff1f7f4d084a5ae4b3fe772a7e113fb3fd4c627aad8c9ace65b45d",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\0E67\\Spread.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\0E678A_Spread.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 2,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "same_name_as_mathlib_file"
+ },
+ {
+  "file": "Subsingleton.lean",
+  "sha256": "ec3270c509eaff71c9557ec8f894b40242a2b41d0a826e1185b3de2ae7ef539a",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\EC32\\Subsingleton.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\EC3270_Subsingleton.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\EC3270_Subsingleton.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "TFAE.lean",
+  "sha256": "d76a5af5445ff0758adc32baa5bbecee314c82b011624ac5b73a05baf31890e5",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\D76A\\TFAE.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\D76A5A_TFAE.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\D76A5A_TFAE.lean"
+  ],
+  "project": null,
+  "axioms": 28,
+  "theorems": 0,
+  "sorry": 2,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "TRUTH_ERROR_DEPENDENCY_PROOF.lean",
+  "sha256": "af673b2c81e5be97da1ef294efe0afe0778b8b873227e666620336d155c8c219",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-29\\referenced-chatgpt-conversation-this-is-untrusted-2\\outputs\\TRUTH_ERROR_DEPENDENCY_PROOF.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\AF673B_TRUTH_ERROR_DEPENDENCY_PROOF.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\AF67\\TRUTH_ERROR_DEPENDENCY_PROOF.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\02_DISTINCTION\\02_DISTINCTION_01__error-defined-as-deviation-requires-a-standard__3thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-29\\referenced-chatgpt-conversation-this-is-untrusted-2\\outputs\\TRUTH_ERROR_DEPENDENCY_PROOF.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\AF673B_TRUTH_ERROR_DEPENDENCY_PROOF.lean"
+  ],
+  "project": null,
+  "axioms": 3,
+  "theorems": 3,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 6,
+  "newest": "2026-07-29 06:20",
+  "library_reason": null
+ },
+ {
+  "file": "TermCongr.lean",
+  "sha256": "407872bab13449427bc717523a81d011d2379b88facba450e42824be839587d5",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\4078\\TermCongr.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\407872_TermCongr.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\407872_TermCongr.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Theophysics_Skeleton_PATTERN.lean",
+  "sha256": "91d4c935f1628809cdb80afcbf73c94a225f8af431f1c8965b8bf88fac9faeb5",
+  "origins": [
+   "C:/theophysics\\LEAN4_STRUCTURE\\Theophysics_Skeleton_PATTERN.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_CANONICAL_BACKUP\\01_C_LEAN4_STRUCTURE\\Theophysics_Skeleton_PATTERN.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\LEAN4_STRUCTURE\\Theophysics_Skeleton_PATTERN.lean"
+  ],
+  "project": null,
+  "axioms": 5,
+  "theorems": 3,
+  "sorry": 3,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-07-25 16:03",
+  "library_reason": null
+ },
+ {
+  "file": "Zanistarast.lean",
+  "sha256": "37c94e58728031da608323caad3a9f2bdc0a1ce9b92b967b77fdc5c4b7eb5bdd",
+  "origins": [
+   "C:/Users/David/Documents\\AXIOM_STAGING\\FROM_H\\#recycle\\Downloads\\hebun-zanabun-main\\zanistarast\\formal\\lean\\Zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\37C94E_Zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\37C9\\Zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\99_UNSORTED_22__assumed-dimension-assignment-supplies-a-being-dimension__1thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\FROM_H\\#recycle\\Downloads\\hebun-zanabun-main\\zanistarast\\formal\\lean\\Zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\37C94E_Zanistarast.lean"
+  ],
+  "project": null,
+  "axioms": 6,
+  "theorems": 1,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 2,
+  "copies": 6,
+  "newest": "2026-03-21 17:12",
+  "library_reason": null
+ },
+ {
+  "file": "Basic__v26.lean",
+  "sha256": "860875a1d2f7f2bbfee8af0975379513d248a9a81bfc1196bc300038e40fd1c8",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\8608\\basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\860875_basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\860875_basic.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\860875_basic.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 5,
+  "sorry": 0,
+  "version_rank": 26,
+  "versions_of_name": 29,
+  "copies": 4,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "congr__v2.lean",
+  "sha256": "1c154243372a4514699f8b39c2f7d252aefa8e746a335bfcfa535fe4a660c5b3",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\1C15\\congr.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\1C1542_congr.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\1C1542_congr.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\1C1542_congr.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 16,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 2,
+  "copies": 4,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "depRewrite.lean",
+  "sha256": "663f51112688c25e63d02c81b775d90af8f083e13c4a54fe39312ca2d17cd787",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\663F\\depRewrite.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\663F51_depRewrite.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\663F51_depRewrite.lean"
+  ],
+  "project": null,
+  "axioms": 2,
+  "theorems": 2,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:30",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Meta__v2.lean",
+  "sha256": "377b0fa4eae43bc3e97ee38d77032ee8dbb705118e9eddf3f77acd8e49514529",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\377B\\meta.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\377B0F_meta.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\377B0F_meta.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 2,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "renameBvar.lean",
+  "sha256": "de74d9c195b44f515ecadc187b1bfa3e1d91def2548cd4fc5ff9b27e2854fed4",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\DE74\\renameBvar.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\DE74D9_renameBvar.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\DE74D9_renameBvar.lean"
+  ],
+  "project": null,
+  "axioms": 1,
+  "theorems": 0,
+  "sorry": 0,
+  "version_rank": 1,
+  "versions_of_name": 1,
+  "copies": 3,
+  "newest": "2026-08-29 18:28",
+  "library_reason": "mathlib_test_guard_msgs"
+ },
+ {
+  "file": "Zanistarast__v2.lean",
+  "sha256": "0514a5acd38c092dffd60122b665ea6bb97becf64490024c600e897e92bbac62",
+  "origins": [
+   "C:/Users/David/Documents\\AXIOM_STAGING\\FROM_H\\#recycle\\Downloads\\hebun-zanabun-main\\zanistarast\\formal\\proofs\\zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\0514A5_zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\0514\\zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\99_UNSORTED_23__dimension-and-knowledge-assumptions-support-fragmentary-claims__6thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\AXIOM_STAGING\\FROM_H\\#recycle\\Downloads\\hebun-zanabun-main\\zanistarast\\formal\\proofs\\zanistarast.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\0514A5_zanistarast.lean"
+  ],
+  "project": null,
+  "axioms": 10,
+  "theorems": 6,
+  "sorry": 0,
+  "version_rank": 2,
+  "versions_of_name": 2,
+  "copies": 6,
+  "newest": "2026-03-21 17:12",
+  "library_reason": null
+ }
+]

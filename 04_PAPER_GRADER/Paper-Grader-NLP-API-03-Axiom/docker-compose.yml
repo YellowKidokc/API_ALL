@@ -1,0 +1,39 @@
+services:
+  paper-grader:
+    build: .
+    container_name: paper-grader
+    environment:
+      QDRANT_URL: http://qdrant:6333
+      INFINITY_URL: ${INFINITY_URL:-http://host.docker.internal:7997}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      HF_HOME: /models/huggingface
+      TRANSFORMERS_CACHE: /models/huggingface
+    volumes:
+      - ./data/input:/data/input
+      - ./data/output:/data/output
+      - ./data/archive:/data/archive
+      - hf_cache:/models/huggingface
+    depends_on:
+      - qdrant
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: paper-grader-qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+
+  # Optional: run Ollama outside Docker on Windows, or uncomment this on Linux hosts.
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   container_name: paper-grader-ollama
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_models:/root/.ollama
+
+volumes:
+  hf_cache:
+  qdrant_storage:
+  # ollama_models:

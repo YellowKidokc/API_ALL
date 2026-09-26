@@ -1,0 +1,4 @@
+# Channels the watcher sends to DeepSeek automatically, one folder name per line
+# (as it appears under subtitles\). Other channels are converted and cleaned but
+# not sent to the API until you add them here.
+Daily Dose Of Wisdom

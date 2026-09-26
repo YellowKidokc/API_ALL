@@ -1,0 +1,313 @@
+[
+ {
+  "file": "MasterEquationSpiritualIsomorphism.lean",
+  "sha256": "c644a90285d9e55bd9de02d4234c0d0c163439662de790ccdcf3927792c25b47",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\ALL PAPERS\\01_FORMALIZATION\\LEAN_4\\LEAN\\MasterEquationSpiritualIsomorphism.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04_THE_PROOFS\\LEAN_4\\LEAN_4\\LEAN\\MasterEquationSpiritualIsomorphism.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\ALL PAPERS\\01_FORMALIZATION\\LEAN_4\\LEAN\\MasterEquationSpiritualIsomorphism.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04_THE_PROOFS\\LEAN_4\\LEAN_4\\LEAN\\MasterEquationSpiritualIsomorphism.lean",
+   "C:/Users/David/theophysics-read\\LEAN\\MasterEquationSpiritualIsomorphism.lean",
+   "C:/Users/David/theophysics-read\\me\\MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\C644A9_MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\02_Master_Equation\\C644A9_MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\C644A9_MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\C644\\C644A902_MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\C644\\MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\05_MASTER_EQUATION\\05_MASTER_EQUATION_13__preserved-coordinates-preserve-the-master-equation__6thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\faiththruphysics.com\\01_WORKING\\___AXIOM\\ALL PAPERS\\01_FORMALIZATION\\LEAN_4\\LEAN\\MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\faiththruphysics.com\\01_WORKING\\___AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04_THE_PROOFS\\LEAN_4\\LEAN_4\\LEAN\\MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\C644A9_MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\02_MASTER_EQUATION_AND_UNIFICATION\\C644A9_MasterEquationSpiritualIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\C644A9_MasterEquationSpiritualIsomorphism.lean"
+  ],
+  "project": null
+ },
+ {
+  "file": "LawIsoKernel.lean",
+  "sha256": "c1d076cbb6b217bba054c56e574d46aef3ee42d21d970e9f028d0e79291494ed",
+  "origins": [
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\06_TRUTH_SUBSTRATE_KERNEL\\Theophysics\\LawIsoKernel.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\AXIOM_BUNDLE\\minimal_no_sorry_package_draft\\Theophysics\\LawIsoKernel.lean"
+  ],
+  "project": "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\06_TRUTH_SUBSTRATE_KERNEL"
+ },
+ {
+  "file": "CDRIso.lean",
+  "sha256": "0a7ffbb8008f1f67d1a5747996f1bc82755b1fe7b4d15d89d7ab8870c13735c6",
+  "origins": [
+   "C:/Users/David/Desktop\\FTP AI Work Packets 2026-07-21\\The Crew\\04-ACTIVE-PROJECTS\\lean-logos-formalization\\lean-starter\\CDRIso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\0A7FFB_CDRIso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\0A7FFB_CDRIso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\0A7F\\CDRIso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\07_GRACE_COHERENCE\\07_GRACE_COHERENCE_24__matching-systems-preserve-coherence-and-restoration__3thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Desktop\\FTP AI Work Packets 2026-07-21\\The Crew\\04-ACTIVE-PROJECTS\\lean-logos-formalization\\lean-starter\\CDRIso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\0A7FFB_CDRIso.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\0A7FFB_CDRIso.lean"
+  ],
+  "project": null
+ },
+ {
+  "file": "IsomorphismTest.lean",
+  "sha256": "108ce1ee9ac3f6845e980a633328e5430979abbf21df21d3435adfd6eb0e7f48",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_compile_test\\extracted\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\108CE1_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\06_Unification_And_Cosmology\\108CE1_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\108C\\108CE1EE_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\108C\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\09_HARNESS_TESTS\\09_HARNESS_TESTS_54__matching-structures-can-accept-unrelated-analogies__6thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_compile_test\\extracted\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\108CE1_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\108CE1_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\108CE1_IsomorphismTest.lean"
+  ],
+  "project": "C:/Users/David/Documents\\Codex\\2026-07-09\\brief-me-on\\outputs\\lean_discrepancy_audit\\full_corpus_package_test"
+ },
+ {
+  "file": "IsomorphismTest__v3.lean",
+  "sha256": "40d77dcd8810a0171cf5177efc13b36ba98b85bffa84277ef4c2af7324bc0448",
+  "origins": [
+   "D:/TEMP_LEAN_ZIP\\GPT\\IN\\D_Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "D:/TEMP_LEAN_ZIP\\GPT\\IN\\D_production_theophysics_lean_formalization\\ResurrectionFormal\\IsomorphismTest.lean",
+   "D:/TEMP_LEAN_ZIP\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\ResurrectionFormal__IsomorphismTest.lean",
+   "D:/TEMP_LEAN_ZIP\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\00_CORE_ARGUMENTS\\06_TikTok_Core_Ideas\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\OLD VAULTS\\_ Theophysics_Case_for_Christ\\_CANNON\\04_LEAN4_PROOFS\\ResurrectionFormal\\IsomorphismTest.lean",
+   "S:/canonical\\Cannon\\FORMAL_VERIFICATION_PACKET_2026-05-10\\ResurrectionFormal\\IsomorphismTest.lean",
+   "S:/canonical\\Cannon\\GITHUB_READY\\theophysics-lean-formalization\\ResurrectionFormal\\IsomorphismTest.lean",
+   "S:/canonical\\Cannon\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT\\IN\\D_Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT\\IN\\D_production_theophysics_lean_formalization\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\ResurrectionFormal__IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT\\IN\\D_Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT\\IN\\D_production_theophysics_lean_formalization\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\ResurrectionFormal__IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\IN\\D_Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\IN\\D_production_theophysics_lean_formalization\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT\\_SORTED_LANE4\\00_KERNEL_VERIFIED\\ResurrectionFormal__IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\GPT_LEAN_CANON_WORKSPACE_20260720_063254\\00_INTAKE_RAW_FOUND_ON_C_D\\TARGETED_SOURCE_CLUSTERS\\D_drive\\Cowork\\ResurrectionFormal\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\40D7\\40D77DCD_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\40D7\\IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\40D7\\ResurrectionFormal__IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\09_HARNESS_TESTS\\_superseded\\09_HARNESS_TESTS_123__matching-structures-can-accept-unrelated-analogies__6thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\40D77D_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\06_ALGEBRAIC_ATLAS_AND_STRUCTURES\\40D77D_IsomorphismTest.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\40D77D_IsomorphismTest.lean"
+  ],
+  "project": "D:/TEMP_LEAN_ZIP\\GPT\\IN\\D_production_theophysics_lean_formalization"
+ },
+ {
+  "file": "UniversalAdversarialHarness.lean",
+  "sha256": "08de828fbea98bdd753f0f5a4ca9ce801e4701c99b244c10cfd17f07d06927d1",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\LEAN 4\\FORMALIZATION_INTAKE_2026-08-25\\04_CURRENT_GITHUB_FORMAL_WORK\\UniversalAdversarialHarness.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\01_Working\\LEAN 4\\FORMALIZATION_INTAKE_2026-08-25\\04_CURRENT_GITHUB_FORMAL_WORK\\UniversalAdversarialHarness.lean"
+  ],
+  "project": "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\LEAN 4\\FORMALIZATION_INTAKE_2026-08-25\\04_CURRENT_GITHUB_FORMAL_WORK"
+ },
+ {
+  "file": "TripleIsomorphismHarness.lean",
+  "sha256": "1b33b89a6aa5328720b649612fe407d1a58234b835a998c45b6ea6568ef0fe59",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\ALL PAPERS\\01_FORMALIZATION\\LEAN_4\\LEAN\\TripleIsomorphismHarness.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04_THE_PROOFS\\LEAN_4\\LEAN_4\\LEAN\\TripleIsomorphismHarness.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\ALL PAPERS\\01_FORMALIZATION\\LEAN_4\\LEAN\\TripleIsomorphismHarness.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\01_WORKING\\01_Working\\___AXIOM\\AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04_THE_PROOFS\\LEAN_4\\LEAN_4\\LEAN\\TripleIsomorphismHarness.lean",
+   "C:/Users/David/theophysics-read\\LEAN\\TripleIsomorphismHarness.lean",
+   "C:/Users/David/theophysics-read\\me\\TripleIsomorphismHarness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\1B33B8_TripleIsomorphismHarness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\1B33\\1B33B89A_TripleIsomorphismHarness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\1B33\\TripleIsomorphismHarness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\09_HARNESS_TESTS\\09_HARNESS_TESTS_93__three-domain-equivalence-requires-preserving-reversible-maps__11thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\faiththruphysics.com\\01_WORKING\\___AXIOM\\ALL PAPERS\\01_FORMALIZATION\\LEAN_4\\LEAN\\TripleIsomorphismHarness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\faiththruphysics.com\\01_WORKING\\___AXIOM\\___AXIOM\\04_FORMAL_LAYER\\04_THE_PROOFS\\LEAN_4\\LEAN_4\\LEAN\\TripleIsomorphismHarness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\1B33B8_TripleIsomorphismHarness.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\1B33B8_TripleIsomorphismHarness.lean"
+  ],
+  "project": null
+ },
+ {
+  "file": "Law1Audit.lean",
+  "sha256": "dd0f6934cd42d76fbd205e1662a3791e095b1ac94cb6ba43fbc1bc3e6d3f978d",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-28\\chrome-plugin-chrome-openai-bundled-file-4\\work\\law1_lean_audit\\Law1Audit.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\DD0F69_Law1Audit.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\DD0F\\Law1Audit.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\09_HARNESS_TESTS\\09_HARNESS_TESTS_63__one-way-analogies-cannot-claim-equivalence__5thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-28\\chrome-plugin-chrome-openai-bundled-file-4\\work\\law1_lean_audit\\Law1Audit.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\DD0F69_Law1Audit.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\DD0F69_Law1Audit.lean"
+  ],
+  "project": null
+ },
+ {
+  "file": "FruitsTripleIsomorphism.lean",
+  "sha256": "3032abfff5c8fcf8b6f5ad4672c7712cccfde9e9ad4552cc3309aab60ed24989",
+  "origins": [
+   "D:/GitHub\\Faith-Thru-Physics-Lean-4-\\FruitsTripleIsomorphism.lean",
+   "D:/GitHub\\theophysics-axiom-chain\\formalization\\2026-09-03\\FruitsTripleIsomorphism.lean",
+   "C:/Users/David/Documents\\Codex\\2026-09-09\\he\\outputs\\KIMMY_LEAN4_PROOF_HANDOFF_2026-09-09\\FruitsTripleIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\3032\\FruitsTripleIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\Faith-Thru-Physics-Lean-4-\\FruitsTripleIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\07_GRACE_COHERENCE\\07_GRACE_COHERENCE_34__restoration-patterns-match-across-three-declared-models__8thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\3032AB_FruitsTripleIsomorphism.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\3032AB_FruitsTripleIsomorphism.lean"
+  ],
+  "project": "D:/GitHub\\Faith-Thru-Physics-Lean-4-"
+ },
+ {
+  "file": "FruitsTripleFingerprint.lean",
+  "sha256": "9260b2d84b9e1e5e2d859389a648e888d3decc03e3e65cbc0ae954547b49d2c1",
+  "origins": [
+   "D:/GitHub\\Faith-Thru-Physics-Lean-4-\\FruitsTripleFingerprint.lean",
+   "D:/GitHub\\theophysics-axiom-chain\\formalization\\2026-09-03\\FruitsTripleFingerprint.lean",
+   "C:/Users/David/Documents\\Codex\\2026-09-09\\he\\outputs\\KIMMY_LEAN4_PROOF_HANDOFF_2026-09-09\\FruitsTripleFingerprint.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\9260\\FruitsTripleFingerprint.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\Faith-Thru-Physics-Lean-4-\\FruitsTripleFingerprint.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\09_HARNESS_TESTS\\09_HARNESS_TESTS_87__shared-restoration-patterns-do-not-establish-meaning__3thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\9260B2_FruitsTripleFingerprint.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\9260B2_FruitsTripleFingerprint.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\9260B2_FruitsTripleFingerprint.lean"
+  ],
+  "project": "D:/GitHub\\Faith-Thru-Physics-Lean-4-"
+ },
+ {
+  "file": "TruthLoveCoherence.lean",
+  "sha256": "47636bd7829168d70fd5d4cfc4e9f2b37f8746768babad08d8735dd3b1d1611e",
+  "origins": [
+   "D:/GitHub\\Faith-Thru-Physics-Lean-4-\\TruthLoveCoherence.lean",
+   "C:/Users/David/Documents\\Codex\\2026-09-09\\he\\outputs\\KIMMY_LEAN4_PROOF_HANDOFF_2026-09-09\\TruthLoveCoherence.lean"
+  ],
+  "project": "D:/GitHub\\Faith-Thru-Physics-Lean-4-"
+ },
+ {
+  "file": "BeatitudesReceiverConditions.lean",
+  "sha256": "2400b2d231956bc3cccf85a7a670b0a02402dcef8e8ffbd093ce9e43dd35969f",
+  "origins": [
+   "D:/GitHub\\Faith-Thru-Physics-Lean-4-\\BeatitudesReceiverConditions.lean",
+   "C:/Users/David/Documents\\Codex\\2026-09-15\\github-raw-is-blocked-by-the\\outputs\\BeatitudesReceiverConditions.lean"
+  ],
+  "project": "D:/GitHub\\Faith-Thru-Physics-Lean-4-"
+ },
+ {
+  "file": "Theophysics_Core__v3.lean",
+  "sha256": "258b0b75d49898e05057c8460c17c409383a4f09045bf765ebeaea5a2b5a7330",
+  "origins": [
+   "D:/TEMP_LEAN_ZIP\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Core.lean",
+   "D:/TEMP_LEAN_ZIP\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_CANONICAL_BACKUP\\06_RECOVERED_CANDIDATES\\01_THEOPHYSICS_LEAN_MAIN\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\Google CoLab Python\\_EXTRACTED_REPOS\\theophysics-lean-main\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\258B\\258B0B75_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\258B\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\99_UNSORTED_04__combined-models-cover-coherence-fall-and-trinity__146thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\258B0B_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\258B0B_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\258B0B_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\05_GENESIS_QUANTUM_AND_PARTICLES\\258B0B_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\258B0B_Theophysics_Core.lean"
+  ],
+  "project": "D:/TEMP_LEAN_ZIP\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main"
+ },
+ {
+  "file": "Theophysics_Core__v4.lean",
+  "sha256": "19da0a8304ba8d2332365592478a111fd5763f8df34f159d8e81290c15fb57f4",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-07-12\\no\\work\\lean-tighten\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\03_Fall_Mechanics_Entropy\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\05_Genesis_Quantum_Bridge\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\19DA\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\99_UNSORTED\\_superseded\\99_UNSORTED_28__combined-models-cover-coherence-fall-and-trinity__139thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-07-12\\no\\work\\lean-tighten\\Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\05_GENESIS_QUANTUM_AND_PARTICLES\\19DA0A_Theophysics_Core.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\19DA0A_Theophysics_Core.lean"
+  ],
+  "project": null
+ },
+ {
+  "file": "Theophysics_Adversarial__v2.lean",
+  "sha256": "6c449ca2792f448c7c9ae1987495b019f368240360c1c243f20f8e674a56a52f",
+  "origins": [
+   "D:/TEMP_LEAN_ZIP\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "D:/TEMP_LEAN_ZIP\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_AXIOM_PROOFS_HOME_2026-08-31\\04_HISTORICAL_LEAN_RECOVERY\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\00_CANONICAL_BACKUP\\06_RECOVERED_CANDIDATES\\01_THEOPHYSICS_LEAN_MAIN\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_AXIOM_PROOFS_GATHERED_2026-08-31\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\Google CoLab Python\\_EXTRACTED_REPOS\\theophysics-lean-main\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS_SOURCE_ONLY\\theophysics-lean-main\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\6C44\\6C449CA2_Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_D\\6C44\\Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\09_HARNESS_TESTS\\09_HARNESS_TESTS_61__negative-controls-reject-modeled-coherence-failures__90thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\6C449C_Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\03_FALL_MECHANICS_ENTROPY_FRACTURE\\6C449C_Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\6C449C_Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\05_GENESIS_QUANTUM_AND_PARTICLES\\6C449C_Theophysics_Adversarial.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\6C449C_Theophysics_Adversarial.lean"
+  ],
+  "project": "D:/TEMP_LEAN_ZIP\\PROFESSIONAL_HANDOFF_2026-07-17\\02_PRIMARY_LEAN_REPOS\\theophysics-lean-main"
+ },
+ {
+  "file": "Theophysics_Adversarial_EM_section.lean",
+  "sha256": "81c0e89d91dd71115539693084e71103f98aaa5d711a0de7f492541f6c564ac0",
+  "origins": [
+   "C:/Users/David/Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\outputs\\pilot_em_consciousness_20260804T033202Z\\source_slices\\Theophysics_Adversarial_EM_section.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\01_Axioms_Of_God\\81C0E8_Theophysics_Adversarial_EM_section.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\01_CANONICAL_LEAN4_PROOFS\\04_Grace_And_Coherence\\81C0E8_Theophysics_Adversarial_EM_section.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_ALL_DISCOVERED_PROOFS\\DRIVE_C\\81C0\\Theophysics_Adversarial_EM_section.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CANON_SORTED_2026-09-17\\09_HARNESS_TESTS\\09_HARNESS_TESTS_01__adversarial-controls-reject-selected-false-correspondences__37thm__UNVERIFIED.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_CONSOLIDATED_ALL\\FROM_DRIVE_C\\Users\\David\\Documents\\Codex\\2026-08-03\\hey-buddy-can-we-4\\outputs\\pilot_em_consciousness_20260804T033202Z\\source_slices\\Theophysics_Adversarial_EM_section.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\01_AXIOMS_OF_GOD_AND_TRINITY\\81C0E8_Theophysics_Adversarial_EM_section.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\04_GRACE_PROPERTIES_AND_COHERENCE\\81C0E8_Theophysics_Adversarial_EM_section.lean",
+   "//192.168.2.50/h_hp/Desktop 2/LEAN 4\\_PROOF_PACKETS_BY_TOPIC\\07_VERIFICATION_HARNESS_AND_TESTS\\81C0E8_Theophysics_Adversarial_EM_section.lean"
+  ],
+  "project": null
+ },
+ {
+  "file": "MaxwellTrinity.lean",
+  "sha256": "8701cfca733c6acb7714cc978e002d1f5dc4b53d97489c0fa194df06a379990c",
+  "origins": [
+   "C:/Users/David/Documents\\faiththruphysics.com\\00_ Production\\00_ Production\\00_THE_STORY\\05_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_DISCLOSURE_REORDER_2026-09-08\\04_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_REORDER_2026-09-08\\03_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/Documents\\faiththruphysics.com\\50_ Social media_ Publishing\\AXIOM\\05_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\00_THE_STORY\\05_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\01_GOD_AXIOM\\01_THE_ONE_STORY\\05_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_DISCLOSURE_REORDER_2026-09-08\\04_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\00_ Production\\00_ Production\\99_ARCHIVE\\ONE_STORY_PRE_REORDER_2026-09-08\\03_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean",
+   "C:/Users/David/SynologyDrive\\Obsidian\\faiththruphysics.com\\50_ Social media_ Publishing\\AXIOM\\05_TRINITY_AND_TRUTH\\01_CLAIMS_AND_EVIDENCE\\LEAN_4\\MaxwellTrinity.lean"
+  ],
+  "project": null
+ }
+]

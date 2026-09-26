@@ -1,0 +1,15 @@
+{
+  "port": 8765,
+  "mode": "transcript",
+  "ytbsd_dir": "D:/GitHub/Research-Acquisition/yt-bulk-subtitles-downloader",
+  "ytbsd_args": ["--free-proxies"],
+  "batch_size": 25,
+  "download_dir": "D:/YouTube_Downloads",
+  "format": "bestvideo[height<=1080]+bestaudio/best[height<=1080]",
+  "write_subs": true,
+  "concurrent_downloads": 2,
+  "proxies": [],
+  "proxy_mode": "rotate",
+  "retries_per_proxy": 1,
+  "extra_args": ["--no-playlist", "--embed-metadata"]
+}

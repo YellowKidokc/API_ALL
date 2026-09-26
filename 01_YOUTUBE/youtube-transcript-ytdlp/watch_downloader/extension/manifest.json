@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Watch Logger & Downloader",
+  "version": "1.0",
+  "description": "Logs YouTube videos you watch and offers to download them via local yt-dlp server.",
+  "permissions": [],
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
