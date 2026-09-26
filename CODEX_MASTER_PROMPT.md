@@ -218,6 +218,24 @@ this design. Keep its encodings and feed it `statistics.json` instead of demo da
 
 ---
 
+## 8b. Baselines: the two standard runs (David, 2026-09-26)
+
+Put these in `config/routines.json` as the first two routines, and show them at the top of the menu:
+
+| Routine | Applies to | Stations |
+|---|---|---|
+| **B: Baseline** | every paper, transcript or document | SUMMARY + CKG (20 CKG_RUN) |
+| **P: Published paper** | every paper David publishes (most of the corpus) | Baseline + **40 ANALYTICAL_ARMS** (axiom nodes, master equation, coherence, Fruits, run together as one grouped run) + **42 STATISTICS_WALL** + 46 REPORT_COMBINE |
+
+- SUMMARY is one merged station replacing the four existing summarizers (exec-summary, summarizer, summary-quad, Atlas synthesis). It gives one sentence, one paragraph, an executive summary and a story version, with DeepSeek as the writer.
+- Everything else stays optional, picked from the menu when wanted.
+
+**Report pipeline (JSON → HTML, per paper):**
+1. Each station writes its canonical `NN_station.json` into the paper folder (`02_RUNS/`).
+2. Each station folder keeps its **own HTML template** (`stations/NN_NAME/templates/section.html`), the piece of the report that station owns.
+3. Station 46 REPORT_COMBINE loads every JSON for the paper, fills each station's template, and assembles `03_REPORT/report.html`, the finished public report for that paper. The statistics section uses the approved matrix template.
+4. Templates contain no logic beyond placeholders and loops. Data comes only from the JSON, so any paper can be re-rendered at any time without new API calls.
+
 ## 9. The new stations: build from their specs
 
 - **40 ANALYTICAL_ARMS**: `ANALYTICAL_ARMS_V1.md`. Local word-level lexicon pass → per-sentence scores from -2 to +2 on 9 fruits (whole
