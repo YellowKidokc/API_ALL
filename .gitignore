@@ -26,3 +26,4 @@ API_HOME/vendor/**/focus/
 API_HOME/vendor/**/.clean_state.json
 API_HOME/vendor/**/.channel_cache.json
 API_HOME/vendor/**/lean_atoms.db
+API_HOME/vendor/youtube/clean/*/
