@@ -100,7 +100,8 @@ def check(quick: bool = False) -> tuple[int, list[tuple[str, str, bool | None, s
     for row in rows:
         for name, ok, detail in check_station(row, quick):
             results.append(("station", name, ok, detail))
-    for env in KEYS:
+    from engine.llm import PROVIDERS, allowed
+    for env in [k for k in KEYS if any(v.get("key") == k and allowed(n) for n, v in PROVIDERS.items())]:
         present = bool(os.environ.get(env))
         results.append(("key", env, present if env == "DEEPSEEK_API_KEY" else (True if present else None),
                         "present" if present else "missing"))

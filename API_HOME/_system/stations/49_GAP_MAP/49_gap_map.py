@@ -51,7 +51,7 @@ def main() -> int:
     if a.dry_run:
         return 0
     if not own:
-        print("No own work found. Mark papers with `47_NEW_PAPER --own`, or set own_work in paths.json (RELOCATE.bat).")
+        print("No own work found. Mark papers with `47_NEW_PAPER --own`, or set own_work in paths.json (SETUP.bat).")
         return 2
 
     # 1. David's claims

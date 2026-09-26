@@ -17,12 +17,7 @@
     "anthropic": "claude-sonnet-5",
     "mock": "mock"
   },
-  "fallback": [
-    {
-      "provider": "openrouter",
-      "model": "deepseek/deepseek-r1:free"
-    }
-  ],
+  "fallback": [],
   "output_token_cap": 8000,
   "sentences_per_output_range": 80,
   "retry": {
@@ -37,9 +32,8 @@
   "context_words": 60000,
   "allowed_providers": [
     "deepseek",
-    "openrouter",
-    "free",
     "mock"
   ],
-  "_allowed_note": "Only these providers can be called, by any station, new or legacy: the relay refuses the rest. Add a provider here to allow it."
+  "_allowed_note": "Only these providers can be called, by any station, new or legacy: the relay refuses the rest. mock = fake replies for tests, never leaves the machine.",
+  "_fallback_note": "Empty = DeepSeek only. To add the free OpenRouter backup later: [{\"provider\": \"openrouter\", \"model\": \"deepseek/deepseek-r1:free\"}] and add openrouter to allowed_providers."
 }

@@ -106,7 +106,7 @@ def main() -> int:
     a = p.parse_args()
     if a.use_station:
         if not configured("conversion_station"):
-            print("conversion_station is not configured (RELOCATE.bat)")
+            print("conversion_station is not configured (SETUP.bat)")
             return 2
         script = external("conversion_station") / "scripts" / "Run-Inbox.ps1"
         return subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", str(script)]).returncode

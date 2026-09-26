@@ -1,4 +1,4 @@
-"""91_RELOCATE: same as RELOCATE.bat."""
+"""91_RELOCATE: same as SETUP.bat."""
 import sys
 from pathlib import Path
 

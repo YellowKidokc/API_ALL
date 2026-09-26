@@ -10,11 +10,11 @@ For each key in config/paths.json:
             You confirm each (Enter = accept). With --auto every find is accepted.
   MISSING   nothing found: type the new location, or Enter to keep the old value.
 
-Relative values (../ONE_MENU_DATA/...) move with the folder and never need fixing.
+Relative values (../_data/...) move with the folder and never need fixing.
 Nothing else changes, because no script holds a path. Ends with the station 90 health check.
 
-  RELOCATE.bat            interactive
-  RELOCATE.bat --auto     accept every find, ask nothing (missing stay as they are)
+  SETUP.bat            interactive
+  SETUP.bat --auto     accept every find, ask nothing (missing stay as they are)
 """
 from __future__ import annotations
 

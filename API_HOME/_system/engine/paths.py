@@ -48,7 +48,7 @@ def load_paths(*, allow_example: bool = True) -> dict[str, str]:
     if not path.exists() and allow_example:
         path = CONFIG_DIR / "paths.example.json"
     if not path.exists():
-        raise PathConfigurationError("Run RELOCATE.bat to create config/paths.json")
+        raise PathConfigurationError("Run SETUP.bat to create config/paths.json")
     data = json.loads(path.read_text(encoding="utf-8-sig"))
     if not isinstance(data, dict):
         raise PathConfigurationError(f"{path} must contain a JSON object")
@@ -79,7 +79,7 @@ def external(key: str, *parts: str, required: bool = True, create: bool = False)
     raw = raw_value(key)
     if not raw:
         if required:
-            raise PathConfigurationError(f"Path '{key}' is not configured. Run RELOCATE.bat.")
+            raise PathConfigurationError(f"Path '{key}' is not configured. Run SETUP.bat.")
         return Path()
     base = expand(raw)
     spec = key_specs().get(key, {})
@@ -89,7 +89,7 @@ def external(key: str, *parts: str, required: bool = True, create: bool = False)
         base.parent.mkdir(parents=True, exist_ok=True)
         return base.joinpath(*parts)
     if required and not base.exists():
-        raise PathConfigurationError(f"Path '{key}' does not exist: {base}. Run RELOCATE.bat.")
+        raise PathConfigurationError(f"Path '{key}' does not exist: {base}. Run SETUP.bat.")
     return base.joinpath(*parts)
 
 

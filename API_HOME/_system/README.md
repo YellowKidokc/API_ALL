@@ -1,19 +1,33 @@
 # ONE_MENU
 
-One portable folder, one batch file, every API pipeline. Double-click `ONE_MENU.bat`, pick what to run by number
-(one, several, or a routine letter), answer a few questions, and it runs in parallel: every result lands in a
-predictable place and every step is shown as it happens. Copy the folder anywhere and run `RELOCATE.bat`.
+One portable folder, two batch files, every API pipeline. Open the folder and you see only:
+
+```
+ONE_MENU.bat    run anything: pick by number, answer a few questions, watch every step
+SETUP.bat       once after copying or moving the folder (key, paths, hiding)
+_system\        (hidden) engine, stations, config, legacy scripts, logs  <- this README lives here
+_data\          (hidden) transcripts, papers, runs, reports
+```
+
+Double-click `ONE_MENU.bat`, pick what to run by number (one, several, or a routine letter), answer a few
+questions, and it runs in parallel: every result lands in a predictable place and every step is shown as it
+happens. `ONE_MENU.bat results` opens the hidden results folder. The individual station scripts are still in
+`_system\stations\NN_NAME\` when you want one on its own.
 
 ## First use
 
 1. Install Python 3.11+ and `pip install openpyxl` (for the .xlsx outputs). Optional, used when present:
-   `textstat`, `vaderSentiment`, `spacy` (more statistics), `requests` and `openai` (some legacy scripts).
-2. Set `DEEPSEEK_API_KEY` as an environment variable (and `OPENROUTER_API_KEY` for the free fallback).
-   Keys never go in any file here.
-3. Run `RELOCATE.bat` once. It creates `config/paths.json` from `config/paths.example.json`. By default all data lives in
-   `ONE_MENU_DATA/` next to `API_HOME/` (relative paths, so it moves with the folder). Point any key at an existing folder
-   instead, e.g. `yt_subtitles` at your current subtitles folder.
-4. Run `ONE_MENU.bat`.
+   `textstat`, `vaderSentiment`, `spacy` (more statistics), `requests` and `openai` (some legacy scripts; the
+   `openai` package is only a client library, it talks to DeepSeek).
+2. Run `SETUP.bat`. It
+   - checks `DEEPSEEK_API_KEY`; if it is missing it asks for it once and saves it in your Windows user environment
+     variables (`setx`). The key never goes in any file here. Already set under Windows environment variables? It
+     just says so.
+   - creates `_system\config\paths.json` from `paths.example.json`. By default all data lives in `_data\` next to
+     `_system\` (relative paths, so it moves with the folder). Point any key at an existing folder instead, e.g.
+     `yt_subtitles` at your current subtitles folder.
+   - hides `_system` and `_data`.
+3. Run `ONE_MENU.bat`.
 
 ## The menu
 
@@ -81,7 +95,7 @@ The menu suggests candidates from your run history; the full list is always show
 | 50-54 | LEAN + axioms | congruence matrix, GOD IS pairing, Lean atom extractor, axiom one-page, axiom-nodes runner | 52, 54 |
 | 60 | OPENAI_STATIONS | the 23 api_call prompts, bundled: 22 stations in 11 calls | yes |
 | 90 | HEALTHCHECK | every station, path and key; proves each declared option exists in the real script | no |
-| 91 | RELOCATE | same as RELOCATE.bat | no |
+| 91 | RELOCATE | the paths step of SETUP.bat | no |
 
 Routines (`config/routines.json`): **Y** YouTube chain (07 02 08 09 44 46) · **I** CKG index + lenses + catalog ·
 **P** paper complete (40 41 42 44 46) · **B** bridge (44 48 49) · **E** evidence intake · **A** evidence synthesis family.
@@ -115,13 +129,14 @@ parallel). A failed item never stops the batch.
 
 ## Providers
 
-**Only DeepSeek (and the free OpenRouter fallback) can be called.** `settings.json` → `allowed_providers`: the relay
-refuses every other provider, for new and legacy scripts alike, even if an OpenAI key is set on the machine. (The
-`openai` Python package some scripts need is only a client library; it talks to DeepSeek.)
+**DeepSeek only.** `settings.json` → `allowed_providers` is `deepseek` (plus `mock`, the fake replies used by the
+tests, which never leave the machine). The relay refuses every other provider, for new and legacy scripts alike,
+even if another key is set on the machine, and there is no fallback: a DeepSeek call that still fails after its
+retries is recorded as failed and the item is retried on the next run. The menu does not ask for a provider.
 
-`config/providers.json` lists DeepSeek, OpenRouter (and `free`), OpenAI, Anthropic, Moonshot/Kimi, Gemini, Groq,
-Together, Mistral, Ollama. DeepSeek is primary; when a DeepSeek call still fails after its retries (or has no key) the
-call falls back to the free OpenRouter model in `settings.json` (`fallback`), and the receipt says so.
+`config/providers.json` still lists OpenRouter, OpenAI, Anthropic, Moonshot/Kimi, Gemini, Groq, Together, Mistral
+and Ollama, so switching one on later is two edits in `settings.json`: add it to `allowed_providers`, and (for a
+backup) put it in `fallback` (the note there has the free OpenRouter line ready to paste).
 
 ## Outputs
 
@@ -147,7 +162,7 @@ contains and which scripts answer `--help`.
 ## Moving the folder
 
 Nothing inside holds a path: internal paths come from `engine/paths.py`, external ones from `config/paths.json`
-by key. After a move, `RELOCATE.bat` checks every key and finds moved ones again (same position relative to
+by key. After a move, `SETUP.bat` checks every key and finds moved ones again (same position relative to
 API_HOME, same path on another drive letter, or a search by folder name + parent + fingerprint file), asks you to
 confirm (`--auto` accepts), saves, and runs the health check.
 

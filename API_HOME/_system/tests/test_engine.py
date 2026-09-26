@@ -23,7 +23,7 @@ from engine.gateway import Gateway  # noqa: E402
 
 def data_config(root: Path) -> Path:
     example = json.loads((HOME / "config" / "paths.example.json").read_text(encoding="utf-8"))
-    cfg = {k: (str(root / "data" / v[len("../ONE_MENU_DATA/"):]) if v.startswith("../ONE_MENU_DATA/") else v) for k, v in example.items()}
+    cfg = {k: (str(root / "data" / v[len("../_data/"):]) if v.startswith("../_data/") else v) for k, v in example.items()}
     path = root / "paths.json"
     path.write_text(json.dumps(cfg), encoding="utf-8")
     return path
@@ -48,7 +48,7 @@ class Portability(unittest.TestCase):
         self.assertEqual([], offenders)
 
     def test_relative_values_move_with_the_folder(self):
-        self.assertEqual(paths.expand("../ONE_MENU_DATA/papers"), (HOME.parent / "ONE_MENU_DATA" / "papers").resolve())
+        self.assertEqual(paths.expand("../_data/papers"), (HOME.parent / "_data" / "papers").resolve())
 
     def test_internal_path_rejects_escape(self):
         with self.assertRaises(paths.PathConfigurationError):
@@ -66,7 +66,8 @@ class Portability(unittest.TestCase):
                 self.assertTrue((folder / required).exists(), f"{folder.name} lacks {required}")
 
     def test_one_batch_file(self):
-        self.assertEqual(["ONE_MENU.bat", "RELOCATE.bat"], sorted(p.name for p in HOME.glob("*.bat")))
+        self.assertEqual(["ONE_MENU.bat", "SETUP.bat"], sorted(p.name for p in HOME.parent.glob("*.bat")))
+        self.assertEqual([], list(HOME.glob("*.bat")))
         self.assertEqual([], [p for p in (HOME / "stations").rglob("*.bat")])
 
     def test_no_keys_in_config(self):
@@ -122,11 +123,8 @@ class Limiter(unittest.TestCase):
                 lim.record(True)
         self.assertEqual(15, lim.current)
 
-    def test_fallback_is_the_free_option(self):
-        chain = llm.fallback_chain("deepseek", "deepseek-chat")
-        self.assertEqual(("deepseek", "deepseek-chat"), chain[0])
-        self.assertEqual("openrouter", chain[1][0])
-        self.assertIn(":free", chain[1][1])
+    def test_deepseek_only_no_fallback(self):
+        self.assertEqual([("deepseek", "deepseek-chat")], llm.fallback_chain("deepseek", "deepseek-chat"))
 
 
 class GatewayTests(unittest.TestCase):
@@ -249,7 +247,7 @@ class DomainRules(unittest.TestCase):
 
     def test_only_allowed_providers(self):
         self.assertTrue(llm.allowed("deepseek"))
-        self.assertTrue(llm.allowed("openrouter"))
+        self.assertFalse(llm.allowed("openrouter"))
         self.assertFalse(llm.allowed("openai"))
         r = llm.call([{"role": "user", "content": "x"}], provider="openai", model="gpt-4o")
         self.assertIn("not allowed", r.error)

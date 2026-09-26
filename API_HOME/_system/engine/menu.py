@@ -11,6 +11,7 @@ No questions when arguments are given:
   ONE_MENU.bat 48 --topic resurrection
   ONE_MENU.bat find resurrection --min 5        tagger search
   ONE_MENU.bat goals                            list every API goal id
+  ONE_MENU.bat results                          open the (hidden) results folder
 """
 from __future__ import annotations
 
@@ -303,7 +304,7 @@ def interactive(args: argparse.Namespace, state: Path) -> None:
         from engine.llm import PROVIDERS
         from engine.llm import allowed
         names = [n for n in list(PROVIDERS) + ["mock"] if allowed(n)]
-        while True:
+        while len([n for n in names if n != "mock"]) > 1:
             answer = ask(f"Provider [{settings['default_provider']}] ({', '.join(names)}):", settings["default_provider"]).lower()
             if answer in names:
                 args.provider = answer
@@ -370,6 +371,21 @@ def estimate(stations: list[dict], limit: int | None, settings: dict, workers: i
     return tokens, seconds
 
 
+def open_results() -> int:
+    """The data lives out of sight (default: _data next to _system); this opens it."""
+    from engine.paths import configured, external
+    for key in ("syntheses_root", "papers_root", "yt_work"):
+        if configured(key):
+            print(f"{key:15} {external(key)}")
+    folder = (API_HOME.parent / "_data").resolve()
+    if not folder.exists() and configured("papers_root"):
+        folder = external("papers_root").parent
+    print(f"Opening {folder}")
+    if hasattr(os, "startfile") and folder.exists():
+        os.startfile(folder)  # type: ignore[attr-defined]
+    return 0
+
+
 def run(argv=None) -> int:
     ensure_runtime_dirs()
     args = parse(argv)
@@ -381,6 +397,8 @@ def run(argv=None) -> int:
         path = write_catalog()
         print(path.read_text(encoding="utf-8"))
         return 0
+    if args.selection and args.selection[0].lower() == "results":
+        return open_results()
     state = API_HOME / "STATE" / "last_run.json"
     if not args.selection:
         if not sys.stdin.isatty():
