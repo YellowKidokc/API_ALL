@@ -2,15 +2,23 @@
   "number": "45",
   "name": "CLAIM_ATOMS",
   "label": "45_CLAIM_ATOMS",
-  "folder": "stations/45_CLAIM_ATOMS",
-  "script": "45_claim_atoms.py",
-  "rank": 28,
+  "kind": "legacy",
+  "description": "Claim atoms over the atoms workspace (DeepSeek or Kimi).",
+  "vendor": "api_deep/ATOMS/SCRIPTS/run_atoms.py",
+  "flags": {
+    "limit": "--max-items",
+    "provider": "--provider"
+  },
+  "provider_values": {
+    "deepseek": "deepseek",
+    "moonshot": "kimi"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
   "options": [
-    "workers",
+    "limit",
     "provider",
-    "model"
-  ],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "run_atoms.py"
+    "focus"
+  ]
 }

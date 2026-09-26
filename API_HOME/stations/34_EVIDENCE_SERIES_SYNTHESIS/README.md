@@ -1,3 +1,7 @@
 # 34_EVIDENCE_SERIES_SYNTHESIS
 
-Run from `ONE_MENU.bat 34`. Accepted options: none.
+Grand synthesis master paper for one series.
+
+- Runs: `vendor/evidence/SCRIPTS/series_grand_synthesizer.py` 
+- Menu options it really accepts: provider, model, focus
+- Script-specific options: --series

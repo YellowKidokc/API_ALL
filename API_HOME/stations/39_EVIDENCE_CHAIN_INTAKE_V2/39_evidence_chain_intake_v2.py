@@ -1,6 +1,8 @@
-from pathlib import Path
+"""39_EVIDENCE_CHAIN_INTAKE_V2: wrapped legacy station. Everything it runs is declared in station.json."""
 import sys
-sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
-from engine.station_runner import legacy_main
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from engine.legacy import main
+
 if __name__ == "__main__":
-    raise SystemExit(legacy_main("39","39_EVIDENCE_CHAIN_INTAKE_V2","legacy_evidence","epistemic_intake_v2.py"))
+    raise SystemExit(main("39_EVIDENCE_CHAIN_INTAKE_V2"))

@@ -2,11 +2,21 @@
   "number": "53",
   "name": "AXIOM_ONE_PAGE_TRANSFORM",
   "label": "53_AXIOM_ONE_PAGE_TRANSFORM",
-  "folder": "stations/53_AXIOM_ONE_PAGE_TRANSFORM",
-  "script": "53_axiom_one_page_transform.py",
-  "rank": 34,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "axiom_one_page_transform.py"
+  "kind": "legacy",
+  "description": "Transform axiom node pages into one-page form (local).",
+  "vendor": "evidence/SCRIPTS/axiom_one_page_transform.py",
+  "flags": {
+    "limit": "--limit"
+  },
+  "extra_flags": {
+    "in_place": "--in-place"
+  },
+  "extra_types": {
+    "in_place": "bool"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": [
+    "limit"
+  ]
 }

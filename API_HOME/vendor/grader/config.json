@@ -1,0 +1,23 @@
+{
+  "name": "paper-proof-grader",
+  "description": "Deterministic first-pass paper audit: text metrics, section detection, claim candidates, 7Q-style checks, and report exports.",
+  "input_dir": "DROP_PAPERS_HERE",
+  "output_dir": "OUTPUT",
+  "archive_dir": "ARCHIVE",
+  "report_dir": "",
+  "schema_path": "MASTER_VARIABLE_SCHEMA.md",
+  "text_extensions": [
+    ".txt",
+    ".md",
+    ".html",
+    ".htm"
+  ],
+  "document_extensions": [],
+  "outputs": {
+    "json": true,
+    "markdown": true,
+    "html": true,
+    "excel": true
+  },
+  "log_dir": "LOGS"
+}

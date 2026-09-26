@@ -2,11 +2,14 @@
   "number": "50",
   "name": "LEAN_PAIR_AXIOMS",
   "label": "50_LEAN_PAIR_AXIOMS",
-  "folder": "stations/50_LEAN_PAIR_AXIOMS",
-  "script": "50_lean_pair_axioms.py",
-  "rank": 24,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "theophysics_congruence_matrix.py"
+  "kind": "legacy",
+  "description": "Theophysics congruence matrix: evidence status x Lean status per paper (local).",
+  "vendor": "evidence/SCRIPTS/theophysics_congruence_matrix.py",
+  "flags": {},
+  "extra_flags": {
+    "db": "--db"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": []
 }

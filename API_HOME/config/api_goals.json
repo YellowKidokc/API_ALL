@@ -1,0 +1,506 @@
+[
+  {
+    "id": "API-03.0",
+    "title": "YT_INDEX",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "03_YT_INDEX",
+    "number": "03"
+  },
+  {
+    "id": "API-04.0",
+    "title": "YT_LENSES",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "04_YT_LENSES",
+    "number": "04"
+  },
+  {
+    "id": "API-06.0",
+    "title": "YT_WATCH",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "06_YT_WATCH",
+    "number": "06"
+  },
+  {
+    "id": "API-08.1",
+    "title": "YT_SUMMARY",
+    "task": "yt_summary",
+    "asks": "answers to QUESTIONS.md (base summary) with timestamps",
+    "station": "08_YT_SUMMARY",
+    "number": "08"
+  },
+  {
+    "id": "API-09.1",
+    "title": "YT_DEEP_ANALYSIS",
+    "task": "yt_deep",
+    "asks": "detailed analysis per DETAIL.md, building on the 08 summary",
+    "station": "09_YT_DEEP",
+    "number": "09"
+  },
+  {
+    "id": "API-20.0",
+    "title": "CKG_RUN",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "20_CKG_RUN",
+    "number": "20"
+  },
+  {
+    "id": "API-30.0",
+    "title": "EVIDENCE_INTAKE",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "30_EVIDENCE_INTAKE",
+    "number": "30"
+  },
+  {
+    "id": "API-33.0",
+    "title": "EVIDENCE_BUILD_ONE_ARGUMENT",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "33_EVIDENCE_BUILD_ONE_ARGUMENT",
+    "number": "33"
+  },
+  {
+    "id": "API-34.0",
+    "title": "EVIDENCE_SERIES_SYNTHESIS",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "34_EVIDENCE_SERIES_SYNTHESIS",
+    "number": "34"
+  },
+  {
+    "id": "API-35.0",
+    "title": "EVIDENCE_SERIES_ARCS",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "35_EVIDENCE_SERIES_ARCS",
+    "number": "35"
+  },
+  {
+    "id": "API-36.0",
+    "title": "EVIDENCE_THREE_DIALS",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "36_EVIDENCE_THREE_DIALS",
+    "number": "36"
+  },
+  {
+    "id": "API-39.0",
+    "title": "EVIDENCE_CHAIN_INTAKE_V2",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "39_EVIDENCE_CHAIN_INTAKE_V2",
+    "number": "39"
+  },
+  {
+    "id": "API-40.1",
+    "title": "FRUITS_SENTENCES",
+    "task": "fruits_sentences",
+    "asks": "-2..+2 per fruit for every sentence in an output range, whole paper each call",
+    "station": "40_ANALYTICAL_ARMS",
+    "number": "40"
+  },
+  {
+    "id": "API-40.2",
+    "title": "FRUITS_VERDICT",
+    "task": "fruits_verdict",
+    "asks": "rubric v0.3.0 gated verdict citing the curve spikes and lexicon gap",
+    "station": "40_ANALYTICAL_ARMS",
+    "number": "40"
+  },
+  {
+    "id": "API-40.3",
+    "title": "MASTER_EQUATION_ANALOG",
+    "task": "master_equation",
+    "asks": "what plays the role of the master equation; product test; 10-slot map (run twice)",
+    "station": "40_ANALYTICAL_ARMS",
+    "number": "40"
+  },
+  {
+    "id": "API-40.4",
+    "title": "AXIOM_NODES",
+    "task": "axiom_nodes",
+    "asks": "engaged axiom nodes with alignment, exact quote, confidence",
+    "station": "40_ANALYTICAL_ARMS",
+    "number": "40"
+  },
+  {
+    "id": "API-40.5",
+    "title": "COHERENCE",
+    "task": "coherence",
+    "asks": "4 coherence dimensions, contradictions, tensions, missing definitions",
+    "station": "40_ANALYTICAL_ARMS",
+    "number": "40"
+  },
+  {
+    "id": "API-41.1",
+    "title": "STORY_PAPER_PASS",
+    "task": "story_paper",
+    "asks": "hook, paragraph roles, through-line, drift, landing, verdict",
+    "station": "41_STORY",
+    "number": "41"
+  },
+  {
+    "id": "API-41.2",
+    "title": "STORY_SERIES_PASS",
+    "task": "story_series",
+    "asks": "series through-line, handoffs, repeats, missing beats",
+    "station": "41_STORY",
+    "number": "41"
+  },
+  {
+    "id": "API-41.3",
+    "title": "STORY_MEMORABLE_LINES",
+    "task": "story_lines",
+    "asks": "one memorable line per paragraph (only when coherent)",
+    "station": "41_STORY",
+    "number": "41"
+  },
+  {
+    "id": "API-44.1",
+    "title": "TAG_CONFIRM",
+    "task": "tagger",
+    "asks": "confirm/adjust 0-10 per candidate tag with a quote or timestamp and a reason",
+    "station": "44_TAGGER",
+    "number": "44"
+  },
+  {
+    "id": "API-45.0",
+    "title": "CLAIM_ATOMS",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "45_CLAIM_ATOMS",
+    "number": "45"
+  },
+  {
+    "id": "API-48.1",
+    "title": "EXTRACT_TOPIC_ARGUMENTS",
+    "task": "extract_arguments",
+    "asks": "every argument about the topic in one item: steps, kind, who holds it, quote/timestamp, strength, objections",
+    "station": "48_TOPIC_SYNTHESIS",
+    "number": "48"
+  },
+  {
+    "id": "API-48.2",
+    "title": "SYNTHESIZE_ARGUMENT",
+    "task": "synthesize_cluster",
+    "asks": "strongest form of one cross-referenced argument, lineage, objections and replies",
+    "station": "48_TOPIC_SYNTHESIS",
+    "number": "48"
+  },
+  {
+    "id": "API-48.3",
+    "title": "SYNTHESIS_OVERVIEW",
+    "task": "synthesis_overview",
+    "asks": "ranked overview report across all synthesized arguments",
+    "station": "48_TOPIC_SYNTHESIS",
+    "number": "48"
+  },
+  {
+    "id": "API-49.1",
+    "title": "OWN_CLAIMS",
+    "task": "own_claims",
+    "asks": "David's claims about the topic, with sentence ids",
+    "station": "49_GAP_MAP",
+    "number": "49"
+  },
+  {
+    "id": "API-49.2",
+    "title": "COVERAGE_MATCH",
+    "task": "gap_match",
+    "asks": "does David's work cover this best argument: covered / partial / missing",
+    "station": "49_GAP_MAP",
+    "number": "49"
+  },
+  {
+    "id": "API-49.3",
+    "title": "PRIOR_ART",
+    "task": "prior_art",
+    "asks": "who else made this claim in the corpus (quotes) -> cite, or appears original",
+    "station": "49_GAP_MAP",
+    "number": "49"
+  },
+  {
+    "id": "API-52.0",
+    "title": "LEAN_ATOM_EXTRACTOR",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "52_LEAN_ATOM_EXTRACTOR",
+    "number": "52"
+  },
+  {
+    "id": "API-54.0",
+    "title": "AXIOM_NODES_RUNNER",
+    "task": "",
+    "asks": "the prompts built into the wrapped script",
+    "station": "54_AXIOM_NODES_RUNNER",
+    "number": "54"
+  },
+  {
+    "id": "API-60.01",
+    "title": "LINGUISTICS_WORD_GAME",
+    "task": "oa_01",
+    "asks": "api_call_01 prompt (prompts/01_LINGUISTICS_WORD_GAME/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.02",
+    "title": "FRAMEWORK_ALIGNMENT_CHI",
+    "task": "oa_02",
+    "asks": "api_call_02 prompt (prompts/02_FRAMEWORK_ALIGNMENT_CHI/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.03",
+    "title": "READER_STRUCTURE",
+    "task": "oa_03",
+    "asks": "api_call_03 prompt (prompts/03_READER_STRUCTURE/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.04",
+    "title": "CLAIMS_AND_ARGUMENT",
+    "task": "oa_04",
+    "asks": "api_call_04 prompt (prompts/04_CLAIMS_AND_ARGUMENT/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.05",
+    "title": "PEER_REVIEW_44",
+    "task": "oa_05",
+    "asks": "api_call_05 prompt (prompts/05_PEER_REVIEW_44/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.06",
+    "title": "FRUITS_YUKAWA",
+    "task": "oa_06",
+    "asks": "api_call_06 prompt (prompts/06_FRUITS_YUKAWA/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.07",
+    "title": "JUSTICE_MERCY_OPERATOR",
+    "task": "oa_07",
+    "asks": "api_call_07 prompt (prompts/07_JUSTICE_MERCY_OPERATOR/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.08",
+    "title": "KNOWLEDGE_GRAPH",
+    "task": "oa_08",
+    "asks": "api_call_08 prompt (prompts/08_KNOWLEDGE_GRAPH/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.09",
+    "title": "GLOSSARY",
+    "task": "oa_09",
+    "asks": "api_call_09 prompt (prompts/09_GLOSSARY/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.10",
+    "title": "FINAL_REPORT",
+    "task": "oa_10",
+    "asks": "api_call_10 prompt (prompts/10_FINAL_REPORT/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.11",
+    "title": "DOMAIN_PERCENTAGES",
+    "task": "oa_11",
+    "asks": "api_call_11 prompt (prompts/11_DOMAIN_PERCENTAGES/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.12",
+    "title": "METADATA",
+    "task": "oa_12",
+    "asks": "api_call_12 prompt (prompts/12_METADATA/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.13",
+    "title": "ISOMORPHISM_REGISTRY_HTML",
+    "task": "oa_13",
+    "asks": "api_call_13 prompt (prompts/13_ISOMORPHISM_REGISTRY_HTML/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.14",
+    "title": "CANON_CLAIMS_JSON",
+    "task": "oa_14",
+    "asks": "api_call_14 prompt (prompts/14_CANON_CLAIMS_JSON/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.15",
+    "title": "ISOMORPHISM_TEST_4_LEVEL",
+    "task": "oa_15",
+    "asks": "api_call_15 prompt (prompts/15_ISOMORPHISM_TEST_4_LEVEL/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.16",
+    "title": "PROOF_MAP_JSON",
+    "task": "oa_16",
+    "asks": "api_call_16 prompt (prompts/16_PROOF_MAP_JSON/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.17",
+    "title": "ADVERSARIAL_AUDIT",
+    "task": "oa_17",
+    "asks": "api_call_17 prompt (prompts/17_ADVERSARIAL_AUDIT/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.18",
+    "title": "SEO",
+    "task": "oa_18",
+    "asks": "api_call_18 prompt (prompts/18_SEO/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.19",
+    "title": "PAGE_SHELL_AUDIT",
+    "task": "oa_19",
+    "asks": "api_call_19 prompt (prompts/19_PAGE_SHELL_AUDIT/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.20",
+    "title": "TRILEMMA_RESOLVER",
+    "task": "oa_20",
+    "asks": "api_call_20 prompt (prompts/20_TRILEMMA_RESOLVER/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.21",
+    "title": "GREAT_GRADER",
+    "task": "oa_21",
+    "asks": "api_call_21 prompt (prompts/21_GREAT_GRADER/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.22",
+    "title": "CLASSIFY_AXIOMIZE_ORGANIZE",
+    "task": "oa_22",
+    "asks": "api_call_22 prompt (prompts/22_CLASSIFY_AXIOMIZE_ORGANIZE/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.23",
+    "title": "MATH_TRANSLATION_LAYER",
+    "task": "oa_23",
+    "asks": "api_call_23 prompt (prompts/23_MATH_TRANSLATION_LAYER/prompt.txt)",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B1",
+    "title": "BUNDLE_READER",
+    "task": "oa_bundle_reader",
+    "asks": "one call answering: API-60.01, API-60.03, API-60.09, API-60.11, API-60.12",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B2",
+    "title": "BUNDLE_GRADING",
+    "task": "oa_bundle_grading",
+    "asks": "one call answering: API-60.05, API-60.17",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B3",
+    "title": "BUNDLE_GREAT_GRADER",
+    "task": "oa_bundle_great_grader",
+    "asks": "one call answering: API-60.21",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B4",
+    "title": "BUNDLE_CLAIMS",
+    "task": "oa_bundle_claims",
+    "asks": "one call answering: API-60.04, API-60.14, API-60.16, API-60.22",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B5",
+    "title": "BUNDLE_FRAMEWORK",
+    "task": "oa_bundle_framework",
+    "asks": "one call answering: API-60.02, API-60.06, API-60.07, API-60.15",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B6",
+    "title": "BUNDLE_GRAPH",
+    "task": "oa_bundle_graph",
+    "asks": "one call answering: API-60.08",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B7",
+    "title": "BUNDLE_MATH",
+    "task": "oa_bundle_math",
+    "asks": "one call answering: API-60.23",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B8",
+    "title": "BUNDLE_PUBLISHING",
+    "task": "oa_bundle_publishing",
+    "asks": "one call answering: API-60.18, API-60.19",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B9",
+    "title": "BUNDLE_REGISTRY_HTML",
+    "task": "oa_bundle_registry_html",
+    "asks": "one call answering: API-60.13",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  },
+  {
+    "id": "API-60.B10",
+    "title": "BUNDLE_FINAL",
+    "task": "oa_bundle_final",
+    "asks": "one call answering: API-60.10",
+    "station": "60_OPENAI_STATIONS",
+    "number": "60"
+  }
+]

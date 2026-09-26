@@ -1,3 +1,7 @@
 # 39_EVIDENCE_CHAIN_INTAKE_V2
 
-Run from `ONE_MENU.bat 39`. Accepted options: limit, workers, provider, model.
+Epistemic intake v2: extract, evaluate against the rubric, adversarial synthesis (3 JSON calls).
+
+- Runs: `vendor/evidence_chain/SCRIPTS/epistemic_intake_v2.py` 
+- Menu options it really accepts: limit, workers, focus
+- Script-specific options: --all, --check

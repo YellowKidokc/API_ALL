@@ -1,3 +1,7 @@
 # 31_EVIDENCE_MERGE_ORIGINALS
 
-Run from `ONE_MENU.bat 31`. Accepted options: none.
+Match companions to their originals by sha256 and merge (local).
+
+- Runs: `vendor/evidence/SCRIPTS/api_original_merge.py` 
+- Menu options it really accepts: limit
+- Script-specific options: --shelf

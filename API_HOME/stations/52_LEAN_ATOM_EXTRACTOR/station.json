@@ -2,11 +2,20 @@
   "number": "52",
   "name": "LEAN_ATOM_EXTRACTOR",
   "label": "52_LEAN_ATOM_EXTRACTOR",
-  "folder": "stations/52_LEAN_ATOM_EXTRACTOR",
-  "script": "52_lean_atom_extractor.py",
-  "rank": 33,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_lean",
-  "legacy_script": "lean_atom/cli.py"
+  "kind": "legacy",
+  "description": "Lean atom extractor (scan / classify / verify / audit / enrich / export / pills / briefs / serve).",
+  "module": "lean_atom.cli",
+  "module_root": "lean_atom",
+  "args": [
+    "--root",
+    "{lean_root}"
+  ],
+  "subcommand": "audit",
+  "flags": {},
+  "uses_api": true,
+  "focus": "gateway",
+  "goals": [],
+  "options": [
+    "focus"
+  ]
 }

@@ -2,11 +2,14 @@
   "number": "37",
   "name": "EVIDENCE_SQLITE_SYNC",
   "label": "37_EVIDENCE_SQLITE_SYNC",
-  "folder": "stations/37_EVIDENCE_SQLITE_SYNC",
-  "script": "37_evidence_sqlite_sync.py",
-  "rank": 27,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "sync_to_sqlite.py"
+  "kind": "legacy",
+  "description": "Sync companions into the pipeline SQLite database (local).",
+  "vendor": "evidence/SCRIPTS/sync_to_sqlite.py",
+  "flags": {},
+  "extra_flags": {
+    "db": "--db"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": []
 }

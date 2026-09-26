@@ -2,17 +2,220 @@
   "number": "60",
   "name": "OPENAI_STATIONS",
   "label": "60_OPENAI_STATIONS",
-  "folder": "stations/60_OPENAI_STATIONS",
-  "script": "60_openai_stations.py",
-  "rank": 20,
+  "kind": "native",
+  "description": "The 23 api_call_NN prompts, grouped into bundles so one whole-document call answers several.",
+  "items": "papers",
   "options": [
     "limit",
     "workers",
     "provider",
     "model",
-    "focus"
+    "focus",
+    "redo"
   ],
-  "retired": false,
-  "path_key": "legacy_openai_stations",
-  "legacy_script": "run.py"
+  "uses_api": true,
+  "goals": [
+    {
+      "id": "API-60.01",
+      "title": "LINGUISTICS_WORD_GAME",
+      "task": "oa_01",
+      "asks": "api_call_01 prompt (prompts/01_LINGUISTICS_WORD_GAME/prompt.txt)"
+    },
+    {
+      "id": "API-60.02",
+      "title": "FRAMEWORK_ALIGNMENT_CHI",
+      "task": "oa_02",
+      "asks": "api_call_02 prompt (prompts/02_FRAMEWORK_ALIGNMENT_CHI/prompt.txt)"
+    },
+    {
+      "id": "API-60.03",
+      "title": "READER_STRUCTURE",
+      "task": "oa_03",
+      "asks": "api_call_03 prompt (prompts/03_READER_STRUCTURE/prompt.txt)"
+    },
+    {
+      "id": "API-60.04",
+      "title": "CLAIMS_AND_ARGUMENT",
+      "task": "oa_04",
+      "asks": "api_call_04 prompt (prompts/04_CLAIMS_AND_ARGUMENT/prompt.txt)"
+    },
+    {
+      "id": "API-60.05",
+      "title": "PEER_REVIEW_44",
+      "task": "oa_05",
+      "asks": "api_call_05 prompt (prompts/05_PEER_REVIEW_44/prompt.txt)"
+    },
+    {
+      "id": "API-60.06",
+      "title": "FRUITS_YUKAWA",
+      "task": "oa_06",
+      "asks": "api_call_06 prompt (prompts/06_FRUITS_YUKAWA/prompt.txt)"
+    },
+    {
+      "id": "API-60.07",
+      "title": "JUSTICE_MERCY_OPERATOR",
+      "task": "oa_07",
+      "asks": "api_call_07 prompt (prompts/07_JUSTICE_MERCY_OPERATOR/prompt.txt)"
+    },
+    {
+      "id": "API-60.08",
+      "title": "KNOWLEDGE_GRAPH",
+      "task": "oa_08",
+      "asks": "api_call_08 prompt (prompts/08_KNOWLEDGE_GRAPH/prompt.txt)"
+    },
+    {
+      "id": "API-60.09",
+      "title": "GLOSSARY",
+      "task": "oa_09",
+      "asks": "api_call_09 prompt (prompts/09_GLOSSARY/prompt.txt)"
+    },
+    {
+      "id": "API-60.10",
+      "title": "FINAL_REPORT",
+      "task": "oa_10",
+      "asks": "api_call_10 prompt (prompts/10_FINAL_REPORT/prompt.txt)"
+    },
+    {
+      "id": "API-60.11",
+      "title": "DOMAIN_PERCENTAGES",
+      "task": "oa_11",
+      "asks": "api_call_11 prompt (prompts/11_DOMAIN_PERCENTAGES/prompt.txt)"
+    },
+    {
+      "id": "API-60.12",
+      "title": "METADATA",
+      "task": "oa_12",
+      "asks": "api_call_12 prompt (prompts/12_METADATA/prompt.txt)"
+    },
+    {
+      "id": "API-60.13",
+      "title": "ISOMORPHISM_REGISTRY_HTML",
+      "task": "oa_13",
+      "asks": "api_call_13 prompt (prompts/13_ISOMORPHISM_REGISTRY_HTML/prompt.txt)"
+    },
+    {
+      "id": "API-60.14",
+      "title": "CANON_CLAIMS_JSON",
+      "task": "oa_14",
+      "asks": "api_call_14 prompt (prompts/14_CANON_CLAIMS_JSON/prompt.txt)"
+    },
+    {
+      "id": "API-60.15",
+      "title": "ISOMORPHISM_TEST_4_LEVEL",
+      "task": "oa_15",
+      "asks": "api_call_15 prompt (prompts/15_ISOMORPHISM_TEST_4_LEVEL/prompt.txt)"
+    },
+    {
+      "id": "API-60.16",
+      "title": "PROOF_MAP_JSON",
+      "task": "oa_16",
+      "asks": "api_call_16 prompt (prompts/16_PROOF_MAP_JSON/prompt.txt)"
+    },
+    {
+      "id": "API-60.17",
+      "title": "ADVERSARIAL_AUDIT",
+      "task": "oa_17",
+      "asks": "api_call_17 prompt (prompts/17_ADVERSARIAL_AUDIT/prompt.txt)"
+    },
+    {
+      "id": "API-60.18",
+      "title": "SEO",
+      "task": "oa_18",
+      "asks": "api_call_18 prompt (prompts/18_SEO/prompt.txt)"
+    },
+    {
+      "id": "API-60.19",
+      "title": "PAGE_SHELL_AUDIT",
+      "task": "oa_19",
+      "asks": "api_call_19 prompt (prompts/19_PAGE_SHELL_AUDIT/prompt.txt)"
+    },
+    {
+      "id": "API-60.20",
+      "title": "TRILEMMA_RESOLVER",
+      "task": "oa_20",
+      "asks": "api_call_20 prompt (prompts/20_TRILEMMA_RESOLVER/prompt.txt)"
+    },
+    {
+      "id": "API-60.21",
+      "title": "GREAT_GRADER",
+      "task": "oa_21",
+      "asks": "api_call_21 prompt (prompts/21_GREAT_GRADER/prompt.txt)"
+    },
+    {
+      "id": "API-60.22",
+      "title": "CLASSIFY_AXIOMIZE_ORGANIZE",
+      "task": "oa_22",
+      "asks": "api_call_22 prompt (prompts/22_CLASSIFY_AXIOMIZE_ORGANIZE/prompt.txt)"
+    },
+    {
+      "id": "API-60.23",
+      "title": "MATH_TRANSLATION_LAYER",
+      "task": "oa_23",
+      "asks": "api_call_23 prompt (prompts/23_MATH_TRANSLATION_LAYER/prompt.txt)"
+    },
+    {
+      "id": "API-60.B1",
+      "title": "BUNDLE_READER",
+      "task": "oa_bundle_reader",
+      "asks": "one call answering: API-60.01, API-60.03, API-60.09, API-60.11, API-60.12"
+    },
+    {
+      "id": "API-60.B2",
+      "title": "BUNDLE_GRADING",
+      "task": "oa_bundle_grading",
+      "asks": "one call answering: API-60.05, API-60.17"
+    },
+    {
+      "id": "API-60.B3",
+      "title": "BUNDLE_GREAT_GRADER",
+      "task": "oa_bundle_great_grader",
+      "asks": "one call answering: API-60.21"
+    },
+    {
+      "id": "API-60.B4",
+      "title": "BUNDLE_CLAIMS",
+      "task": "oa_bundle_claims",
+      "asks": "one call answering: API-60.04, API-60.14, API-60.16, API-60.22"
+    },
+    {
+      "id": "API-60.B5",
+      "title": "BUNDLE_FRAMEWORK",
+      "task": "oa_bundle_framework",
+      "asks": "one call answering: API-60.02, API-60.06, API-60.07, API-60.15"
+    },
+    {
+      "id": "API-60.B6",
+      "title": "BUNDLE_GRAPH",
+      "task": "oa_bundle_graph",
+      "asks": "one call answering: API-60.08"
+    },
+    {
+      "id": "API-60.B7",
+      "title": "BUNDLE_MATH",
+      "task": "oa_bundle_math",
+      "asks": "one call answering: API-60.23"
+    },
+    {
+      "id": "API-60.B8",
+      "title": "BUNDLE_PUBLISHING",
+      "task": "oa_bundle_publishing",
+      "asks": "one call answering: API-60.18, API-60.19"
+    },
+    {
+      "id": "API-60.B9",
+      "title": "BUNDLE_REGISTRY_HTML",
+      "task": "oa_bundle_registry_html",
+      "asks": "one call answering: API-60.13"
+    },
+    {
+      "id": "API-60.B10",
+      "title": "BUNDLE_FINAL",
+      "task": "oa_bundle_final",
+      "asks": "one call answering: API-60.10"
+    }
+  ],
+  "prompt_files": [
+    "bundles.json",
+    "prompts/*/prompt.txt"
+  ]
 }

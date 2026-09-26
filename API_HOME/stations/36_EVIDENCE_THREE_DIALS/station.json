@@ -2,11 +2,22 @@
   "number": "36",
   "name": "EVIDENCE_THREE_DIALS",
   "label": "36_EVIDENCE_THREE_DIALS",
-  "folder": "stations/36_EVIDENCE_THREE_DIALS",
-  "script": "36_evidence_three_dials.py",
-  "rank": 26,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "three_dials_annotate.py"
+  "kind": "legacy",
+  "description": "Annotate one article with the three dials (kind, claimed vs earned strength).",
+  "vendor": "evidence/SCRIPTS/three_dials_annotate.py",
+  "items": "positional",
+  "flags": {
+    "model": "--model"
+  },
+  "model_values": [
+    "deepseek-chat",
+    "deepseek-reasoner"
+  ],
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "model",
+    "focus"
+  ]
 }

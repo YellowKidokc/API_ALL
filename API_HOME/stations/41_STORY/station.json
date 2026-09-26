@@ -2,9 +2,9 @@
   "number": "41",
   "name": "STORY",
   "label": "41_STORY",
-  "folder": "stations/41_STORY",
-  "script": "41_story.py",
-  "rank": 14,
+  "kind": "native",
+  "description": "Hook / sequence / coherence per paper -> series pass -> gated memorable lines (STORY_STATION_V2).",
+  "items": "papers",
   "options": [
     "limit",
     "workers",
@@ -13,5 +13,30 @@
     "focus",
     "redo"
   ],
-  "retired": false
+  "uses_api": true,
+  "goals": [
+    {
+      "id": "API-41.1",
+      "title": "STORY_PAPER_PASS",
+      "task": "story_paper",
+      "asks": "hook, paragraph roles, through-line, drift, landing, verdict"
+    },
+    {
+      "id": "API-41.2",
+      "title": "STORY_SERIES_PASS",
+      "task": "story_series",
+      "asks": "series through-line, handoffs, repeats, missing beats"
+    },
+    {
+      "id": "API-41.3",
+      "title": "STORY_MEMORABLE_LINES",
+      "task": "story_lines",
+      "asks": "one memorable line per paragraph (only when coherent)"
+    }
+  ],
+  "prompt_files": [
+    "PASS1.md",
+    "PASS2.md",
+    "PASS3.md"
+  ]
 }

@@ -2,11 +2,16 @@
   "number": "22",
   "name": "CKG_INBOX_CHECK",
   "label": "22_CKG_INBOX_CHECK",
-  "folder": "stations/22_CKG_INBOX_CHECK",
-  "script": "22_ckg_inbox_check.py",
-  "rank": 30,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_ckg",
-  "legacy_script": "PYTHON/run_ckg.py"
+  "kind": "legacy",
+  "description": "Show what is waiting in the CKG inbox (no API).",
+  "vendor": "ckg/PYTHON/run_ckg.py",
+  "args": [
+    "--root",
+    "{ckg_root}",
+    "--inventory"
+  ],
+  "flags": {},
+  "uses_api": false,
+  "goals": [],
+  "options": []
 }

@@ -2,11 +2,10 @@
   "number": "47",
   "name": "NEW_PAPER",
   "label": "47_NEW_PAPER",
-  "folder": "stations/47_NEW_PAPER",
-  "script": "47_new_paper.py",
-  "rank": 19,
-  "options": [
-    "limit"
-  ],
-  "retired": false
+  "kind": "native",
+  "description": "Create the per-paper working folder from templates/PAPER_FOLDER (then tags it).",
+  "items": "none",
+  "options": [],
+  "uses_api": false,
+  "goals": []
 }

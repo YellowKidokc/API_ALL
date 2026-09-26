@@ -2,11 +2,33 @@
   "number": "35",
   "name": "EVIDENCE_SERIES_ARCS",
   "label": "35_EVIDENCE_SERIES_ARCS",
-  "folder": "stations/35_EVIDENCE_SERIES_ARCS",
-  "script": "35_evidence_series_arcs.py",
-  "rank": 23,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "series_evaluator.py"
+  "kind": "legacy",
+  "description": "Series scorecard, arc report and reorder recommendation.",
+  "vendor": "evidence/SCRIPTS/series_evaluator.py",
+  "flags": {
+    "provider": "--provider",
+    "model": "--model",
+    "workers": "--workers"
+  },
+  "provider_values": {
+    "deepseek": "deepseek",
+    "openrouter": "openrouter",
+    "openai": "openai"
+  },
+  "extra_flags": {
+    "series": "--series",
+    "all": "--all"
+  },
+  "extra_types": {
+    "all": "bool"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "provider",
+    "model",
+    "workers",
+    "focus"
+  ]
 }

@@ -2,13 +2,32 @@
   "number": "01",
   "name": "YT_GRAB",
   "label": "01_YT_GRAB",
-  "folder": "stations/01_YT_GRAB",
-  "script": "01_yt_grab.py",
-  "rank": 1,
-  "options": [
-    "limit"
+  "kind": "legacy",
+  "description": "Download YouTube transcripts (channel, playlist or video URLs) into yt_subtitles. Then asks what to look for in this channel and whether to auto-process new videos.",
+  "vendor": "youtube/grab/ytgrab.py",
+  "args": [
+    "--out",
+    "{yt_subtitles}"
   ],
-  "retired": false,
-  "path_key": "legacy_youtube",
-  "legacy_script": "ytgrab.py"
+  "items": "positional",
+  "flags": {
+    "limit": "--limit",
+    "workers": "--threads"
+  },
+  "extra_flags": {
+    "free_proxies": "--free-proxies",
+    "shorts": "--shorts",
+    "no_webshare": "--no-webshare"
+  },
+  "extra_types": {
+    "free_proxies": "bool",
+    "shorts": "bool",
+    "no_webshare": "bool"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": [
+    "limit",
+    "workers"
+  ]
 }

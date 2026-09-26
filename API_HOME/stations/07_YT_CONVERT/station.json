@@ -2,13 +2,14 @@
   "number": "07",
   "name": "YT_CONVERT",
   "label": "07_YT_CONVERT",
-  "folder": "stations/07_YT_CONVERT",
-  "script": "07_yt_convert.py",
-  "rank": 15,
+  "kind": "native",
+  "description": "Convert SRT / VTT / JSON transcripts to ytgrab-style .md; originals kept in <Channel>/_originals (local).",
+  "items": "videos",
   "options": [
-    "limit"
+    "limit",
+    "channel",
+    "redo"
   ],
-  "retired": false,
-  "path_key": "legacy_youtube",
-  "legacy_script": "convert.py"
+  "uses_api": false,
+  "goals": []
 }

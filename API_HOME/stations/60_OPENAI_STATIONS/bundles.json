@@ -1,0 +1,92 @@
+{
+ "_note": "Bundles group api_call stations that read the same whole document, so one call answers several. Edit freely. weight = expected output tokens per station (default 1500); a bundle is split so each call stays under output_token_cap. 'after' bundles run once the others are done and receive their outputs (10 FINAL_REPORT compiles 01-09).",
+ "default_weight": 1500,
+ "bundles": {
+  "reader": {
+   "stations": [
+    "01",
+    "03",
+    "09",
+    "11",
+    "12"
+   ],
+   "why": "word/structure/glossary/domain/metadata: descriptive reads of the same text"
+  },
+  "grading": {
+   "stations": [
+    "05",
+    "17"
+   ],
+   "why": "peer review + adversarial audit"
+  },
+  "great_grader": {
+   "stations": [
+    "21"
+   ],
+   "why": "20 dimensions over 202 questions: large output, alone"
+  },
+  "claims": {
+   "stations": [
+    "04",
+    "14",
+    "16",
+    "22"
+   ],
+   "why": "claim extraction family (overlaps atoms / axiom nodes)"
+  },
+  "framework": {
+   "stations": [
+    "02",
+    "06",
+    "07",
+    "15"
+   ],
+   "why": "Theophysics framework reads: chi alignment, fruits (Yukawa variant), justice-mercy, isomorphism test"
+  },
+  "graph": {
+   "stations": [
+    "08"
+   ],
+   "why": "knowledge graph: large output, alone (overlaps CKG)"
+  },
+  "math": {
+   "stations": [
+    "23"
+   ],
+   "why": "math translation layer (complements the master-equation arm)"
+  },
+  "publishing": {
+   "stations": [
+    "18",
+    "19"
+   ],
+   "why": "SEO + page-shell audit"
+  },
+  "registry_html": {
+   "stations": [
+    "13"
+   ],
+   "why": "full HTML page: large output, alone"
+  },
+  "final": {
+   "stations": [
+    "10"
+   ],
+   "after": true,
+   "why": "compiles the others"
+  }
+ },
+ "not_in_default_run": {
+  "20": "TRILEMMA_RESOLVER takes a 'fight' as input, not a paper: run with --stations 20 on a fight file"
+ },
+ "weights": {
+  "01": 2500,
+  "05": 4000,
+  "08": 3500,
+  "13": 6000,
+  "17": 2500,
+  "20": 5000,
+  "21": 6500,
+  "23": 3000
+ }
+}

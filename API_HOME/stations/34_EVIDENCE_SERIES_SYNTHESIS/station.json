@@ -2,11 +2,26 @@
   "number": "34",
   "name": "EVIDENCE_SERIES_SYNTHESIS",
   "label": "34_EVIDENCE_SERIES_SYNTHESIS",
-  "folder": "stations/34_EVIDENCE_SERIES_SYNTHESIS",
-  "script": "34_evidence_series_synthesis.py",
-  "rank": 22,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "series_grand_synthesizer.py"
+  "kind": "legacy",
+  "description": "Grand synthesis master paper for one series.",
+  "vendor": "evidence/SCRIPTS/series_grand_synthesizer.py",
+  "flags": {
+    "provider": "--provider",
+    "model": "--model"
+  },
+  "provider_values": {
+    "deepseek": "deepseek",
+    "openrouter": "openrouter"
+  },
+  "extra_flags": {
+    "series": "--series"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "provider",
+    "model",
+    "focus"
+  ]
 }

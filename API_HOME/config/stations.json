@@ -1,481 +1,362 @@
 [
-  {
-    "number": "01",
-    "name": "YT_GRAB",
-    "label": "01_YT_GRAB",
-    "folder": "stations/01_YT_GRAB",
-    "script": "01_yt_grab.py",
-    "rank": 1,
-    "options": [
-      "limit"
-    ],
-    "retired": false,
-    "path_key": "legacy_youtube",
-    "legacy_script": "ytgrab.py"
-  },
-  {
-    "number": "02",
-    "name": "YT_CLEAN",
-    "label": "02_YT_CLEAN",
-    "folder": "stations/02_YT_CLEAN",
-    "script": "02_yt_clean.py",
-    "rank": 2,
-    "options": [
-      "limit"
-    ],
-    "retired": false,
-    "path_key": "legacy_youtube",
-    "legacy_script": "clean_library.py"
-  },
-  {
-    "number": "03",
-    "name": "YT_INDEX",
-    "label": "03_YT_INDEX",
-    "folder": "stations/03_YT_INDEX",
-    "script": "03_yt_index.py",
-    "rank": 3,
-    "options": [
-      "limit",
-      "workers",
-      "redo"
-    ],
-    "retired": false,
-    "path_key": "legacy_youtube",
-    "legacy_script": "index_video.py"
-  },
-  {
-    "number": "04",
-    "name": "YT_LENSES",
-    "label": "04_YT_LENSES",
-    "folder": "stations/04_YT_LENSES",
-    "script": "04_yt_lenses.py",
-    "rank": 4,
-    "options": [
-      "limit",
-      "workers",
-      "redo",
-      "focus"
-    ],
-    "retired": false,
-    "path_key": "legacy_youtube",
-    "legacy_script": "lens_pass.py"
-  },
-  {
-    "number": "05",
-    "name": "YT_CATALOG",
-    "label": "05_YT_CATALOG",
-    "folder": "stations/05_YT_CATALOG",
-    "script": "05_yt_catalog.py",
-    "rank": 5,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_youtube",
-    "legacy_script": "build_catalog.py"
-  },
-  {
-    "number": "06",
-    "name": "YT_WATCH",
-    "label": "06_YT_WATCH",
-    "folder": "stations/06_YT_WATCH",
-    "script": "06_yt_watch.py",
-    "rank": 6,
-    "options": [
-      "workers"
-    ],
-    "retired": false,
-    "path_key": "legacy_youtube",
-    "legacy_script": "watch_pipeline.py"
-  },
-  {
-    "number": "07",
-    "name": "YT_CONVERT",
-    "label": "07_YT_CONVERT",
-    "folder": "stations/07_YT_CONVERT",
-    "script": "07_yt_convert.py",
-    "rank": 15,
-    "options": [
-      "limit"
-    ],
-    "retired": false,
-    "path_key": "legacy_youtube",
-    "legacy_script": "convert.py"
-  },
-  {
-    "number": "20",
-    "name": "CKG_RUN",
-    "label": "20_CKG_RUN",
-    "folder": "stations/20_CKG_RUN",
-    "script": "20_ckg_run.py",
-    "rank": 7,
-    "options": [
-      "workers"
-    ],
-    "retired": false,
-    "path_key": "legacy_ckg",
-    "legacy_script": "PYTHON/run_ckg.py"
-  },
-  {
-    "number": "21",
-    "name": "CKG_EXTRACT_CPE",
-    "label": "21_CKG_EXTRACT_CPE",
-    "folder": "stations/21_CKG_EXTRACT_CPE",
-    "script": "21_ckg_extract_cpe.py",
-    "rank": 16,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_ckg",
-    "legacy_script": "PYTHON/extract_claims_proofs_evidence.py"
-  },
-  {
-    "number": "22",
-    "name": "CKG_INBOX_CHECK",
-    "label": "22_CKG_INBOX_CHECK",
-    "folder": "stations/22_CKG_INBOX_CHECK",
-    "script": "22_ckg_inbox_check.py",
-    "rank": 30,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_ckg",
-    "legacy_script": "PYTHON/run_ckg.py"
-  },
-  {
-    "number": "30",
-    "name": "EVIDENCE_INTAKE",
-    "label": "30_EVIDENCE_INTAKE",
-    "folder": "stations/30_EVIDENCE_INTAKE",
-    "script": "30_evidence_intake.py",
-    "rank": 8,
-    "options": [
-      "limit",
-      "workers",
-      "provider",
-      "model",
-      "focus"
-    ],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "turbo_pipeline_runner.py"
-  },
-  {
-    "number": "31",
-    "name": "EVIDENCE_MERGE_ORIGINALS",
-    "label": "31_EVIDENCE_MERGE_ORIGINALS",
-    "folder": "stations/31_EVIDENCE_MERGE_ORIGINALS",
-    "script": "31_evidence_merge_originals.py",
-    "rank": 25,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "api_original_merge.py"
-  },
-  {
-    "number": "32",
-    "name": "EVIDENCE_BEST_ARGUMENTS",
-    "label": "32_EVIDENCE_BEST_ARGUMENTS",
-    "folder": "stations/32_EVIDENCE_BEST_ARGUMENTS",
-    "script": "32_evidence_best_arguments.py",
-    "rank": 12,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "best_arguments_and_weaknesses.py"
-  },
-  {
-    "number": "33",
-    "name": "EVIDENCE_BUILD_ONE_ARGUMENT",
-    "label": "33_EVIDENCE_BUILD_ONE_ARGUMENT",
-    "folder": "stations/33_EVIDENCE_BUILD_ONE_ARGUMENT",
-    "script": "33_evidence_build_one_argument.py",
-    "rank": 13,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "argument_builder.py"
-  },
-  {
-    "number": "34",
-    "name": "EVIDENCE_SERIES_SYNTHESIS",
-    "label": "34_EVIDENCE_SERIES_SYNTHESIS",
-    "folder": "stations/34_EVIDENCE_SERIES_SYNTHESIS",
-    "script": "34_evidence_series_synthesis.py",
-    "rank": 22,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "series_grand_synthesizer.py"
-  },
-  {
-    "number": "35",
-    "name": "EVIDENCE_SERIES_ARCS",
-    "label": "35_EVIDENCE_SERIES_ARCS",
-    "folder": "stations/35_EVIDENCE_SERIES_ARCS",
-    "script": "35_evidence_series_arcs.py",
-    "rank": 23,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "series_evaluator.py"
-  },
-  {
-    "number": "36",
-    "name": "EVIDENCE_THREE_DIALS",
-    "label": "36_EVIDENCE_THREE_DIALS",
-    "folder": "stations/36_EVIDENCE_THREE_DIALS",
-    "script": "36_evidence_three_dials.py",
-    "rank": 26,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "three_dials_annotate.py"
-  },
-  {
-    "number": "37",
-    "name": "EVIDENCE_SQLITE_SYNC",
-    "label": "37_EVIDENCE_SQLITE_SYNC",
-    "folder": "stations/37_EVIDENCE_SQLITE_SYNC",
-    "script": "37_evidence_sqlite_sync.py",
-    "rank": 27,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "sync_to_sqlite.py"
-  },
-  {
-    "number": "38",
-    "name": "EVIDENCE_SIDECARS",
-    "label": "38_EVIDENCE_SIDECARS",
-    "folder": "stations/38_EVIDENCE_SIDECARS",
-    "script": "38_evidence_sidecars.py",
-    "rank": 31,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "evidence_sidecars.py"
-  },
-  {
-    "number": "39",
-    "name": "EVIDENCE_CHAIN_INTAKE_V2",
-    "label": "39_EVIDENCE_CHAIN_INTAKE_V2",
-    "folder": "stations/39_EVIDENCE_CHAIN_INTAKE_V2",
-    "script": "39_evidence_chain_intake_v2.py",
-    "rank": 32,
-    "options": [
-      "limit",
-      "workers",
-      "provider",
-      "model"
-    ],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "epistemic_intake_v2.py"
-  },
-  {
-    "number": "40",
-    "name": "ANALYTICAL_ARMS",
-    "label": "40_ANALYTICAL_ARMS",
-    "folder": "stations/40_ANALYTICAL_ARMS",
-    "script": "40_analytical_arms.py",
-    "rank": 9,
-    "options": [
-      "limit",
-      "workers",
-      "provider",
-      "model",
-      "focus",
-      "redo"
-    ],
-    "retired": false
-  },
-  {
-    "number": "41",
-    "name": "STORY",
-    "label": "41_STORY",
-    "folder": "stations/41_STORY",
-    "script": "41_story.py",
-    "rank": 14,
-    "options": [
-      "limit",
-      "workers",
-      "provider",
-      "model",
-      "focus",
-      "redo"
-    ],
-    "retired": false
-  },
-  {
-    "number": "42",
-    "name": "STATISTICS_WALL",
-    "label": "42_STATISTICS_WALL",
-    "folder": "stations/42_STATISTICS_WALL",
-    "script": "42_statistics_wall.py",
-    "rank": 10,
-    "options": [
-      "limit",
-      "workers",
-      "provider",
-      "model",
-      "focus",
-      "redo"
-    ],
-    "retired": false
-  },
-  {
-    "number": "43",
-    "name": "PAPER_GRADER",
-    "label": "43_PAPER_GRADER",
-    "folder": "stations/43_PAPER_GRADER",
-    "script": "43_paper_grader.py",
-    "rank": 17,
-    "options": [
-      "limit",
-      "workers"
-    ],
-    "retired": false,
-    "path_key": "legacy_grader",
-    "legacy_script": "pipeline.py"
-  },
-  {
-    "number": "44",
-    "name": "TAGGER",
-    "label": "44_TAGGER",
-    "folder": "stations/44_TAGGER",
-    "script": "44_tagger.py",
-    "rank": 11,
-    "options": [
-      "limit",
-      "workers",
-      "provider",
-      "model",
-      "focus",
-      "redo"
-    ],
-    "retired": false
-  },
-  {
-    "number": "45",
-    "name": "CLAIM_ATOMS",
-    "label": "45_CLAIM_ATOMS",
-    "folder": "stations/45_CLAIM_ATOMS",
-    "script": "45_claim_atoms.py",
-    "rank": 28,
-    "options": [
-      "workers",
-      "provider",
-      "model"
-    ],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "run_atoms.py"
-  },
-  {
-    "number": "46",
-    "name": "REPORT_COMBINE",
-    "label": "46_REPORT_COMBINE",
-    "folder": "stations/46_REPORT_COMBINE",
-    "script": "46_report_combine.py",
-    "rank": 18,
-    "options": [
-      "limit"
-    ],
-    "retired": false
-  },
-  {
-    "number": "47",
-    "name": "NEW_PAPER",
-    "label": "47_NEW_PAPER",
-    "folder": "stations/47_NEW_PAPER",
-    "script": "47_new_paper.py",
-    "rank": 19,
-    "options": [
-      "limit"
-    ],
-    "retired": false
-  },
-  {
-    "number": "50",
-    "name": "LEAN_PAIR_AXIOMS",
-    "label": "50_LEAN_PAIR_AXIOMS",
-    "folder": "stations/50_LEAN_PAIR_AXIOMS",
-    "script": "50_lean_pair_axioms.py",
-    "rank": 24,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "theophysics_congruence_matrix.py"
-  },
-  {
-    "number": "51",
-    "name": "LEAN_GOD_IS_UNPROVEN",
-    "label": "51_LEAN_GOD_IS_UNPROVEN",
-    "folder": "stations/51_LEAN_GOD_IS_UNPROVEN",
-    "script": "51_lean_god_is_unproven.py",
-    "rank": 29,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "god_is_unproven_to_lean.py"
-  },
-  {
-    "number": "52",
-    "name": "LEAN_ATOM_EXTRACTOR",
-    "label": "52_LEAN_ATOM_EXTRACTOR",
-    "folder": "stations/52_LEAN_ATOM_EXTRACTOR",
-    "script": "52_lean_atom_extractor.py",
-    "rank": 33,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_lean",
-    "legacy_script": "lean_atom/cli.py"
-  },
-  {
-    "number": "53",
-    "name": "AXIOM_ONE_PAGE_TRANSFORM",
-    "label": "53_AXIOM_ONE_PAGE_TRANSFORM",
-    "folder": "stations/53_AXIOM_ONE_PAGE_TRANSFORM",
-    "script": "53_axiom_one_page_transform.py",
-    "rank": 34,
-    "options": [],
-    "retired": false,
-    "path_key": "legacy_evidence",
-    "legacy_script": "axiom_one_page_transform.py"
-  },
-  {
-    "number": "60",
-    "name": "OPENAI_STATIONS",
-    "label": "60_OPENAI_STATIONS",
-    "folder": "stations/60_OPENAI_STATIONS",
-    "script": "60_openai_stations.py",
-    "rank": 20,
-    "options": [
-      "limit",
-      "workers",
-      "provider",
-      "model",
-      "focus"
-    ],
-    "retired": false,
-    "path_key": "legacy_openai_stations",
-    "legacy_script": "run.py"
-  },
-  {
-    "number": "90",
-    "name": "HEALTHCHECK",
-    "label": "90_HEALTHCHECK",
-    "folder": "stations/90_HEALTHCHECK",
-    "script": "90_healthcheck.py",
-    "rank": 21,
-    "options": [],
-    "retired": false
-  },
-  {
-    "number": "91",
-    "name": "RELOCATE",
-    "label": "91_RELOCATE",
-    "folder": "stations/91_RELOCATE",
-    "script": "91_relocate.py",
-    "rank": 35,
-    "options": [],
-    "retired": false
-  }
+ {
+  "number": "01",
+  "name": "YT_GRAB",
+  "label": "01_YT_GRAB",
+  "folder": "stations/01_YT_GRAB",
+  "script": "01_yt_grab.py",
+  "rank": 1,
+  "retired": false
+ },
+ {
+  "number": "02",
+  "name": "YT_CLEAN",
+  "label": "02_YT_CLEAN",
+  "folder": "stations/02_YT_CLEAN",
+  "script": "02_yt_clean.py",
+  "rank": 2,
+  "retired": false
+ },
+ {
+  "number": "03",
+  "name": "YT_INDEX",
+  "label": "03_YT_INDEX",
+  "folder": "stations/03_YT_INDEX",
+  "script": "03_yt_index.py",
+  "rank": 3,
+  "retired": false
+ },
+ {
+  "number": "04",
+  "name": "YT_LENSES",
+  "label": "04_YT_LENSES",
+  "folder": "stations/04_YT_LENSES",
+  "script": "04_yt_lenses.py",
+  "rank": 4,
+  "retired": false
+ },
+ {
+  "number": "05",
+  "name": "YT_CATALOG",
+  "label": "05_YT_CATALOG",
+  "folder": "stations/05_YT_CATALOG",
+  "script": "05_yt_catalog.py",
+  "rank": 5,
+  "retired": false
+ },
+ {
+  "number": "06",
+  "name": "YT_WATCH",
+  "label": "06_YT_WATCH",
+  "folder": "stations/06_YT_WATCH",
+  "script": "06_yt_watch.py",
+  "rank": 6,
+  "retired": false
+ },
+ {
+  "number": "07",
+  "name": "YT_CONVERT",
+  "label": "07_YT_CONVERT",
+  "folder": "stations/07_YT_CONVERT",
+  "script": "07_yt_convert.py",
+  "rank": 15,
+  "retired": false
+ },
+ {
+  "number": "08",
+  "name": "YT_SUMMARY",
+  "label": "08_YT_SUMMARY",
+  "folder": "stations/08_YT_SUMMARY",
+  "script": "08_yt_summary.py",
+  "rank": 37,
+  "retired": false
+ },
+ {
+  "number": "09",
+  "name": "YT_DEEP",
+  "label": "09_YT_DEEP",
+  "folder": "stations/09_YT_DEEP",
+  "script": "09_yt_deep.py",
+  "rank": 38,
+  "retired": false
+ },
+ {
+  "number": "20",
+  "name": "CKG_RUN",
+  "label": "20_CKG_RUN",
+  "folder": "stations/20_CKG_RUN",
+  "script": "20_ckg_run.py",
+  "rank": 7,
+  "retired": false
+ },
+ {
+  "number": "21",
+  "name": "CKG_EXTRACT_CPE",
+  "label": "21_CKG_EXTRACT_CPE",
+  "folder": "stations/21_CKG_EXTRACT_CPE",
+  "script": "21_ckg_extract_cpe.py",
+  "rank": 16,
+  "retired": false
+ },
+ {
+  "number": "22",
+  "name": "CKG_INBOX_CHECK",
+  "label": "22_CKG_INBOX_CHECK",
+  "folder": "stations/22_CKG_INBOX_CHECK",
+  "script": "22_ckg_inbox_check.py",
+  "rank": 30,
+  "retired": false
+ },
+ {
+  "number": "30",
+  "name": "EVIDENCE_INTAKE",
+  "label": "30_EVIDENCE_INTAKE",
+  "folder": "stations/30_EVIDENCE_INTAKE",
+  "script": "30_evidence_intake.py",
+  "rank": 8,
+  "retired": false
+ },
+ {
+  "number": "31",
+  "name": "EVIDENCE_MERGE_ORIGINALS",
+  "label": "31_EVIDENCE_MERGE_ORIGINALS",
+  "folder": "stations/31_EVIDENCE_MERGE_ORIGINALS",
+  "script": "31_evidence_merge_originals.py",
+  "rank": 25,
+  "retired": false
+ },
+ {
+  "number": "32",
+  "name": "EVIDENCE_BEST_ARGUMENTS",
+  "label": "32_EVIDENCE_BEST_ARGUMENTS",
+  "folder": "stations/32_EVIDENCE_BEST_ARGUMENTS",
+  "script": "32_evidence_best_arguments.py",
+  "rank": 12,
+  "retired": false
+ },
+ {
+  "number": "33",
+  "name": "EVIDENCE_BUILD_ONE_ARGUMENT",
+  "label": "33_EVIDENCE_BUILD_ONE_ARGUMENT",
+  "folder": "stations/33_EVIDENCE_BUILD_ONE_ARGUMENT",
+  "script": "33_evidence_build_one_argument.py",
+  "rank": 13,
+  "retired": false
+ },
+ {
+  "number": "34",
+  "name": "EVIDENCE_SERIES_SYNTHESIS",
+  "label": "34_EVIDENCE_SERIES_SYNTHESIS",
+  "folder": "stations/34_EVIDENCE_SERIES_SYNTHESIS",
+  "script": "34_evidence_series_synthesis.py",
+  "rank": 22,
+  "retired": false
+ },
+ {
+  "number": "35",
+  "name": "EVIDENCE_SERIES_ARCS",
+  "label": "35_EVIDENCE_SERIES_ARCS",
+  "folder": "stations/35_EVIDENCE_SERIES_ARCS",
+  "script": "35_evidence_series_arcs.py",
+  "rank": 23,
+  "retired": false
+ },
+ {
+  "number": "36",
+  "name": "EVIDENCE_THREE_DIALS",
+  "label": "36_EVIDENCE_THREE_DIALS",
+  "folder": "stations/36_EVIDENCE_THREE_DIALS",
+  "script": "36_evidence_three_dials.py",
+  "rank": 26,
+  "retired": false
+ },
+ {
+  "number": "37",
+  "name": "EVIDENCE_SQLITE_SYNC",
+  "label": "37_EVIDENCE_SQLITE_SYNC",
+  "folder": "stations/37_EVIDENCE_SQLITE_SYNC",
+  "script": "37_evidence_sqlite_sync.py",
+  "rank": 27,
+  "retired": false
+ },
+ {
+  "number": "38",
+  "name": "EVIDENCE_SIDECARS",
+  "label": "38_EVIDENCE_SIDECARS",
+  "folder": "stations/38_EVIDENCE_SIDECARS",
+  "script": "38_evidence_sidecars.py",
+  "rank": 31,
+  "retired": false
+ },
+ {
+  "number": "39",
+  "name": "EVIDENCE_CHAIN_INTAKE_V2",
+  "label": "39_EVIDENCE_CHAIN_INTAKE_V2",
+  "folder": "stations/39_EVIDENCE_CHAIN_INTAKE_V2",
+  "script": "39_evidence_chain_intake_v2.py",
+  "rank": 32,
+  "retired": false
+ },
+ {
+  "number": "40",
+  "name": "ANALYTICAL_ARMS",
+  "label": "40_ANALYTICAL_ARMS",
+  "folder": "stations/40_ANALYTICAL_ARMS",
+  "script": "40_analytical_arms.py",
+  "rank": 9,
+  "retired": false
+ },
+ {
+  "number": "41",
+  "name": "STORY",
+  "label": "41_STORY",
+  "folder": "stations/41_STORY",
+  "script": "41_story.py",
+  "rank": 14,
+  "retired": false
+ },
+ {
+  "number": "42",
+  "name": "STATISTICS_WALL",
+  "label": "42_STATISTICS_WALL",
+  "folder": "stations/42_STATISTICS_WALL",
+  "script": "42_statistics_wall.py",
+  "rank": 10,
+  "retired": false
+ },
+ {
+  "number": "43",
+  "name": "PAPER_GRADER",
+  "label": "43_PAPER_GRADER",
+  "folder": "stations/43_PAPER_GRADER",
+  "script": "43_paper_grader.py",
+  "rank": 17,
+  "retired": false
+ },
+ {
+  "number": "44",
+  "name": "TAGGER",
+  "label": "44_TAGGER",
+  "folder": "stations/44_TAGGER",
+  "script": "44_tagger.py",
+  "rank": 11,
+  "retired": false
+ },
+ {
+  "number": "45",
+  "name": "CLAIM_ATOMS",
+  "label": "45_CLAIM_ATOMS",
+  "folder": "stations/45_CLAIM_ATOMS",
+  "script": "45_claim_atoms.py",
+  "rank": 28,
+  "retired": false
+ },
+ {
+  "number": "46",
+  "name": "REPORT_COMBINE",
+  "label": "46_REPORT_COMBINE",
+  "folder": "stations/46_REPORT_COMBINE",
+  "script": "46_report_combine.py",
+  "rank": 18,
+  "retired": false
+ },
+ {
+  "number": "47",
+  "name": "NEW_PAPER",
+  "label": "47_NEW_PAPER",
+  "folder": "stations/47_NEW_PAPER",
+  "script": "47_new_paper.py",
+  "rank": 19,
+  "retired": false
+ },
+ {
+  "number": "48",
+  "name": "TOPIC_SYNTHESIS",
+  "label": "48_TOPIC_SYNTHESIS",
+  "folder": "stations/48_TOPIC_SYNTHESIS",
+  "script": "48_topic_synthesis.py",
+  "rank": 39,
+  "retired": false
+ },
+ {
+  "number": "49",
+  "name": "GAP_MAP",
+  "label": "49_GAP_MAP",
+  "folder": "stations/49_GAP_MAP",
+  "script": "49_gap_map.py",
+  "rank": 40,
+  "retired": false
+ },
+ {
+  "number": "50",
+  "name": "LEAN_PAIR_AXIOMS",
+  "label": "50_LEAN_PAIR_AXIOMS",
+  "folder": "stations/50_LEAN_PAIR_AXIOMS",
+  "script": "50_lean_pair_axioms.py",
+  "rank": 24,
+  "retired": false
+ },
+ {
+  "number": "51",
+  "name": "LEAN_GOD_IS_UNPROVEN",
+  "label": "51_LEAN_GOD_IS_UNPROVEN",
+  "folder": "stations/51_LEAN_GOD_IS_UNPROVEN",
+  "script": "51_lean_god_is_unproven.py",
+  "rank": 29,
+  "retired": false
+ },
+ {
+  "number": "52",
+  "name": "LEAN_ATOM_EXTRACTOR",
+  "label": "52_LEAN_ATOM_EXTRACTOR",
+  "folder": "stations/52_LEAN_ATOM_EXTRACTOR",
+  "script": "52_lean_atom_extractor.py",
+  "rank": 33,
+  "retired": false
+ },
+ {
+  "number": "53",
+  "name": "AXIOM_ONE_PAGE_TRANSFORM",
+  "label": "53_AXIOM_ONE_PAGE_TRANSFORM",
+  "folder": "stations/53_AXIOM_ONE_PAGE_TRANSFORM",
+  "script": "53_axiom_one_page_transform.py",
+  "rank": 34,
+  "retired": false
+ },
+ {
+  "number": "54",
+  "name": "AXIOM_NODES_RUNNER",
+  "label": "54_AXIOM_NODES_RUNNER",
+  "folder": "stations/54_AXIOM_NODES_RUNNER",
+  "script": "54_axiom_nodes_runner.py",
+  "rank": 36,
+  "retired": false
+ },
+ {
+  "number": "60",
+  "name": "OPENAI_STATIONS",
+  "label": "60_OPENAI_STATIONS",
+  "folder": "stations/60_OPENAI_STATIONS",
+  "script": "60_openai_stations.py",
+  "rank": 20,
+  "retired": false
+ },
+ {
+  "number": "90",
+  "name": "HEALTHCHECK",
+  "label": "90_HEALTHCHECK",
+  "folder": "stations/90_HEALTHCHECK",
+  "script": "90_healthcheck.py",
+  "rank": 21,
+  "retired": false
+ },
+ {
+  "number": "91",
+  "name": "RELOCATE",
+  "label": "91_RELOCATE",
+  "folder": "stations/91_RELOCATE",
+  "script": "91_relocate.py",
+  "rank": 35,
+  "retired": false
+ }
 ]

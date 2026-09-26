@@ -1,7 +1,22 @@
 [
-  "resurrection", "existence of God", "problem of evil/suffering", "creation/evolution",
-  "fine-tuning", "consciousness", "information/logos", "Bible reliability", "prophecy",
-  "Christology/Trinity", "salvation/grace", "morality", "miracles", "science and faith",
-  "apologetics method", "church and ethics", "end times", "prayer",
-  "one-world/conspiracy", "master equation/Theophysics"
+  {"tag": "resurrection", "keywords": ["resurrection", "risen", "rose from the dead", "empty tomb", "raised", "appearances"]},
+  {"tag": "existence of God", "keywords": ["existence of god", "god exists", "cosmological", "ontological", "first cause", "necessary being", "atheism"]},
+  {"tag": "problem of evil/suffering", "keywords": ["problem of evil", "suffering", "theodicy", "evil", "pain"]},
+  {"tag": "creation/evolution", "keywords": ["creation", "evolution", "darwin", "genesis", "common descent", "intelligent design"]},
+  {"tag": "fine-tuning", "keywords": ["fine-tuning", "fine tuning", "cosmological constant", "anthropic", "constants of nature", "multiverse"]},
+  {"tag": "consciousness", "keywords": ["consciousness", "mind", "qualia", "hard problem", "soul", "awareness"]},
+  {"tag": "information/logos", "keywords": ["information", "logos", "shannon", "code", "entropy", "word"]},
+  {"tag": "Bible reliability", "keywords": ["manuscript", "reliability", "canon", "textual criticism", "gospels", "historicity"]},
+  {"tag": "prophecy", "keywords": ["prophecy", "prophecies", "fulfilled", "fulfilment", "fulfillment", "daniel", "isaiah 53"]},
+  {"tag": "Christology/Trinity", "keywords": ["trinity", "christology", "incarnation", "divinity of jesus", "son of god", "triune"]},
+  {"tag": "salvation/grace", "keywords": ["salvation", "grace", "saved", "atonement", "justification", "redemption"]},
+  {"tag": "morality", "keywords": ["morality", "moral", "ethics", "objective moral", "good and evil"]},
+  {"tag": "miracles", "keywords": ["miracle", "miracles", "supernatural", "hume", "healing"]},
+  {"tag": "science and faith", "keywords": ["science and faith", "science", "faith", "scientism", "methodological naturalism"]},
+  {"tag": "apologetics method", "keywords": ["apologetics", "presuppositional", "evidentialist", "classical apologetics", "burden of proof"]},
+  {"tag": "church and ethics", "keywords": ["church", "denomination", "pastor", "abortion", "marriage", "sexuality"]},
+  {"tag": "end times", "keywords": ["end times", "rapture", "tribulation", "eschatology", "revelation", "antichrist", "millennium"]},
+  {"tag": "prayer", "keywords": ["prayer", "pray", "praying", "intercession"]},
+  {"tag": "one-world/conspiracy", "keywords": ["one world", "new world order", "globalist", "conspiracy", "great reset", "mark of the beast"]},
+  {"tag": "master equation/Theophysics", "keywords": ["master equation", "theophysics", "coherence", "chi field", "negentropy", "ten laws"]}
 ]

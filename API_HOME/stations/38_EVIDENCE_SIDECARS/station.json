@@ -2,11 +2,14 @@
   "number": "38",
   "name": "EVIDENCE_SIDECARS",
   "label": "38_EVIDENCE_SIDECARS",
-  "folder": "stations/38_EVIDENCE_SIDECARS",
-  "script": "38_evidence_sidecars.py",
-  "rank": 31,
-  "options": [],
-  "retired": false,
-  "path_key": "legacy_evidence",
-  "legacy_script": "evidence_sidecars.py"
+  "kind": "legacy",
+  "description": "Write / search evidence sidecars (local).",
+  "vendor": "evidence/SCRIPTS/evidence_sidecars.py",
+  "flags": {},
+  "extra_flags": {
+    "search": "--search"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": []
 }

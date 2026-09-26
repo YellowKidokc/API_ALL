@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lean-atom-extractor"
+version = "1.0.0"
+description = "Lean 4 Corpus Scanner & Atom Record Extractor"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "click>=8.0",
+    "jinja2>=3.0"
+]
+
+[project.scripts]
+lean-atom = "lean_atom.cli:main"

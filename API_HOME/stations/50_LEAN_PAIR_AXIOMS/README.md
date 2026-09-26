@@ -1,3 +1,7 @@
 # 50_LEAN_PAIR_AXIOMS
 
-Run from `ONE_MENU.bat 50`. Accepted options: none.
+Theophysics congruence matrix: evidence status x Lean status per paper (local).
+
+- Runs: `vendor/evidence/SCRIPTS/theophysics_congruence_matrix.py` 
+- Menu options it really accepts: none
+- Script-specific options: --db

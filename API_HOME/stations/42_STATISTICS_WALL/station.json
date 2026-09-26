@@ -2,16 +2,14 @@
   "number": "42",
   "name": "STATISTICS_WALL",
   "label": "42_STATISTICS_WALL",
-  "folder": "stations/42_STATISTICS_WALL",
-  "script": "42_statistics_wall.py",
-  "rank": 10,
+  "kind": "native",
+  "description": "Every academic + Obsidian metric in Python (same numbers every run), with corpus / series percentiles and change since last version.",
+  "items": "both",
   "options": [
     "limit",
-    "workers",
-    "provider",
-    "model",
-    "focus",
-    "redo"
+    "redo",
+    "channel"
   ],
-  "retired": false
+  "uses_api": false,
+  "goals": []
 }

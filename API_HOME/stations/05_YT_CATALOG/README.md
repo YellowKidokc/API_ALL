@@ -1,3 +1,7 @@
 # 05_YT_CATALOG
 
-Run from `ONE_MENU.bat 05`. Accepted options: none.
+Channel overviews, debate pages, catalog.xlsx and catalog.sqlite from the index (local).
+
+- Runs: `vendor/youtube/deepseek_home/build_catalog.py` 
+- Menu options it really accepts: none
+- Script-specific options: none

@@ -1,0 +1,17 @@
+{
+  "_note": "External Python metric suites station 42 runs in addition to its own metrics (David's deterministic layer). Each suite is OFF until its command is confirmed on David's machine. {script_dir} = the suite folder (paths.json key), {source} = the paper file, {out} = a scratch output folder. Every JSON file the command writes into {out} is read; every numeric field becomes a metric (family = the suite name, method = python:<suite>). Use `python stations/42_STATISTICS_WALL/42_statistics_wall.py --audit-suites` to list what each suite folder contains and which scripts answer --help.",
+  "suites": [
+    {"name": "paper_intelligence", "path_key": "paper_intelligence", "enabled": false,
+     "command": ["{python}", "{script_dir}/pipeline.py", "--input", "{source}", "--out", "{out}"],
+     "status": "command not yet confirmed (pipeline.py flags unknown from the cloud)"},
+    {"name": "python_api_116", "path_key": "nas_brain", "subfolder": "Python API", "enabled": false,
+     "command": ["{python}", "{script_dir}/Python API/run_all.py", "{source}", "{out}"],
+     "status": "entry point not yet confirmed; see 04_PAPER_GRADER/API_DEEP_PAPER_GRADER_prompts/paper_metric_registry.json"},
+    {"name": "grader_chi_qi_v5", "path_key": null, "vendored": "grader", "enabled": true,
+     "command": ["{python}", "{API_HOME}/vendor/grader/chi_qi_v5_metric_engine.py", "--input", "{source}", "--out", "{out}"],
+     "status": "vendored July grader metric engine; flags confirmed from its argparse"},
+    {"name": "grader_nlp_deep", "path_key": null, "vendored": "grader", "enabled": true,
+     "command": ["{python}", "{API_HOME}/vendor/grader/nlp_deep_runner.py", "--input", "{source}", "--out", "{out}"],
+     "status": "vendored July grader NLP runner; flags confirmed from its argparse"}
+  ]
+}

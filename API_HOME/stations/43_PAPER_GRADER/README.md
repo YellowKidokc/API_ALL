@@ -1,3 +1,7 @@
 # 43_PAPER_GRADER
 
-Run from `ONE_MENU.bat 43`. Accepted options: limit, workers.
+July deterministic paper audit: metrics, sections, claim candidates, 7Q checks (local).
+
+- Runs: `vendor/grader/pipeline.py` 
+- Menu options it really accepts: none
+- Script-specific options: none

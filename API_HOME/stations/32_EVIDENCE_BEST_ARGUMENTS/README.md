@@ -1,3 +1,7 @@
 # 32_EVIDENCE_BEST_ARGUMENTS
 
-Run from `ONE_MENU.bat 32`. Accepted options: none.
+Cluster primary arguments and weaknesses across companions (local TF-IDF).
+
+- Runs: `vendor/evidence/SCRIPTS/best_arguments_and_weaknesses.py` 
+- Menu options it really accepts: none
+- Script-specific options: --shelf, --threshold, --top

@@ -1,3 +1,7 @@
 # 38_EVIDENCE_SIDECARS
 
-Run from `ONE_MENU.bat 38`. Accepted options: none.
+Write / search evidence sidecars (local).
+
+- Runs: `vendor/evidence/SCRIPTS/evidence_sidecars.py` 
+- Menu options it really accepts: none
+- Script-specific options: --search

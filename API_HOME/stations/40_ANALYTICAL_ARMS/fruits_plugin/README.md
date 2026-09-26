@@ -1,1 +1,0 @@
-David's replaceable Fruits plug-in lives here. Put prompt and rubric Markdown here; configure Excel workbooks through `excel_fruits` and `excel_lexicons` in `paths.json`. The default scale is provisional `-2..+2` pending David's decision.

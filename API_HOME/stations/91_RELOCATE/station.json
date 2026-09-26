@@ -2,9 +2,10 @@
   "number": "91",
   "name": "RELOCATE",
   "label": "91_RELOCATE",
-  "folder": "stations/91_RELOCATE",
-  "script": "91_relocate.py",
-  "rank": 35,
+  "kind": "native",
+  "description": "After moving the folder: find every external path again (auto-search), confirm, save, health check.",
+  "items": "none",
   "options": [],
-  "retired": false
+  "uses_api": false,
+  "goals": []
 }
