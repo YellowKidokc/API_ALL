@@ -81,6 +81,24 @@
   "retired": false
  },
  {
+  "number": "10",
+  "name": "CKG_THEOLOGY",
+  "label": "10_CKG_THEOLOGY",
+  "folder": "stations/10_CKG_THEOLOGY",
+  "script": "10_ckg_theology.py",
+  "rank": 41,
+  "retired": false
+ },
+ {
+  "number": "11",
+  "name": "CKG_PHYSICS",
+  "label": "11_CKG_PHYSICS",
+  "folder": "stations/11_CKG_PHYSICS",
+  "script": "11_ckg_physics.py",
+  "rank": 42,
+  "retired": false
+ },
+ {
   "number": "20",
   "name": "CKG_RUN",
   "label": "20_CKG_RUN",

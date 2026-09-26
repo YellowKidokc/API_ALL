@@ -1,0 +1,30 @@
+{
+ "_note": "Asked whenever a run includes YouTube stations: what kind of channel is this? The answer adds the CKG index (03) and the domain's own stations right after it (you can decline each), and is remembered per channel in yt_focus/<Channel>.json. Add a domain or a station here; no code change needed.",
+ "ckg_station": "03",
+ "domains": {
+  "theology": {
+   "label": "Theology",
+   "after_ckg": [
+    "10"
+   ],
+   "lens_layer": "C"
+  },
+  "physics": {
+   "label": "Physics / Theophysics",
+   "after_ckg": [
+    "11"
+   ],
+   "lens_layer": "S"
+  },
+  "conspiracy": {
+   "label": "Conspiracy / one-world",
+   "after_ckg": [],
+   "lens_layer": "W"
+  },
+  "patterns": {
+   "label": "Patterns",
+   "after_ckg": [],
+   "lens_layer": "A"
+  }
+ }
+}

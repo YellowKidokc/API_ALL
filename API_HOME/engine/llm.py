@@ -211,6 +211,10 @@ def _parse_completion(payload: bytes) -> tuple[str, int, int]:
     return text, int(usage.get("prompt_tokens", 0)), int(usage.get("completion_tokens", 0))
 
 
+def allowed(provider: str) -> bool:
+    return provider in settings().get("allowed_providers", list(PROVIDERS) + ["mock"])
+
+
 def fallback_chain(provider: str, model: str) -> list[tuple[str, str]]:
     """The provider asked for first, then settings.fallback (by default a free
     OpenRouter model) when the first fails after its retries or has no key."""
@@ -231,7 +235,11 @@ def call(messages: list[dict[str, str]], *, provider: str = "deepseek", model: s
     provider and model that actually answered; earlier failures are kept in extra."""
     failures = []
     result = None
+    if not allowed(provider):
+        return LLMResult("", provider, model, error=f"provider '{provider}' is not allowed (settings.json allowed_providers)", task=task)
     for prov, mod in fallback_chain(provider, model):
+        if not allowed(prov):
+            continue
         result = _call_one(messages, provider=prov, model=mod, temperature=temperature, max_tokens=max_tokens,
                            json_mode=json_mode, task=task, station=station)
         if result.ok:

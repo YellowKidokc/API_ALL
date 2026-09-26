@@ -184,6 +184,8 @@ def discover(selectors: list[str], kind: str = "papers", limit: int | None = Non
     created on the fly only by station 47). With no selectors: every paper in papers_root
     and/or every transcript under yt_subtitles (optionally one --channel)."""
     items: list[Item] = []
+    if channel and kind == "both":
+        kind = "videos"  # naming a channel means that channel's videos
     for raw in selectors:
         path = Path(raw).expanduser()
         if not path.is_absolute() and not path.exists():

@@ -149,10 +149,44 @@ def openai_bundle(p: str) -> dict:
     return {k: {"mock": True, "station": k, "note": "MOCK station output"} for k in keys}
 
 
+def theology_triage(p: str) -> dict:
+    """Deliberately over-flags (6 FLAGs, one without a timestamp, a CLAIM on row 5) so the rules are exercised."""
+    rows = [{"row": n, "verdict": "CLEAN", "line": "", "severity": 0, "timestamp": ""} for n in range(1, 18)]
+    for n, sev in ((8, 9), (10, 8), (2, 5), (9, 4), (3, 3), (12, 7)):
+        rows[n - 1].update(verdict="FLAG", line=f"MOCK finding on row {n}", severity=sev, timestamp="01:23",
+                           expansion=f"MOCK expansion for row {n}.")
+    rows[11]["timestamp"] = ""
+    rows[4].update(verdict="CLAIM", line="MOCK history claim", timestamp="02:00", expansion="MOCK", verify=False)
+    rows[16].update(verdict="FLAG", line="MOCK unexplained-right", timestamp="03:10", expansion="MOCK insight", mode="BRIDGE")
+    rows[14].update(verdict="FLAG", line="MOCK comment objection", timestamp="04:00")
+    return {"speaker": "MOCK speaker", "rubric": rows, "collapse_question": "MOCK collapse question?", "steers_around": False,
+            "platform_probes": {"speaker_incentives": {"verdict": "FLAG", "line": "MOCK sells a course"}},
+            "argument_layer": {"claims": [{"id": "C001", "text": "MOCK claim", "mode": "THEOLOGICAL", "status": "CONDITIONAL"}],
+                               "premises": [{"id": "P001", "text": "MOCK premise", "supports": ["C001"]}],
+                               "hidden_premises": [{"id": "HP001", "text": "MOCK hidden", "needed_for": ["C001"], "reason": "MOCK", "load_bearing": True}],
+                               "inference_edges": [{"from": "P001", "to": "C001", "relation": "supports", "status": "CONDITIONAL"}],
+                               "adversarial_tests": [], "win_condition": {"what_would_win": "MOCK", "what_would_defeat": "MOCK"}},
+            "keywords": ["resurrection"], "source_reliability": "mixed"}
+
+
+def physics_mirror(p: str) -> dict:
+    """Two mirrors: one honest ANALOGY, one overclaimed STRUCTURAL with a stage out of order (the rules must downgrade it)."""
+    stages = [{"n": i, "physics": f"MOCK stage {i}", "theology": f"MOCK counterpart {i}", "timestamp": f"0{i}:00", "match": "analogous"}
+              for i in range(1, 7)]
+    return {"mirrors": [
+        {"title": "MOCK death and resurrection as phase transition", "direction": "theology_mirrors_physics",
+         "physics_process": "first-order phase transition", "theological_event": "resurrection", "stages": stages,
+         "directional": "yes", "out_of_order": [4], "level": "STRUCTURAL", "prediction": "MOCK prediction", "breaks": ["MOCK"],
+         "law_axis": "Law 5", "confidence": "low"},
+        {"title": "MOCK light as grace", "direction": "physics_mirrors_theology", "physics_process": "photon emission",
+         "theological_event": "grace", "stages": stages[:2], "directional": "yes", "level": "ANALOGY", "prediction": ""}],
+        "physics_errors": []}
+
+
 HANDLERS = {
     "fruits_sentences": fruits_sentences, "fruits_verdict": fruits_verdict, "master_equation": master_equation,
     "axiom_nodes": axiom_nodes, "coherence": coherence, "story_paper": story_paper, "story_series": story_series,
     "story_lines": story_lines, "tagger": tagger, "extract_arguments": extract_arguments,
     "synthesize_cluster": synthesize_cluster, "synthesis_overview": synthesis_overview, "gap_match": gap_match,
-    "prior_art": prior_art, "own_claims": own_claims, "yt_summary": yt_summary, "yt_deep": yt_deep,
+    "prior_art": prior_art, "own_claims": own_claims, "yt_summary": yt_summary, "yt_deep": yt_deep, "theology_triage": theology_triage, "physics_mirror": physics_mirror,
 }

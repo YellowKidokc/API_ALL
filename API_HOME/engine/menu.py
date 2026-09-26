@@ -149,6 +149,66 @@ def interrupted_run(state: Path) -> dict | None:
     return last if last.get("status") == "running" else None
 
 
+def order_chain(numbers: list[str]) -> list[str]:
+    """The CKG index (03) runs after download / convert / clean, and a domain's stations right after 03."""
+    domains = load("domains.json")
+    ckg = domains.get("ckg_station", "03")
+    after = [n for d in domains["domains"].values() for n in d.get("after_ckg", [])]
+    chain = [n for n in [ckg] + after if n in numbers]
+    if not chain:
+        return numbers
+    rest = [n for n in numbers if n not in chain]
+    anchor = max((rest.index(n) + 1 for n in ("01", "07", "02") if n in rest), default=0)
+    return rest[:anchor] + chain + rest[anchor:]
+
+
+def touches_youtube(numbers: list[str]) -> bool:
+    return any("01" <= n <= "19" for n in numbers)
+
+
+def channel_domain(channel: str | None) -> str | None:
+    from engine.paths import configured, external
+    if not channel or not configured("yt_focus"):
+        return None
+    f = external("yt_focus") / f"{channel}.json"
+    return json.loads(f.read_text(encoding="utf-8")).get("domain") if f.exists() else None
+
+
+def remember_domain(channel: str | None, domain: str) -> None:
+    from engine.paths import PathConfigurationError, external
+    if not channel:
+        return
+    try:
+        f = external("yt_focus", create=True) / f"{channel}.json"
+    except PathConfigurationError:
+        return
+    data = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    data["domain"] = domain
+    f.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def domain_additions(domain: str, numbers: list[str], interactive_mode: bool) -> list[str]:
+    """Stations a domain adds: the CKG index, then the domain's own (each can be declined interactively)."""
+    domains = load("domains.json")
+    spec = domains["domains"].get(domain)
+    if not spec:
+        return []
+    reg = registry()
+    add = []
+    wanted = [domains.get("ckg_station", "03")] + spec.get("after_ckg", [])
+    for n in wanted:
+        if n in numbers or n not in reg:
+            continue
+        if interactive_mode:
+            what = "the CKG index" if n == domains.get("ckg_station", "03") else reg[n]["name"]
+            if ask(f"Run {n} {what} too? [Y/n]:", "y").lower().startswith("n"):
+                continue
+        add.append(n)
+    if not spec.get("after_ckg") and interactive_mode:
+        print(f"   ({spec['label']} has no stations of its own yet; add them in config/domains.json)")
+    return add
+
+
 def parse(argv=None) -> argparse.Namespace:
     p = argparse.ArgumentParser(description="One front door for every API pipeline")
     p.add_argument("selection", nargs="*")
@@ -162,6 +222,7 @@ def parse(argv=None) -> argparse.Namespace:
     p.add_argument("--focus", action="append", default=[])
     p.add_argument("--channel")
     p.add_argument("--topic")
+    p.add_argument("--domain", help="kind of channel: theology, physics, conspiracy, patterns (adds CKG + its stations)")
     p.add_argument("--yes", action="store_true", help="skip the confirm question")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--min", dest="minimum", type=int, default=5)
@@ -209,6 +270,22 @@ def interactive(args: argparse.Namespace, state: Path) -> None:
     print("\n2  Options (Enter = default)")
     if "channel" in opts:
         args.channel = ask("Which channel folder? [all]:") or None
+    numbers = [s["number"] for s in stations]
+    if touches_youtube(numbers):
+        domains = load("domains.json")["domains"]
+        names = list(domains)
+        saved = channel_domain(args.channel)
+        menu_line = "  ".join(f"{i} {domains[k]['label']}" for i, k in enumerate(names, 1))
+        default = str(names.index(saved) + 1) if saved in names else "0"
+        answer = ask(f"What kind of channel is this? {menu_line}  0 none [{default}]:", default)
+        if answer.isdigit() and 0 < int(answer) <= len(names):
+            args.domain = names[int(answer) - 1]
+            added = domain_additions(args.domain, numbers, True)
+            args.selection = list(args.selection) + added
+            args.domain_applied = True
+            remember_domain(args.channel, args.domain)
+            stations = [registry()[n] for n in resolve(args.selection)]
+            opts = accepted_options([s["number"] for s in stations])
     if "topic" in opts:
         args.topic = ask("Topic (e.g. resurrection):") or None
     found, done, where = count_items(stations, args)
@@ -224,7 +301,8 @@ def interactive(args: argparse.Namespace, state: Path) -> None:
         args.workers = int(answer) if answer.isdigit() else default
     if "provider" in opts:
         from engine.llm import PROVIDERS
-        names = [n for n in PROVIDERS] + ["mock"]
+        from engine.llm import allowed
+        names = [n for n in list(PROVIDERS) + ["mock"] if allowed(n)]
         while True:
             answer = ask(f"Provider [{settings['default_provider']}] ({', '.join(names)}):", settings["default_provider"]).lower()
             if answer in names:
@@ -309,6 +387,12 @@ def run(argv=None) -> int:
             raise SystemExit("Give a station number or routine letter (non-interactive mode).")
         interactive(args, state)
     numbers = resolve(args.selection)
+    if getattr(args, "domain", None) and not getattr(args, "domain_applied", False):
+        if args.domain not in load("domains.json")["domains"]:
+            raise SystemExit(f"Unknown domain '{args.domain}'. Known: {', '.join(load('domains.json')['domains'])}")
+        numbers += domain_additions(args.domain, numbers, False)
+        remember_domain(args.channel, args.domain)
+    numbers = order_chain(numbers)
     reg = registry()
     stations = [reg[n] for n in numbers]
     settings = load("settings.json")
@@ -323,7 +407,7 @@ def run(argv=None) -> int:
     run_focus = focus_lib.resolve_run_focus(args.focus)
     plan = {"selection": args.selection, "stations": [s["label"] for s in stations], "items": args.item,
             "found": where + (f" ({done} done)" if done else "") if found else None, "limit": args.limit,
-            "channel": args.channel, "topic": args.topic, "workers": workers, "provider": provider, "model": model,
+            "channel": args.channel, "topic": args.topic, "domain": getattr(args, "domain", None), "workers": workers, "provider": provider, "model": model,
             "fallback": [f"{f['provider']}:{f['model']}" for f in settings.get("fallback", [])], "redo": args.redo,
             "focus": run_focus, "estimated_tokens": tokens, "estimated_minutes": round(seconds / 60, 1), "dry_run": args.dry_run}
     def show_plan() -> None:

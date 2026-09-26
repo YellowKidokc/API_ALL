@@ -39,6 +39,14 @@ def after_grab(since: float) -> None:
             current.update({"ask": ask, "saved": date.today().isoformat()})
             path.write_text(json.dumps(current, indent=2, ensure_ascii=False), encoding="utf-8")
             print(f"  saved -> {path}")
+        domains = json.loads((API_HOME / "config" / "domains.json").read_text(encoding="utf-8"))["domains"]
+        names = list(domains)
+        menu = "  ".join(f"{i} {domains[k]['label']}" for i, k in enumerate(names, 1))
+        pick = input(f"  What kind of channel is this? {menu}  0 none (Enter = {current.get('domain') or 'none'}) ").strip()
+        if pick.isdigit() and 0 < int(pick) <= len(names):
+            current["domain"] = names[int(pick) - 1]
+            path.write_text(json.dumps(current, indent=2, ensure_ascii=False), encoding="utf-8")
+            print(f"  saved: {current['domain']} (the menu will preselect the CKG index and its stations for this channel)")
         watched = WATCH.read_text(encoding="utf-8").splitlines() if WATCH.exists() else []
         if channel not in [w.strip() for w in watched]:
             if input("  Auto-process new videos from this channel (station 06)? [y/N] ").strip().lower().startswith("y"):

@@ -10,6 +10,8 @@ from each station's `station.json`; do not edit by hand. Receipts and saved repl
 | `API-06.0` | YT_WATCH | 06_YT_WATCH | the prompts built into the wrapped script |
 | `API-08.1` | YT_SUMMARY | 08_YT_SUMMARY | answers to QUESTIONS.md (base summary) with timestamps |
 | `API-09.1` | YT_DEEP_ANALYSIS | 09_YT_DEEP | detailed analysis per DETAIL.md, building on the 08 summary |
+| `API-10.1` | THEOLOGY_TRIAGE | 10_CKG_THEOLOGY | 17-probe verdicts + expansions, collapse question, platform notes, argument layer (claims, premises, hidden premises, edges, tests, win condition) |
+| `API-11.1` | PHYSICS_MIRROR | 11_CKG_PHYSICS | mirrors between theological events and physics processes: stages in order, direction, level (identity / structural / analogy / none), transferring prediction, breaks, law axis |
 | `API-20.0` | CKG_RUN | 20_CKG_RUN | the prompts built into the wrapped script |
 | `API-30.0` | EVIDENCE_INTAKE | 30_EVIDENCE_INTAKE | the prompts built into the wrapped script |
 | `API-33.0` | EVIDENCE_BUILD_ONE_ARGUMENT | 33_EVIDENCE_BUILD_ONE_ARGUMENT | the prompts built into the wrapped script |

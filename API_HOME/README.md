@@ -42,6 +42,12 @@ ONE_MENU.bat goals                      (every API goal id, also in API_GOALS.md
 ONE_MENU.bat 40 --mock --limit 1        (fake replies, no key, no cost: tests the plumbing)
 ```
 
+**What kind of channel is this?** Whenever a run includes YouTube stations the menu asks: Theology, Physics,
+Conspiracy, Patterns or none (remembered per channel; station 01 asks right after a grab). Choosing one adds the CKG
+index (03) and that domain's own stations right after it: Theology adds 10 CKG_THEOLOGY, Physics adds 11 CKG_PHYSICS.
+Each is preselected and can be declined. Add domains or stations in `config/domains.json`. Without questions:
+`ONE_MENU.bat Y --channel "Some Channel" --domain theology`.
+
 **Top 20** starts empty on purpose: put the numbers and routine letters you use most in `config/top20.json`.
 The menu suggests candidates from your run history; the full list is always shown underneath.
 
@@ -56,6 +62,8 @@ The menu suggests candidates from your run history; the full list is always show
 | 05 | YT_CATALOG | channel overviews, debate pages, catalog.xlsx / .sqlite | no |
 | 06 | YT_WATCH | automatic chain for channels in WATCH_CHANNELS.txt | yes |
 | 07 | YT_CONVERT | SRT / VTT / JSON to .md; originals kept in `_originals` | no |
+| 10 | CKG_THEOLOGY | theology triage after the CKG index: 17 probes, CLEAN / NOTE / FLAG / CLAIM / ??, max 3 FLAGs, rules enforced in code; argument layer for the claim graph | yes |
+| 11 | CKG_PHYSICS | physics mirror: which physics process a theological event mirrors (or the reverse), stage by stage, in order; identity / structural / analogy / none | yes |
 | 08 | YT_SUMMARY | **base layer**: your questions in `QUESTIONS.md`, one whole-transcript call per video | yes |
 | 09 | YT_DEEP | **detailed layer** on top of 08 (`DETAIL.md`) | yes |
 | 20-22 | CKG | CKG run, claims/proofs/evidence split, inbox check | 20 |
@@ -106,6 +114,10 @@ creeps back. One item = one whole-document call; only outputs are split (e.g. 80
 parallel). A failed item never stops the batch.
 
 ## Providers
+
+**Only DeepSeek (and the free OpenRouter fallback) can be called.** `settings.json` → `allowed_providers`: the relay
+refuses every other provider, for new and legacy scripts alike, even if an OpenAI key is set on the machine. (The
+`openai` Python package some scripts need is only a client library; it talks to DeepSeek.)
 
 `config/providers.json` lists DeepSeek, OpenRouter (and `free`), OpenAI, Anthropic, Moonshot/Kimi, Gemini, Groq,
 Together, Mistral, Ollama. DeepSeek is primary; when a DeepSeek call still fails after its retries (or has no key) the

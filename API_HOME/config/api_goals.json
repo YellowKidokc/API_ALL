@@ -40,6 +40,22 @@
     "number": "09"
   },
   {
+    "id": "API-10.1",
+    "title": "THEOLOGY_TRIAGE",
+    "task": "theology_triage",
+    "asks": "17-probe verdicts + expansions, collapse question, platform notes, argument layer (claims, premises, hidden premises, edges, tests, win condition)",
+    "station": "10_CKG_THEOLOGY",
+    "number": "10"
+  },
+  {
+    "id": "API-11.1",
+    "title": "PHYSICS_MIRROR",
+    "task": "physics_mirror",
+    "asks": "mirrors between theological events and physics processes: stages in order, direction, level (identity / structural / analogy / none), transferring prediction, breaks, law axis",
+    "station": "11_CKG_PHYSICS",
+    "number": "11"
+  },
+  {
     "id": "API-20.0",
     "title": "CKG_RUN",
     "task": "",

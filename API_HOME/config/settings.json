@@ -34,5 +34,12 @@
   "estimated_tokens_per_item": 12000,
   "estimated_seconds_per_call": 40,
   "tag_confirm_from": 3,
-  "context_words": 60000
+  "context_words": 60000,
+  "allowed_providers": [
+    "deepseek",
+    "openrouter",
+    "free",
+    "mock"
+  ],
+  "_allowed_note": "Only these providers can be called, by any station, new or legacy: the relay refuses the rest. Add a provider here to allow it."
 }

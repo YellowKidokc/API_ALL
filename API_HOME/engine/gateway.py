@@ -140,10 +140,15 @@ class Gateway:
         focus_added = len(body) != before
         started = time.monotonic()
         self.stats.begin()
-        if self.mock:
+        if not self.mock and not llm.allowed(provider):
+            error = f"provider '{provider}' is not allowed (settings.json allowed_providers); call refused"
+            status, payload, ctype, attempts = 0, b"", "application/json", 0
+        elif self.mock:
             status, payload, ctype, attempts, error = self._mock(task, body, streaming)
         else:
             status, payload, ctype, attempts, error = llm.forward_with_policy(provider, rest, body, headers, self.limiter)
+        if status == 0 and error and "not allowed" in error:
+            status, payload = 403, json.dumps({"error": {"message": error, "type": "one_menu_gateway"}}).encode()
         pt = ct = 0
         if status and status < 400:
             usage = {}

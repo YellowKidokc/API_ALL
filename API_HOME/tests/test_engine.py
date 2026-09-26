@@ -216,5 +216,50 @@ class EndToEnd(unittest.TestCase):
             self.assertNotIn("unrecognized arguments", r.stdout + r.stderr, row["label"])
 
 
+class DomainRules(unittest.TestCase):
+    def rubric(self):
+        from engine import triage
+        return triage.load_rubric((HOME / "stations/10_CKG_THEOLOGY/RUBRIC.md").read_text(encoding="utf-8"))
+
+    def test_triage_cap_priority_and_exemptions(self):
+        from engine import triage, mock
+        reply = json.loads(mock.respond("theology_triage", [{"role": "user", "content": ""}]))
+        out = triage.enforce(reply, self.rubric(), comments_available=False)
+        verdict = {r["row"]: r["verdict"] for r in out["rows"]}
+        self.assertEqual([2, 3, 9], out["flags"])              # priority rows beat higher-severity Fruit/Enemy
+        self.assertEqual("NOTE", verdict[8])
+        self.assertEqual("NOTE", verdict[12])                  # no timestamp
+        self.assertEqual("CLAIM", verdict[17])                 # always CLAIM, never capped
+        self.assertNotEqual("CLAIM", verdict[5])               # history is a lead, not a claim
+        self.assertEqual("??", verdict[15])                    # no comments acquired
+        self.assertEqual(17, len(out["rows"]))
+        layer = triage.claims_into_graph(reply["argument_layer"], out["rows"])
+        self.assertTrue(any(c["id"] == "RC17" for c in layer["claims"]))
+
+    def test_mirror_needs_order_stages_and_prediction(self):
+        from engine import mirror
+        base = {"stages": [{"n": i, "match": "direct", "timestamp": "01:00"} for i in range(3)], "directional": "yes",
+                "level": "STRUCTURAL", "prediction": "p"}
+        self.assertEqual("STRUCTURAL", mirror.enforce(base)["level"])
+        self.assertEqual("ANALOGY", mirror.enforce({**base, "prediction": ""})["level"])
+        self.assertEqual("ANALOGY", mirror.enforce({**base, "out_of_order": [2]})["level"])
+        self.assertEqual("ANALOGY", mirror.enforce({**base, "stages": base["stages"][:2]})["level"])
+        self.assertEqual("IDENTITY", mirror.enforce({**base, "level": "IDENTITY"})["level"])
+        self.assertEqual("NONE", mirror.enforce({"stages": [], "level": "STRUCTURAL"})["level"])
+
+    def test_only_allowed_providers(self):
+        self.assertTrue(llm.allowed("deepseek"))
+        self.assertTrue(llm.allowed("openrouter"))
+        self.assertFalse(llm.allowed("openai"))
+        r = llm.call([{"role": "user", "content": "x"}], provider="openai", model="gpt-4o")
+        self.assertIn("not allowed", r.error)
+
+    def test_domain_puts_ckg_then_its_station_after_cleaning(self):
+        from engine.menu import order_chain, domain_additions
+        self.assertEqual(["03", "10"], domain_additions("theology", ["07", "02", "08"], False))
+        self.assertEqual(["03", "11"], domain_additions("physics", ["08"], False))
+        self.assertEqual(["07", "02", "03", "10", "08", "09"], order_chain(["07", "02", "08", "09", "03", "10"]))
+
+
 if __name__ == "__main__":
     unittest.main()
