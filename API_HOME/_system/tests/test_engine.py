@@ -245,6 +245,15 @@ class DomainRules(unittest.TestCase):
         self.assertEqual("IDENTITY", mirror.enforce({**base, "level": "IDENTITY"})["level"])
         self.assertEqual("NONE", mirror.enforce({"stages": [], "level": "STRUCTURAL"})["level"])
 
+    def test_youtube_naming_rule(self):
+        from engine import ytnames
+        n = ytnames.parse("Gary Habermas - Chapter 159 - The Historical Jesus - Gary Habermas", "Gary Habermas")
+        self.assertEqual(("Ch 159 - The Historical Jesus", "Ch 159 · The Historical Jesus"), (n.file_stem, n.h1))
+        self.assertEqual("Ep 012 - Why the Tomb Was Empty", ytnames.parse("Ep. 12: Why the Tomb Was Empty | DDW", "DDW").file_stem)
+        self.assertEqual("2021-03-04 - Minimal Facts", ytnames.parse("Minimal Facts", "X", "20210304").file_stem)
+        self.assertEqual("The #1 Argument for God", ytnames.parse("The #1 Argument for God", "X").file_stem)
+        self.assertEqual("What Is Truth", ytnames.parse("What Is Truth?", "X").file_stem)
+
     def test_only_allowed_providers(self):
         self.assertTrue(llm.allowed("deepseek"))
         self.assertFalse(llm.allowed("openrouter"))

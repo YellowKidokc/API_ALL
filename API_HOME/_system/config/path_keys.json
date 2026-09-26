@@ -1,37 +1,153 @@
 {
-  "papers_root":           {"what": "per-paper working folders (station 47 creates them)", "create": true},
-  "own_work":              {"what": "David's own writing on disk, for the gap map (folder of .md); optional if papers are marked own_work", "fingerprint": null},
-  "syntheses_root":        {"what": "topic synthesis and gap-map reports (48, 49)", "create": true},
-  "catalog_db":            {"what": "SQLite file with tag scores (created if missing)", "file": true},
-  "yt_subtitles":          {"what": "ONE download location for transcripts (ytgrab writes, the whole chain reads)", "create": true},
-  "yt_clean":              {"what": "cleaned transcript notes", "create": true},
-  "yt_indexed":            {"what": "CKG index output (03-06)", "create": true},
-  "yt_work":               {"what": "per-video working folders (08, 09, 40, 44 ...)", "create": true},
-  "yt_focus":              {"what": "saved per-channel focus (<Channel>.json)", "create": true},
-  "evidence_root":         {"what": "EVIDENCE working folder (INBOX / OUTBOX / PROCESSED_ORIGINALS)", "create": true, "fingerprint": "INBOX"},
-  "evidence_chain_root":   {"what": "EvidenceChainIntake working folder (INBOX / OUTBOX)", "create": true, "fingerprint": "INBOX"},
-  "ckg_root":              {"what": "CKG working folder (INBOX / OUTBOX)", "create": true, "fingerprint": "INBOX"},
-  "grader_root":           {"what": "paper grader working folder (DROP_PAPERS_HERE / OUTPUT)", "create": true},
-  "atoms_workspace":       {"what": "atoms / axiom-nodes workspace (01_PRIORITY, 02_SERIES, 03_GENERAL)", "create": true},
-  "lean_root":             {"what": "Faith-Thru-Physics-Lean-4 repository", "fingerprint": "lakefile.lean"},
-  "conversion_station":    {"what": "X:\\00_CONVERSION_STATION\\Transcripts to Markdown (optional; 07 converts locally without it)", "fingerprint": "scripts"},
-  "vault":                 {"what": "Obsidian vault", "fingerprint": ".obsidian"},
-  "nas_brain":             {"what": "NAS brain (05_MODELS, Python API metric scripts)", "fingerprint": "05_MODELS"},
-  "paper_intelligence":    {"what": "THEOPHYSICS_PAPER_INTELLIGENCE metric scripts (station 42 runs them when set)", "fingerprint": null},
-  "stations_04":           {"what": "X:\\04_STATIONS (station 42 runs its metric scripts when set)", "fingerprint": null},
-  "excel_fruits":          {"what": "Fruits Template (1) (1).xlsx (Truth Engine v2.0)", "file": true},
-  "excel_lexicons":        {"what": "lexicons_master_enhanced.xlsx", "file": true},
-  "me_pills":              {"what": "master-equation canonical pills folder (slot meanings)", "fingerprint": null},
-  "axiom_registry":        {"what": "axiom registry file used by the axiom-nodes arm (default: the vendored AXIOMS_PART1)", "file": true},
-  "production_root":       {"what": "faiththruphysics.com\\00_ Production\\00_ Production", "fingerprint": null},
-  "pipeline_api_root":     {"what": "___Pipeline_Done_New\\One page paper API (LEAN4, EVIDENCE)", "fingerprint": null},
-  "apis_root":             {"what": "Desktop\\APIs\\APIs", "fingerprint": null},
-  "lean_floor":            {"what": "pipeline-workflows-main\\LEAN_FLOOR", "fingerprint": null},
-  "lean_harvest":          {"what": "Desktop\\ALL_LEAN4", "fingerprint": null},
-  "canonization_root":     {"what": "Canonizationv1 (theophysics_pipeline.db)", "fingerprint": null},
-  "sidecar_mirror":        {"what": "David-OSv3\\_FIS_ROOT_SIDECAR_ARCHIVE", "fingerprint": null},
-  "atoms_repo":            {"what": "Faith-through-physics-atoms repository", "fingerprint": null},
-  "mathlib_cache":         {"what": "mathlib4 cache for Lean", "fingerprint": null},
-  "ckg_argument_template": {"what": "CKGARGUMENT_TEMPLATE_V1.md (optional)", "file": true},
-  "search_roots":          {"what": "semicolon-separated folders RELOCATE searches when a path goes missing", "fingerprint": null}
+  "papers_root": {
+    "what": "per-paper working folders (station 47 creates them)",
+    "create": true
+  },
+  "own_work": {
+    "what": "David's own writing on disk, for the gap map (folder of .md); optional if papers are marked own_work",
+    "fingerprint": null
+  },
+  "syntheses_root": {
+    "what": "topic synthesis and gap-map reports (48, 49)",
+    "create": true
+  },
+  "catalog_db": {
+    "what": "SQLite file with tag scores (created if missing)",
+    "file": true
+  },
+  "yt_subtitles": {
+    "what": "ONE download location for transcripts (ytgrab writes, the whole chain reads)",
+    "create": true
+  },
+  "yt_clean": {
+    "what": "cleaned transcript notes",
+    "create": true
+  },
+  "yt_indexed": {
+    "what": "CKG index output (03-06)",
+    "create": true
+  },
+  "yt_work": {
+    "what": "per-video working folders (08, 09, 40, 44 ...)",
+    "create": true
+  },
+  "yt_focus": {
+    "what": "saved per-channel focus (<Channel>.json)",
+    "create": true
+  },
+  "evidence_root": {
+    "what": "EVIDENCE working folder (INBOX / OUTBOX / PROCESSED_ORIGINALS)",
+    "create": true,
+    "fingerprint": "INBOX"
+  },
+  "evidence_chain_root": {
+    "what": "EvidenceChainIntake working folder (INBOX / OUTBOX)",
+    "create": true,
+    "fingerprint": "INBOX"
+  },
+  "ckg_root": {
+    "what": "CKG working folder (INBOX / OUTBOX)",
+    "create": true,
+    "fingerprint": "INBOX"
+  },
+  "grader_root": {
+    "what": "paper grader working folder (DROP_PAPERS_HERE / OUTPUT)",
+    "create": true
+  },
+  "atoms_workspace": {
+    "what": "atoms / axiom-nodes workspace (01_PRIORITY, 02_SERIES, 03_GENERAL)",
+    "create": true
+  },
+  "lean_root": {
+    "what": "Faith-Thru-Physics-Lean-4 repository",
+    "fingerprint": "lakefile.lean"
+  },
+  "conversion_station": {
+    "what": "X:\\00_CONVERSION_STATION\\Transcripts to Markdown (optional; 07 converts locally without it)",
+    "fingerprint": "scripts"
+  },
+  "vault": {
+    "what": "Obsidian vault",
+    "fingerprint": ".obsidian"
+  },
+  "nas_brain": {
+    "what": "NAS brain (05_MODELS, Python API metric scripts)",
+    "fingerprint": "05_MODELS"
+  },
+  "paper_intelligence": {
+    "what": "THEOPHYSICS_PAPER_INTELLIGENCE metric scripts (station 42 runs them when set)",
+    "fingerprint": null
+  },
+  "stations_04": {
+    "what": "X:\\04_STATIONS (station 42 runs its metric scripts when set)",
+    "fingerprint": null
+  },
+  "excel_fruits": {
+    "what": "Fruits Template (1) (1).xlsx (Truth Engine v2.0)",
+    "file": true
+  },
+  "excel_lexicons": {
+    "what": "lexicons_master_enhanced.xlsx",
+    "file": true
+  },
+  "me_pills": {
+    "what": "master-equation canonical pills folder (slot meanings)",
+    "fingerprint": null
+  },
+  "axiom_registry": {
+    "what": "axiom registry file used by the axiom-nodes arm (default: the vendored AXIOMS_PART1)",
+    "file": true
+  },
+  "production_root": {
+    "what": "faiththruphysics.com\\00_ Production\\00_ Production",
+    "fingerprint": null
+  },
+  "pipeline_api_root": {
+    "what": "___Pipeline_Done_New\\One page paper API (LEAN4, EVIDENCE)",
+    "fingerprint": null
+  },
+  "apis_root": {
+    "what": "Desktop\\APIs\\APIs",
+    "fingerprint": null
+  },
+  "lean_floor": {
+    "what": "pipeline-workflows-main\\LEAN_FLOOR",
+    "fingerprint": null
+  },
+  "lean_harvest": {
+    "what": "Desktop\\ALL_LEAN4",
+    "fingerprint": null
+  },
+  "canonization_root": {
+    "what": "Canonizationv1 (theophysics_pipeline.db)",
+    "fingerprint": null
+  },
+  "sidecar_mirror": {
+    "what": "David-OSv3\\_FIS_ROOT_SIDECAR_ARCHIVE",
+    "fingerprint": null
+  },
+  "atoms_repo": {
+    "what": "Faith-through-physics-atoms repository",
+    "fingerprint": null
+  },
+  "mathlib_cache": {
+    "what": "mathlib4 cache for Lean",
+    "fingerprint": null
+  },
+  "ckg_argument_template": {
+    "what": "CKGARGUMENT_TEMPLATE_V1.md (optional)",
+    "file": true
+  },
+  "search_roots": {
+    "what": "semicolon-separated folders RELOCATE searches when a path goes missing",
+    "fingerprint": null
+  },
+  "yt_markdown": {
+    "what": "Obsidian-ready transcript notes, uniform names (12_YT_TIDY)",
+    "create": true
+  },
+  "yt_summary": {
+    "what": "channel summary folders: summary notes + sheet (13_YT_CHANNEL_SUMMARY)",
+    "create": true
+  }
 }

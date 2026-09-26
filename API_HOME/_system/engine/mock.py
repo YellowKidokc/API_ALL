@@ -137,6 +137,12 @@ def yt_summary(p: str) -> dict:
             "focus_findings": []}
 
 
+def yt_channel_summary(p: str) -> dict:
+    cols = re.findall(r"^(\w+) \| ", p.split("COLUMNS (name", 1)[-1].split("CHANNEL:", 1)[0], re.M)
+    return {"summary": "MOCK sentence one. MOCK sentence two. MOCK sentence three.",
+            "keywords": ["mock keyword", "resurrection", "minimal facts"], "columns": {c: f"MOCK {c}" for c in cols}}
+
+
 def yt_deep(p: str) -> dict:
     return {"arguments": [{"title": "MOCK argument", "premises": ["MOCK"], "unstated_premises": [], "conclusion": "MOCK",
                            "strength": 6, "strength_reason": "MOCK", "make_stronger": "MOCK", "timestamps": ["00:09"]}],
@@ -188,5 +194,5 @@ HANDLERS = {
     "axiom_nodes": axiom_nodes, "coherence": coherence, "story_paper": story_paper, "story_series": story_series,
     "story_lines": story_lines, "tagger": tagger, "extract_arguments": extract_arguments,
     "synthesize_cluster": synthesize_cluster, "synthesis_overview": synthesis_overview, "gap_match": gap_match,
-    "prior_art": prior_art, "own_claims": own_claims, "yt_summary": yt_summary, "yt_deep": yt_deep, "theology_triage": theology_triage, "physics_mirror": physics_mirror,
+    "prior_art": prior_art, "own_claims": own_claims, "yt_summary": yt_summary, "yt_channel_summary": yt_channel_summary, "yt_deep": yt_deep, "theology_triage": theology_triage, "physics_mirror": physics_mirror,
 }

@@ -159,7 +159,7 @@ def order_chain(numbers: list[str]) -> list[str]:
     if not chain:
         return numbers
     rest = [n for n in numbers if n not in chain]
-    anchor = max((rest.index(n) + 1 for n in ("01", "07", "02") if n in rest), default=0)
+    anchor = max((rest.index(n) + 1 for n in ("01", "07", "02", "12", "13") if n in rest), default=0)
     return rest[:anchor] + chain + rest[anchor:]
 
 

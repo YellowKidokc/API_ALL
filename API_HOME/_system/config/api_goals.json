@@ -56,6 +56,14 @@
     "number": "11"
   },
   {
+    "id": "API-13.1",
+    "title": "YT_CHANNEL_SUMMARY",
+    "task": "yt_channel_summary",
+    "asks": "three-sentence summary, 2-3 keywords, one value per COLUMNS.md column",
+    "station": "13_YT_CHANNEL_SUMMARY",
+    "number": "13"
+  },
+  {
     "id": "API-20.0",
     "title": "CKG_RUN",
     "task": "",

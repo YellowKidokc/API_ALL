@@ -1,0 +1,15 @@
+{
+  "number": "13",
+  "name": "YT_CHANNEL_SUMMARY",
+  "label": "13_YT_CHANNEL_SUMMARY",
+  "kind": "native",
+  "description": "Channel summary folder: a 3-sentence summary, 2-3 keywords and the COLUMNS.md answers per video, one call each; the channel sheet (.xlsx, .tsv, index note) is rebuilt after every video.",
+  "items": "videos",
+  "options": ["limit", "workers", "provider", "model", "focus", "redo", "channel"],
+  "uses_api": true,
+  "prompt_files": ["COLUMNS.md"],
+  "goals": [
+    {"id": "API-13.1", "title": "YT_CHANNEL_SUMMARY", "task": "yt_channel_summary",
+     "asks": "three-sentence summary, 2-3 keywords, one value per COLUMNS.md column"}
+  ]
+}
