@@ -1,7 +1,7 @@
-# SYNTHESIS v0: David's existing stations and Paper Intelligence suite, mapped to the ONE_MENU plan
+# SYNTHESIS v0.5: David's existing stations and Paper Intelligence suite, mapped to the ONE_MENU plan
 
 For the online Claude/Codex working on ONE_MENU. You cannot reach David's NAS, so this is the map of what exists there.
-**v0 = first pass** (2026-09-26): built from folder listings, file dates and earlier reads. Deep reads of the code are running.
+**v0.5** = first pass + deep read of the 23 active stations (section 4b and `SYNTHESIS_PART_A_ACTIVE_STATIONS.md`). Paper Intelligence and grader deep reads still pending;  (2026-09-26): built from folder listings, file dates and earlier reads. Deep reads of the code are running.
 A v1 with every field name will replace this file. Read with `CODEX_MASTER_PROMPT.md` (the build plan) in this repo.
 
 ---
@@ -115,6 +115,66 @@ Several of these already implement pieces the new specs need: contradiction-*, l
 (Story station), master-equation-canon, math-verify.
 
 ---
+
+## 4b. What the deep read of the 23 active stations found (full detail: `SYNTHESIS_PART_A_ACTIVE_STATIONS.md`)
+
+**The existing contract to keep.** Every `.station` follows the *Station Script Standard v1* (`_shared/SSS_v1_STANDARD.md` +
+`SSS_TEMPLATE_v1.py` + `newstation.py` scaffolder + `teststation.py`):
+- 13 fixed sections; only `06 NLP_ROUTE` and `07 PROCESS` are station-specific.
+- A standard artifact envelope `ART_{ts}__{STATION_ID}__{stem}.json` with `input_file, station_id, station_name, nlp_used, api_endpoint,
+  processed_at, success, artifacts[], errors[], data{}`.
+- **Build ONE_MENU's station wrapper on this envelope** rather than inventing a new one, and move the 11 shared sections into an importable
+  `engine/` module so the `_FIX_*` patch scripts are no longer needed.
+
+**The local model layer already exists.** A FastAPI NLP service at `localhost:8700/nlp/{classify, embed, summarize, ner, sentiment, qa,
+contradiction}` (code: `D:\GitHub\BACKSIDE-NLP-NEW\nlp_api\main.py`, models M01-M16: BART-large-CNN, DeBERTa-v3 zero-shot/NLI,
+Qwen3-Embedding, roberta squad2, bert-base-NER).
+- It was down on 06-19 and 08-14.
+- **`/nlp/generate` does not exist (404)**, so every "LLM" branch in plain-language, summary-quad and audience-level silently falls back.
+- **Action:** that `generate` role becomes DeepSeek (with OpenRouter free as fallback) through `engine/llm.py`. Health-check the 8700 service in station 90.
+
+**David's "API and Python get the same data" idea already has a working prototype:** the Atlas Method Comparison
+(`method-packet-builder` → `local-nlp-audit` + `external-api-audit` (DeepSeek `deepseek-chat`) → `method-convergence`).
+- It freezes one source.
+- It runs the same 8-stage contract (claims, classification, dependencies, falsification, evidence, contradictions, dynamics, synthesis) through the local lane and the API lane.
+- It scores agreement: structural 0.25 / field 0.35 / content 0.40; high ≥ 0.80. The last run scored 0.52, LOW.
+
+**Generalize this into ONE_MENU:** every API station with a Python mirror reports its API-vs-Python agreement the same way.
+
+**Reconcile before building the arms (conflicts found):**
+1. **χ is modelled three incompatible ways:**
+   - chi-evaluator uses a 10-factor product *including C*.
+   - nabla-chi-classifier / `master_equation_types.py` say "C_W is a wrapper, not a tenth factor" (9 factors).
+   - `_shared/canon_index.py` has a third set.
+
+   MASTER_EQUATION_STATION_V2 in this repo uses 10 slots including C. **Ask David which is canonical.**
+2. **Fruits is scored four ways:**
+   - embedding cosine (fruits-spirit-canon SSS)
+   - `fruits_coherence_engine.py`
+   - chi-evaluator's tanh fruit_output
+   - paper-intelligence `fruit_dynamics`
+
+   `fruits_coherence_engine.py` is production-grade and already scores **word → sentence → paragraph-role → paper** against the lexicon xlsx, with per-sentence CSV + word trace. That is the local half of ANALYTICAL_ARMS' Fruits stage 1-3, so reuse it as the deterministic layer. (David is redesigning Fruits; keep it pluggable.)
+3. **Claim mode vocabularies disagree:**
+   - ST_003: factual/model/opinion/definition
+   - Atlas contract: 14 modes, AXIOM…PREDICTION
+   - atlas-record-assembler's `normalized_mode` matches neither, so every claim becomes UNKNOWN.
+
+   Pick one vocabulary.
+4. **Two tag registries:**
+   - `D:\GitHub\David-OS-tagger-publish\tagger\spiritual_tag_registry.csv` (topbar-tagger)
+   - `C:\Theophysics_Tagger\01_REGISTRY\tag_registry.csv` (convergence-tagger)
+
+   The TAGGER station (44) should adopt one as `config/tags.json`'s source.
+5. **Summaries and reading level are duplicated 4 ways each:** exec-summary, summarizer, summary-quad and Atlas synthesis; plain-language, audience-level, reading-level-glossary and taxonomy.
+   - Merge the summaries into one SUMMARY station (sentence / paragraph / executive / story).
+   - Merge the reading-level stations into one READING_LEVEL station (Flesch ladder + 3 tiers + glossary + DeepSeek rewrites).
+
+**Scaling lesson:** claim-extraction timed out because it made one zero-shot call **per sentence**. This confirms the master prompt's rule: one whole-document call per station, splitting only the output.
+
+**Security:** a Postgres password is hard-coded in `NLP_file-intelligence-system-master/config/settings.ini` *and* `settings.example.ini`. Never copy those into git, and replace the example value with a placeholder.
+
+**Portability:** stations reference `C:\Theophysics_Tagger`, `D:\GitHub\...`, `C:\Users\lowes\...` (an old user profile), `Z:\Theophysics_Vault`, `\\dlowenas\HPWorkstation`. Every one of these goes into `config/paths.json`.
 
 ## 5. What to do with this (for the online build)
 
