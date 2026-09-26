@@ -1,0 +1,1 @@
+This folder is copied by station 47. `00_SOURCE` is read-only; notes belong in `01_NOTES`; dated station bundles go in `02_RUNS`; combined artifacts go in `03_REPORT`; media and exact web shipments remain separate.

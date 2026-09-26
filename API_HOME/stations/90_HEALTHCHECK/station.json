@@ -1,0 +1,10 @@
+{
+  "number": "90",
+  "name": "HEALTHCHECK",
+  "label": "90_HEALTHCHECK",
+  "folder": "stations/90_HEALTHCHECK",
+  "script": "90_healthcheck.py",
+  "rank": 21,
+  "options": [],
+  "retired": false
+}

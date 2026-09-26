@@ -1,0 +1,12 @@
+{
+  "number": "21",
+  "name": "CKG_EXTRACT_CPE",
+  "label": "21_CKG_EXTRACT_CPE",
+  "folder": "stations/21_CKG_EXTRACT_CPE",
+  "script": "21_ckg_extract_cpe.py",
+  "rank": 16,
+  "options": [],
+  "retired": false,
+  "path_key": "legacy_ckg",
+  "legacy_script": "PYTHON/extract_claims_proofs_evidence.py"
+}

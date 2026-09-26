@@ -1,0 +1,17 @@
+{
+  "number": "39",
+  "name": "EVIDENCE_CHAIN_INTAKE_V2",
+  "label": "39_EVIDENCE_CHAIN_INTAKE_V2",
+  "folder": "stations/39_EVIDENCE_CHAIN_INTAKE_V2",
+  "script": "39_evidence_chain_intake_v2.py",
+  "rank": 32,
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model"
+  ],
+  "retired": false,
+  "path_key": "legacy_evidence",
+  "legacy_script": "epistemic_intake_v2.py"
+}

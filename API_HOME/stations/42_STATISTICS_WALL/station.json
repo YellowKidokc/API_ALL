@@ -1,0 +1,17 @@
+{
+  "number": "42",
+  "name": "STATISTICS_WALL",
+  "label": "42_STATISTICS_WALL",
+  "folder": "stations/42_STATISTICS_WALL",
+  "script": "42_statistics_wall.py",
+  "rank": 10,
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo"
+  ],
+  "retired": false
+}

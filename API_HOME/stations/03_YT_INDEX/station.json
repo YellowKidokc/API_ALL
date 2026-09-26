@@ -1,0 +1,16 @@
+{
+  "number": "03",
+  "name": "YT_INDEX",
+  "label": "03_YT_INDEX",
+  "folder": "stations/03_YT_INDEX",
+  "script": "03_yt_index.py",
+  "rank": 3,
+  "options": [
+    "limit",
+    "workers",
+    "redo"
+  ],
+  "retired": false,
+  "path_key": "legacy_youtube",
+  "legacy_script": "index_video.py"
+}
