@@ -1,7 +1,7 @@
-# SYNTHESIS v0.5: David's existing stations and Paper Intelligence suite, mapped to the ONE_MENU plan
+# SYNTHESIS v0.8: David's existing stations and Paper Intelligence suite, mapped to the ONE_MENU plan
 
 For the online Claude/Codex working on ONE_MENU. You cannot reach David's NAS, so this is the map of what exists there.
-**v0.5** = first pass + deep read of the 23 active stations (section 4b and `SYNTHESIS_PART_A_ACTIVE_STATIONS.md`). Paper Intelligence and grader deep reads still pending;  (2026-09-26): built from folder listings, file dates and earlier reads. Deep reads of the code are running.
+**v0.8** = deep reads of the 23 active stations (4b, Part A) and the Paper Intelligence suite (4c, Part B). The grader deep read is still pending;  (2026-09-26): built from folder listings, file dates and earlier reads. Deep reads of the code are running.
 A v1 with every field name will replace this file. Read with `CODEX_MASTER_PROMPT.md` (the build plan) in this repo.
 
 ---
@@ -175,6 +175,29 @@ Qwen3-Embedding, roberta squad2, bert-base-NER).
 **Security:** a Postgres password is hard-coded in `NLP_file-intelligence-system-master/config/settings.ini` *and* `settings.example.ini`. Never copy those into git, and replace the example value with a placeholder.
 
 **Portability:** stations reference `C:\Theophysics_Tagger`, `D:\GitHub\...`, `C:\Users\lowes\...` (an old user profile), `Z:\Theophysics_Vault`, `\\dlowenas\HPWorkstation`. Every one of these goes into `config/paths.json`.
+
+## 4c. What the deep read of the Paper Intelligence suite found (full field list: `SYNTHESIS_PART_B_PAPER_INTELLIGENCE.md`)
+
+- **Use copy B** (`THEOPHYSICS_PAPER_INTELLIGENCE (1)`): it is the current one. No hard-coded keys.
+- **The suite is ready for STATISTICS_WALL (42) to wrap:**
+  - `metric_registry.json` already lists **356 fields** (334 verified in real output).
+  - `14_LOCAL_API/server.py` already exposes it as a loopback HTTP job service (`POST /runs/paper`, `GET /jobs/{id}/results`, `GET /metrics`).
+  - Station 42 should call this API (or `run_pipeline.py` directly) rather than re-implementing it.
+- **It already does per-sentence scoring:** L14 heartbeat gives every sentence 9 fruit scores, 10 χ scores and 14 structural markers, with peak and valley. L6 gives a per-claim ledger with evidence candidates and truth status. Both feed ANALYTICAL_ARMS directly.
+- **DeepSeek is already the provider** for 7Q (L4) and the series analyst (L13), via `DEEPSEEK_API_KEY` / `DEEPSEEK_BASE_URL` / `DEEPSEEK_MODEL`.
+  - **But L4 truncates papers to 6,000 characters.** That violates the one-whole-document-per-call rule; fix it when wrapping.
+  - The o3 / gpt-4o-mini side tools in 12_HEARTBEAT are not wired in.
+- **Bugs to fix when wrapping:**
+  - L5 topics are always empty (`build_corpus_model` is never called).
+  - L10 idea density always sees 1 paragraph (whitespace is collapsed before the split).
+  - L7 graph edges use fields that no longer exist.
+  - L6 anti-fruit lists have only 4 terms each.
+  - The textdescriptives "quality" component is skipped.
+  - 4 fields that are referenced are never produced.
+  - The runner exits 0 on layer failure.
+  - The `fruits_scorer_v2` import points to another subnet.
+  - `paper_analyzer.py` (grammar, drift, density, argument, flow, links: about 70 fields) is fully written but **not wired in**. Wire it in; it covers much of STATISTICS_WALL's "syntax / cohesion / density" families.
+- **Existing 7Q forward/reverse/promotion prompts** (verbatim structure in Part B) are strong candidates for the CKG/grader stations. Reuse them.
 
 ## 5. What to do with this (for the online build)
 
