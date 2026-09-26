@@ -1,0 +1,5 @@
+{
+  "Y": {"name": "YouTube chain", "stations": ["01", "02", "03", "04", "44", "05"]},
+  "A": {"name": "Evidence argument routine", "stations": ["21", "32", "33", "34"]},
+  "P": {"name": "Paper complete", "stations": ["40", "41", "42", "43", "44", "46"]}
+}

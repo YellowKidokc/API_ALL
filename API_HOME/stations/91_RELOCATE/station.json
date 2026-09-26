@@ -1,0 +1,10 @@
+{
+  "number": "91",
+  "name": "RELOCATE",
+  "label": "91_RELOCATE",
+  "folder": "stations/91_RELOCATE",
+  "script": "91_relocate.py",
+  "rank": 35,
+  "options": [],
+  "retired": false
+}

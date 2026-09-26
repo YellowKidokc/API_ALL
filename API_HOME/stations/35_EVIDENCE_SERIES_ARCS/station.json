@@ -1,0 +1,12 @@
+{
+  "number": "35",
+  "name": "EVIDENCE_SERIES_ARCS",
+  "label": "35_EVIDENCE_SERIES_ARCS",
+  "folder": "stations/35_EVIDENCE_SERIES_ARCS",
+  "script": "35_evidence_series_arcs.py",
+  "rank": 23,
+  "options": [],
+  "retired": false,
+  "path_key": "legacy_evidence",
+  "legacy_script": "series_evaluator.py"
+}

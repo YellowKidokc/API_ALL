@@ -1,0 +1,12 @@
+{
+  "number": "51",
+  "name": "LEAN_GOD_IS_UNPROVEN",
+  "label": "51_LEAN_GOD_IS_UNPROVEN",
+  "folder": "stations/51_LEAN_GOD_IS_UNPROVEN",
+  "script": "51_lean_god_is_unproven.py",
+  "rank": 29,
+  "options": [],
+  "retired": false,
+  "path_key": "legacy_evidence",
+  "legacy_script": "god_is_unproven_to_lean.py"
+}

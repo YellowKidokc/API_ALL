@@ -1,0 +1,17 @@
+{
+  "number": "40",
+  "name": "ANALYTICAL_ARMS",
+  "label": "40_ANALYTICAL_ARMS",
+  "folder": "stations/40_ANALYTICAL_ARMS",
+  "script": "40_analytical_arms.py",
+  "rank": 9,
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo"
+  ],
+  "retired": false
+}

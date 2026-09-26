@@ -4,6 +4,11 @@ __pycache__/
 *.local.*
 keys.local.json
 config/paths.json
+API_HOME/config/paths.json
+API_HOME/LOGS/*
+API_HOME/STATE/*
+!API_HOME/LOGS/.gitkeep
+!API_HOME/STATE/.gitkeep
 
 # real keys live here locally; never commit
 09_SOURCE_API_FOLDERS/API 2/writing-analyzer/config.txt

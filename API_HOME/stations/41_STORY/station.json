@@ -1,0 +1,17 @@
+{
+  "number": "41",
+  "name": "STORY",
+  "label": "41_STORY",
+  "folder": "stations/41_STORY",
+  "script": "41_story.py",
+  "rank": 14,
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo"
+  ],
+  "retired": false
+}
