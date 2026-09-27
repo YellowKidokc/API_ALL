@@ -5,7 +5,18 @@ Status: **PLAN ONLY. Nothing has been moved.** Written 2026-09-27 by the local s
 Checks before planning: 22/22 unit tests OK; `health.py` 1 problem (`catalog_db` missing: `_data\catalog.sqlite`
 is not created until station 05 runs; harmless).
 
-MAIN below = `API_ALL\API_HOME` (the prompt's default). **Gate question 1 decides this; see the end.**
+## DECIDED by David (2026-09-27)
+
+- **MAIN = `D:\GitHub\pipeline-workflows\API`.** Everything inside `API\API`, `API\API 2`, `API\API 3` and
+  `API\Open-AI-CALL-OBS-Plugin-Final-Claude` comes out, numbered, into `API\` itself; the engine
+  (`ONE_MENU.bat`, `SETUP.bat`, `_system`) is copied in from `API_ALL\API_HOME`. Only `API\` is touched; every
+  other folder in pipeline-workflows stays as it is.
+- **`API\API 2` is NLP, not API**: it goes to the NLP stack (location to confirm), not into the numbering.
+  Section C rows 100-106 are dropped.
+- Hand-moves committed as they were (pipeline-workflows branch `claude/api-front-folders`, commit 656ab9b);
+  every `config.txt` is git-ignored (key).
+
+The tables below still say MAIN = API_HOME in places; read MAIN as `pipeline-workflows\API`.
 
 ---
 
