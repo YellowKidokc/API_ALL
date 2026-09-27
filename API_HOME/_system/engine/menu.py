@@ -136,10 +136,10 @@ def count_items(stations: list[dict], args: argparse.Namespace) -> tuple[int, in
                 from engine import inbox
                 entries = inbox.scan(external("lean_inbox"), {".lean", ".md", ".txt", ".tex"})
                 done = len(list(external("lean_work").glob(f"*/*/*/02_RUNS/{label}"))) if configured("lean_work") else 0
-                lanes = {lane: sum(1 for e in entries if e.lane == lane) for lane in ("priority", "series", "general")}
+                lanes = {lane: sum(1 for e in entries if e.lane == lane) for lane in ("priority", "series", "group")}
                 total, done_total = total + len(entries), done_total + done
                 parts.append(f"{len(entries):,} Lean sources ({lanes['priority']} priority, {lanes['series']} series, "
-                             f"{lanes['general']} general)")
+                             f"{lanes['group']} group)")
             if parts:
                 return total, done_total, " + ".join(parts)
             inbox = {"20": "ckg_root", "22": "ckg_root", "30": "evidence_root", "39": "evidence_chain_root"}.get(station["number"])

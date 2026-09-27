@@ -3,10 +3,11 @@
   <inbox>/
     00_PRIORITY/                     runs first; sub-folders are groups too
     01_SERIES/<Series name>/...      a series: the folder name is the series
-    02_GENERAL/<Group name>/...      same as a series, but not one (e.g. "One pagers"); the folder name is the group
+    02_GROUP/<Group name>/...        same as a series, but not one (e.g. "One pagers"); the folder name is the group
+                                     (02_GENERAL is still read, as the same lane)
     (files directly in <inbox> or directly in a lane folder go to the group "Ungrouped")
 
-Order: priority, then series, then general; inside a lane by group name, then file name. The group travels with
+Order: priority, then series, then group; inside a lane by group name, then file name. The group travels with
 every item into its outputs: <outbox>/<lane>/<group>/<item>/, so a group stays together like a series.
 """
 from __future__ import annotations
@@ -20,14 +21,15 @@ from pathlib import Path
 from .items import Item, _copy_source, _template_copy, slugify
 from .output import sha256_file
 
-LANES = (("00_PRIORITY", "priority"), ("01_SERIES", "series"), ("02_GENERAL", "general"))
+LANES = (("00_PRIORITY", "priority"), ("01_SERIES", "series"), ("02_GROUP", "group"))
+OLD_LANES = (("02_GENERAL", "group"),)   # earlier name of the group lane, still read
 SKIP_PARTS = {".git", ".lake", "__pycache__", "_done", "_originals"}
 
 
 @dataclass
 class Entry:
     path: Path
-    lane: str      # priority | series | general
+    lane: str      # priority | series | group
     group: str     # the folder name that groups it
 
 
@@ -42,8 +44,8 @@ def scan(inbox: Path, extensions: set[str]) -> list[Entry]:
                       and not SKIP_PARTS & set(p.parts) and not p.name.startswith(("_", ".")))
 
     out: list[Entry] = []
-    lane_dirs = {folder for folder, _ in LANES}
-    for folder, lane in LANES:
+    lane_dirs = {folder for folder, _ in LANES + OLD_LANES}
+    for folder, lane in LANES + OLD_LANES:
         base = inbox / folder
         if not base.is_dir():
             continue
@@ -51,7 +53,7 @@ def scan(inbox: Path, extensions: set[str]) -> list[Entry]:
             rel = f.relative_to(base)
             out.append(Entry(f, lane, rel.parts[0] if len(rel.parts) > 1 else "Ungrouped"))
     loose = [f for f in files(inbox) if f.relative_to(inbox).parts[0] not in lane_dirs]
-    out.extend(Entry(f, "general", f.relative_to(inbox).parts[0] if len(f.relative_to(inbox).parts) > 1 else "Ungrouped")
+    out.extend(Entry(f, "group", f.relative_to(inbox).parts[0] if len(f.relative_to(inbox).parts) > 1 else "Ungrouped")
                for f in loose)
     rank = {lane: i for i, (_, lane) in enumerate(LANES)}
     out.sort(key=lambda e: (rank[e.lane], e.group.lower(), str(e.path).lower()))

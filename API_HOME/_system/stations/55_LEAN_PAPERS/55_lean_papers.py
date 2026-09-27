@@ -9,7 +9,7 @@ One source = the whole file in every call (no chunking); 30+ sources side by sid
 Claims never carry their assumptions: they point to them by id. Code enforces the trust rules (no LEAN_CERTIFIED from
 the model; PASS only with a cited source line).
 
-Inbox (lean_inbox): 00_PRIORITY/, 01_SERIES/<series>/, 02_GENERAL/<group>/, run in that order (engine/inbox.py).
+Inbox (lean_inbox): 00_PRIORITY/, 01_SERIES/<series>/, 02_GROUP/<group>/, run in that order (engine/inbox.py).
 Outbox (lean_outbox): one flat folder. Every paper is printed into its root:
   <title> - 1 Formal.md, <title> - 2 Reader.md, <title> - 3 Claims.md, <title> - 4 Assumptions.md
 and, rebuilt after every item:
@@ -44,7 +44,7 @@ MASTER_LOCK = threading.Lock()
 
 
 def args(p):
-    p.add_argument("--lane", choices=["priority", "series", "general"], help="only this lane of the inbox")
+    p.add_argument("--lane", choices=["priority", "series", "group"], help="only this lane of the inbox")
     p.add_argument("--group", help="only this series / group (folder name)")
 
 
@@ -184,7 +184,7 @@ def flat_name(item, name: str) -> str:
 
 
 def done_items(work: Path) -> list[Path]:
-    rank = {"priority": 0, "series": 1, "general": 2}
+    rank = {"priority": 0, "series": 1, "group": 2}
     folders = [p.parent for p in work.glob("*/*/*/lean.json") if (p.parent / "03_REPORT" / "claims.json").exists()]
     def key(f):
         meta = inbox.load_meta(f, "lean")
@@ -261,6 +261,6 @@ if __name__ == "__main__":
     found = items(st)
     if not found:
         print(f"{LABEL}: nothing in the Lean inbox. Put .lean / .md files in lean_inbox "
-              "(00_PRIORITY, 01_SERIES/<series>, 02_GENERAL/<group>).")
+              "(00_PRIORITY, 01_SERIES/<series>, 02_GROUP/<group>).")
         raise SystemExit(0)
     raise SystemExit(st.run(process, items=found))

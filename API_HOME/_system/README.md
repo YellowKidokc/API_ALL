@@ -12,7 +12,7 @@ _data\          (hidden) transcripts, papers, working folders, receipts
 ```
 
 Every front folder looks the same: a few numbered .bat files you click without thinking, then `INBOX\` (00_PRIORITY,
-01_SERIES\<series>, 02_GENERAL\<group>) and `OUTBOX\`, where every paper is printed flat into the root (receipts and
+01_SERIES\<series>, 02_GROUP\<group>) and `OUTBOX\`, where every paper is printed flat into the root (receipts and
 working folders stay in `_data`). More front folders (claims, evidence, YouTube) follow the same shape.
 
 Double-click `ONE_MENU.bat`, pick what to run by number (one, several, or a routine letter), answer a few
@@ -121,10 +121,10 @@ looks **original** in this corpus. Citations are always assembled from the sourc
 model; anything from the model's general knowledge is marked "verify". Reports land in
 `<syntheses_root>/<topic>/03_REPORT/`.
 
-## Inboxes: priority, series, general
+## Inboxes: priority, series, group
 
 Stations that take files in read one inbox shape (`engine/inbox.py`): `00_PRIORITY/` first, then
-`01_SERIES/<series>/`, then `02_GENERAL/<group>/`. A general group is carried through like a series without being
+`01_SERIES/<series>/`, then `02_GROUP/<group>/`. A group is carried through like a series without being
 one (e.g. all the one-pagers); the folder name is the group's name and it travels into the outputs. The scripts
 never sit in these folders: `paths.json` points at them. 55_LEAN_PAPERS uses it now (`lean_inbox`).
 

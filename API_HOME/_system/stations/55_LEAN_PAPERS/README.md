@@ -11,7 +11,7 @@ folders stay in `lean_work`). Front folder: `API_HOME\LEAN` (`1 RUN ALL.bat`, `2
 | 3 Claims | each claim filled into `templates/lean/CLAIM_TEMPLATE.md`; assumptions only by id |
 | 4 Assumptions | the assumptions paper (`templates/lean/ASSUMPTIONS_TEMPLATE.md`), reviewed before anything is run |
 
-- Script: `55_lean_papers.py` (`ONE_MENU.bat 55`; `--lane priority|series|general`, `--group "Trinity Proofs"`)
+- Script: `55_lean_papers.py` (`ONE_MENU.bat 55`; `--lane priority|series|group`, `--group "Trinity Proofs"`)
 - Works on: `lean_inbox` → `lean_outbox` (point both at any folder in `paths.json`; the scripts never live there)
 - Menu options it accepts: limit, workers, provider, model, focus, redo
 - One source = the whole file in every call (never chunked; files above `context_words` are skipped with a message).
@@ -23,7 +23,7 @@ folders stay in `lean_work`). Front folder: `API_HOME\LEAN` (`1 RUN ALL.bat`, `2
 lean_inbox/
   00_PRIORITY/                  first
   01_SERIES/<series name>/      the folder name is the series
-  02_GENERAL/<group name>/      grouped like a series without being one (e.g. "One pagers")
+  02_GROUP/<group name>/        grouped like a series without being one (e.g. "One pagers")
 ```
 
 The lane and group are stamped at the top of every paper and order the masters.

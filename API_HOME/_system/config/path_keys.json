@@ -151,7 +151,7 @@
     "create": true
   },
   "lean_inbox": {
-    "what": "Lean sources: 00_PRIORITY, 01_SERIES/<series>, 02_GENERAL/<group> (default: the LEAN front folder's INBOX)",
+    "what": "Lean sources: 00_PRIORITY, 01_SERIES/<series>, 02_GROUP/<group> (default: the LEAN front folder's INBOX)",
     "create": true
   },
   "lean_outbox": {

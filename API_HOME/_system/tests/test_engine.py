@@ -259,14 +259,14 @@ class DomainRules(unittest.TestCase):
         from engine import inbox
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
-            for rel in ("02_GENERAL/One pagers/b.lean", "01_SERIES/Trinity/2.lean", "01_SERIES/Trinity/1.lean",
+            for rel in ("02_GROUP/One pagers/b.lean", "01_SERIES/Trinity/2.lean", "01_SERIES/Trinity/1.lean",
                         "00_PRIORITY/p.lean", "loose.lean", "01_SERIES/Trinity/_draft.lean"):
                 (root / rel).parent.mkdir(parents=True, exist_ok=True)
                 (root / rel).write_text("theorem t : True := trivial")
             got = [(e.lane, e.group, e.path.name) for e in inbox.scan(root, {".lean"})]
         self.assertEqual([("priority", "Ungrouped", "p.lean"), ("series", "Trinity", "1.lean"),
-                          ("series", "Trinity", "2.lean"), ("general", "One pagers", "b.lean"),
-                          ("general", "Ungrouped", "loose.lean")], got)
+                          ("series", "Trinity", "2.lean"), ("group", "One pagers", "b.lean"),
+                          ("group", "Ungrouped", "loose.lean")], got)
 
     def test_lean_trust_rules(self):
         import importlib.util
