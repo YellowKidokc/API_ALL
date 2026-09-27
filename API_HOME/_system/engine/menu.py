@@ -135,7 +135,7 @@ def count_items(stations: list[dict], args: argparse.Namespace) -> tuple[int, in
             if kind == "lean" and configured("lean_inbox"):
                 from engine import inbox
                 entries = inbox.scan(external("lean_inbox"), {".lean", ".md", ".txt", ".tex"})
-                done = len(list(external("lean_outbox").glob(f"*/*/*/02_RUNS/{label}"))) if configured("lean_outbox") else 0
+                done = len(list(external("lean_work").glob(f"*/*/*/02_RUNS/{label}"))) if configured("lean_work") else 0
                 lanes = {lane: sum(1 for e in entries if e.lane == lane) for lane in ("priority", "series", "general")}
                 total, done_total = total + len(entries), done_total + done
                 parts.append(f"{len(entries):,} Lean sources ({lanes['priority']} priority, {lanes['series']} series, "
@@ -236,6 +236,7 @@ def parse(argv=None) -> argparse.Namespace:
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--min", dest="minimum", type=int, default=5)
     p.add_argument("--mock", action="store_true", help="fake replies, no API (plumbing test)")
+    p.add_argument("--station-args", default="", help='extra options passed as-is to the station, e.g. "--lane priority"')
     return p.parse_args(argv)
 
 
@@ -367,6 +368,8 @@ def command_for(station: dict, args: argparse.Namespace, workers: int, provider:
         cmd.append("--redo")
     if args.dry_run:
         cmd.append("--dry-run")
+    if getattr(args, "station_args", ""):
+        cmd += shlex.split(args.station_args, posix=True)
     return cmd
 
 

@@ -1,13 +1,15 @@
 # 55_LEAN_PAPERS
 
-Every Lean source (or claim written for Lean) in the Lean inbox becomes:
+Every Lean source (or claim written for Lean) in the Lean inbox becomes four papers, printed flat into the
+outbox root as `<title> - 1 Formal.md`, `- 2 Reader.md`, `- 3 Claims.md`, `- 4 Assumptions.md` (receipts and working
+folders stay in `lean_work`). Front folder: `API_HOME\LEAN` (`1 RUN ALL.bat`, `2 RUN PRIORITY ONLY.bat`, INBOX, OUTBOX).
 
-| file (in `<item>/03_REPORT/`) | for whom |
+| paper | for whom |
 |---|---|
-| `1_FORMAL.md` | paper 1: readers who know Lean and formal verification |
-| `2_READER.md` | paper 2: someone who has never used Lean (six fixed headings) |
-| `3_CLAIMS.md` | each claim filled into `templates/lean/CLAIM_TEMPLATE.md`; assumptions only by id |
-| `4_ASSUMPTIONS.md` | the assumptions paper (`templates/lean/ASSUMPTIONS_TEMPLATE.md`), reviewed before anything is run |
+| 1 Formal | paper 1: readers who know Lean and formal verification |
+| 2 Reader | paper 2: someone who has never used Lean (six fixed headings) |
+| 3 Claims | each claim filled into `templates/lean/CLAIM_TEMPLATE.md`; assumptions only by id |
+| 4 Assumptions | the assumptions paper (`templates/lean/ASSUMPTIONS_TEMPLATE.md`), reviewed before anything is run |
 
 - Script: `55_lean_papers.py` (`ONE_MENU.bat 55`; `--lane priority|series|general`, `--group "Trinity Proofs"`)
 - Works on: `lean_inbox` → `lean_outbox` (point both at any folder in `paths.json`; the scripts never live there)
@@ -24,7 +26,7 @@ lean_inbox/
   02_GENERAL/<group name>/      grouped like a series without being one (e.g. "One pagers")
 ```
 
-The group travels into the outbox: `lean_outbox/<lane>/<group>/<item>/`.
+The lane and group are stamped at the top of every paper and order the masters.
 
 ## Masters (rebuilt after every item, in inbox order)
 

@@ -10,10 +10,13 @@ Claims never carry their assumptions: they point to them by id. Code enforces th
 the model; PASS only with a cited source line).
 
 Inbox (lean_inbox): 00_PRIORITY/, 01_SERIES/<series>/, 02_GENERAL/<group>/, run in that order (engine/inbox.py).
-Outbox (lean_outbox): <lane>/<group>/<item>/03_REPORT/ plus, rebuilt after every item:
+Outbox (lean_outbox): one flat folder. Every paper is printed into its root:
+  <title> - 1 Formal.md, <title> - 2 Reader.md, <title> - 3 Claims.md, <title> - 4 Assumptions.md
+and, rebuilt after every item:
   00_ALL_CLAIMS.md             every claim through the template, in inbox order
   00_ALL_ASSUMPTIONS.md        every assumptions paper, in the same order
   00_ASSUMPTIONS_REVIEW.xlsx   one row per assumption with a `review` column (your marks are kept on rebuild)
+Working folders (receipts, every call, steps.log) stay out of sight in lean_work/<lane>/<group>/<item>/.
 """
 import csv
 import hashlib
@@ -151,7 +154,11 @@ def process(ctx):
     (report / "assumptions.json").write_text(json.dumps(assumptions, indent=2, ensure_ascii=False), encoding="utf-8")
     ctx.step(f"{len(claims)} claim(s), {len(assumptions)} assumption(s) -> {report}")
     with MASTER_LOCK:
-        rebuild_masters(external("lean_outbox"))
+        outbox = external("lean_outbox", create=True)
+        stamp = f"> {meta['lane']} / {meta['group']} · source `{meta['source_file']}`\n\n"
+        for name, text in files.items():
+            (outbox / flat_name(item, name)).write_text(stamp + text, encoding="utf-8")
+        rebuild_masters(external("lean_work"), outbox)
     ctx.step("master files rebuilt: 00_ALL_CLAIMS.md, 00_ALL_ASSUMPTIONS.md, 00_ASSUMPTIONS_REVIEW.xlsx")
     data = {"claims": claims, "assumptions": assumptions, "lane": meta["lane"], "group": meta["group"]}
     md = "\n\n---\n\n".join(files.values())
@@ -162,9 +169,23 @@ def process(ctx):
 
 
 # ------------------------------------------------------------------ the masters, in inbox order
-def done_items(outbox: Path) -> list[Path]:
+PAPER_NAMES = {"1_FORMAL.md": "1 Formal", "2_READER.md": "2 Reader", "3_CLAIMS.md": "3 Claims",
+               "4_ASSUMPTIONS.md": "4 Assumptions"}
+
+
+def flat_name(item, name: str) -> str:
+    """<title> - 1 Formal.md in the outbox root; the source hash keeps two same-titled sources apart."""
+    from engine.ytnames import safe
+    title = safe(item.title, 90)
+    taken = external("lean_outbox") / f"{title} - {PAPER_NAMES[name]}.md"
+    if taken.exists() and item.meta["source_file"] not in taken.read_text(encoding="utf-8", errors="replace")[:4000]:
+        title = f"{title} ({item.meta['source_hash'][:6]})"
+    return f"{title} - {PAPER_NAMES[name]}.md"
+
+
+def done_items(work: Path) -> list[Path]:
     rank = {"priority": 0, "series": 1, "general": 2}
-    folders = [p.parent for p in outbox.glob("*/*/*/lean.json") if (p.parent / "03_REPORT" / "claims.json").exists()]
+    folders = [p.parent for p in work.glob("*/*/*/lean.json") if (p.parent / "03_REPORT" / "claims.json").exists()]
     def key(f):
         meta = inbox.load_meta(f, "lean")
         return rank.get(meta.get("lane"), 3), str(meta.get("group", "")).lower(), str(meta.get("original_path", "")).lower()
@@ -187,12 +208,12 @@ def read_reviews(path: Path) -> dict[str, str]:
     return {str(row[k]): str(row[r]) for row in rows[1:] if row[r] not in (None, "")}
 
 
-def rebuild_masters(outbox: Path) -> None:
+def rebuild_masters(work: Path, outbox: Path) -> None:
     claims_md, assumptions_md, rows = ["# All claims", ""], ["# All assumptions", ""], []
     xlsx = outbox / "00_ASSUMPTIONS_REVIEW.xlsx"
     reviews = read_reviews(xlsx)
     current = None
-    for folder in done_items(outbox):
+    for folder in done_items(work):
         meta = inbox.load_meta(folder, "lean")
         heading = f"{meta['lane'].title()} · {meta['group']}"
         if heading != current:
@@ -220,7 +241,7 @@ def items(station):
     a = station.args
     try:
         box = external("lean_inbox", create=True)
-        out = external("lean_outbox", create=True)
+        out = external("lean_work", create=True)
     except PathConfigurationError as exc:
         print(f"{LABEL}: {exc}", file=sys.stderr)
         return []

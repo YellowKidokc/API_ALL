@@ -30,3 +30,13 @@ API_HOME/_system/vendor/youtube/clean/*/
 API_HOME/_data/
 API_HOME/LOGS/
 API_HOME/STATE/
+API_HOME/LEAN/INBOX/**
+!API_HOME/LEAN/INBOX/*/
+!API_HOME/LEAN/INBOX/*/.gitkeep
+API_HOME/LEAN/OUTBOX/*
+!API_HOME/LEAN/OUTBOX/.gitkeep
+API_HOME/QUICK_CALL/input/*
+!API_HOME/QUICK_CALL/input/.gitkeep
+API_HOME/QUICK_CALL/output/*
+!API_HOME/QUICK_CALL/output/.gitkeep
+**/key.txt

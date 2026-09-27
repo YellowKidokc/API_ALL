@@ -5,9 +5,15 @@ One portable folder, two batch files, every API pipeline. Open the folder and yo
 ```
 ONE_MENU.bat    run anything: pick by number, answer a few questions, watch every step
 SETUP.bat       once after copying or moving the folder (key, paths, hiding)
+LEAN\           1 RUN ALL.bat, 2 RUN PRIORITY ONLY.bat, INBOX\, OUTBOX\   (station 55)
+QUICK_CALL\     a one-off DeepSeek job in a folder you copy: prompt.txt + input\ -> RUN.bat -> output\
 _system\        (hidden) engine, stations, config, legacy scripts, logs  <- this README lives here
-_data\          (hidden) transcripts, papers, runs, reports
+_data\          (hidden) transcripts, papers, working folders, receipts
 ```
+
+Every front folder looks the same: a few numbered .bat files you click without thinking, then `INBOX\` (00_PRIORITY,
+01_SERIES\<series>, 02_GENERAL\<group>) and `OUTBOX\`, where every paper is printed flat into the root (receipts and
+working folders stay in `_data`). More front folders (claims, evidence, YouTube) follow the same shape.
 
 Double-click `ONE_MENU.bat`, pick what to run by number (one, several, or a routine letter), answer a few
 questions, and it runs in parallel: every result lands in a predictable place and every step is shown as it
@@ -175,6 +181,14 @@ Nothing inside holds a path: internal paths come from `engine/paths.py`, externa
 by key. After a move, `SETUP.bat` checks every key and finds moved ones again (same position relative to
 API_HOME, same path on another drive letter, or a search by folder name + parent + fingerprint file), asks you to
 confirm (`--auto` accepts), saves, and runs the health check.
+
+## Pulling the nested API folders up
+
+`python _system\tools\pull_up_api_folders.py "<your pipeline-workflows folder>"` previews moving every station folder
+out of `API\API`, `API\API 2` and `API\API 3` into the main folder, numbered (`01_CKG` ...), and renames the old
+OpenAI quick-call folder to `QUICK_CALL_OLD`. Plumbing folders (INBOX, OUTBOX, SCRIPTS ...) stay. Add `--apply` to
+move (logged in `PULL_UP_LOG.csv`), `--undo` to put everything back. It never overwrites, flags same-named folders,
+and flags scripts that point at their parent folder (those can break when moved).
 
 ## Legacy code
 

@@ -151,11 +151,15 @@
     "create": true
   },
   "lean_inbox": {
-    "what": "Lean sources to write up: 00_PRIORITY, 01_SERIES/<series>, 02_GENERAL/<group> (55_LEAN_PAPERS)",
+    "what": "Lean sources: 00_PRIORITY, 01_SERIES/<series>, 02_GENERAL/<group> (default: the LEAN front folder's INBOX)",
     "create": true
   },
   "lean_outbox": {
-    "what": "Lean papers, claim templates, assumptions papers + review sheet (55_LEAN_PAPERS)",
+    "what": "Lean papers, printed flat into the root, plus the masters and review sheet (default: LEAN\\OUTBOX)",
+    "create": true
+  },
+  "lean_work": {
+    "what": "Lean working folders: receipts, every call, steps.log (out of sight)",
     "create": true
   }
 }
