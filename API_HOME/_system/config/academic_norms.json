@@ -1,0 +1,4 @@
+{
+ "_note": "Academic benchmarks per metric name: {\"Flesch–Kincaid grade\": {\"p25\": 10, \"p50\": 12.5, \"p75\": 14, \"source\": \"...\"}}. Empty until David supplies sources; the matrix draws a dashed ring (no academic benchmark) for anything not listed.",
+ "target_bands": {}
+}

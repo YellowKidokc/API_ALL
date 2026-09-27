@@ -1,0 +1,30 @@
+{
+  "number": "10",
+  "name": "CKG_THEOLOGY",
+  "label": "10_CKG_THEOLOGY",
+  "kind": "native",
+  "description": "Theology triage after the CKG index: 17 probes (CLEAN / NOTE / FLAG / CLAIM / ??), rules enforced in code, argument layer for the claim graph, YouTube platform notes.",
+  "items": "videos",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo",
+    "channel"
+  ],
+  "uses_api": true,
+  "prompt_files": [
+    "RUBRIC.md",
+    "PLATFORM_PROBES.md"
+  ],
+  "goals": [
+    {
+      "id": "API-10.1",
+      "title": "THEOLOGY_TRIAGE",
+      "task": "theology_triage",
+      "asks": "17-probe verdicts + expansions, collapse question, platform notes, argument layer (claims, premises, hidden premises, edges, tests, win condition)"
+    }
+  ]
+}

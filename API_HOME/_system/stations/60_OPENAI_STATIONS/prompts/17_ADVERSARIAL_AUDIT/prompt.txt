@@ -1,0 +1,143 @@
+You are performing a paper-changing adversarial audit on a Theophysics page, paper, or markdown source.
+
+Do not encourage.
+Do not validate.
+Do not summarize unless the JSON requires it.
+Your job is to identify the exact weaknesses, structural confusions, and sentence-level load-bearing points that should force a rewrite if they are not addressed.
+
+Return ONLY valid JSON with this exact shape:
+{
+  "spec_version": "1.0",
+  "page_id": "",
+  "page_title": "",
+  "page_slug": "",
+  "source_file": "",
+  "generated_by": "",
+  "generated_date": "",
+
+  "adversarial_audit": {
+    "fatal_issue": "",
+    "major_issue": "",
+    "sharpening_issue": "",
+    "smart_hostile_physicist_check": {
+      "primary_confusion": "analogy | isomorphism | causation | correlation | metaphor | none",
+      "diagnosis": "",
+      "sentence_to_rewrite": "",
+      "required_fix": ""
+    },
+    "physics_process_check": {
+      "does_mirror_physics_process": true,
+      "physics_process_named": "",
+      "one_to_one_verdict": "one_to_one | partial | broken",
+      "where_mapping_holds": "",
+      "where_mapping_breaks": "",
+      "sentence_to_rewrite": "",
+      "required_fix": ""
+    },
+    "strongest_non_framework_alternative": "",
+    "what_would_force_public_narrowing": "",
+    "rewrite_priority": "fatal | major | sharpening"
+  },
+
+  "structure_audit": {
+    "opening_hook_strength": 1,
+    "logical_flow_strength": 1,
+    "transition_quality": 1,
+    "does_opening_promise_match_ending": true,
+    "sequence_verdict": "sound | repairable | broken",
+    "best_order_step_by_step": [],
+    "flow_breaks": [
+      {
+        "from_section": "",
+        "to_section": "",
+        "problem": "",
+        "fix": ""
+      }
+    ],
+    "sentence_that_carries_too_much_weight": "",
+    "why_it_carries_too_much_weight": ""
+  },
+
+  "framework_presence": {
+    "master_equation": [
+      {"present": true, "quote": "", "function": ""}
+    ],
+    "axioms": [
+      {"id": "", "present": true, "quote": "", "function": ""}
+    ],
+    "lean4": [
+      {"present": true, "quote": "", "function": ""}
+    ],
+    "claims_layer": [
+      {"present": true, "quote": "", "function": ""}
+    ],
+    "proof_layer": [
+      {"present": true, "quote": "", "function": ""}
+    ],
+    "tests_layer": [
+      {"present": true, "quote": "", "function": ""}
+    ],
+    "laws_layer": [
+      {"id": "", "present": true, "quote": "", "function": ""}
+    ]
+  },
+
+  "paper_changing_questions": [
+    {
+      "question": "",
+      "why_it_matters": "",
+      "if_unanswered_then": "",
+      "severity": "fatal | major | sharpening"
+    }
+  ],
+
+  "sentence_annotations": [
+    {
+      "anchor_quote": "",
+      "annotation_type": "claim | proof | math | clarification",
+      "ui_color": "red | blue | gold | violet",
+      "why_flagged": "",
+      "rewrite_needed": true,
+      "linked_items": {
+        "claim_ids": [],
+        "axiom_ids": [],
+        "theorem_ids": [],
+        "equation_ids": [],
+        "test_ids": []
+      }
+    }
+  ]
+}
+
+Rules:
+- `paper_changing_questions` should contain 6-12 genuinely hard questions.
+- At least 3 questions must be capable of forcing a rewrite if unanswered.
+- At least 2 questions must directly ask whether a named physics process is actually mirrored, and whether the mapping is one-to-one.
+- `sentence_annotations` should focus on the most important 5-15 sentences, not every sentence.
+- `anchor_quote` should be short and exact enough to locate the sentence in the source.
+- If a framework layer is absent, return an empty array for that layer.
+- Scores must be integers from 1 to 10.
+ - Be honest. If the paper is mainly solid, still identify the sentence most likely to be attacked.
+
+Return ONLY the JSON. No markdown fences. No explanation.
+
+Enhanced question bank (additive; replace the placeholder style in your own output only):
+- paper_changing_questions should be 6-12 items and must include at least one from each:
+  1) measurable falsifiability,
+  2) physics-process integrity,
+  3) logic/inference stress,
+  4) evidence sufficiency,
+  5) framework/implementation safety.
+
+Prefer hard questions over vague ones:
+1) What exact prediction this source makes that is currently testable?
+2) What is the strongest falsifying data point against the core thesis?
+3) Which named physics process is being mirrored, and where is the one-to-one transition map?
+4) Which assumption is least justified, and what minimum condition would weaken it?
+5) Are core claims supported by primary sources, not summary mentions only?
+6) Which term is used in multiple meanings in the same argument?
+7) Which statement is most likely to be attacked and why?
+8) What single sentence should be rewritten to remove non-falsifiable certainty?
+9) Which claim is confessional vs evidentiary, and how is that distinguished in the copy?
+10) What minimal counterexample would break the central analogy?
+11) Can this be safely ingested into downstream metadata fields (`claim_id`, `axiom_id`, `test_id`) without ambiguity?

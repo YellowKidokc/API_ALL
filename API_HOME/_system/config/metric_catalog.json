@@ -1,0 +1,1512 @@
+{
+ "_note": "Metric catalog from the approved STATISTICS_MATRIX_PROTOTYPE (names, direction, decimals, units). dir: hi = higher is better, lo = lower is better, band = best in the middle. The prototype's demo ranges are NOT academic norms and are not used; real benchmarks go in academic_norms.json.",
+ "families": [
+  {
+   "k": "text",
+   "n": "Text and size",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Word count",
+     "dir": "band",
+     "dec": 0,
+     "unit": "words"
+    },
+    {
+     "name": "Sentences",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Paragraphs",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Mean words per sentence",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Longest sentence",
+     "dir": "lo",
+     "dec": 0,
+     "unit": "words"
+    },
+    {
+     "name": "Type-token ratio",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Stopword ratio",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Questions",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Quotations",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Parentheticals",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Reading time",
+     "dir": "band",
+     "dec": 1,
+     "unit": "min"
+    },
+    {
+     "name": "Speaking time",
+     "dir": "band",
+     "dec": 1,
+     "unit": "min"
+    }
+   ]
+  },
+  {
+   "k": "read",
+   "n": "Readability",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Flesch reading ease",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Flesch–Kincaid grade",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Gunning fog",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "SMOG",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Coleman–Liau",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "ARI",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Dale–Chall",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "LIX",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "RIX",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Linsear Write",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Spache",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "FORCAST",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "McAlpine EFLAW",
+     "dir": "lo",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Consensus grade",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "lex",
+   "n": "Vocabulary richness",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "MTLD",
+     "dir": "hi",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "MATTR (w=50)",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "HD-D",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "vocd-D",
+     "dir": "hi",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Yule's K",
+     "dir": "lo",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Simpson's D",
+     "dir": "lo",
+     "dec": 4,
+     "unit": ""
+    },
+    {
+     "name": "Honoré's R",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Brunet's W",
+     "dir": "lo",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Herdan's C",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Maas a²",
+     "dir": "lo",
+     "dec": 4,
+     "unit": ""
+    },
+    {
+     "name": "Hapax ratio",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Dis legomena ratio",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Zipf slope",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Zipf R²",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Heaps β",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "syn",
+   "n": "Sentence structure",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Mean dependency distance",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Parse-tree depth",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Clauses per sentence",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Subordination index",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Passive voice ratio",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Nominalization ratio",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Noun share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Verb share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Adjective share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Adverb share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Pronoun share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Lexical density",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Mean word length",
+     "dir": "band",
+     "dec": 2,
+     "unit": "chars"
+    },
+    {
+     "name": "Long-word share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "coh",
+   "n": "Cohesion",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Noun overlap, adjacent",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Argument overlap",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Sentence similarity mean",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Sentence similarity SD",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Paragraph similarity",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Causal connectives",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Adversative connectives",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Temporal connectives",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Additive connectives",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Conditional connectives",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Given/new ratio",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Topic drift start→end",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "info",
+   "n": "Information theory",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Unigram entropy",
+     "dir": "hi",
+     "dec": 2,
+     "unit": "bits"
+    },
+    {
+     "name": "Bigram entropy",
+     "dir": "hi",
+     "dec": 2,
+     "unit": "bits"
+    },
+    {
+     "name": "Conditional entropy",
+     "dir": "band",
+     "dec": 2,
+     "unit": "bits"
+    },
+    {
+     "name": "Redundancy",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "gzip ratio",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "bz2 ratio",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "lzma ratio",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Surprisal mean",
+     "dir": "band",
+     "dec": 2,
+     "unit": "bits"
+    },
+    {
+     "name": "Surprisal SD",
+     "dir": "band",
+     "dec": 2,
+     "unit": "bits"
+    },
+    {
+     "name": "Perplexity",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Key-term mutual info",
+     "dir": "hi",
+     "dec": 2,
+     "unit": "bits"
+    },
+    {
+     "name": "Information per sentence",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "bits"
+    }
+   ]
+  },
+  {
+   "k": "stance",
+   "n": "Stance and hedging",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Hedges",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Boosters",
+     "dir": "lo",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Attitude markers",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Self-mentions",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Engagement markers",
+     "dir": "band",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Hedge:booster ratio",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Absolutes (always/never/proves)",
+     "dir": "lo",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Certainty index",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "emo",
+   "n": "Emotion and tone",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "VADER compound",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Positive share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Negative share",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Valence",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Arousal",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Dominance",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Joy",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Trust",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Fear",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Anger",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Sadness",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Anticipation",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Arc fit (man-in-a-hole)",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "claim",
+   "n": "Claims and evidence",
+   "src": "A",
+   "metrics": [
+    {
+     "name": "Claims",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Claim:evidence ratio",
+     "dir": "lo",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Unsupported claims",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Claims carrying a caveat",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Premise depth",
+     "dir": "band",
+     "dec": 1,
+     "unit": ""
+    },
+    {
+     "name": "Longest inference chain",
+     "dir": "band",
+     "dec": 0,
+     "unit": "steps"
+    },
+    {
+     "name": "Branching factor",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Objections raised",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Objections answered",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Counter-argument ratio",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Fallacy flags",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Overstatements",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Descriptive claims",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Causal claims",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Theological claims",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Empirical claims",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Historical claims",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Mathematical claims",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "cite",
+   "n": "Citations and sources",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "References",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "References per 1k words",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "DOI coverage",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Median reference year",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Price index (last 5 yrs)",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Peer-reviewed share",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Book share",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Web share",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Self-citation share",
+     "dir": "lo",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Scripture references",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "OT:NT ratio",
+     "dir": "band",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Citation density §3",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Citation density §5",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/1k"
+    },
+    {
+     "name": "Primary-source share",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "math",
+   "n": "Math and formal proof",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Equations",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Unique symbols",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Undefined variables",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Missing units",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Dimensional checks passed",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Equations referenced in text",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Lean theorems linked",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Lean sorry count",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Kernel-verified share",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Formal maturity level",
+     "dir": "hi",
+     "dec": 0,
+     "unit": "/7"
+    },
+    {
+     "name": "Kill conditions stated",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Testable predictions",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "sem",
+   "n": "Topics and novelty",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Topic count",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Topic entropy",
+     "dir": "band",
+     "dec": 2,
+     "unit": "bits"
+    },
+    {
+     "name": "Novelty vs your corpus",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Similarity to series centroid",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Similarity to corpus centroid",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Near-duplicate sentences (internal)",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Near-duplicates vs corpus",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "New terms introduced",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Series coverage",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "graph",
+   "n": "Concept graph",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Concept nodes",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Edges",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Density",
+     "dir": "band",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Modularity",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Clustering coefficient",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Diameter",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Connected components",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Bridge concepts",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Hub concepts",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "PageRank of thesis term",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "obs",
+   "n": "Obsidian vault",
+   "src": "L",
+   "metrics": [
+    {
+     "name": "Wikilinks out",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Backlinks in",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Unresolved links",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Embeds",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Block references",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Tags",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Frontmatter completeness",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    },
+    {
+     "name": "Heading depth",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Callouts",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Orphan status",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Vault graph degree",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Revisions (git)",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "fruit",
+   "n": "Fruits of the Spirit",
+   "src": "A",
+   "metrics": [
+    {
+     "name": "Love, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Joy, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Peace, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Patience, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Kindness, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Goodness, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Faithfulness, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Gentleness, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Self-control, mean",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Spikes toward love",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Spikes away from love",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Counterfeit sentences",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Hidden-fruit sentences",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "me",
+   "n": "Master equation",
+   "src": "A",
+   "metrics": [
+    {
+     "name": "Slot coverage",
+     "dir": "hi",
+     "dec": 0,
+     "unit": "/10"
+    },
+    {
+     "name": "Product test (multiplicative)",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "G fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "M fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "E fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "S_eff fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "T fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "K fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "R fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Q fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "F fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "C fit",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Analog strength",
+     "dir": "hi",
+     "dec": 0,
+     "unit": "/5"
+    },
+    {
+     "name": "Run agreement",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "ax",
+   "n": "Axiom nodes",
+   "src": "A",
+   "metrics": [
+    {
+     "name": "Nodes engaged",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "AX_CORE touched",
+     "dir": "hi",
+     "dec": 0,
+     "unit": "/7"
+    },
+    {
+     "name": "AX_DERIVED touched",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "AX_SCAFFOLD touched",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "FW_EXTENDED touched",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "HY_EVIDENCE touched",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Directly asserted",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Supported",
+     "dir": "hi",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Contested",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Unmapped claims",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "cohs",
+   "n": "Coherence",
+   "src": "A",
+   "metrics": [
+    {
+     "name": "Coherence score",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/10"
+    },
+    {
+     "name": "Internal consistency",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/10"
+    },
+    {
+     "name": "Definitional stability",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/10"
+    },
+    {
+     "name": "Inferential connectedness",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/10"
+    },
+    {
+     "name": "Register boundary respect",
+     "dir": "hi",
+     "dec": 1,
+     "unit": "/10"
+    },
+    {
+     "name": "Structural contradictions",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Local contradictions",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Tensions",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Missing definitions",
+     "dir": "lo",
+     "dec": 0,
+     "unit": ""
+    }
+   ]
+  },
+  {
+   "k": "rel",
+   "n": "Reliability",
+   "src": "A",
+   "metrics": [
+    {
+     "name": "Cohen's κ, claim types",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "ICC, fruit scores",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "ICC, coherence",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "κ, axiom alignment",
+     "dir": "hi",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Mean 95% CI width, love",
+     "dir": "lo",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Mean 95% CI width, surprisal",
+     "dir": "lo",
+     "dec": 2,
+     "unit": ""
+    },
+    {
+     "name": "Runs compared",
+     "dir": "band",
+     "dec": 0,
+     "unit": ""
+    },
+    {
+     "name": "Quote-verification rate",
+     "dir": "hi",
+     "dec": 3,
+     "unit": ""
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "number": "49",
+  "name": "GAP_MAP",
+  "label": "49_GAP_MAP",
+  "kind": "native",
+  "description": "Overlay a topic synthesis on David's own work: expand / contract / holes, and who said it first (citations).",
+  "items": "own",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo",
+    "topic"
+  ],
+  "uses_api": true,
+  "goals": [
+    {
+      "id": "API-49.1",
+      "title": "OWN_CLAIMS",
+      "task": "own_claims",
+      "asks": "David's claims about the topic, with sentence ids"
+    },
+    {
+      "id": "API-49.2",
+      "title": "COVERAGE_MATCH",
+      "task": "gap_match",
+      "asks": "does David's work cover this best argument: covered / partial / missing"
+    },
+    {
+      "id": "API-49.3",
+      "title": "PRIOR_ART",
+      "task": "prior_art",
+      "asks": "who else made this claim in the corpus (quotes) -> cite, or appears original"
+    }
+  ],
+  "prompt_files": [
+    "OWN_CLAIMS.md",
+    "COVERAGE.md",
+    "PRIOR_ART.md"
+  ]
+}

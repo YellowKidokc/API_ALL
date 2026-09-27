@@ -1,0 +1,14 @@
+{
+  "_note": "Every provider ONE_MENU knows. base = the upstream root the relay forwards to; chat = path of the chat endpoint under base; key = environment variable holding the API key. Keys never go in this file.",
+  "deepseek":   {"base": "https://api.deepseek.com", "chat": "chat/completions", "key": "DEEPSEEK_API_KEY", "default_model": "deepseek-chat", "openai_compatible": true, "cost_tier": "low", "status": "primary"},
+  "openrouter": {"base": "https://openrouter.ai/api", "chat": "v1/chat/completions", "key": "OPENROUTER_API_KEY", "default_model": "deepseek/deepseek-r1:free", "openai_compatible": true, "cost_tier": "free models available", "status": "fallback"},
+  "free":       {"alias_of": "openrouter", "default_model": "deepseek/deepseek-r1:free", "note": "--provider free = OpenRouter free model"},
+  "openai":     {"base": "https://api.openai.com", "chat": "v1/chat/completions", "key": "OPENAI_API_KEY", "default_model": "gpt-4o-mini", "openai_compatible": true, "cost_tier": "medium", "status": "listed"},
+  "anthropic":  {"base": "https://api.anthropic.com", "chat": null, "key": "ANTHROPIC_API_KEY", "default_model": "claude-sonnet-5", "openai_compatible": false, "cost_tier": "medium", "status": "listed (relay passthrough for legacy scripts; native chat route not wired)"},
+  "moonshot":   {"base": "https://api.moonshot.ai", "chat": "v1/chat/completions", "key": "MOONSHOT_API_KEY", "default_model": "kimi-k2-0905-preview", "openai_compatible": true, "cost_tier": "low", "status": "listed (used by API_DEEP atoms)"},
+  "gemini":     {"base": "https://generativelanguage.googleapis.com/v1beta/openai", "chat": "chat/completions", "key": "GEMINI_API_KEY", "default_model": "gemini-2.5-flash", "openai_compatible": true, "cost_tier": "low", "status": "listed"},
+  "groq":       {"base": "https://api.groq.com/openai", "chat": "v1/chat/completions", "key": "GROQ_API_KEY", "default_model": "llama-3.3-70b-versatile", "openai_compatible": true, "cost_tier": "low", "status": "listed"},
+  "together":   {"base": "https://api.together.xyz", "chat": "v1/chat/completions", "key": "TOGETHER_API_KEY", "default_model": "deepseek-ai/DeepSeek-V3", "openai_compatible": true, "cost_tier": "low", "status": "listed"},
+  "mistral":    {"base": "https://api.mistral.ai", "chat": "v1/chat/completions", "key": "MISTRAL_API_KEY", "default_model": "mistral-small-latest", "openai_compatible": true, "cost_tier": "low", "status": "listed"},
+  "ollama":     {"base": "http://127.0.0.1:11434", "chat": "v1/chat/completions", "key": "OLLAMA_API_KEY", "default_model": "llama3.1", "openai_compatible": true, "cost_tier": "local, free", "status": "listed (local; no key needed)", "no_key": true}
+}

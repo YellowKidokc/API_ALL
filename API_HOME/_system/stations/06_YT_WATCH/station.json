@@ -1,0 +1,27 @@
+{
+  "number": "06",
+  "name": "YT_WATCH",
+  "label": "06_YT_WATCH",
+  "kind": "legacy",
+  "description": "Automatic chain for channels in WATCH_CHANNELS: convert, clean, index, channel focus, catalog.",
+  "vendor": "youtube/deepseek_home/watch_pipeline.py",
+  "flags": {
+    "workers": "--workers",
+    "dry_run": "--dry-run"
+  },
+  "extra_flags": {
+    "once": "--once",
+    "interval": "--interval",
+    "max_per_cycle": "--max-per-cycle"
+  },
+  "extra_types": {
+    "once": "bool"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "workers",
+    "focus"
+  ]
+}

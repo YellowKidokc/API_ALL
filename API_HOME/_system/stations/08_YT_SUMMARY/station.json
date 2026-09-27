@@ -1,0 +1,26 @@
+{
+  "number": "08",
+  "name": "YT_SUMMARY",
+  "label": "08_YT_SUMMARY",
+  "kind": "native",
+  "description": "Base layer for a video: the summary questions in QUESTIONS.md, whole transcript in one call.",
+  "items": "videos",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo",
+    "channel"
+  ],
+  "uses_api": true,
+  "goals": [
+    {
+      "id": "API-08.1",
+      "title": "YT_SUMMARY",
+      "task": "yt_summary",
+      "asks": "answers to QUESTIONS.md (base summary) with timestamps"
+    }
+  ]
+}

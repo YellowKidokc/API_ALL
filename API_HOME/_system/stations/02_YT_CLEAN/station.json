@@ -1,0 +1,32 @@
+{
+  "number": "02",
+  "name": "YT_CLEAN",
+  "label": "02_YT_CLEAN",
+  "kind": "legacy",
+  "description": "Clean raw transcripts into readable notes (local Python, never an API).",
+  "vendor": "youtube/clean/clean_library.py",
+  "args": [
+    "--src",
+    "{yt_subtitles}",
+    "--out",
+    "{yt_clean}"
+  ],
+  "flags": {
+    "limit": "--limit",
+    "redo": "--force",
+    "dry_run": "--dry-run"
+  },
+  "extra_flags": {
+    "channel": "--channel",
+    "punctuate": "--punctuate"
+  },
+  "extra_types": {
+    "punctuate": "bool"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": [
+    "limit",
+    "redo"
+  ]
+}

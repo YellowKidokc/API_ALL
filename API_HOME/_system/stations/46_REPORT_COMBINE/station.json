@@ -1,0 +1,14 @@
+{
+  "number": "46",
+  "name": "REPORT_COMBINE",
+  "label": "46_REPORT_COMBINE",
+  "kind": "native",
+  "description": "Assemble every station's JSON in procedure order (aggregate.json/.md) and build report.html + report.xlsx.",
+  "items": "both",
+  "options": [
+    "limit",
+    "channel"
+  ],
+  "uses_api": false,
+  "goals": []
+}

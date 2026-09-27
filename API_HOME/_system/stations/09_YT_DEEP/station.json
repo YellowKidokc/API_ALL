@@ -1,0 +1,26 @@
+{
+  "number": "09",
+  "name": "YT_DEEP",
+  "label": "09_YT_DEEP",
+  "kind": "native",
+  "description": "Detailed, rigorous layer on top of the base summary (reads 08's output + the whole transcript).",
+  "items": "videos",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo",
+    "channel"
+  ],
+  "uses_api": true,
+  "goals": [
+    {
+      "id": "API-09.1",
+      "title": "YT_DEEP_ANALYSIS",
+      "task": "yt_deep",
+      "asks": "detailed analysis per DETAIL.md, building on the 08 summary"
+    }
+  ]
+}

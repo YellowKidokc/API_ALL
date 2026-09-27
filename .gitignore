@@ -4,12 +4,39 @@ __pycache__/
 *.local.*
 keys.local.json
 config/paths.json
-API_HOME/config/paths.json
-API_HOME/LOGS/*
-API_HOME/STATE/*
-!API_HOME/LOGS/.gitkeep
-!API_HOME/STATE/.gitkeep
+API_HOME/_system/config/paths.json
+API_HOME/_system/LOGS/*
+API_HOME/_system/STATE/*
+!API_HOME/_system/LOGS/.gitkeep
+!API_HOME/_system/STATE/.gitkeep
 
 # real keys live here locally; never commit
 09_SOURCE_API_FOLDERS/API 2/writing-analyzer/config.txt
 **/writing-analyzer/config.txt
+
+# ONE_MENU runtime (never commit)
+ONE_MENU_DATA/
+API_HOME/_system/stations/*/_work/
+API_HOME/_system/vendor/**/LOGS/
+API_HOME/_system/vendor/**/logs/
+API_HOME/_system/vendor/**/log.jsonl
+API_HOME/_system/vendor/**/requests/
+API_HOME/_system/vendor/**/outputs/
+API_HOME/_system/vendor/**/focus/
+API_HOME/_system/vendor/**/.clean_state.json
+API_HOME/_system/vendor/**/.channel_cache.json
+API_HOME/_system/vendor/**/lean_atoms.db
+API_HOME/_system/vendor/youtube/clean/*/
+API_HOME/_data/
+API_HOME/LOGS/
+API_HOME/STATE/
+API_HOME/LEAN/INBOX/**
+!API_HOME/LEAN/INBOX/*/
+!API_HOME/LEAN/INBOX/*/.gitkeep
+API_HOME/LEAN/OUTBOX/*
+!API_HOME/LEAN/OUTBOX/.gitkeep
+API_HOME/QUICK_CALL/input/*
+!API_HOME/QUICK_CALL/input/.gitkeep
+API_HOME/QUICK_CALL/output/*
+!API_HOME/QUICK_CALL/output/.gitkeep
+**/key.txt

@@ -1,0 +1,49 @@
+{
+  "number": "55",
+  "name": "LEAN_PAPERS",
+  "label": "55_LEAN_PAPERS",
+  "kind": "native",
+  "description": "Every Lean source in the Lean inbox (priority, series, general) -> formal paper, reader paper, claims in the claim template, and a separate assumptions paper to review before running; whole file per call, 30+ side by side.",
+  "items": "lean",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo"
+  ],
+  "uses_api": true,
+  "prompt_files": [
+    "ASSUMPTIONS_PROMPT.md",
+    "PROMPT.md",
+    "FORMAL_PAPER_PROMPT.md",
+    "READER_PROMPT.md"
+  ],
+  "goals": [
+    {
+      "id": "API-55.1",
+      "title": "LEAN_ASSUMPTIONS",
+      "task": "lean_assumptions",
+      "asks": "every assumption with line, kind, load-bearing, plus the assumptions paper"
+    },
+    {
+      "id": "API-55.2",
+      "title": "LEAN_CLAIMS",
+      "task": "lean_claims",
+      "asks": "up to 12 claims for the claim template (no assumptions inside)"
+    },
+    {
+      "id": "API-55.3",
+      "title": "LEAN_FORMAL_PAPER",
+      "task": "lean_formal_paper",
+      "asks": "paper 1: formal, for Lean readers"
+    },
+    {
+      "id": "API-55.4",
+      "title": "LEAN_READER_PAPER",
+      "task": "lean_reader_paper",
+      "asks": "paper 2: for someone new to Lean"
+    }
+  ]
+}

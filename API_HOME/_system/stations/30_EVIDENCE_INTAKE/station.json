@@ -1,0 +1,38 @@
+{
+  "number": "30",
+  "name": "EVIDENCE_INTAKE",
+  "label": "30_EVIDENCE_INTAKE",
+  "kind": "legacy",
+  "description": "Turbo evidence intake: one call per paper fills the v0.4.1 companion; shelves + master index.",
+  "vendor": "evidence/SCRIPTS/turbo_pipeline_runner.py",
+  "args": [
+    "--root",
+    "{evidence_root}"
+  ],
+  "flags": {
+    "limit": "--limit",
+    "workers": "--workers",
+    "provider": "--provider",
+    "model": "--model"
+  },
+  "provider_values": {
+    "deepseek": "deepseek",
+    "openrouter": "openrouter"
+  },
+  "extra_flags": {
+    "continuous": "--continuous"
+  },
+  "extra_types": {
+    "continuous": "bool"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus"
+  ]
+}

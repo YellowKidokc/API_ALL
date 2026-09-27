@@ -1,0 +1,11 @@
+{
+  "number": "91",
+  "name": "RELOCATE",
+  "label": "91_RELOCATE",
+  "kind": "native",
+  "description": "After moving the folder: find every external path again (auto-search), confirm, save, health check.",
+  "items": "none",
+  "options": [],
+  "uses_api": false,
+  "goals": []
+}

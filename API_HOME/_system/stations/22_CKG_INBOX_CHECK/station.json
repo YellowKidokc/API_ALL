@@ -1,0 +1,17 @@
+{
+  "number": "22",
+  "name": "CKG_INBOX_CHECK",
+  "label": "22_CKG_INBOX_CHECK",
+  "kind": "legacy",
+  "description": "Show what is waiting in the CKG inbox (no API).",
+  "vendor": "ckg/PYTHON/run_ckg.py",
+  "args": [
+    "--root",
+    "{ckg_root}",
+    "--inventory"
+  ],
+  "flags": {},
+  "uses_api": false,
+  "goals": [],
+  "options": []
+}

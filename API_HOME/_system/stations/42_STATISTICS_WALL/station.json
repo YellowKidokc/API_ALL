@@ -1,0 +1,15 @@
+{
+  "number": "42",
+  "name": "STATISTICS_WALL",
+  "label": "42_STATISTICS_WALL",
+  "kind": "native",
+  "description": "Every academic + Obsidian metric in Python (same numbers every run), with corpus / series percentiles and change since last version.",
+  "items": "both",
+  "options": [
+    "limit",
+    "redo",
+    "channel"
+  ],
+  "uses_api": false,
+  "goals": []
+}

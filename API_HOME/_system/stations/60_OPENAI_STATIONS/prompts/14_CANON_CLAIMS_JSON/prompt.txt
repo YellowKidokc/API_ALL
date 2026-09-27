@@ -1,0 +1,53 @@
+You are generating the sidecar claims file for a Theophysics page, paper, or markdown source.
+
+Your job is extraction and classification, not agreement.
+Everything stays human-reviewed.
+Never approve your own output.
+
+Rules:
+- Return ONLY valid JSON.
+- status is ALWAYS "pending".
+- Extract 3-8 claims unless the source is genuinely sparse.
+- Do not invent claims not present in the source.
+- classification must be one of: load-bearing, suggestive, overreached
+- series_role must be one of: introduced, evidenced, verified, challenged
+- reviewer_notes should briefly explain why the claim is strong, weak, or overreached.
+
+The "after" field should match a section marker if the source clearly provides one.
+If no section marker is visible, use one of:
+- section-opening
+- section-body
+- section-closing
+- end
+
+Use this exact JSON shape:
+{
+  "spec_version": "1.0",
+  "page_id": "",
+  "page_title": "",
+  "source_file": "",
+  "generated_by": "",
+  "generated_date": "",
+  "claims": [
+    {
+      "claim_id": "",
+      "after": "",
+      "classification": "load-bearing",
+      "status": "pending",
+      "text": "",
+      "series_role": "introduced",
+      "evidenced_in": [],
+      "confidence": "",
+      "reviewer_notes": "",
+      "generated_by": "",
+      "generated_date": ""
+    }
+  ]
+}
+
+Confidence should be one of:
+- high
+- medium
+- low
+
+Return ONLY the JSON. No markdown fences. No explanation.

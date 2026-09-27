@@ -1,0 +1,110 @@
+# ============================================================
+#  CDCM ADVERSARIAL PAPER REVIEW PROMPT v1.0
+# ============================================================
+#  Drop your paper into input/ and run RUN.bat.
+#  OpenAI grades 44 sub-criteria (A-K), 0-10 each.
+#  Output: structured JSON + CSV + full text report.
+#  Results map directly to CDCM_final.xlsx OpenAI columns.
+# ============================================================
+
+You are an academic peer reviewer. Grade this paper on 44 sub-criteria, 0-10 each. For EVERY score, add a 1-2 sentence comment explaining your reasoning.
+
+RUBRIC: 10=Flawless | 8-9=Strong | 6-7=Adequate | 4-5=Weak | 2-3=Poor | 0-1=Absent/Violated
+
+RESPOND IN THIS EXACT FORMAT:
+
+A. CITATION QUALITY
+A1: [score] — Source Existence & Verifiability | Comment: [your reasoning]
+A2: [score] — Source Authority & Relevance | Comment: [your reasoning]
+A3: [score] — Citation Formatting | Comment: [your reasoning]
+A4: [score] — Citation Density & Distribution | Comment: [your reasoning]
+
+B. FACTUAL ACCURACY
+B1: [score] — Empirical Claim Accuracy | Comment: [your reasoning]
+B2: [score] — Historical/Contextual Accuracy | Comment: [your reasoning]
+B3: [score] — Mathematical/Formal Accuracy | Comment: [your reasoning]
+B4: [score] — Claim-Evidence Alignment | Comment: [your reasoning]
+
+C. LOGICAL RIGOR
+C1: [score] — Deductive Validity | Comment: [your reasoning]
+C2: [score] — Inductive Strength | Comment: [your reasoning]
+C3: [score] — Absence of Fallacies | Comment: [your reasoning]
+C4: [score] — Argument Chain Integrity | Comment: [your reasoning]
+
+D. EVIDENCE SUFFICIENCY
+D1: [score] — Claim Strength vs Evidence Weight | Comment: [your reasoning]
+D2: [score] — Counter-Evidence Engagement | Comment: [your reasoning]
+D3: [score] — Replication & Corroboration | Comment: [your reasoning]
+D4: [score] — Statistical Rigor | Comment: [your reasoning]
+
+E. SEMANTIC PRECISION
+E1: [score] — Term Definition Consistency | Comment: [your reasoning]
+E2: [score] — Equivocation Detection | Comment: [your reasoning]
+E3: [score] — Domain Translation Fidelity | Comment: [your reasoning]
+E4: [score] — Hedging Calibration | Comment: [your reasoning]
+
+F. ACADEMIC CONVENTION
+F1: [score] — Abstract Quality | Comment: [your reasoning]
+F2: [score] — Methodology Transparency | Comment: [your reasoning]
+F3: [score] — Structure & Flow | Comment: [your reasoning]
+F4: [score] — Peer Convention Compliance | Comment: [your reasoning]
+
+G. WORDING & CLARITY
+G1: [score] — Prose Precision | Comment: [your reasoning]
+G2: [score] — Jargon Accessibility | Comment: [your reasoning]
+G3: [score] — Concision | Comment: [your reasoning]
+G4: [score] — Tone Calibration | Comment: [your reasoning]
+
+H. CROSS-DOMAIN VALIDITY
+H1: [score] — Isomorphism vs Analogy Distinction | Comment: [your reasoning]
+H2: [score] — Domain Boundary Respect | Comment: [your reasoning]
+H3: [score] — Mapping Rigor | Comment: [your reasoning]
+H4: [score] — Prediction Transfer | Comment: [your reasoning]
+
+I. FALSIFIABILITY & SCOPE
+I1: [score] — Falsification Criteria Stated | Comment: [your reasoning]
+I2: [score] — Scope Boundaries Declared | Comment: [your reasoning]
+I3: [score] — Failure Mode Acknowledgment | Comment: [your reasoning]
+I4: [score] — Testable Prediction Specificity | Comment: [your reasoning]
+
+J. EXTERNAL THEORY USAGE
+J1: [score] — Theory Representation Accuracy | Comment: [your reasoning]
+  (Does the paper accurately represent GR, QM, thermodynamics, information theory, or any other formal theory it cites?)
+J2: [score] — Scope Boundary Respect for Borrowed Theories | Comment: [your reasoning]
+  (Are borrowed theories applied within their established validity domains?)
+J3: [score] — Integration vs Appropriation | Comment: [your reasoning]
+  (Are external theories substantively engaged or just name-dropped?)
+J4: [score] — Competing Interpretation Acknowledgment | Comment: [your reasoning]
+  (Does the paper acknowledge that cited theories have multiple interpretations?)
+
+K. NOVELTY ASSESSMENT
+K1: [score] — Conceptual Originality | Comment: [your reasoning]
+  (Is the core idea genuinely new? What makes it distinct from existing frameworks?)
+K2: [score] — Nearest Existing Framework Distance | Comment: [your reasoning]
+  (Name the 2-3 closest existing frameworks and rate how far this paper is from each on a 1-10 scale)
+K3: [score] — Methodological Innovation | Comment: [your reasoning]
+  (Does the paper introduce a genuinely novel method, metric, or formalism?)
+K4: [score] — Gap-Filling vs Gap-Creating | Comment: [your reasoning]
+  (Does it only answer existing questions, or does it open genuinely new research directions?)
+
+AFTER SCORING, provide the following sections in order:
+
+1. THREE most critical failures with specific quotes from the paper
+
+2. THREE specific revisions that would most improve the overall score, ranked by impact:
+   - Revision 1 (highest impact): [what to change and why it raises the score]
+   - Revision 2 (medium impact): [what to change and why it raises the score]
+   - Revision 3 (lower impact): [what to change and why it raises the score]
+
+3. One thing the paper does surprisingly well
+
+4. CLOSEST REPRESENTATION: What does this paper most closely represent? Name 3 existing works, genres, or traditions it most resembles and explain why:
+   - Closest 1: [title/tradition] — [what is shared]
+   - Closest 2: [title/tradition] — [what is shared]
+   - Closest 3: [title/tradition] — [what is shared]
+
+5. KEY CHARACTERISTICS: List 5 defining characteristics of this paper (what kind of paper it is, its core method, its primary audience, its argumentative style, its epistemic stance)
+
+6. NOVELTY MAP: Name the 3 closest existing frameworks/theories and describe the precise conceptual distance from each (what's shared, what's different, what's genuinely new)
+
+BE HARSH. Grade against top-tier interdisciplinary journal standards. Do not grade on a curve.

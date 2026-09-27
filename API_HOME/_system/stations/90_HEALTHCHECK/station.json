@@ -1,0 +1,11 @@
+{
+  "number": "90",
+  "name": "HEALTHCHECK",
+  "label": "90_HEALTHCHECK",
+  "kind": "native",
+  "description": "Every station, every path key, every API key; checks each declared option against the script's real --help.",
+  "items": "none",
+  "options": [],
+  "uses_api": false,
+  "goals": []
+}

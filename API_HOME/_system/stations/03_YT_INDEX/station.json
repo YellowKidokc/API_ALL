@@ -1,0 +1,34 @@
+{
+  "number": "03",
+  "name": "YT_INDEX",
+  "label": "03_YT_INDEX",
+  "kind": "legacy",
+  "description": "Standard CKG argument-first index of each video (DeepSeek). Whole transcript per call.",
+  "vendor": "youtube/deepseek_home/index_video.py",
+  "items": "positional",
+  "channel_item": "{yt_subtitles}/{channel}",
+  "default_items": [
+    "{yt_subtitles}"
+  ],
+  "flags": {
+    "limit": "--limit",
+    "workers": "--workers",
+    "redo": "--force"
+  },
+  "extra_flags": {
+    "render_only": "--render-only"
+  },
+  "extra_types": {
+    "render_only": "bool"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "limit",
+    "workers",
+    "redo",
+    "focus",
+    "channel"
+  ]
+}

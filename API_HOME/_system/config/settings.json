@@ -1,0 +1,39 @@
+{
+  "max_concurrent_calls": 30,
+  "turbo_presets": {
+    "1": 10,
+    "2": 30,
+    "3": 60,
+    "low": 10,
+    "normal": 30,
+    "high": 60
+  },
+  "default_provider": "deepseek",
+  "models": {
+    "deepseek": "deepseek-chat",
+    "openrouter": "deepseek/deepseek-r1:free",
+    "openai": "gpt-4o-mini",
+    "moonshot": "kimi-k2-0905-preview",
+    "anthropic": "claude-sonnet-5",
+    "mock": "mock"
+  },
+  "fallback": [],
+  "output_token_cap": 8000,
+  "sentences_per_output_range": 80,
+  "retry": {
+    "attempts": 3,
+    "base_seconds": 1.0,
+    "max_seconds": 30.0
+  },
+  "request_timeout_seconds": 180,
+  "estimated_tokens_per_item": 12000,
+  "estimated_seconds_per_call": 40,
+  "tag_confirm_from": 3,
+  "context_words": 60000,
+  "allowed_providers": [
+    "deepseek",
+    "mock"
+  ],
+  "_allowed_note": "Only these providers can be called, by any station, new or legacy: the relay refuses the rest. mock = fake replies for tests, never leaves the machine.",
+  "_fallback_note": "Empty = DeepSeek only. To add the free OpenRouter backup later: [{\"provider\": \"openrouter\", \"model\": \"deepseek/deepseek-r1:free\"}] and add openrouter to allowed_providers."
+}

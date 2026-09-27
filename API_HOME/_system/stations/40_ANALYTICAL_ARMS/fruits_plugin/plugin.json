@@ -1,0 +1,19 @@
+{
+  "name": "Fruits of the Spirit",
+  "version": "plugin-1",
+  "fruits": ["love", "joy", "peace", "patience", "kindness", "goodness", "faithfulness", "gentleness", "self_control"],
+  "sentence_scale": {"min": -2, "max": 2, "status": "PROVISIONAL: David decides -2..+2 (proposed) vs 0-4",
+                     "labels": {"-2": "clear anti-fruit", "-1": "leans anti", "0": "neutral / not engaged", "1": "leans toward", "2": "clear embodiment"}},
+  "verdict_scale": {"min": 0, "max": 4, "source": "rubric v0.3.0"},
+  "sentence_prompt": "SENTENCE_PROMPT.md",
+  "verdict_prompt": "VERDICT_PROMPT.md",
+  "rubric": "rubric/fruits_rubric_v0.3.0.json",
+  "lexicons": {
+    "seed": "lexicons/seed_lexicons.json",
+    "excel_keys": ["excel_lexicons", "excel_fruits"],
+    "which_wins": "UNDECIDED (David): when both Excel workbooks and the seed list are present they are merged (union) and the source of every term is recorded"
+  },
+  "rolling_window": 5,
+  "gap": {"counterfeit": "fruit-word hits >= 1 (not negated/quoted) and mechanism <= -1",
+          "hidden_fruit": "no fruit-word hits and mechanism >= +1"}
+}
