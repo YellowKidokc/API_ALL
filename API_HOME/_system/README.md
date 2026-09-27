@@ -95,6 +95,7 @@ The menu suggests candidates from your run history; the full list is always show
 | 48 | TOPIC_SYNTHESIS | **bridge**: best arguments for a topic across papers, videos, EVIDENCE; cross-referenced; multi-page report with citations | yes |
 | 49 | GAP_MAP | **bridge**: your own work vs the synthesis: EXPAND · HOLES · CONTRACT · CITE (who said it first) · ORIGINAL | yes |
 | 50-54 | LEAN + axioms | congruence matrix, GOD IS pairing, Lean atom extractor, axiom one-page, axiom-nodes runner | 52, 54 |
+| 55 | LEAN_PAPERS | every Lean source in the Lean inbox: formal paper, reader paper, claims in the claim template, separate assumptions paper + review sheet; whole file per call, 30+ side by side | yes |
 | 60 | OPENAI_STATIONS | the 23 api_call prompts, bundled: 22 stations in 11 calls | yes |
 | 90 | HEALTHCHECK | every station, path and key; proves each declared option exists in the real script | no |
 | 91 | RELOCATE | the paths step of SETUP.bat | no |
@@ -113,6 +114,13 @@ objections and replies, and builds a multi-page report. `49 --topic resurrection
 looks **original** in this corpus. Citations are always assembled from the source records, never written by the
 model; anything from the model's general knowledge is marked "verify". Reports land in
 `<syntheses_root>/<topic>/03_REPORT/`.
+
+## Inboxes: priority, series, general
+
+Stations that take files in read one inbox shape (`engine/inbox.py`): `00_PRIORITY/` first, then
+`01_SERIES/<series>/`, then `02_GENERAL/<group>/`. A general group is carried through like a series without being
+one (e.g. all the one-pagers); the folder name is the group's name and it travels into the outputs. The scripts
+never sit in these folders: `paths.json` points at them. 55_LEAN_PAPERS uses it now (`lean_inbox`).
 
 ## Focus: your extra requests, next to the call
 

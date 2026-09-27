@@ -132,6 +132,14 @@ def count_items(stations: list[dict], args: argparse.Namespace) -> tuple[int, in
                 done = sum(1 for p in papers if (p.parent / "02_RUNS" / label).is_dir())
                 total, done_total = total + len(papers), done_total + done
                 parts.append(f"{len(papers):,} {'of your own ' if kind == 'own' else ''}papers")
+            if kind == "lean" and configured("lean_inbox"):
+                from engine import inbox
+                entries = inbox.scan(external("lean_inbox"), {".lean", ".md", ".txt", ".tex"})
+                done = len(list(external("lean_outbox").glob(f"*/*/*/02_RUNS/{label}"))) if configured("lean_outbox") else 0
+                lanes = {lane: sum(1 for e in entries if e.lane == lane) for lane in ("priority", "series", "general")}
+                total, done_total = total + len(entries), done_total + done
+                parts.append(f"{len(entries):,} Lean sources ({lanes['priority']} priority, {lanes['series']} series, "
+                             f"{lanes['general']} general)")
             if parts:
                 return total, done_total, " + ".join(parts)
             inbox = {"20": "ckg_root", "22": "ckg_root", "30": "evidence_root", "39": "evidence_chain_root"}.get(station["number"])

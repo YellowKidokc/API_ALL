@@ -254,6 +254,33 @@ class DomainRules(unittest.TestCase):
         self.assertEqual("The #1 Argument for God", ytnames.parse("The #1 Argument for God", "X").file_stem)
         self.assertEqual("What Is Truth", ytnames.parse("What Is Truth?", "X").file_stem)
 
+    def test_inbox_order_and_groups(self):
+        import tempfile
+        from engine import inbox
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            for rel in ("02_GENERAL/One pagers/b.lean", "01_SERIES/Trinity/2.lean", "01_SERIES/Trinity/1.lean",
+                        "00_PRIORITY/p.lean", "loose.lean", "01_SERIES/Trinity/_draft.lean"):
+                (root / rel).parent.mkdir(parents=True, exist_ok=True)
+                (root / rel).write_text("theorem t : True := trivial")
+            got = [(e.lane, e.group, e.path.name) for e in inbox.scan(root, {".lean"})]
+        self.assertEqual([("priority", "Ungrouped", "p.lean"), ("series", "Trinity", "1.lean"),
+                          ("series", "Trinity", "2.lean"), ("general", "One pagers", "b.lean"),
+                          ("general", "Ungrouped", "loose.lean")], got)
+
+    def test_lean_trust_rules(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("lean55", HOME / "stations/55_LEAN_PAPERS/55_lean_papers.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        claims = [{"claim_id": "C1", "verification_status": "LEAN_CERTIFIED", "uses_assumptions": ["A1", "A9"],
+                   "controls": [{"check": "build", "status": "PASS", "command_or_evidence": "lake build"},
+                                {"check": "axioms", "status": "PASS", "command_or_evidence": "L88: no sorryAx"}]}]
+        mod.enforce(claims, {"A1"})
+        self.assertEqual("CANDIDATE", claims[0]["verification_status"])
+        self.assertEqual(["NOT_RUN", "PASS"], [c["status"] for c in claims[0]["controls"]])
+        self.assertEqual(["A1"], claims[0]["uses_assumptions"])
+
     def test_only_allowed_providers(self):
         self.assertTrue(llm.allowed("deepseek"))
         self.assertFalse(llm.allowed("openrouter"))

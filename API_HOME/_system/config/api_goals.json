@@ -264,6 +264,38 @@
     "number": "54"
   },
   {
+    "id": "API-55.1",
+    "title": "LEAN_ASSUMPTIONS",
+    "task": "lean_assumptions",
+    "asks": "every assumption with line, kind, load-bearing, plus the assumptions paper",
+    "station": "55_LEAN_PAPERS",
+    "number": "55"
+  },
+  {
+    "id": "API-55.2",
+    "title": "LEAN_CLAIMS",
+    "task": "lean_claims",
+    "asks": "up to 12 claims for the claim template (no assumptions inside)",
+    "station": "55_LEAN_PAPERS",
+    "number": "55"
+  },
+  {
+    "id": "API-55.3",
+    "title": "LEAN_FORMAL_PAPER",
+    "task": "lean_formal_paper",
+    "asks": "paper 1: formal, for Lean readers",
+    "station": "55_LEAN_PAPERS",
+    "number": "55"
+  },
+  {
+    "id": "API-55.4",
+    "title": "LEAN_READER_PAPER",
+    "task": "lean_reader_paper",
+    "asks": "paper 2: for someone new to Lean",
+    "station": "55_LEAN_PAPERS",
+    "number": "55"
+  },
+  {
     "id": "API-60.01",
     "title": "LINGUISTICS_WORD_GAME",
     "task": "oa_01",

@@ -20,7 +20,7 @@ from .output import sha256_file
 from .paths import PathConfigurationError, configured, external, inside
 from .text import strip_front_matter
 
-META_FILES = {"paper": "paper.json", "video": "video.json"}
+META_FILES = {"paper": "paper.json", "video": "video.json", "lean": "lean.json"}
 TEXT_EXT = {".md", ".txt", ".html", ".htm", ".tex"}
 
 

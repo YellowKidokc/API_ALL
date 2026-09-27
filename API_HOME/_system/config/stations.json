@@ -369,6 +369,15 @@
     "retired": false
   },
   {
+    "number": "55",
+    "name": "LEAN_PAPERS",
+    "label": "55_LEAN_PAPERS",
+    "folder": "stations/55_LEAN_PAPERS",
+    "script": "55_lean_papers.py",
+    "rank": 45,
+    "retired": false
+  },
+  {
     "number": "60",
     "name": "OPENAI_STATIONS",
     "label": "60_OPENAI_STATIONS",

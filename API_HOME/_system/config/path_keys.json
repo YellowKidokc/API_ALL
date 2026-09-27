@@ -149,5 +149,13 @@
   "yt_summary": {
     "what": "channel summary folders: summary notes + sheet (13_YT_CHANNEL_SUMMARY)",
     "create": true
+  },
+  "lean_inbox": {
+    "what": "Lean sources to write up: 00_PRIORITY, 01_SERIES/<series>, 02_GENERAL/<group> (55_LEAN_PAPERS)",
+    "create": true
+  },
+  "lean_outbox": {
+    "what": "Lean papers, claim templates, assumptions papers + review sheet (55_LEAN_PAPERS)",
+    "create": true
   }
 }

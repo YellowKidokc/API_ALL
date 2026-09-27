@@ -38,6 +38,10 @@ from each station's `station.json`; do not edit by hand. Receipts and saved repl
 | `API-49.3` | PRIOR_ART | 49_GAP_MAP | who else made this claim in the corpus (quotes) -> cite, or appears original |
 | `API-52.0` | LEAN_ATOM_EXTRACTOR | 52_LEAN_ATOM_EXTRACTOR | the prompts built into the wrapped script |
 | `API-54.0` | AXIOM_NODES_RUNNER | 54_AXIOM_NODES_RUNNER | the prompts built into the wrapped script |
+| `API-55.1` | LEAN_ASSUMPTIONS | 55_LEAN_PAPERS | every assumption with line, kind, load-bearing, plus the assumptions paper |
+| `API-55.2` | LEAN_CLAIMS | 55_LEAN_PAPERS | up to 12 claims for the claim template (no assumptions inside) |
+| `API-55.3` | LEAN_FORMAL_PAPER | 55_LEAN_PAPERS | paper 1: formal, for Lean readers |
+| `API-55.4` | LEAN_READER_PAPER | 55_LEAN_PAPERS | paper 2: for someone new to Lean |
 | `API-60.01` | LINGUISTICS_WORD_GAME | 60_OPENAI_STATIONS | api_call_01 prompt (prompts/01_LINGUISTICS_WORD_GAME/prompt.txt) |
 | `API-60.02` | FRAMEWORK_ALIGNMENT_CHI | 60_OPENAI_STATIONS | api_call_02 prompt (prompts/02_FRAMEWORK_ALIGNMENT_CHI/prompt.txt) |
 | `API-60.03` | READER_STRUCTURE | 60_OPENAI_STATIONS | api_call_03 prompt (prompts/03_READER_STRUCTURE/prompt.txt) |

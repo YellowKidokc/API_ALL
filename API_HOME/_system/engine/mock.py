@@ -143,6 +143,26 @@ def yt_channel_summary(p: str) -> dict:
             "keywords": ["mock keyword", "resurrection", "minimal facts"], "columns": {c: f"MOCK {c}" for c in cols}}
 
 
+def lean_assumptions(p: str) -> dict:
+    return {"assumptions": [{"id": "A1", "kind": "custom_axiom", "statement": "axiom MOCK : True", "where": "L3",
+                             "load_bearing": True, "why": "MOCK"},
+                            {"id": "A2", "kind": "hidden", "statement": "MOCK hidden premise", "where": "L5",
+                             "load_bearing": False, "why": "MOCK"}],
+            "assumptions_paper": "MOCK assumptions paper."}
+
+
+def lean_claims(p: str) -> dict:
+    return {"claims": [{"claim_id": "C1", "title": "MOCK claim", "source_expression": "theorem mock : True",
+                        "disposition": "FORMALIZE", "disposition_reason": "MOCK", "object_type": "THEOREM",
+                        "statement": "theorem mock : True := trivial", "declaration": "Mock.mock", "module": "Mock",
+                        "symbols": [{"term": "True", "formal_definition": "Prop", "reader_meaning": "a true statement"}],
+                        "controls": [{"check": "module compilation", "command_or_evidence": "lake build", "status": "PASS",
+                                      "interpretation": "MOCK overclaim"}],
+                        "verification_status": "LEAN_CERTIFIED", "established": "MOCK", "open": "MOCK",
+                        "fidelity": "MOCK", "uses_assumptions": ["A1", "A9"]}],
+            "other_declarations": ["Mock.helper"]}
+
+
 def yt_deep(p: str) -> dict:
     return {"arguments": [{"title": "MOCK argument", "premises": ["MOCK"], "unstated_premises": [], "conclusion": "MOCK",
                            "strength": 6, "strength_reason": "MOCK", "make_stronger": "MOCK", "timestamps": ["00:09"]}],
@@ -194,5 +214,5 @@ HANDLERS = {
     "axiom_nodes": axiom_nodes, "coherence": coherence, "story_paper": story_paper, "story_series": story_series,
     "story_lines": story_lines, "tagger": tagger, "extract_arguments": extract_arguments,
     "synthesize_cluster": synthesize_cluster, "synthesis_overview": synthesis_overview, "gap_match": gap_match,
-    "prior_art": prior_art, "own_claims": own_claims, "yt_summary": yt_summary, "yt_channel_summary": yt_channel_summary, "yt_deep": yt_deep, "theology_triage": theology_triage, "physics_mirror": physics_mirror,
+    "prior_art": prior_art, "own_claims": own_claims, "yt_summary": yt_summary, "yt_channel_summary": yt_channel_summary, "lean_assumptions": lean_assumptions, "lean_claims": lean_claims, "yt_deep": yt_deep, "theology_triage": theology_triage, "physics_mirror": physics_mirror,
 }
