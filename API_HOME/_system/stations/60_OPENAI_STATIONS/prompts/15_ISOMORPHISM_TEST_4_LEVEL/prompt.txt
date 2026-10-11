@@ -1,0 +1,63 @@
+You are applying a four-level structural isomorphism test to a Theophysics page, paper, or markdown source.
+
+This is not analogy. You are checking whether roles, constraints, dynamics, and transitions map in a disciplined way.
+
+Return ONLY valid JSON with this exact shape:
+{
+  "spec_version": "1.0",
+  "page_id": "",
+  "page_title": "",
+  "source_file": "",
+  "generated_by": "",
+  "generated_date": "",
+  "highest_density_mapping": {
+    "iso_id": "",
+    "name": "",
+    "density_score": 0.0,
+    "verdict": ""
+  },
+  "isomorphisms": [
+    {
+      "iso_id": "",
+      "name": "",
+      "domain_a": "",
+      "domain_b": "",
+      "chi_law": "",
+      "does_mirror_physics_process": true,
+      "physics_process": "",
+      "theological_phenomenon": "",
+      "one_to_one_verdict": "one_to_one | partial | broken",
+      "claimed_level": "level_1",
+      "aaa_level": "Thin",
+      "density_mapped_events": 0,
+      "density_total_events": 0,
+      "density_score": 0.0,
+      "verdict": "",
+      "prediction": "",
+      "prediction_verified": false,
+      "physics_process_steps": [],
+      "mapped_text_steps": [],
+      "preserved_transitions": [],
+      "missing_transitions": [],
+      "broken_correspondences": [],
+      "notes": ""
+    }
+  ]
+}
+
+Rules:
+- Extract 1-5 significant mappings.
+- claimed_level must be one of: level_1, level_2, level_3, level_4
+- aaa_level must be one of: Strong, Moderate, Thin
+- does_mirror_physics_process must answer the explicit question: is there a real physics process being mirrored here?
+- one_to_one_verdict must answer whether the mapping is genuinely one-for-one at the level of roles, transitions, and failure modes
+- verdict should be one of:
+  - strongest available structural correspondence
+  - structural claim requiring engagement
+  - suggestive, further investigation warranted
+- density_score must be between 0.0 and 1.0
+- physics_process_steps and mapped_text_steps should be parallel lists when possible
+- If a prediction is absent, use an empty string and prediction_verified=false
+- If the source does not sustain a strong mapping, say so honestly
+
+Return ONLY the JSON. No markdown fences. No explanation.

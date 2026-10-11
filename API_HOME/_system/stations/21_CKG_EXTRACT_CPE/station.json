@@ -1,0 +1,17 @@
+{
+  "number": "21",
+  "name": "CKG_EXTRACT_CPE",
+  "label": "21_CKG_EXTRACT_CPE",
+  "kind": "legacy",
+  "description": "Split CKG outputs into claims / proofs / evidence (local).",
+  "vendor": "ckg/PYTHON/extract_claims_proofs_evidence.py",
+  "args": [
+    "--root",
+    "{ckg_root}"
+  ],
+  "items": "--input",
+  "flags": {},
+  "uses_api": false,
+  "goals": [],
+  "options": []
+}

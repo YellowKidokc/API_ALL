@@ -1,0 +1,269 @@
+{
+ "_note": "Seed lexicons (editable). Used alone when the Excel workbooks are not configured; merged with them when they are.",
+ "fruit": {
+  "love": [
+   "love",
+   "loved",
+   "loving",
+   "agape",
+   "charity",
+   "compassion",
+   "care",
+   "cares",
+   "caring",
+   "sacrifice",
+   "beloved",
+   "cherish",
+   "devotion"
+  ],
+  "joy": [
+   "joy",
+   "joyful",
+   "rejoice",
+   "rejoicing",
+   "delight",
+   "glad",
+   "gladness",
+   "celebrate",
+   "celebration",
+   "thanksgiving",
+   "praise"
+  ],
+  "peace": [
+   "peace",
+   "peaceful",
+   "reconcile",
+   "reconciliation",
+   "rest",
+   "calm",
+   "harmony",
+   "shalom",
+   "settled",
+   "stillness"
+  ],
+  "patience": [
+   "patience",
+   "patient",
+   "endure",
+   "endurance",
+   "persevere",
+   "perseverance",
+   "wait",
+   "waiting",
+   "longsuffering",
+   "steadfast"
+  ],
+  "kindness": [
+   "kind",
+   "kindness",
+   "gentle word",
+   "generous",
+   "generosity",
+   "mercy",
+   "merciful",
+   "help",
+   "helping",
+   "welcome"
+  ],
+  "goodness": [
+   "good",
+   "goodness",
+   "righteous",
+   "righteousness",
+   "honest",
+   "honesty",
+   "integrity",
+   "virtue",
+   "upright",
+   "just"
+  ],
+  "faithfulness": [
+   "faithful",
+   "faithfulness",
+   "trust",
+   "trustworthy",
+   "loyal",
+   "loyalty",
+   "covenant",
+   "promise",
+   "reliable",
+   "fidelity"
+  ],
+  "gentleness": [
+   "gentle",
+   "gentleness",
+   "meek",
+   "meekness",
+   "humble",
+   "humility",
+   "tender",
+   "soft",
+   "lowly"
+  ],
+  "self_control": [
+   "self-control",
+   "discipline",
+   "restraint",
+   "temperance",
+   "sober",
+   "moderation",
+   "restrain",
+   "self-restraint"
+  ]
+ },
+ "anti_fruit": {
+  "love": [
+   "hate",
+   "hatred",
+   "contempt",
+   "despise",
+   "cruel",
+   "selfish",
+   "indifference"
+  ],
+  "joy": [
+   "despair",
+   "misery",
+   "gloom",
+   "bitter",
+   "bitterness",
+   "hopeless"
+  ],
+  "peace": [
+   "anxiety",
+   "fear",
+   "strife",
+   "conflict",
+   "chaos",
+   "war",
+   "hostile",
+   "rage"
+  ],
+  "patience": [
+   "impatient",
+   "rash",
+   "hasty",
+   "hurry",
+   "frustrated",
+   "restless"
+  ],
+  "kindness": [
+   "cruelty",
+   "mock",
+   "mocking",
+   "ridicule",
+   "insult",
+   "harsh",
+   "scorn"
+  ],
+  "goodness": [
+   "corrupt",
+   "corruption",
+   "wicked",
+   "evil",
+   "deceit",
+   "deceive",
+   "lie",
+   "lies"
+  ],
+  "faithfulness": [
+   "betray",
+   "betrayal",
+   "unfaithful",
+   "disloyal",
+   "abandon",
+   "broken promise"
+  ],
+  "gentleness": [
+   "harshness",
+   "brutal",
+   "violent",
+   "aggressive",
+   "arrogant",
+   "pride",
+   "proud"
+  ],
+  "self_control": [
+   "addiction",
+   "addicted",
+   "indulge",
+   "excess",
+   "lust",
+   "greed",
+   "impulsive",
+   "binge"
+  ]
+ },
+ "grounding": [
+  "evidence",
+  "data",
+  "study",
+  "measured",
+  "observed",
+  "experiment",
+  "source",
+  "according to",
+  "documented",
+  "historically"
+ ],
+ "contradiction": [
+  "but",
+  "however",
+  "although",
+  "contradiction",
+  "inconsistent",
+  "yet",
+  "nevertheless"
+ ],
+ "propaganda": [
+  "everyone knows",
+  "obviously",
+  "undeniable",
+  "they want you",
+  "wake up",
+  "sheep",
+  "the truth they hide"
+ ],
+ "jargon": [
+  "paradigm",
+  "ontological",
+  "epistemic",
+  "hermeneutic",
+  "eschatological",
+  "teleological",
+  "instantiate"
+ ],
+ "hedge": [
+  "may",
+  "might",
+  "perhaps",
+  "possibly",
+  "suggests",
+  "likely",
+  "appears",
+  "seems",
+  "could"
+ ],
+ "absolute": [
+  "always",
+  "never",
+  "proves",
+  "proven",
+  "certainly",
+  "undeniably",
+  "every",
+  "all",
+  "none",
+  "must"
+ ],
+ "negation": [
+  "not",
+  "no",
+  "never",
+  "without",
+  "nor",
+  "neither",
+  "hardly",
+  "n't"
+ ]
+}

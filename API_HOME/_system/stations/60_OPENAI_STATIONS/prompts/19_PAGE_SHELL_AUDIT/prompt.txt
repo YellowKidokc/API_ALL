@@ -1,0 +1,49 @@
+You are auditing a faiththruphysics.com page against the FROZEN Page Shell Gold Standard (reference implementation: revolution-of-truth/drv-00-the-argument.html). This is Loop v2: a REFINEMENT audit that enforces a known standard. You do not redesign anything. You do not touch prose meaning.
+
+Use the clinical-terms vocabulary EXACTLY: white-page regression, double-shell defect, legacy shell residue, top-bar drift, header-lip drift, bottom-dock regression, title merge regression, theme-integrity failure.
+
+The attached file is either a full HTML page or the markdown source that builds one. Audit what is present; mark structurally-invisible checks as "not_assessable" rather than guessing.
+
+CHECKLIST (Loop v2, C1-C9):
+C1 ONE top bar only — exactly one shell header; no legacy header.tp-top / .tp-class alongside the new shell
+C2 ONE bottom/audio system only — at most one audio dock, one mini-player, one bottom nav
+C3 No white page — dark reset <style>html,body{background:#050505;color:#e0e0e0;}</style> appears as the FIRST style in <head>
+C4 No broken JS/CSS links — every script src / link href is a plausible local path or known CDN (MathJax, fonts); flag anything suspicious
+C5 Headings styled — exactly one h1; no title merge regression (h1 and subtitle collapsed together)
+C6 Reading layers — if the page is in a leveled series, HS/College/PhD panels present and switchable
+C7 Verification block — verified-bar markup present with data-verification-slug; JSON wired or an honest pending state; NEVER em-dash garbage; NEVER fabricated numbers
+C8 No duplicate shell artifacts — zero double-shell defect; live legacy residue reported (dead CSS alone = note, not defect)
+C9 Readable, not overcrowded — body max-width respected; spacing rhythm plausible against gold standard; no component stacked directly on component
+
+Return ONLY valid JSON:
+{
+  "spec_version": "1.0",
+  "page_slug": "",
+  "input_type": "html | markdown",
+  "checks": [
+    {"id": "C1", "name": "one_top_bar", "verdict": "pass | fail | not_assessable",
+     "defect_term": "<clinical term or none>",
+     "evidence": "<short exact quote/selector from the file>",
+     "fix_class": "AUTO | REVIEW",
+     "fix_instruction": "<concrete, handable to a worker; cite WHITE-PAGE-FIX-PROCESS.md for C3>"}
+    // ... C2 through C9, same shape, ALWAYS all nine
+  ],
+  "shell_data_draft": {
+    "page": {"title": "", "subtitle": "", "series": "", "slug": "", "prev": null, "next": null},
+    "notes": "<fields you could NOT determine — leave empty, never invent>"
+  },
+  "forced_changes": [
+    {"change": "<the edit this page cannot ship without>", "checklist_id": "C1-C9",
+     "severity": "fatal | major | sharpening", "anchor": "<quote or selector>"}
+  ],
+  "regression_gate_ready": false,
+  "verdict": "conformant | repairable | rebuild_from_template"
+}
+
+Rules:
+- ALL NINE checks appear in every response, in order.
+- forced_changes: 1-8 items; every fail-verdict check yields at least one.
+- fix_class AUTO only for deterministic fixes (dark reset injection, duplicate dock removal, path rewrite to an existing file). Anything touching content boundary = REVIEW.
+- Never fabricate verification data, chi scores, or series membership. Unknown = empty + note.
+- "rebuild_from_template" verdict only when 4+ structural checks fail — the builder pipeline is cheaper than patching.
+Return ONLY the JSON. No markdown fences.

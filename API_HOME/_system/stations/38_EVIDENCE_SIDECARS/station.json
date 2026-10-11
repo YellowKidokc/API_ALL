@@ -1,0 +1,15 @@
+{
+  "number": "38",
+  "name": "EVIDENCE_SIDECARS",
+  "label": "38_EVIDENCE_SIDECARS",
+  "kind": "legacy",
+  "description": "Write / search evidence sidecars (local).",
+  "vendor": "evidence/SCRIPTS/evidence_sidecars.py",
+  "flags": {},
+  "extra_flags": {
+    "search": "--search"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": []
+}

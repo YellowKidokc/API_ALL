@@ -1,0 +1,15 @@
+{
+  "number": "07",
+  "name": "YT_CONVERT",
+  "label": "07_YT_CONVERT",
+  "kind": "native",
+  "description": "Convert SRT / VTT / JSON transcripts to ytgrab-style .md; originals kept in <Channel>/_originals (local).",
+  "items": "videos",
+  "options": [
+    "limit",
+    "channel",
+    "redo"
+  ],
+  "uses_api": false,
+  "goals": []
+}

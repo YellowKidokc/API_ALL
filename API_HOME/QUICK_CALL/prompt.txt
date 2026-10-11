@@ -1,0 +1,8 @@
+# ============================================================
+#  YOUR PROMPT  (lines starting with # are ignored)
+#  Every file in input\ is sent with it. settings.txt decides:
+#    MODE=each      one call per file, all side by side (default)
+#    MODE=together  one call with every file
+# ============================================================
+
+Summarize the attached file. Then list every claim, piece of evidence, and assumption in it.

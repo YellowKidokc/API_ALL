@@ -1,0 +1,55 @@
+You are generating a publication-ready HTML page for the Theophysics Isomorphism Registry at faiththruphysics.com.
+
+Read the attached markdown document. It describes a structural isomorphism between a physics domain and a theology domain.
+
+Generate a complete, self-contained HTML page with these sections:
+
+1. REGISTRY HEADER — Logo glyph (Greek Phi), "Theophysics Registry", subtitle with ISO number and title, classification badge (Level 3 = green "Isomorphism", Level 2 = yellow "Correspondence"), confidence level, version.
+
+2. HERO BANNER — Two-column grid with gradient gold tint:
+   - Left: law badge, large title "Domain A <arrow> Domain B", subtitle, pull-quote from the document in italic serif with gold left border
+   - Right: equation card showing the core equations from both domains with mapping arrow between them
+
+3. DOMAIN SPECIFICATIONS — Two cards side by side:
+   - Domain A (Physics) with blue top border, icon, description
+   - Domain B (Theology) with gold top border, icon, description
+
+4. THE ISOMORPHIC MAPPING — Full mapping table from the document rendered as a styled table with gold headers. Every row from the source document's mapping table must be included.
+
+5. SEPARATOR TESTS — Four test cards in a 2x2 grid:
+   - Test A: Structural Preservation (do relations survive under mapping?)
+   - Test B: Non-Arbitrariness (is the mapping forced or could you swap targets?)
+   - Test C: Constraint (does the mapping rule things out?)
+   - Test D: Bidirectionality (does each side predict the other?)
+   Mark each PASS or FAIL based on the document's test results.
+
+6. CLASSIFICATION & EVIDENCE — Classification panel with confidence level, evidence chips, laws invoked.
+
+7. FALSIFICATION CRITERIA — Red-tinted box listing specific kill conditions from the document.
+
+8. RELATED ISOMORPHISMS — Grid of related ISO links if mentioned.
+
+9. FOOTER — "Theophysics Research Program", POF 2828, version, seal: "The math points to God. The math does not contain God."
+
+DESIGN RULES:
+- Background #0a0a0a, text #c9d1d9, gold #d4af37, success #22c55e, danger #ef4444, info #4a9eff
+- All CSS variables defined in :root and all styles inline in a <style> block
+- Headings: Oswald, uppercase, letter-spacing
+- Body: Inter
+- Equations: JetBrains Mono
+- Quotes: Crimson Text, italic
+- Section numbers in large faded gold (opacity .3)
+- Each section has a gradient line separator
+- Verse references in small monospace gray
+- Mobile responsive (2-col grids collapse to 1-col below 768px)
+- Include Font Awesome 6.4 CDN link
+- Include Google Fonts CDN link
+
+CONTENT RULES:
+- The mapping is STRUCTURAL ISOMORPHISM, not metaphor. State this explicitly.
+- Do NOT water down claims. State them directly.
+- Include all equations from the source document.
+- Preserve the exact kill conditions from the source.
+- If the document says PASS, the test card says PASS. Do not second-guess.
+
+Output the complete HTML file. Nothing else.

@@ -1,0 +1,25 @@
+{
+  "number": "20",
+  "name": "CKG_RUN",
+  "label": "20_CKG_RUN",
+  "kind": "legacy",
+  "description": "CKG atom run over ckg_root/INBOX (map, S01-S10, audit).",
+  "vendor": "ckg/PYTHON/run_ckg.py",
+  "args": [
+    "--root",
+    "{ckg_root}",
+    "--yes"
+  ],
+  "flags": {
+    "limit": "--max-items",
+    "workers": "--workers"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "limit",
+    "workers",
+    "focus"
+  ]
+}

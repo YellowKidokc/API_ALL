@@ -1,0 +1,43 @@
+{
+  "number": "04",
+  "name": "YT_LENSES",
+  "label": "04_YT_LENSES",
+  "kind": "legacy",
+  "description": "Numbered focus lenses and lettered layers over indexed videos; --ask is free-text focus.",
+  "vendor": "youtube/deepseek_home/lens_pass.py",
+  "items": "positional",
+  "channel_item": "{yt_subtitles}/{channel}",
+  "flags": {
+    "limit": "--limit",
+    "workers": "--workers",
+    "redo": "--force",
+    "dry_run": "--dry-run"
+  },
+  "focus": "flag",
+  "focus_flag": "--ask",
+  "extra_flags": {
+    "lens": "--lens",
+    "pick": "--pick",
+    "pick_only": "--pick-only",
+    "save": "--save",
+    "list": "--list"
+  },
+  "extra_types": {
+    "pick": "bool",
+    "pick_only": "bool",
+    "save": "bool",
+    "list": "bool"
+  },
+  "env": {
+    "ONE_MENU_PATH_YT_FOCUS": "{yt_focus}"
+  },
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "limit",
+    "workers",
+    "redo",
+    "focus",
+    "channel"
+  ]
+}

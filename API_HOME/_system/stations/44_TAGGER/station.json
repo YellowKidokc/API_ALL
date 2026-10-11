@@ -1,0 +1,25 @@
+{
+  "number": "44",
+  "name": "TAGGER",
+  "label": "44_TAGGER",
+  "kind": "native",
+  "description": "20 tags scored 0-10 per paper and video; local pass first, DeepSeek confirms scores of 5+.",
+  "items": "both",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "redo",
+    "channel"
+  ],
+  "uses_api": true,
+  "goals": [
+    {
+      "id": "API-44.1",
+      "title": "TAG_CONFIRM",
+      "task": "tagger",
+      "asks": "confirm/adjust 0-10 per candidate tag with a quote or timestamp and a reason"
+    }
+  ]
+}

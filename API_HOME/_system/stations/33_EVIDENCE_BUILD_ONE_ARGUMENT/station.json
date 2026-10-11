@@ -1,0 +1,31 @@
+{
+  "number": "33",
+  "name": "EVIDENCE_BUILD_ONE_ARGUMENT",
+  "label": "33_EVIDENCE_BUILD_ONE_ARGUMENT",
+  "kind": "legacy",
+  "description": "Build one argument from a best-arguments cluster (lineage, originality, dimensions).",
+  "vendor": "evidence/SCRIPTS/argument_builder.py",
+  "flags": {
+    "model": "--model"
+  },
+  "model_values": [
+    "deepseek-chat",
+    "deepseek-reasoner"
+  ],
+  "extra_flags": {
+    "find": "--find",
+    "name": "--name",
+    "list": "--list",
+    "min_match": "--min-match"
+  },
+  "extra_types": {
+    "list": "bool"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "model",
+    "focus"
+  ]
+}

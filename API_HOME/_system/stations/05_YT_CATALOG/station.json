@@ -1,0 +1,12 @@
+{
+  "number": "05",
+  "name": "YT_CATALOG",
+  "label": "05_YT_CATALOG",
+  "kind": "legacy",
+  "description": "Channel overviews, debate pages, catalog.xlsx and catalog.sqlite from the index (local).",
+  "vendor": "youtube/deepseek_home/build_catalog.py",
+  "flags": {},
+  "uses_api": false,
+  "goals": [],
+  "options": []
+}

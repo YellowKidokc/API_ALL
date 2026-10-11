@@ -1,0 +1,7 @@
+# Quick call settings. The key comes from the DEEPSEEK_API_KEY environment variable
+# (SETUP.bat sets it), or from a key.txt file next to this one if you want a copy with its own key.
+MODE=each
+WORKERS=30
+MODEL=deepseek-chat
+MAX_TOKENS=8000
+TEMPERATURE=0.3

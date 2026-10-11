@@ -1,0 +1,17 @@
+{
+  "number": "32",
+  "name": "EVIDENCE_BEST_ARGUMENTS",
+  "label": "32_EVIDENCE_BEST_ARGUMENTS",
+  "kind": "legacy",
+  "description": "Cluster primary arguments and weaknesses across companions (local TF-IDF).",
+  "vendor": "evidence/SCRIPTS/best_arguments_and_weaknesses.py",
+  "flags": {},
+  "extra_flags": {
+    "shelf": "--shelf",
+    "threshold": "--threshold",
+    "top": "--top"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": []
+}

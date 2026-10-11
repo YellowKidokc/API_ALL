@@ -1,0 +1,12 @@
+{
+  "number": "51",
+  "name": "LEAN_GOD_IS_UNPROVEN",
+  "label": "51_LEAN_GOD_IS_UNPROVEN",
+  "kind": "legacy",
+  "description": "Pair GOD IS unproven claims with Lean targets (local).",
+  "vendor": "evidence/SCRIPTS/god_is_unproven_to_lean.py",
+  "flags": {},
+  "uses_api": false,
+  "goals": [],
+  "options": []
+}

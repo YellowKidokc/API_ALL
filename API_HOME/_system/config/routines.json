@@ -1,0 +1,9 @@
+{
+  "Y": {"name": "YouTube chain", "stations": ["07", "02", "12", "13", "08", "09", "44", "46"]},
+  "I": {"name": "YouTube CKG index + lenses + catalog", "stations": ["03", "04", "05"]},
+  "P": {"name": "Paper complete", "stations": ["40", "41", "42", "44", "46"]},
+  "B": {"name": "Bridge: best arguments + gap map", "stations": ["44", "48", "49"]},
+  "E": {"name": "Evidence intake to best arguments", "stations": ["30", "31", "32"]},
+  "A": {"name": "Evidence synthesis family", "stations": ["32", "33", "34", "35"]},
+  "T": {"name": "YouTube tidy: convert, uniform names, channel summary", "stations": ["07", "12", "13"]}
+}

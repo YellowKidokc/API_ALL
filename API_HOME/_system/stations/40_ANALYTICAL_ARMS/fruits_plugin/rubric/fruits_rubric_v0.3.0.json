@@ -1,0 +1,51 @@
+{
+  "rubric_id": "fruits.epistemic.v0.3.0",
+  "title": "Fruits of the Spirit Epistemic and Institutional Rating Rubric",
+  "default_mode": "gated_profile",
+  "score_scale": {
+    "0": "inverse: repeated material anti-fruit",
+    "1": "deficient: mostly absent, performative, or contradicted by consequential behavior",
+    "2": "mixed_or_unknown: genuine positive and negative evidence, or insufficient evidence",
+    "3": "present: repeated evidence across more than one context with manageable exceptions",
+    "4": "robust: persists across time, cost, pressure, power, correction, and affected-party review"
+  },
+  "fruits": [
+    {"id":"fruit.love","name":"Love","mechanism":"truth-aligned relational cohesion seeking the good of the whole and each member while bearing cost and preserving agency","anti_fruit":"hatred, exploitation, possession, disposability","counterfeit":"attachment, validation, or control called love while truth or agency is sacrificed"},
+    {"id":"fruit.joy","name":"Joy","mechanism":"durable participation in real good not dependent on denial, spectacle, status, or constant stimulation","anti_fruit":"envy, despair, emptiness, compulsive stimulation","counterfeit":"euphoria, novelty, or triumphal display that collapses when reward disappears"},
+    {"id":"fruit.peace","name":"Peace","mechanism":"reintegrated order in which relevant tensions are truthfully addressed without suppression","anti_fruit":"fragmentation, hostility, anxiety, unresolved conflict","counterfeit":"silence, avoidance, sedation, or unity imposed by fear"},
+    {"id":"fruit.patience","name":"Patience","mechanism":"preservation of persons and processes across the time required for truth, growth, correction, or convergence while acting when action is due","anti_fruit":"impulsivity, premature closure, abandonment, neglect","counterfeit":"passivity or indefinite postponement that leaves preventable harm in place"},
+    {"id":"fruit.kindness","name":"Kindness","mechanism":"low-friction repair and assistance that reduces needless barriers without erasing truth or responsibility","anti_fruit":"cruelty, contempt, indifference, humiliation","counterfeit":"approval or niceness that refuses necessary correction"},
+    {"id":"fruit.goodness","name":"Goodness","mechanism":"truth-aligned action producing real non-malign benefit after costs and externalities are counted","anti_fruit":"corruption, predation, parasitism, exported harm","counterfeit":"moral display or reputation management while costs are exported"},
+    {"id":"fruit.faithfulness","name":"Faithfulness","mechanism":"invariant fidelity across time, audiences, incentives, and pressure, joined to correction when the object of loyalty is false","anti_fruit":"betrayal, opportunism, selective standards, cover-up","counterfeit":"tribal loyalty, stubbornness, or commitment to error over truth"},
+    {"id":"fruit.gentleness","name":"Gentleness","mechanism":"power precisely restrained to the minimum force sufficient for the good while protecting the vulnerable","anti_fruit":"domination, humiliation, uncontrolled force, needless damage","counterfeit":"powerlessness or appeasement that leaves victims unprotected"},
+    {"id":"fruit.self_control","name":"Self-control","mechanism":"boundary integrity and governance of appetite, impulse, scope, and optimization under the true good","anti_fruit":"compulsion, addiction, scope creep, mission capture","counterfeit":"repression, rigid suppression, or image management with hidden rebound"}
+  ],
+  "gates": [
+    {"id":"gate.truth_evidence","hard":true,"question":"Are factual claims supported by relevant traceable evidence?"},
+    {"id":"gate.contradiction","hard":true,"question":"Are contradictions load-bearing and unresolved, or local, acknowledged, bounded, and potentially productive?"},
+    {"id":"gate.scope","hard":false,"question":"Does the conclusion remain within the evidence and method's domain?"},
+    {"id":"gate.falsifiability","hard":false,"question":"Does the source identify what counts against it and permit correction?"},
+    {"id":"gate.bridge_validity","hard":false,"question":"For cross-domain claims, are mapping, invariants, bridge law, recovery, prediction, alternatives, and kill condition explicit?"},
+    {"id":"gate.provenance","hard":false,"question":"Can evidence, quotations, authorship, dependencies, and formal artifacts be traced?"},
+    {"id":"gate.agency_noncoercion","hard":true,"question":"Are apparent outcomes produced without concealed compulsion or destruction of agency?"}
+  ],
+  "stress_tests": ["source", "cost", "endurance", "relation", "power", "correction", "outsider", "succession"],
+  "veto_conditions": [
+    "material deception",
+    "coercion presented as consent",
+    "severe exported harm hidden from the evaluation boundary",
+    "refusal of correction in a load-bearing claim",
+    "counterfeit mechanism that repeatedly produces the anti-fruit"
+  ],
+  "invariants": [
+    "No assessment without cited evidence or explicit unknown state.",
+    "No overall score without all nine raw dimensions.",
+    "No positive verdict after an unresolved hard-gate failure.",
+    "No inference about hidden motives, salvation status, or divine origin.",
+    "Intent, mechanism, process, immediate output, and delayed outcome remain distinct.",
+    "Insider, outsider, benefited-party, and harmed-party observations remain separable.",
+    "Vocabulary is not character evidence.",
+    "Contradiction is classified by location, severity, acknowledgement, resolution, and consequence; it is not automatically anti-fruit.",
+    "Uncertainty and missing evidence are returned rather than converted into invented precision."
+  ]
+}

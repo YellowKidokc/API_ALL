@@ -1,0 +1,29 @@
+{
+  "number": "11",
+  "name": "CKG_PHYSICS",
+  "label": "11_CKG_PHYSICS",
+  "kind": "native",
+  "description": "Physics mirror pass after the CKG index: which physics process a theological event mirrors (or the reverse), stage by stage, in order, and whether it is identity, structural isomorphism or only analogy (rules enforced in code).",
+  "items": "both",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo",
+    "channel"
+  ],
+  "uses_api": true,
+  "prompt_files": [
+    "PROMPT.md"
+  ],
+  "goals": [
+    {
+      "id": "API-11.1",
+      "title": "PHYSICS_MIRROR",
+      "task": "physics_mirror",
+      "asks": "mirrors between theological events and physics processes: stages in order, direction, level (identity / structural / analogy / none), transferring prediction, breaks, law axis"
+    }
+  ]
+}

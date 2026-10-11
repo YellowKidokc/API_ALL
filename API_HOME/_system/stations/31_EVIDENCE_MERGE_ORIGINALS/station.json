@@ -1,0 +1,19 @@
+{
+  "number": "31",
+  "name": "EVIDENCE_MERGE_ORIGINALS",
+  "label": "31_EVIDENCE_MERGE_ORIGINALS",
+  "kind": "legacy",
+  "description": "Match companions to their originals by sha256 and merge (local).",
+  "vendor": "evidence/SCRIPTS/api_original_merge.py",
+  "flags": {
+    "limit": "--limit"
+  },
+  "extra_flags": {
+    "shelf": "--shelf"
+  },
+  "uses_api": false,
+  "goals": [],
+  "options": [
+    "limit"
+  ]
+}

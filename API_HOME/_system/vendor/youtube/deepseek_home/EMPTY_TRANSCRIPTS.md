@@ -1,0 +1,256 @@
+# Empty transcripts (no captions downloaded)
+
+251 files under subtitles/ have fewer than 200 words after the header.
+Re-fetch these; the pipeline will not send them to the API.
+
+- Daily Dose Of Wisdom / Alex O'Connor Learns What He MISSED (Kalam Cosmological Argument)
+- Daily Dose Of Wisdom / Answering Skeptics BIGGEST Questions With @Speak Life DDOW #30
+- Daily Dose Of Wisdom / Astrophysicist Shares NEW DISCOVERIES Pointing to GOD @RTB_official
+- Daily Dose Of Wisdom / Atheism FAILS Its Own Test (Documentary Free Chapter)
+- Daily Dose Of Wisdom / Atheism is Logically Impossible, Here's Why.
+- Daily Dose Of Wisdom / Atheist Encounters JESUS During Near Death Experience (MUST WATCH!)
+- Daily Dose Of Wisdom / Atheist Learns How Math DESTROYS Materialism (Under 12 Minutes!)
+- Daily Dose Of Wisdom / Atheist Professor Crashes Q&A, Then THIS Happens!
+- Daily Dose Of Wisdom / Atheist REVEALS Dirty Little Secret That Exposes THIS!
+- Daily Dose Of Wisdom / Atheist STUMPED By How MATH Points To GOD (Epic Conversation!)
+- Daily Dose Of Wisdom / Atheist Storms out of Q&A for THIS Reason!
+- Daily Dose Of Wisdom / Atheist Tries To DEBUNK God Using DNA (It Backfires!)
+- Daily Dose Of Wisdom / Atheist Tries To Show Why GOD is Not Good (Perfect Rebuttal!)
+- Daily Dose Of Wisdom / Christians Address Common Objections To Christianity
+- Daily Dose Of Wisdom / College Student SLAMS Christianity (Important Response!)
+- Daily Dose Of Wisdom / Dawkins JUST CONFRONTED Peterson About Christianity, Then THIS Happened!
+- Daily Dose Of Wisdom / Dawkins Left LITERALLY Speechless EPIC DEBATE
+- Daily Dose Of Wisdom / Earth Confirms Christianity (Astrophysicist Explains)
+- Daily Dose Of Wisdom / Ex-Muslim Unpacks 3 Lies He Was Taught About JESUS
+- Daily Dose Of Wisdom / Exorcist Shares Journey From The Occult To Jesus DDOW Podcast #21
+- Daily Dose Of Wisdom / Experts EXPOSE Why Muslims Are Klling In Syria (Media STILL Silent!)
+- Daily Dose Of Wisdom / Former Muslim EXPOSES Islam After READING the Quran for Herself
+- Daily Dose Of Wisdom / Frank Turek Answers Two TOUGH Questions About GOD (Important Answers!)
+- Daily Dose Of Wisdom / Genetics Research CONFIRMS The BIBLE (In Surprising Ways)
+- Daily Dose Of Wisdom / God Definitely Exists (here's how to prove it)
+- Daily Dose Of Wisdom / He EXPOSED The Lie Of Religious Pluralism
+- Daily Dose Of Wisdom / How Muslims Are Being DECEIVED About Jesus (Important End Times Expectations!)
+- Daily Dose Of Wisdom / How Progressive Values Endanger Women & Children
+- Daily Dose Of Wisdom / Is Jesus God (Feat. Strobel, Craig, Habermas, Licona, Qureshi...)
+- Daily Dose Of Wisdom / Jewish Scientist Explains Why JESUS Is The Messiah (3 POWERFUL Reasons!)
+- Daily Dose Of Wisdom / Joe Rogan And The Bible's Predictive Power
+- Daily Dose Of Wisdom / Joe Rogan Questioned About JESUS, Then This Happens (Finally!)
+- Daily Dose Of Wisdom / LEE STROBEL - Nature Can't Produce Information
+- Daily Dose Of Wisdom / Lee Strobel - The 4 E's of the Resurrection
+- Daily Dose Of Wisdom / My Story & Why I Started This Channel
+- Daily Dose Of Wisdom / Neuroscientist Explains WHY He Believes In GOD (How Prayer Works)
+- Daily Dose Of Wisdom / People Are Lied To About DNA (It Was Designed)
+- Daily Dose Of Wisdom / Philosopher DESTROYS Atheism (15 Minute Brilliancy)
+- Daily Dose Of Wisdom / Q&A in Honor Of Charlie Kirk Exposed These CORE Lies
+- Daily Dose Of Wisdom / Skeptical Student Asks IMPORTANT Religion Question (Why they can't all be true!)
+- Daily Dose Of Wisdom / Student CONFRONTED With Why RELATIVISM Fails (Important Conversation)
+- Daily Dose Of Wisdom / Student Learns The Truth About ERRORS In The BIBLE (Epic Q&A)
+- Daily Dose Of Wisdom / TOUGH Parts in The Bible EXPLAINED Ft. @Paul_Copan (Part 1)
+- Daily Dose Of Wisdom / The Despair of Atheism, The Hope of Christianity
+- Daily Dose Of Wisdom / The Hidden War on Christians in Nigeria (Exposed)
+- Daily Dose Of Wisdom / The Moment He Learned Why God MUST Exist.
+- Daily Dose Of Wisdom / The Most Powerful Transgender Story Ive Ever Heard
+- Daily Dose Of Wisdom / This is what a Post-Christian culture sounds like...
+- Daily Dose Of Wisdom / Tim Keller Explains Where Secularism FAILS (12 Minute Brilliancy!)
+- Daily Dose Of Wisdom / Top Atheists ADMIT It's Not A Matter Of Evidence
+- Daily Dose Of Wisdom / Two Smart Skeptics CHALLENGE Christianity (Amazing Response!)
+- Daily Dose Of Wisdom / We All Know It, But The Way He Says It...
+- Daily Dose Of Wisdom / Wes Huff Crushes RAPID FIRE Questions About JESUS (12 Minute Brilliancy!)
+- Daily Dose Of Wisdom / Wes Huff Explains The 10 Commandments Like You’ve Never Heard
+- Daily Dose Of Wisdom / Wes Huff Exposes 3 HUGE Problems For Islam (Quran VS History)
+- Daily Dose Of Wisdom / What REALLY Happened With The Canaanites (3 Important Responses)
+- Daily Dose Of Wisdom / Why Certain Books Were LEFT OUT of The Bible (Detailed Explanation!)
+- Gary Habermas / Gary Habermas - Chapter 197 - Where Do These Resurrection Scholars Agree Allison, Licona, & McDowell
+- Gary Habermas / Gary Habermas - Chapter 245 - (English & Spanish) La Historicidad de La Resurrección de Jesús - Gary Habermas
+- Gary Habermas / Gary Habermas - Chapter 273 - One Minute Apologist - Should Christians be Surprised by Suffering
+- Gary Habermas / Gary Habermas - Chapter 275 - One Minute Apologist - Does the Bible Always Promise Escape from Suffering
+- Gary Habermas / Gary Habermas - Chapter 330 - The Transformation of the Disciples
+- Gary Habermas / Gary Habermas - Chapter 331 - The Gospel Proclamation
+- Gary Habermas / Gary Habermas - Chapter 338 - Skeptical Scholar’s View of the Crucifixion
+- Gary Habermas / Gary Habermas - Chapter 348 - Who Wrote the Gospels
+- Gary Habermas / Gary Habermas - Chapter 358 - Why the Apologetic and Historical Focus
+- Lakepointe Church / 4 EASY Ways to Study the Bible and UNLOCK Hidden Truth Live Free with Josh Howerton
+- Lakepointe Church / A Calling Lived. A Community Reached Pastor Ernest Smith's Story AMO 2025
+- Lakepointe Church / A Disciple Stewards EVERYTHING Pastor Josh Howerton
+- Lakepointe Church / Are You Sealed and Filled with the Holy Spirit Encounter Pastor Josh Howerton
+- Lakepointe Church / Breaking Free From Toxic Relationships Live Free with Pastor Josh Howerton
+- Lakepointe Church / Ep. 255 🎙️ Praying with Authority Pastor Jon Tyson
+- Lakepointe Church / How Far Is TOO FAR in Christian Dating! Live Free with Josh Howerton
+- Lakepointe Church / How to Be a Godly Christian Wife Fight for Your Family Pastor Josh Howerton
+- Lakepointe Church / How to Forgive Someone Who Hurt You Pastor Mike Breaux
+- Lakepointe Church / How to Go All In For Jesus Pastor Mike Breaux
+- Lakepointe Church / Is Philip Anthony Mitchell Selling the Gospel! (Addressing Accusations) Live Free w Josh Howerton
+- Lakepointe Church / Is the Church FORCING Religion in Schools Live Free with Josh Howerton
+- Lakepointe Church / Megachurch Pastor Reacts to Tucker Carlson on Trump, Iran, and Islam Live Free with Josh Howerton
+- Lakepointe Church / NEVER Say These 6 Things in a Fight (If You Want to Stay Married) Live Free with Josh Howerton
+- Lakepointe Church / Pastor Exposes DEMONIC Strategy to Replace YOU as a Parent Live Free with Josh Howerton
+- Lakepointe Church / Rediscovering Your First Love For God Live Free with Josh Howerton
+- Lakepointe Church / What is God’s Call for My Life Pastor Josh Howerton
+- Lakepointe Church / Why Satan Wants You to Ignore This Message Mike Breaux
+- Lakepointe Church / Why The American Marriage Process WRECKS Marriages (& How to Fix It) Live Free with Josh Howerton
+- Lakepointe Church / Why Worship Changes Everything Bonus Podcast with Pastor Josh Howerton
+- Lakepointe Church / You Are in a Propaganda War — Here's the Proof
+- Lakepointe Church / 🎙️ Philip’s Journey with the Ethiopian Official Acts 826-39
+- Nils Glenn / Did We Find King Solomon's Mines
+- Nils Glenn / Was Yahweh Defeated by another god
+- The Power of the Word / 18 Biblical Landmarks That Still Exist Today
+- The Power of the Word / 7 MESSAGES HIDDEN IN THE BIBLE 📜 Never Before Revealed
+- The Power of the Word / 7 SIGNS OF THE GIFT OF DISCERNMENT
+- The Power of the Word / 8 Hidden Signs That Angels Are in Your Home
+- The Power of the Word / ARMAGEDDON Biblical Prophecy 🎬 This is How The FINAL BATTLE Will Unfold
+- The Power of the Word / CHRISTIANITY vs ISLAM The 7 Differences of JESUS in the BIBLE vs JESUS in the QURAN
+- The Power of the Word / Daniel’s 7 Prophetic Keys to Identifying the ANTICHRIST
+- The Power of the Word / ELIJAH (2026) THE PROPHET OF FIRE 🎬 Full Movie in 4k
+- The Power of the Word / HOW DID THE VIRGIN MARY DIE 📜 The 10 Hidden Secrets of the Virgin Mary
+- The Power of the Word / JOB FULL MOVIE 🎬 The Greatest Story of FAITH Ever Told
+- The Power of the Word / LUCIFER (2026) The Full Story of The Angel who became Satan FULL MOVIE 4K
+- The Power of the Word / REVELATION (2026) The Movie that Shocked the World Full Book Narrated by John
+- The Power of the Word / THE BIBLE FULL STORY (2026) The Movie That Shocked the World
+- The Power of the Word / THE BIBLICAL DESTINY OF IRAN 📜 The Truth about Iran Written in the Bible
+- The Power of the Word / THE BIBLICAL DESTINY OF ISLAM 📜 The Truth of Islam Written in the Bible
+- The Power of the Word / THE BOOK OF ACTS OF THE APOSTLES 🎬 FULL MOVIE John Peter James Paul
+- The Power of the Word / THE BOOK OF GENESIS 🎬 Full HD Movie Adam and Eve Noah Abraham Jacob Joseph
+- The Power of the Word / THE DARK FATE of the SOLDIER Who CRUCIFIED JESUS​​ On The CROSS
+- The Power of the Word / THE DARK SECRET OF KING SOLOMON 🎬 FULL MOVIE 2026
+- The Power of the Word / THE GOSPEL OF JOHN 🎬 Full Movie Witness of Revelation
+- The Power of the Word / THE LAST POPE IS DEAD 🪦 THE PROPHECY HAS BEEN FULFILLED
+- The Power of the Word / THE ORIGINAL LORD’S PRAYER 📜 The Prayer Jesus REALLY Prayed in Aramaic
+- The Power of the Word / THE PROPHECY OF CHRISTMAS 🗝️ GOD'S GIFT that Few Celebrate
+- The Power of the Word / THE TRUE DATE JESUS WAS BORN 🗝️ 7 Hidden Biblical Clues
+- The Power of the Word / The 11 Strangest Parts of the Bible 📜 That Very Few People Know
+- The Power of the Word / The 12 Steps and Judgments in the Bible Prophecy Timeline
+- The Power of the Word / The BOOK of ISAIAH 📜 The Greatest Revelation of the End Times FULL MOVIE
+- The Power of the Word / The Book of REVELATION FULL MOVIE 🎬 Narrated by John
+- The Power of the Word / The Complete History of the BIBLE As You've Never Seen It 🎬 in 4K.
+- The Power of the Word / The Complete Story Of REVELATION Like You've Never Seen It Before In 4K, Narrated by John
+- The Power of the Word / The Complete Story of LUCIFER Like You've Never Seen It Before From Glory to Curse
+- The Power of the Word / The Full Story of JESUS Like You’ve Never Seen Before 🎬 2026 FULL MOVIE
+- The Power of the Word / The Full Story of Samson (2026) The Tragic END of the FORCE of GOD 🎬 Full Movie in 4k
+- The Power of the Word / The Hidden Biblical Truth About Garlic's Spiritual Power 🧄
+- The Power of the Word / The Prophecy of October 1st Everyone Is Talking About
+- The Power of the Word / The SEVEN TRUMPETS Of The APOCALYPSE 🎺 This is How the End Begins
+- The Power of the Word / The TRUE Appearance of ANGELS According to the Bible
+- The Power of the Word / The Terrible End of the 12 Apostles on a Map
+- The Power of the Word / This Was Life Before the FLOOD Full Biblical Documentary 4k 📜
+- The Power of the Word / WHO IS THE HOLY SPIRIT REALLY 🗝️ The Powerful Truth of TRINITY Revealed
+- The Power of the Word / WHY GOD CHOSE A RAVEN The Truth Hidden in the Bible 📜
+- The Power of the Word / WHY GOD WAKES YOU UP AT 3 A.M. 🗝️ The Divine Secret Revealed
+- The Power of the Word / WILL THE CREMATED NOT RISE (Here's what the BIBLE SAYS)
+- The Power of the Word / Who Was Cain's Wife 📜 The Forbidden Story of the Daughters of Adam and Eve
+- The Power of the Word / Why Did God’s People Break Apart 📜 Judah and Israel’s Division Explains Today’s Struggles
+- The Power of the Word / Why God CANNOT Kill Satan Or Fallen Angels
+- The Power of the Word / Why Jesus Had to Go To HELL the 3 Days after his Death
+- The Power of the Word / Why The Book of Romans Will BLOW Your Mind
+- The Power of the Word / YOUR BIRTH MONTH 🗝️ BIBLICAL MEANING 📜 The Hidden Message Behind Your Birthday
+- The Power of the Word / 📜 Forbidden Knowledge Why Book of Jubilees Was BANNED
+- The Power of the Word / 📜 World's Smartest Person Claims Jesus Will Come in Our Generation
+- Tom Bilyeu / Adapt or Die Power Players with Grant Cardone Tom Bilyeu Theory 018
+- Tom Bilyeu / Advice for Overcoming Any Obstacle Impact Theory Q&A
+- Tom Bilyeu / After Impact Gary Vaynerchuk
+- Tom Bilyeu / After Impact Jay Samit
+- Tom Bilyeu / After Impact Jessica O. Matthews
+- Tom Bilyeu / After Impact Vishen Lakhiani
+- Tom Bilyeu / All Businesses Need To Have A Why
+- Tom Bilyeu / Always Be Improving
+- Tom Bilyeu / Anti-Aging Expert Explains How to Improve Your Diet and Lifestyle Kellyann Petrucci
+- Tom Bilyeu / Are You Afraid to Give Up Your Path
+- Tom Bilyeu / Are You Stuck in the Matrix
+- Tom Bilyeu / Be An Adaptation Machine Impact Quotes
+- Tom Bilyeu / Being Wrong Is Awesome - Here's Why
+- Tom Bilyeu / Build an Invincible Will Impact Quotes
+- Tom Bilyeu / Characters Without Superpowers are the Real Deal
+- Tom Bilyeu / Charlie Kirk's Killer EXPOSES America's Real Collapse...
+- Tom Bilyeu / China Cracked the Code. America Didn't. Steve Keen
+- Tom Bilyeu / Dame Dash Shares His SECRETS For Success, Philosophy on Life, & Overcoming the Odds Impact Theory
+- Tom Bilyeu / Do Something Today
+- Tom Bilyeu / Do This Before 2024 To Change Your Life. The Only Way To Quickly Make Progress In Life Gabor Maté
+- Tom Bilyeu / Don't Give In
+- Tom Bilyeu / Establish and MAINTAIN Discipline For GOOD with These Helpful TIPS Tom Bilyeu
+- Tom Bilyeu / Find Something You Would Die For, and Live For It
+- Tom Bilyeu / Find Your Purpose To Make Money
+- Tom Bilyeu / Find the Path to Execution
+- Tom Bilyeu / For People Who FEEL LOST In Life, Watch This To Find Your PURPOSE Jay Shetty
+- Tom Bilyeu / Going From Exhaustion to Tranquility
+- Tom Bilyeu / Headphone Up and Get St Done
+- Tom Bilyeu / How Nuclear War Starts WW3, Russia, China, Area 51, Aliens, Nazi's & CIA Secrets Annie Jacobsen
+- Tom Bilyeu / How Stephen King Changed My Life
+- Tom Bilyeu / How The US Is Destroying Young People's Future Raoul Pal vs Peter Schiff Debate
+- Tom Bilyeu / How To Prepare For The GLOBAL RECESSION & Build Wealth In The Process! Raoul Pal
+- Tom Bilyeu / How to Achieve Ultra High Performance Dr. Michael Gervais on Impact Theory
+- Tom Bilyeu / How to Become a Better Parent Dr. Shefali on Impact Theory
+- Tom Bilyeu / How to Become a High Performer Brendon Burchard on Impact Theory
+- Tom Bilyeu / How to Build Mental Discipline
+- Tom Bilyeu / How to Get Paid for Your Passions Tom Bilyeu Theory 008
+- Tom Bilyeu / How to Keep Making Money Before Your New Business Does
+- Tom Bilyeu / How to NOT Get SICK Dom D'Agostino on Health Theory
+- Tom Bilyeu / I Made Money When I Stopped Prioritizing It
+- Tom Bilyeu / I Need 3 Things From Any Employee
+- Tom Bilyeu / I Would Eat Ramen Every Day To Do This
+- Tom Bilyeu / I'd Rather Lose If I Didn't Earn It
+- Tom Bilyeu / IMPACT Books Tools of Titans by Tim Ferriss
+- Tom Bilyeu / If You Don't Use the Knowledge, Why Do You F#%king Read
+- Tom Bilyeu / If You Fail, Would You Still Love It
+- Tom Bilyeu / If You Think You're Unlucky, Watch This
+- Tom Bilyeu / If You Want to Find Your Passion, Watch This
+- Tom Bilyeu / Impact Entertainment How Cinema Builds A Foundation For Your Life
+- Tom Bilyeu / Invest In Yourself
+- Tom Bilyeu / Jay Shetty's Most Motivational Video EVER! Raw Impact
+- Tom Bilyeu / Kill Your EXCUSES, Discover Your Path & Live Life to the Fullest Rich Roll
+- Tom Bilyeu / Lewis Howes’ Top 3 Tips for Impact
+- Tom Bilyeu / Mastering Your Own Mind
+- Tom Bilyeu / Mel Robbins on the Lies Surrounding Change
+- Tom Bilyeu / Middle-Class Is Wiped Out - Trump, Biden, Putin vs Ukraine, WW3 & Migrant Crisis Robert Kennedy Jr
+- Tom Bilyeu / Money Is More Powerful Than You Think, But...
+- Tom Bilyeu / Now Is The Time To Get Rich! - Get Ahead & Build Wealth In The Upcoming Recession Codie Sanchez
+- Tom Bilyeu / Personal Branding Matters More Than You Think...
+- Tom Bilyeu / Q&A on Addressing Insecurities and Avoiding Burnout
+- Tom Bilyeu / Q&A on Moderation, Navigating Toxic Work Culture, and Goal Setting
+- Tom Bilyeu / Q&A on Superheroes, Skill Tests, and Mindset at Retirement
+- Tom Bilyeu / Q&A on Working with a Team and A Peek at How Tom Created His Morning Routine
+- Tom Bilyeu / Should You Make a New Years Resolution
+- Tom Bilyeu / Special Message from Tom Why You’ll Start Seeing Ads
+- Tom Bilyeu / StartUp Theory The Youth Academy
+- Tom Bilyeu / Stop Putting Excuses in the Way - Mel Robbins on Impact Theory
+- Tom Bilyeu / Stop Whining, Start Doing
+- Tom Bilyeu / Thank You for 250K!
+- Tom Bilyeu / Thank You for 50k Subscribers! (It’s Just the Beginning)
+- Tom Bilyeu / The #1 Skill is Belief
+- Tom Bilyeu / The 5 Habits BILLIONAIRES Run Daily! (Try This To Change Your Life) Tom Bilyeu
+- Tom Bilyeu / The 50-Year Economic Collapse That Created Socialism Is Happening Again Right Now
+- Tom Bilyeu / The Critical Thing People Should Monitor, But Never Do Dr. Molly Maloof on Health Theory
+- Tom Bilyeu / The Number 1 Flaw of Modern Education
+- Tom Bilyeu / The Psychology Behind the Coronavirus Toilet Paper Panic Jud Brewer on Impact Theory
+- Tom Bilyeu / The RISE of Tom Bilyeu and How He Built and Scaled A BILLION DOLLAR Company
+- Tom Bilyeu / The Secret to Making Powerful Friends Jordan Harbinger on Impact Theory
+- Tom Bilyeu / The Shocking Truth Behind How The LA Wild Fires Unfolded, Corruption & What's Needed Tom Bilyeu
+- Tom Bilyeu / The TOP FOODS You Absolutely Should Not Eat To LIVE LONGER! Dr. William Li
+- Tom Bilyeu / The Truth About Finding Your Passion
+- Tom Bilyeu / The War Nobody Voted For Is Here
+- Tom Bilyeu / The World's Problems Boil Down to This
+- Tom Bilyeu / These Books Can Change Your Life
+- Tom Bilyeu / These Technologies Will Change the World Peter Diamandis and Steven Kotler on Conversations w Tom
+- Tom Bilyeu / They Want You to Forget Epstein — Here’s Why That’s So Dangerous Tom Bilyeu Show
+- Tom Bilyeu / This Coming Economic Crisis Will Wipe People Out - Prepare Now Before 2025 Balaji
+- Tom Bilyeu / This Is How Evil People Takeover The World - Everything Wrong With The West Jordan Peterson
+- Tom Bilyeu / This Is How You THINK Better, Faster & More Effective Than EVER Before Tom Bilyeu
+- Tom Bilyeu / This Is What You Do If You Have No Talent
+- Tom Bilyeu / This is How You Become Disciplined
+- Tom Bilyeu / This is What Fuels Me, What Fuels You
+- Tom Bilyeu / Trump Just Killed the Department of Education – Here’s What Happens Next Tom Bilyeu Show
+- Tom Bilyeu / Trump Just Triggered the Collapse of the IRS – No One’s Ready for What’s Next
+- Tom Bilyeu / Unbreakable Will Impact Quotes
+- Tom Bilyeu / Watch This If You Struggle With Self Doubt
+- Tom Bilyeu / We All Have Greatness David Goggins Motivational Special
+- Tom Bilyeu / Wear Your Impact and Reinforce Your Identity
+- Tom Bilyeu / What Are Your Core and Fundamental Beliefs
+- Tom Bilyeu / What I Look Like After A 3-Day Fast
+- Tom Bilyeu / What I Tell Everyone
+- Tom Bilyeu / What's Coming Is Worse Than A Recession - Peter Schiff vs Raoul Pal Debate On Economy & Bitcoin
+- Tom Bilyeu / Why I Did A 3-Day Fast
+- Tom Bilyeu / Why I Think Movie Theaters Will Fail
+- Tom Bilyeu / Why Self-Esteem Is the Secret to Success
+- Tom Bilyeu / Why Self-Esteem Matters
+- Tom Bilyeu / Why Winning Isn't Everything
+- Tom Bilyeu / Why the Game You Play Isn't Money or Success
+- Tom Bilyeu / Why the Ketogenic Diet
+- jawed / Me at the zoo

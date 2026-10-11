@@ -1,0 +1,15 @@
+{
+  "number": "12",
+  "name": "YT_TIDY",
+  "label": "12_YT_TIDY",
+  "kind": "native",
+  "description": "One uniform name (Ch 159 - Title) and an Obsidian note (front matter, H1, transcript) per transcript, into yt_markdown/<Channel>/, one for one; --watch waits for a download to finish, then converts, tidies and summarizes (local).",
+  "items": "videos",
+  "options": [
+    "limit",
+    "channel",
+    "redo"
+  ],
+  "uses_api": false,
+  "goals": []
+}

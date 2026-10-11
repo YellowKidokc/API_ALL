@@ -1,0 +1,43 @@
+{
+  "number": "48",
+  "name": "TOPIC_SYNTHESIS",
+  "label": "48_TOPIC_SYNTHESIS",
+  "kind": "native",
+  "description": "Bridge layer: best arguments for a topic across all papers, videos and evidence, cross-referenced, with citations; multi-page report.",
+  "items": "both",
+  "options": [
+    "limit",
+    "workers",
+    "provider",
+    "model",
+    "focus",
+    "redo",
+    "topic"
+  ],
+  "uses_api": true,
+  "goals": [
+    {
+      "id": "API-48.1",
+      "title": "EXTRACT_TOPIC_ARGUMENTS",
+      "task": "extract_arguments",
+      "asks": "every argument about the topic in one item: steps, kind, who holds it, quote/timestamp, strength, objections"
+    },
+    {
+      "id": "API-48.2",
+      "title": "SYNTHESIZE_ARGUMENT",
+      "task": "synthesize_cluster",
+      "asks": "strongest form of one cross-referenced argument, lineage, objections and replies"
+    },
+    {
+      "id": "API-48.3",
+      "title": "SYNTHESIS_OVERVIEW",
+      "task": "synthesis_overview",
+      "asks": "ranked overview report across all synthesized arguments"
+    }
+  ],
+  "prompt_files": [
+    "EXTRACT.md",
+    "SYNTHESIZE.md",
+    "OVERVIEW.md"
+  ]
+}

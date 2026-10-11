@@ -1,0 +1,24 @@
+{
+  "number": "54",
+  "name": "AXIOM_NODES_RUNNER",
+  "label": "54_AXIOM_NODES_RUNNER",
+  "kind": "legacy",
+  "description": "API_DEEP axiom-nodes runner over the atoms workspace (191-node registry).",
+  "vendor": "api_deep/AXIOM_NODES/SCRIPTS/run_axiom_nodes.py",
+  "flags": {
+    "limit": "--max-items",
+    "provider": "--provider"
+  },
+  "provider_values": {
+    "deepseek": "deepseek",
+    "moonshot": "kimi"
+  },
+  "focus": "gateway",
+  "uses_api": true,
+  "goals": [],
+  "options": [
+    "limit",
+    "provider",
+    "focus"
+  ]
+}

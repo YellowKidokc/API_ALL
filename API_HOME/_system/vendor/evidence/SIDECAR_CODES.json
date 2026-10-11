@@ -1,0 +1,13 @@
+{
+  "ME": {"name": "Master Equation", "aliases": ["master-equation", "master_equation"]},
+  "MATH": {"name": "Mathematics", "aliases": ["math", "mathematical", "algebra", "calculus", "geometry", "topology"]},
+  "PHYS": {"name": "Physics", "aliases": ["physical science"]},
+  "THEO": {"name": "Theology", "aliases": ["theological"]},
+  "INFO": {"name": "Information Theory", "aliases": ["information-theory"]},
+  "CONS": {"name": "Consciousness", "aliases": []},
+  "QM": {"name": "Quantum Mechanics", "aliases": ["quantum-mechanics", "quantum physics"]},
+  "GR": {"name": "General Relativity", "aliases": ["general-relativity"]},
+  "TD": {"name": "Thermodynamics", "aliases": ["thermodynamic"]},
+  "AI": {"name": "Artificial Intelligence", "aliases": ["AI alignment", "machine learning"]},
+  "EPI": {"name": "Epistemology", "aliases": ["epistemological"]}
+}

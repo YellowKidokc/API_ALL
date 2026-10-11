@@ -1,0 +1,79 @@
+You are compiling the final intelligence report for a Theophysics document.
+
+The attached file is the original document. Reference context below contains JSON outputs from 9 analytical stations that have already processed this document:
+
+Station 01: Raw Metrics (word counts, reading levels, equation density)
+Station 02: Chi-Variable Mapping & Framework Alignment (10 chi-variables, regime detection)
+Station 03: Writing Structure Analysis (section roles, argument flow, rhetorical moves)
+Station 04: Claim Extraction & Argument Analysis (claims extracted, classified, evidence-linked)
+Station 05: 44-Criterion Academic Peer Review CDCM (cross-domain coherence metrics)
+Station 06: Fruits of the Spirit Grading (9 Fruits + anti-Fruits, phase transitions)
+Station 07: Justice-Mercy Operator Scoring (alpha spectrum, Δα epistemic symmetry)
+Station 08: Knowledge Graph Extraction (entity-relation triples, symmetry pairs)
+Station 09: Glossary Extraction (term definitions, canonical usage)
+
+Synthesize all available station data into a single report. Not all stations may have data — work with what is present.
+
+EXECUTIVE SUMMARY:
+- One-sentence verdict
+- One-paragraph summary
+- Overall grade (A through F)
+- Top 3 strengths
+- Top 3 weaknesses
+- Recommended action: PUBLISH | REVISE_MINOR | REVISE_MAJOR | HOLD | ARCHIVE
+
+SCORECARD:
+Compile grades from each station into a single scorecard:
+- "metrics_grade": from Station 01 (Raw Metrics)
+- "chi_mapping_grade": from Station 02 (Chi-Variable Mapping)
+- "writing_structure_grade": from Station 03 (Writing Structure)
+- "claims_grade": from Station 04 (Claim Extraction)
+- "peer_review_grade": from Station 05 (CDCM Peer Review)
+- "fruits_grade": from Station 06 (Fruits of the Spirit)
+- "justice_mercy_grade": from Station 07 (Justice-Mercy Operator)
+- "knowledge_graph_grade": from Station 08 (Knowledge Graph)
+- "glossary_grade": from Station 09 (Glossary)
+- "composite_grade": weighted average
+
+CRITICAL PATH:
+The ordered list of fixes that would most improve the document, synthesized across all stations. Maximum 10 items.
+- "priority": 1-10
+- "station_source": which station identified it
+- "problem": what is wrong
+- "fix": what to do
+- "impact": what improves if fixed
+
+RISK ASSESSMENT:
+- "publication_ready": true/false
+- "academic_credibility": 0-100
+- "public_trust": 0-100
+- "hostile_critic_vulnerability": HIGH | MEDIUM | LOW
+- "biggest_risk": the single most damaging weakness
+- "risk_mitigation": what would fix it
+
+CHI PROFILE:
+If Station 06 and 07 data is available, compile:
+- "chi_estimate": overall coherence score
+- "dominant_fruit": from Station 06 Fruits scoring
+- "dominant_antifruit": from Station 06 Fruits scoring
+- "justice_mercy_alpha": from Station 07 alpha spectrum
+- "delta_alpha": from Station 07 epistemic symmetry
+- "regime_balance": constructive vs destructive count
+
+COMPRESSION:
+- "one_sentence": the entire document in one sentence
+- "twelve_line_summary": 12-line structured summary, no hype
+
+Return JSON:
+{
+  "executive_summary": {...},
+  "scorecard": {...},
+  "critical_path": [...],
+  "risk_assessment": {...},
+  "chi_profile": {...},
+  "compression": {...},
+  "station_data_available": [list of station numbers with data],
+  "station_data_missing": [list of station numbers without data]
+}
+
+Return ONLY valid JSON. No markdown fences.

@@ -1,0 +1,50 @@
+# Configuration for lean-atom-extractor
+
+[project]
+name = "Theophysics"
+root_dir = ""
+db_path = "lean_atoms.db"
+export_dir = "./exports"
+
+[scanner]
+approved_dirs = ["."]
+exclude_dirs = [
+    ".lake",
+    ".git",
+    "build",
+    "cache",
+    ".github",
+    "lake-packages"
+]
+exclude_patterns = [
+    "*.compile.txt",
+    "*_audit.md",
+    "*.tmp"
+]
+
+[compiler]
+lean_cmd = "lean"
+lake_cmd = "lake"
+timeout_seconds = 600          # per file; first build of a file can be slow
+enable_verification = true
+
+[trust]
+flag_sorry = true
+flag_admit = true
+flag_custom_axioms = true
+flag_unsafe = true
+
+[ai]
+enabled = false
+provider = "ollama"           # ollama | cloudflare | openrouter
+endpoint = "http://127.0.0.1:11434"
+model = "qwen3:4b-instruct"
+prompt_version = "v1.0-formal-semantic"
+max_batch_size = 10
+timeout_seconds = 30
+rate_limit_rpm = 60
+
+[web]
+host = "0.0.0.0"          # reachable on the LAN at this PC's IP (192.168.2.51)
+port = 8989
+debug = false

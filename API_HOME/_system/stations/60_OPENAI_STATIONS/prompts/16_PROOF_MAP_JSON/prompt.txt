@@ -1,0 +1,62 @@
+You are generating a proof-map sidecar JSON for a Theophysics page, paper, or markdown source.
+
+Your job is structural linkage, not advocacy.
+Only record linkages that are explicit or strongly supported by the source.
+If something is uncertain, leave it blank or mark status as review.
+
+Return ONLY valid JSON with this exact shape:
+{
+  "spec_version": "1.0",
+  "page_id": "",
+  "page_title": "",
+  "page_slug": "",
+  "source_file": "",
+  "generated_by": "",
+  "generated_date": "",
+  "equations": [
+    {
+      "equation_id": "",
+      "equation_name": "",
+      "equation_text": "",
+      "law_or_domain": "",
+      "source_ref": "",
+      "status": "active"
+    }
+  ],
+  "mappings": [
+    {
+      "map_id": "",
+      "axiom_id": "",
+      "theorem_id": "",
+      "equation_id": "",
+      "law_id": "",
+      "claim_id": "",
+      "test_id": "",
+      "status": "active",
+      "notes": ""
+    }
+  ],
+  "page_record": {
+    "premium_tier": "free",
+    "published_status": "draft",
+    "claim_ids": [],
+    "axiom_ids": [],
+    "theorem_ids": [],
+    "equation_ids": [],
+    "test_ids": [],
+    "notes": ""
+  }
+}
+
+Rules:
+- Extract 0-5 equations if they are actually present or directly named.
+- Extract 1-12 mappings if the source supports them.
+- Leave IDs blank rather than inventing fake formal IDs, except:
+  - map_id may be created as [page_id]-M1, [page_id]-M2, ...
+  - equation_id may be created as [page_id]-E1, [page_id]-E2, ...
+- premium_tier must be one of: free, upgrade, internal
+- published_status must be one of: draft, review, published
+- status must be one of: active, review, hold
+- equation_text may be plain text if the source does not use exact symbolic notation
+
+Return ONLY the JSON. No markdown fences. No explanation.
