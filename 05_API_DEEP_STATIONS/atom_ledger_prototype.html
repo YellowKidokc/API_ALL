@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Consilience Atlas — Atom Ledger (prototype v0.1)</title>
+<style>
+:root{
+  --bg:#0b0d12;--panel:#141923;--panel2:#1a2130;--line:#2b3546;--ink:#e9eef7;--mut:#8f9db2;--dim:#5f6c80;
+  --gold:#d9a94a;--cyan:#49b4e0;--green:#63c991;--amber:#d7a94b;--red:#d86b70;--blue:#76a7ff;--purple:#9c86ef;
+  --shadow:0 16px 48px rgba(0,0,0,.38);
+  --mono:ui-monospace,"Cascadia Code",Consolas,monospace;
+  --sans:Inter,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans)}
+body{min-height:100vh;background-image:linear-gradient(rgba(73,180,224,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(73,180,224,.03) 1px,transparent 1px);background-size:28px 28px}
+button{font:inherit}
+.mono{font-family:var(--mono)}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+
+/* ── TOP CONTROL BAR ── */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.topbar-inner{max-width:1460px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.brand{font:700 12px/1.25 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.brand small{display:block;color:var(--dim);font-size:9px;margin-top:3px;letter-spacing:.1em}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-left:auto}
+.seg{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.seg button{border:0;background:var(--panel);color:var(--mut);padding:8px 14px;cursor:pointer;font:700 11px var(--mono);letter-spacing:.08em}
+.seg button.on{background:rgba(217,169,74,.14);color:var(--gold)}
+.pill{border:1px solid var(--line);background:var(--panel);color:var(--mut);border-radius:999px;padding:7px 12px;cursor:pointer;font:600 10px var(--mono);letter-spacing:.06em}
+.pill:hover{border-color:var(--cyan);color:var(--cyan)}
+.pill.on{border-color:var(--cyan);color:var(--cyan);background:rgba(73,180,224,.09)}
+.lane-group{display:flex;gap:6px;align-items:center}
+.lane-label{font:700 9px var(--mono);color:var(--dim);letter-spacing:.12em;margin-right:2px}
+
+.shell{max-width:1460px;margin:0 auto;padding:22px 20px 70px}
+
+/* ── ATOM PANE ── */
+.pane{display:grid;grid-template-columns:minmax(380px,5fr) minmax(420px,7fr);gap:18px;margin-bottom:20px}
+.face{background:linear-gradient(145deg,#151b27,#10151e);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.face-head{padding:20px 22px 14px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:16px}
+.eyebrow{font:700 10px var(--mono);letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}
+.face h1{margin:7px 0 6px;font-size:23px;line-height:1.25}
+.claimline{font-size:14px;line-height:1.65;color:#d8dfeb}
+.badge{align-self:start;border-radius:9px;padding:9px 12px;font:700 11px var(--mono);white-space:nowrap;letter-spacing:.06em}
+.st-FLOOR{border:1px solid rgba(99,201,145,.5);background:rgba(99,201,145,.09);color:var(--green)}
+.st-VERIFIED{border:1px solid rgba(73,180,224,.5);background:rgba(73,180,224,.09);color:var(--cyan)}
+.st-DRAFT{border:1px solid rgba(215,169,75,.5);background:rgba(215,169,75,.09);color:var(--amber)}
+.st-PROSE{border:1px solid rgba(143,157,178,.4);background:rgba(143,157,178,.08);color:var(--mut)}
+.markers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.marker{background:var(--panel);padding:9px 12px;min-height:54px}
+.mk{font:700 9px var(--mono);color:var(--dim);letter-spacing:.08em}
+.mv{font-size:12px;margin-top:4px;line-height:1.35;color:var(--ink)}
+.turn{margin-top:auto;width:100%;border:0;background:linear-gradient(90deg,rgba(217,169,74,.07),rgba(73,180,224,.05));color:var(--gold);padding:13px;cursor:pointer;font:700 11px var(--mono);letter-spacing:.13em;text-transform:uppercase}
+.turn:hover{background:rgba(217,169,74,.11)}
+.turn-back{display:none;border-color:rgba(217,169,74,.5);color:var(--gold)}
+.pane.flipped .turn-back{display:inline-block}
+
+/* ── GRAPH PANEL ── */
+.graph-panel{border:1px solid var(--line);border-radius:16px;background:rgba(15,20,29,.9);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.graph-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.graph-title{font:700 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font:600 9px var(--mono);color:var(--mut)}
+.lg{display:flex;align-items:center;gap:5px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot.hollow{background:transparent;border:2px solid var(--green);width:6px;height:6px}
+.stage{position:relative;height:440px}
+.pane.flipped{grid-template-columns:1fr}
+.pane.flipped .face{display:none}
+.pane.flipped .stage{height:560px}
+svg.edges{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.edge{fill:none;stroke:#66758b;stroke-width:1.4;opacity:.45}
+.edge.bad{stroke:var(--red);stroke-dasharray:6 5;opacity:.6}
+.edge-label{font:600 9px var(--mono);fill:var(--dim);letter-spacing:.04em}
+.gnode{position:absolute;z-index:3;width:190px;padding:10px 12px;border-radius:11px;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--k,var(--cyan));box-shadow:0 7px 18px rgba(0,0,0,.25);transform:translate(-50%,-50%);transition:opacity .15s ease}
+.gnode.dim{opacity:.15}
+.gnode .nid{font:700 9px var(--mono);letter-spacing:.08em;color:var(--k);word-break:break-all}
+.gnode .nt{font-weight:700;font-size:12px;margin:4px 0 2px;line-height:1.3}
+.gnode .nrole{font:600 9px var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+.gnode.center{width:250px;background:linear-gradient(145deg,rgba(73,180,224,.10),var(--panel));border-width:1.5px}
+.gnode.center .nt{font-size:13px}
+.k-premise{--k:var(--gold)}.k-claim{--k:var(--cyan)}.k-evidence{--k:var(--blue)}
+.k-proof{--k:var(--green)}.k-lean{--k:var(--purple)}.k-audit{--k:var(--red)}
+.k-receipt{--k:var(--green);border-style:dashed}
+
+/* ── LEDGER ── */
+.ledger{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);overflow:hidden}
+.ledger-bar{display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.ledger-title{font:700 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.ledger-count{font:600 10px var(--mono);color:var(--dim)}
+.filter{margin-left:auto;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:8px 12px;font:12px var(--mono);width:min(300px,60vw);outline:none}
+.filter:focus{border-color:var(--cyan)}
+.filter::placeholder{color:var(--dim)}
+.table-wrap{max-height:56vh;overflow-y:auto;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+thead th{position:sticky;top:0;z-index:5;background:var(--panel2);color:var(--dim);font:700 9px var(--mono);letter-spacing:.12em;text-transform:uppercase;text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody td{padding:8px 12px;border-bottom:1px solid rgba(43,53,70,.55);vertical-align:top;font-family:var(--mono);color:#cdd7e4}
+tbody tr{cursor:pointer;transition:background .1s}
+tbody tr:hover{background:rgba(73,180,224,.05)}
+tbody tr.sel{background:rgba(217,169,74,.09);box-shadow:inset 3px 0 0 var(--gold)}
+td.num{color:var(--dim);width:44px}
+td.txt{font-family:var(--sans);line-height:1.45;min-width:280px}
+td.cls{color:var(--mut);white-space:nowrap}
+td.rcpt{color:var(--dim);white-space:nowrap}
+td.ppr{color:var(--gold);white-space:nowrap;font-size:11px}
+.chip{display:inline-block;border-radius:6px;padding:3px 8px;font:700 9px var(--mono);letter-spacing:.07em;border:1px solid}
+.chip-CLAIM{color:var(--cyan);border-color:rgba(73,180,224,.45);background:rgba(73,180,224,.07)}
+.chip-PROOF{color:var(--green);border-color:rgba(99,201,145,.45);background:rgba(99,201,145,.07)}
+.chip-EVIDENCE{color:var(--blue);border-color:rgba(118,167,255,.45);background:rgba(118,167,255,.07)}
+.chip-LEAN{color:var(--purple);border-color:rgba(156,134,239,.45);background:rgba(156,134,239,.07)}
+.chip-AUDIT{color:var(--red);border-color:rgba(216,107,112,.45);background:rgba(216,107,112,.07)}
+.smini{display:inline-block;border-radius:6px;padding:3px 8px;font:700 9px var(--mono);letter-spacing:.06em}
+.empty-row td{padding:26px;text-align:center;color:var(--dim);font-family:var(--mono)}
+
+@media(max-width:980px){
+  .pane{grid-template-columns:1fr}
+  .stage{height:auto;min-height:0;padding:18px 14px;display:grid;grid-template-columns:1fr;gap:10px}
+  .gnode{position:relative!important;left:auto!important;top:auto!important;transform:none;width:100%!important}
+  svg.edges{display:none}
+  .controls{margin-left:0}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Consilience Atlas · Atom Ledger<small>prototype v0.1 · seeded from the verified floor</small></div>
+    <div class="controls">
+      <div class="seg" id="scopeSeg">
+        <button data-scope="paper" class="on">PAPER</button>
+        <button data-scope="corpus">CORPUS</button>
+      </div>
+      <div class="lane-group" id="laneGroup">
+        <span class="lane-label">LANE</span>
+        <button class="pill on" data-lane="ALL">ALL</button>
+        <button class="pill" data-lane="CLAIMS">CLAIMS</button>
+        <button class="pill" data-lane="PROOFS">PROOFS</button>
+        <button class="pill" data-lane="EVIDENCE">EVIDENCE</button>
+        <button class="pill" data-lane="LEAN">LEAN</button>
+        <button class="pill" data-lane="AUDIT">AUDIT</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+
+  <!-- ATOM PANE -->
+  <section class="pane" id="pane">
+    <div class="face" id="face">
+      <div class="face-head">
+        <div>
+          <div class="eyebrow" id="fEyebrow"></div>
+          <h1 id="fTitle"></h1>
+          <div class="claimline" id="fClaim"></div>
+        </div>
+        <div class="badge" id="fBadge"></div>
+      </div>
+      <div class="markers" id="fMarkers"></div>
+      <button class="turn" id="turnBtn">Turn the atom over → full evidence graph</button>
+    </div>
+    <div class="graph-panel">
+      <div class="graph-head">
+        <span class="graph-title" id="graphTitle">Neighborhood · claim · evidence · proof · audit</span>
+        <button class="pill turn-back" id="turnBackBtn">← Turn the atom back · face card</button>
+        <div class="legend">
+          <span class="lg"><i class="dot" style="background:var(--gold)"></i>premise</span>
+          <span class="lg"><i class="dot" style="background:var(--cyan)"></i>claim</span>
+          <span class="lg"><i class="dot" style="background:var(--purple)"></i>lean</span>
+          <span class="lg"><i class="dot" style="background:var(--green)"></i>proof</span>
+          <span class="lg"><i class="dot" style="background:var(--blue)"></i>evidence</span>
+          <span class="lg"><i class="dot" style="background:var(--red)"></i>audit</span>
+          <span class="lg"><i class="dot hollow"></i>receipt</span>
+        </div>
+      </div>
+      <div class="stage" id="stage">
+        <svg class="edges" id="edges"></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEDGER -->
+  <section class="ledger" id="ledger">
+    <div class="ledger-bar">
+      <span class="ledger-title" id="ledgerTitle">Ledger · Master Equation (canon paper)</span>
+      <span class="ledger-count" id="ledgerCount"></span>
+      <input class="filter" id="filterBox" type="text" placeholder="filter rows… (text, domain, receipt)" spellcheck="false" />
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead id="theadRow"><tr></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════
+   DATA SCHEMA — window.LEDGER (generate this block from tooling later)
+   ──────────────────────────────────────────────────────────────────
+   LEDGER = { paper: ScopeData, corpus: ScopeData }
+   ScopeData = { label: string, rows: Row[] }          // rows in SOURCE ORDER, never sorted
+   Row = {
+     type:    'CLAIM'|'PROOF'|'EVIDENCE'|'LEAN'|'AUDIT',
+     text:    string,                 // one-line summary
+     domain:  string, family: string, // rendered as "domain · family"
+     status:  'FLOOR'|'VERIFIED'|'DRAFT'|'PROSE',
+     receipt: string,                 // short ref, or '—'
+     paper?:  string,                 // corpus scope only
+     atom: {
+       id, role, title, claim: string,
+       markers: { home, objectType, commitment, standing, evidenceGrade },
+       neighbors: [{ id, role, title, edge }]   // 3–6 nodes; role ∈
+          // premise|claim|lean|proof|evidence|audit|receipt
+          // edge is the relation label drawn on the SVG connector
+     }
+   }
+   Status vocabulary (fixed): FLOOR = CI-verified in theophysics-lean-verified;
+   VERIFIED = compiles, receipt on file; DRAFT = sorry / declared axioms;
+   PROSE = no formal counterpart yet.
+   Corpus scope reuses the paper rows (adds .paper) and appends other papers.
+   ══════════════════════════════════════════════════════════════════ */
+(function(){
+'use strict';
+
+var CI = 'lake build CI 2026-10-08';
+
+var PAPER_ROWS = [
+ { type:'CLAIM', text:'χ(W) = C_W[∏ᵢ₌₁⁹ Xᵢ] — nine factors, multiplied; any factor at zero collapses the whole',
+   domain:'Ontology', family:'Master Equation', status:'FLOOR', receipt:CI,
+   atom:{ id:'AX-ME-01', role:'Canonical Claim', title:'The Master Equation',
+     claim:'χ(W) = C_W[∏ᵢ₌₁⁹ Xᵢ] — nine factors, multiplied; any factor at zero collapses the whole.',
+     markers:{ home:'Ontology', objectType:'Claim / Master Equation', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (machine-checked)' },
+     neighbors:[
+       { id:'listProd_eq_zero_iff', role:'lean', title:'Product collapse theorem', edge:'formalizes' },
+       { id:'cannot_rescue_zero', role:'lean', title:'No rescue for a zero factor', edge:'sharpens' },
+       { id:'SRC-ME-AUG1', role:'evidence', title:'Source span · master doc (Aug 1)', edge:'sources' },
+       { id:'KILL-ZF-NZP', role:'audit', title:'Kill: zero factor, nonzero product', edge:'challenges' },
+       { id:'chi_zero_if_any_factor_zero', role:'proof', title:'χ = 0 if any Xᵢ = 0', edge:'instantiates' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', text:'theorem listProd_eq_zero_iff (ProductionKernel) — product collapses iff a factor is zero',
+   domain:'Ontology', family:'Master Equation', status:'FLOOR', receipt:CI,
+   atom:{ id:'ProductionKernel.listProd_eq_zero_iff', role:'Lean Theorem', title:'listProd_eq_zero_iff',
+     claim:'List.prod xs = 0 ↔ ∃ x ∈ xs, x = 0 — collapse of a product is exactly a collapsed factor.',
+     markers:{ home:'Ontology', objectType:'Lean theorem', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (kernel-checked)' },
+     neighbors:[
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'formalizes' },
+       { id:'cannot_rescue_zero', role:'lean', title:'No rescue for a zero factor', edge:'companion' },
+       { id:'ProductionKernel.lean', role:'premise', title:'Module: ProductionKernel', edge:'lives_in' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', text:'theorem cannot_rescue_zero — no zero-preserving operator rescues a collapsed product',
+   domain:'Ontology', family:'Master Equation', status:'FLOOR', receipt:CI,
+   atom:{ id:'ProductionKernel.cannot_rescue_zero', role:'Lean Theorem', title:'cannot_rescue_zero',
+     claim:'Any operator that preserves zero cannot turn a collapsed product back into a nonzero one. Collapse is sticky.',
+     markers:{ home:'Ontology', objectType:'Lean theorem', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (kernel-checked)' },
+     neighbors:[
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'protects' },
+       { id:'listProd_eq_zero_iff', role:'lean', title:'Product collapse theorem', edge:'builds_on' },
+       { id:'KILL-ZF-NZP', role:'audit', title:'Kill: zero factor, nonzero product', edge:'answers' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', text:'theorems grace_idempotent + grace_not_invertible — grace-as-reset, not grace-as-undo',
+   domain:'Ontology', family:'Grace Operator', status:'FLOOR', receipt:CI,
+   atom:{ id:'GraceOperator.grace_idempotent', role:'Lean Theorem', title:'grace_idempotent · grace_not_invertible',
+     claim:'grace (grace x) = grace x, and no factor recovery is promised: grace resets the term, it does not invert the collapse.',
+     markers:{ home:'Ontology', objectType:'Lean theorem pair', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (kernel-checked)' },
+     neighbors:[
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'extends' },
+       { id:'latch_once_true_stays', role:'proof', title:'Salvation latch', edge:'pairs_with' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', text:'theorems chi_zero_if_any_factor_zero, latch_once_true_stays (MasterEquationV4 — salvation latch vs walk sector)',
+   domain:'Ontology', family:'Master Equation', status:'FLOOR', receipt:CI,
+   atom:{ id:'MasterEquationV4.latch', role:'Lean Theorem', title:'χ-collapse · salvation latch',
+     claim:'χ hits zero the moment any factor does; the salvation latch, once true, stays true — while the walk sector remains free to move.',
+     markers:{ home:'Ontology', objectType:'Lean theorem pair', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (kernel-checked)' },
+     neighbors:[
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'instantiates' },
+       { id:'grace_idempotent', role:'lean', title:'Grace-as-reset', edge:'pairs_with' },
+       { id:'MasterEquationV4.lean', role:'premise', title:'Module: MasterEquationV4', edge:'lives_in' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'PROOF', text:'negation test — “no distinctions exist” itself performs a distinction (self-defeat)',
+   domain:'Epistemology', family:'Distinction', status:'VERIFIED', receipt:'Z3 2026-10-11 · 18/18',
+   atom:{ id:'PRF-DIST-NEG', role:'Proof', title:'Negation test (self-defeat)',
+     claim:'Uttering “no distinctions exist” distinguishes that proposition from its denial — the denial performs the very act it forbids.',
+     markers:{ home:'Epistemology', objectType:'Proof (self-defeat)', commitment:'Working', standing:'Verified', evidenceGrade:'B (solver receipt)' },
+     neighbors:[
+       { id:'P-DIST', role:'premise', title:'Assertion requires contrast', edge:'grounds' },
+       { id:'Z3-2026-10-11', role:'receipt', title:'Z3 receipt · 18/18 checks', edge:'verifies' },
+       { id:'AX-DIST', role:'claim', title:'Distinction precedes description', edge:'supports' }
+     ] } },
+
+ { type:'EVIDENCE', text:'source span — master-equation-canonical-with-free-will, the master doc (Aug 1)',
+   domain:'Provenance', family:'Source Span', status:'VERIFIED', receipt:'span capture on file',
+   atom:{ id:'SRC-ME-AUG1', role:'Evidence', title:'Source span · master doc (Aug 1)',
+     claim:'Immutable provenance: the exact span of master-equation-canonical-with-free-will that generated the Master Equation atom.',
+     markers:{ home:'Provenance', objectType:'Source span', commitment:'Canonical', standing:'Verified', evidenceGrade:'A (immutable span)' },
+     neighbors:[
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'sources' },
+       { id:'DOC-ME-FREEWILL', role:'premise', title:'master-equation-canonical-with-free-will', edge:'drawn_from' },
+       { id:'REV-SPAN', role:'receipt', title:'Span capture on file', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', text:'theorem righteousness_preservation (NoetherCommandments) — declared axiom frame_lock_decay',
+   domain:'Ethics', family:'Noether Commandments', status:'DRAFT', receipt:'—',
+   atom:{ id:'NoetherCommandments.righteousness_preservation', role:'Lean Theorem', title:'righteousness_preservation',
+     claim:'Righteousness is the conserved quantity under the commanded symmetries — currently resting on the declared axiom frame_lock_decay.',
+     markers:{ home:'Ethics', objectType:'Lean theorem', commitment:'Working', standing:'Draft', evidenceGrade:'C (axiom-dependent)' },
+     neighbors:[
+       { id:'frame_lock_decay', role:'audit', title:'Declared axiom: frame_lock_decay', edge:'depends_on' },
+       { id:'NoetherCommandments.lean', role:'premise', title:'Module: NoetherCommandments', edge:'lives_in' },
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'supports' }
+     ] } },
+
+ { type:'LEAN', text:'MasterEquation.lean (old root file) — 3 sorry placeholders remain',
+   domain:'Ontology', family:'Master Equation', status:'DRAFT', receipt:'—',
+   atom:{ id:'MasterEquation.lean', role:'Lean File', title:'MasterEquation.lean (old root)',
+     claim:'The original root-file formalization of the Master Equation; superseded by MasterEquationV4, still carrying 3 sorry placeholders.',
+     markers:{ home:'Ontology', objectType:'Lean file', commitment:'Deprecated', standing:'Draft', evidenceGrade:'C (3 sorry)' },
+     neighbors:[
+       { id:'SORRY-3', role:'audit', title:'3 × sorry placeholders', edge:'flags' },
+       { id:'MasterEquationV4.lean', role:'lean', title:'MasterEquationV4 (successor)', edge:'superseded_by' },
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'draft_of' }
+     ] } },
+
+ { type:'CLAIM', text:'Law 10 — Kingdom/Shalom family chain (never formalized; highest-priority gap)',
+   domain:'Teleology', family:'Ten Laws · Law 10', status:'PROSE', receipt:'—',
+   atom:{ id:'AX-LAW-10', role:'Claim', title:'Law 10 · Kingdom / Shalom chain',
+     claim:'The tenth law: the Kingdom/Shalom family chain. Held in prose only — the single highest-priority formalization gap in the corpus.',
+     markers:{ home:'Teleology', objectType:'Claim', commitment:'Working', standing:'Prose', evidenceGrade:'D (unformalized)' },
+     neighbors:[
+       { id:'TenLawIsomorphism', role:'lean', title:'TenLawIsomorphism (9/10 gates)', edge:'gap_in' },
+       { id:'LAWS-1-9', role:'premise', title:'Laws 1–9 formalized', edge:'follows' },
+       { id:'GAP-L10', role:'audit', title:'Highest-priority open gap', edge:'flags' }
+     ] } },
+
+ { type:'AUDIT', text:'kill condition — “produce a zero factor with nonzero product” (open challenge; no countermodel exists)',
+   domain:'Audit', family:'Kill Conditions', status:'VERIFIED', receipt:'adversarial harness · open',
+   atom:{ id:'KILL-ZF-NZP', role:'Audit', title:'Kill: zero factor, nonzero product',
+     claim:'Standing challenge to the Master Equation: exhibit any zero factor whose product is nonzero. The adversarial harness has found no countermodel.',
+     markers:{ home:'Audit', objectType:'Kill condition', commitment:'Canonical', standing:'Open challenge', evidenceGrade:'A (harness-clean)' },
+     neighbors:[
+       { id:'AX-ME-01', role:'claim', title:'The Master Equation', edge:'challenges' },
+       { id:'cannot_rescue_zero', role:'lean', title:'No rescue for a zero factor', edge:'answered_by' },
+       { id:'HARNESS-ADV', role:'receipt', title:'Adversarial harness · no countermodel', edge:'survives' }
+     ] } }
+];
+
+var CORPUS_EXTRA = [
+ { type:'LEAN', paper:'Maxwell Trinity', text:'MaxwellTrinity quaternion gate — trinity structure passes the quaternion closure gate',
+   domain:'Physics Bridge', family:'Maxwell Trinity', status:'FLOOR', receipt:CI,
+   atom:{ id:'MaxwellTrinity.quaternion_gate', role:'Lean Theorem', title:'Quaternion closure gate',
+     claim:'The trinity structure closes under quaternion multiplication — the gate the Maxwell Trinity paper hangs on.',
+     markers:{ home:'Physics Bridge', objectType:'Lean theorem', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (kernel-checked)' },
+     neighbors:[
+       { id:'QGATE', role:'proof', title:'Quaternion closure check', edge:'passes' },
+       { id:'MAXWELL-TRINITY', role:'premise', title:'Maxwell Trinity paper', edge:'lives_in' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', paper:'Beatitudes Receiver', text:'Beatitudes receiver conditions — eight receiver conditions formalized',
+   domain:'Theology Bridge', family:'Beatitudes', status:'FLOOR', receipt:CI,
+   atom:{ id:'Beatitudes.receiver_conditions', role:'Lean Theorem', title:'Eight receiver conditions',
+     claim:'Each beatitude is formalized as a receiver condition on the agent — eight conditions, all machine-checked.',
+     markers:{ home:'Theology Bridge', objectType:'Lean theorem set', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (kernel-checked)' },
+     neighbors:[
+       { id:'B8', role:'claim', title:'Beatitudes as receiver conditions', edge:'formalizes' },
+       { id:'BEATITUDES-PAPER', role:'premise', title:'Beatitudes Receiver paper', edge:'lives_in' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', paper:'Ten-Law Isomorphism', text:'TenLawIsomorphism — 9/10 isomorphism gates green; Law 10 gate open',
+   domain:'Structure', family:'Ten Laws', status:'FLOOR', receipt:CI,
+   atom:{ id:'TenLawIsomorphism.gates', role:'Lean Theorem', title:'TenLawIsomorphism · 9/10 gates',
+     claim:'Nine of the ten law-isomorphism gates pass the kernel. The tenth gate is open because Law 10 itself is still prose.',
+     markers:{ home:'Structure', objectType:'Lean theorem set', commitment:'Canonical', standing:'Floor', evidenceGrade:'A (9/10 gates)' },
+     neighbors:[
+       { id:'GATES-9', role:'proof', title:'9/10 isomorphism gates green', edge:'reports' },
+       { id:'AX-LAW-10', role:'claim', title:'Law 10 · Kingdom / Shalom chain', edge:'open_gate' },
+       { id:'CI-2026-10-08', role:'receipt', title:'lake build · CI green', edge:'verifies' }
+     ] } },
+
+ { type:'LEAN', paper:'Fruits of the Spirit', text:'TheophysicsFruits.lean — fruit-of-the-spirit factor lemmas; receipt missing',
+   domain:'Theology Bridge', family:'Fruits', status:'PROSE', receipt:'—',
+   atom:{ id:'TheophysicsFruits.lean', role:'Lean File', title:'TheophysicsFruits.lean',
+     claim:'Draft factor lemmas for the fruits of the spirit. No CI receipt on file — do not cite as verified.',
+     markers:{ home:'Theology Bridge', objectType:'Lean file', commitment:'Working', standing:'Prose', evidenceGrade:'D (no receipt)' },
+     neighbors:[
+       { id:'FRUIT-LEMMAS', role:'premise', title:'Fruit-of-the-spirit factor lemmas', edge:'drafts' },
+       { id:'MISSING-RECEIPT', role:'audit', title:'Receipt missing — do not cite as verified', edge:'flags' }
+     ] } }
+];
+
+var PAPER_NAME = 'Master Equation (canon)';
+PAPER_ROWS.forEach(function(r){ r.paper = PAPER_NAME; });
+
+window.LEDGER = {
+  paper:  { label:'Master Equation (canon paper)', rows: PAPER_ROWS },
+  corpus: { label:'Whole corpus', rows: PAPER_ROWS.concat(CORPUS_EXTRA) }
+};
+
+/* ── Lane → node-role mapping (premises ride with CLAIMS; receipts with EVIDENCE) ── */
+var LANE_ROLES = {
+  ALL:      null,
+  CLAIMS:   ['claim','premise'],
+  PROOFS:   ['proof'],
+  EVIDENCE: ['evidence','receipt'],
+  LEAN:     ['lean'],
+  AUDIT:    ['audit']
+};
+var LANE_TYPES = {
+  ALL:null, CLAIMS:['CLAIM'], PROOFS:['PROOF'], EVIDENCE:['EVIDENCE'], LEAN:['LEAN'], AUDIT:['AUDIT']
+};
+
+var state = { scope:'paper', lane:'ALL', query:'', sel:0, flipped:false };
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function $(id){ return document.getElementById(id); }
+function rows(){ return window.LEDGER[state.scope].rows; }
+
+/* ── LEDGER TABLE ── */
+function rowVisible(r){
+  var lt = LANE_TYPES[state.lane];
+  if (lt && lt.indexOf(r.type) === -1) return false;
+  if (state.query){
+    var hay = (r.type+' '+r.text+' '+r.domain+' '+r.family+' '+r.status+' '+r.receipt+' '+(r.paper||'')).toLowerCase();
+    if (hay.indexOf(state.query) === -1) return false;
+  }
+  return true;
+}
+
+function renderHead(){
+  var cols = state.scope === 'corpus'
+    ? ['#','Paper','Type','Text','Classification','Status','Receipt']
+    : ['#','Type','Text','Classification','Status','Receipt'];
+  $('theadRow').firstElementChild.innerHTML =
+    cols.map(function(c){ return '<th>'+esc(c)+'</th>'; }).join('');
+}
+
+function renderTable(){
+  renderHead();
+  var rs = rows(), html = '', visible = 0;
+  rs.forEach(function(r, i){
+    if (!rowVisible(r)) return;
+    visible++;
+    html += '<tr data-idx="'+i+'"'+(i===state.sel?' class="sel"':'')+'>'
+      + '<td class="num">'+(i+1)+'</td>'
+      + (state.scope==='corpus' ? '<td class="ppr">'+esc(r.paper||'')+'</td>' : '')
+      + '<td><span class="chip chip-'+r.type+'">'+r.type+'</span></td>'
+      + '<td class="txt">'+esc(r.text)+'</td>'
+      + '<td class="cls">'+esc(r.domain)+' · '+esc(r.family)+'</td>'
+      + '<td><span class="smini st-'+r.status+'">'+r.status+'</span></td>'
+      + '<td class="rcpt">'+esc(r.receipt)+'</td>'
+      + '</tr>';
+  });
+  if (!visible) html = '<tr class="empty-row"><td colspan="7">no rows match the current lane / filter</td></tr>';
+  $('tbody').innerHTML = html;
+  $('ledgerTitle').textContent = 'Ledger · ' + window.LEDGER[state.scope].label;
+  $('ledgerCount').textContent = visible + ' / ' + rs.length + ' rows · source order';
+  Array.prototype.forEach.call($('tbody').querySelectorAll('tr[data-idx]'), function(tr){
+    tr.addEventListener('click', function(){ selectRow(+tr.dataset.idx, true); });
+  });
+}
+
+/* ── ATOM PANE ── */
+var MARKER_LABELS = [
+  ['01 · Atom ID',       function(a){ return a.id; }],
+  ['02 · Home Domain',   function(a){ return a.markers.home; }],
+  ['03 · Object Type',   function(a){ return a.markers.objectType; }],
+  ['09 · Commitment',    function(a){ return a.markers.commitment; }],
+  ['10 · Standing',      function(a){ return a.markers.standing; }],
+  ['12 · Evidence Grade',function(a){ return a.markers.evidenceGrade; }]
+];
+
+function renderFace(r){
+  var a = r.atom;
+  $('fEyebrow').textContent = a.id + ' · ' + a.role;
+  $('fTitle').textContent = a.title;
+  $('fClaim').textContent = a.claim;
+  var b = $('fBadge');
+  b.textContent = r.status;
+  b.className = 'badge st-' + r.status;
+  $('fMarkers').innerHTML = MARKER_LABELS.map(function(m){
+    return '<div class="marker"><div class="mk">'+esc(m[0])+'</div><div class="mv">'+esc(m[1](a))+'</div></div>';
+  }).join('');
+}
+
+var ROLE_OF_TYPE = { CLAIM:'claim', PROOF:'proof', EVIDENCE:'evidence', LEAN:'lean', AUDIT:'audit' };
+
+function renderGraph(r){
+  var stage = $('stage');
+  stage.querySelectorAll('.gnode').forEach(function(n){ n.remove(); });
+  $('edges').innerHTML = '';
+
+  var centerRole = ROLE_OF_TYPE[r.type] || 'claim';
+  var center = document.createElement('div');
+  center.className = 'gnode center k-' + centerRole;
+  center.style.left = '50%'; center.style.top = '50%';
+  center.dataset.role = centerRole;
+  center.innerHTML = '<div class="nid">'+esc(r.atom.id)+'</div>'
+    + '<div class="nt">'+esc(r.atom.title)+'</div>'
+    + '<div class="nrole">'+esc(centerRole)+' · selected</div>';
+  stage.appendChild(center);
+
+  var nb = r.atom.neighbors, n = nb.length;
+  nb.forEach(function(g, i){
+    var ang = -Math.PI/2 + i * (2*Math.PI/n);
+    var x = 50 + 37*Math.cos(ang), y = 50 + 36*Math.sin(ang);
+    var el = document.createElement('div');
+    el.className = 'gnode k-' + g.role;
+    el.style.left = x + '%'; el.style.top = y + '%';
+    el.dataset.role = g.role;
+    el.dataset.edge = g.edge;
+    el.innerHTML = '<div class="nid">'+esc(g.id)+'</div>'
+      + '<div class="nt">'+esc(g.title)+'</div>'
+      + '<div class="nrole">'+esc(g.role)+'</div>';
+    stage.appendChild(el);
+  });
+
+  applyLaneDim();
+  requestAnimationFrame(drawEdges);
+}
+
+function drawEdges(){
+  if (window.innerWidth < 980) return;
+  var stage = $('stage'), svg = $('edges');
+  var sr = stage.getBoundingClientRect();
+  var center = stage.querySelector('.gnode.center');
+  if (!center) return;
+  var cr = center.getBoundingClientRect();
+  var cx = cr.left + cr.width/2 - sr.left, cy = cr.top + cr.height/2 - sr.top;
+  var out = '';
+  stage.querySelectorAll('.gnode:not(.center)').forEach(function(el){
+    var r = el.getBoundingClientRect();
+    var x = r.left + r.width/2 - sr.left, y = r.top + r.height/2 - sr.top;
+    var mx = (cx + x)/2;
+    var cls = 'edge' + (el.dataset.role === 'audit' ? ' bad' : '');
+    out += '<path class="'+cls+'" d="M'+x+','+y+' C'+mx+','+y+' '+mx+','+cy+' '+cx+','+cy+'"/>';
+    var lx = (x + cx)/2, ly = (y + cy)/2 - 6;
+    out += '<text class="edge-label" x="'+lx+'" y="'+ly+'" text-anchor="middle">'+esc(el.dataset.edge)+'</text>';
+  });
+  svg.innerHTML = out;
+}
+
+function applyLaneDim(){
+  var allowed = LANE_ROLES[state.lane];
+  document.querySelectorAll('#stage .gnode').forEach(function(el){
+    el.classList.toggle('dim', !!(allowed && allowed.indexOf(el.dataset.role) === -1));
+  });
+}
+
+/* ── SELECTION / SCOPE / LANE ── */
+function selectRow(i, scroll){
+  state.sel = i;
+  var rs = rows();
+  if (!rs[i]) return;
+  document.querySelectorAll('#tbody tr').forEach(function(tr){
+    tr.classList.toggle('sel', +tr.dataset.idx === i);
+  });
+  renderFace(rs[i]);
+  renderGraph(rs[i]);
+  if (scroll) $('pane').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+$('scopeSeg').querySelectorAll('button').forEach(function(b){
+  b.addEventListener('click', function(){
+    if (b.dataset.scope === state.scope) return;
+    $('scopeSeg').querySelectorAll('button').forEach(function(x){ x.classList.remove('on'); });
+    b.classList.add('on');
+    state.scope = b.dataset.scope;
+    state.sel = 0;
+    renderTable();
+    selectRow(0, false);
+  });
+});
+
+$('laneGroup').querySelectorAll('.pill').forEach(function(b){
+  b.addEventListener('click', function(){
+    $('laneGroup').querySelectorAll('.pill').forEach(function(x){ x.classList.remove('on'); });
+    b.classList.add('on');
+    state.lane = b.dataset.lane;
+    renderTable();
+    applyLaneDim();
+    // keep selection valid: if selected row is filtered out, select first visible
+    var selTr = $('tbody').querySelector('tr.sel');
+    if (!selTr){
+      var first = $('tbody').querySelector('tr[data-idx]');
+      if (first) selectRow(+first.dataset.idx, false);
+    }
+  });
+});
+
+$('filterBox').addEventListener('input', function(e){
+  state.query = e.target.value.trim().toLowerCase();
+  renderTable();
+});
+
+function setFlipped(v){
+  state.flipped = v;
+  $('pane').classList.toggle('flipped', v);
+  $('turnBtn').textContent = v
+    ? 'Turn the atom back → face card'
+    : 'Turn the atom over → full evidence graph';
+  if (v) setTimeout(drawEdges, 60);
+  $('graphTitle').textContent = v
+    ? 'Evidence graph · why this atom has its standing'
+    : 'Neighborhood · claim · evidence · proof · audit';
+}
+$('turnBtn').addEventListener('click', function(){ setFlipped(!state.flipped); });
+$('turnBackBtn').addEventListener('click', function(){ setFlipped(false); });
+
+window.addEventListener('resize', drawEdges);
+
+/* ── INIT ── */
+renderTable();
+selectRow(0, false);
+setTimeout(drawEdges, 80);
+
+})();
+</script>
+</body>
+</html>

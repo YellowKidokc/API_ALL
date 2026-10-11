@@ -76,7 +76,8 @@ def normalize(text):
 
 def meta(text, path):
     title = next((l[2:].strip() for l in text.splitlines() if l.startswith("# ")), path.stem)
-    vid = re.search(r"\*\*Video ID:\*\*\s*`([^`]+)`", text)
+    vid = (re.search(r"\*\*Video ID:\*\*\s*`([^`]+)`", text)
+           or re.search(r'^video_id:\s*"?([A-Za-z0-9_-]{6,})"?\s*$', text, re.M))  # chapter-split YAML format
     return {"title": title, "video_id": vid.group(1) if vid else "",
             "channel": path.parent.name, "source_file": str(path),
             "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
@@ -105,6 +106,30 @@ def secs(ts):
 
 class Truncated(Exception):
     """The reply hit the output-token limit; the input must be split."""
+
+
+def reflow(lines, max_words=60):
+    """Split any line longer than ~max_words into sentence-sized lines so the chunker and the
+    halving recursion both have something to cut. Lines that are already short pass through."""
+    out = []
+    for line in lines:
+        if len(line.split()) <= max_words * 2:
+            out.append(line)
+            continue
+        sentences = re.split(r"(?<=[.!?])\s+", line.strip())
+        # auto-captions often have no punctuation at all: fall back to fixed word windows
+        if len(sentences) < 3:
+            w = line.split()
+            sentences = [" ".join(w[i:i + max_words]) for i in range(0, len(w), max_words)]
+        buf = []
+        for s in sentences:
+            buf.append(s)
+            if len(" ".join(buf).split()) >= max_words:
+                out.append(" ".join(buf))
+                buf = []
+        if buf:
+            out.append(" ".join(buf))
+    return out
 
 
 def call(client, prompt):
@@ -673,6 +698,7 @@ def index_one(path, client, force=False, render_only=False):
 
     body = text.split("## Transcript", 1)[-1]
     lines = [l for l in body.splitlines() if l.strip()]
+    lines = reflow(lines)  # chapter-split files arrive as one giant paragraph; make them chunkable
     pieces = home.chunk_lines(lines, CHUNK_WORDS, 150)
     title = f"{m['title']} [video ID: {m['video_id']}]" if m["video_id"] else m["title"]
     stamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")

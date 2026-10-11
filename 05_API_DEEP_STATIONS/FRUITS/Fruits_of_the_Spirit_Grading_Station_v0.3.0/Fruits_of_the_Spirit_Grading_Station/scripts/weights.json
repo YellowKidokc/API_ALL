@@ -1,0 +1,51 @@
+{
+  "_note": "Externalized for tuning; David intends these to be baked into the program once calibrated — treat changes as canon-adjacent.",
+  "category_weights": {
+    "fruit": 1.0,
+    "grounding": 2.0,
+    "anti_fruit": -1.5,
+    "contradiction": -0.5,
+    "jargon": -0.3,
+    "propaganda": -2.0,
+    "archetype": 0.0
+  },
+  "fruit_axis_weights": {
+    "love": 1.0,
+    "joy": 1.0,
+    "peace": 1.0,
+    "patience": 1.0,
+    "kindness": 1.0,
+    "goodness": 1.0,
+    "faithfulness": 1.0,
+    "gentleness": 1.0,
+    "self_control": 1.0
+  },
+  "spike_z_threshold": 2.0,
+  "span_size": 3,
+  "in_report_whitelist": [
+    "volume.sentences",
+    "volume.words",
+    "volume.sentence_len.avg",
+    "fruit.density_per_100w",
+    "anti_fruit.density_per_100w",
+    "grounding.density_per_100w",
+    "propaganda.density_per_100w",
+    "truth.score",
+    "fruit_axis.love.total",
+    "fruit_axis.joy.total",
+    "fruit_axis.peace.total",
+    "fruit_axis.patience.total",
+    "fruit_axis.kindness.total",
+    "fruit_axis.goodness.total",
+    "fruit_axis.faithfulness.total",
+    "fruit_axis.gentleness.total",
+    "fruit_axis.self_control.total",
+    "claim_strength.strong_to_weak_ratio",
+    "hedge_to_absolute_ratio",
+    "grounding_to_claim_ratio",
+    "spikes.fruit.top5",
+    "spikes.anti_fruit.top5",
+    "spikes.grounding.top5",
+    "spikes.propaganda.top5"
+  ]
+}
