@@ -57,7 +57,7 @@ echo       or press Enter to skip it for now (rerun RELOCATE.bat any time).
 rem ---- 5. Desktop shortcut --------------------------------------
 echo.
 echo [5/5] Creating desktop shortcut "ONE_MENU"...
-powershell -NoProfile -Command "$s=(New-Object -ComObject WScript.Shell).CreateShortcut([Environment]::GetFolderPath('Desktop')+'\ONE_MENU.lnk');$s.TargetPath='%API_HOME%ONE_MENU.bat';$s.WorkingDirectory='%API_HOME%';$s.Save()"
+powershell -NoProfile -Command "$s=(New-Object -ComObject WScript.Shell).CreateShortcut([Environment]::GetFolderPath('Desktop')+'\ONE_MENU.lnk');$s.TargetPath='%API_HOME%ONE_MENU_WEB.bat';$s.WorkingDirectory='%API_HOME%';$s.Save()"
 
 echo.
 echo ==================================================
