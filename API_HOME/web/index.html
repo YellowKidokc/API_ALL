@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ONE_MENU</title>
+<link rel="icon" href="/icon.png">
+<style>
+:root{--bg:#f6f5f1;--panel:#fff;--ink:#1d1f24;--muted:#6b6f78;--line:#e3e1da;--accent:#2f5bd3;--accent-ink:#fff;--ok:#1f8a4c;--bad:#c2412d;--warn:#b7791f;--chip:#eef1fb}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--panel:#1b1e23;--ink:#e8e9ec;--muted:#9aa0aa;--line:#2b2f36;--accent:#7b9cff;--accent-ink:#0d1220;--ok:#4cc38a;--bad:#ff7a63;--warn:#e0b04a;--chip:#232a3b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:22px;letter-spacing:.5px}
+header .sub{color:var(--muted)}
+#healthbar{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.pill{padding:3px 10px;border-radius:99px;font-size:13px;border:1px solid var(--line);background:var(--panel)}
+.pill.ok{color:var(--ok)}.pill.bad{color:var(--bad)}
+main{display:grid;grid-template-columns:1fr 380px;gap:20px;padding:20px 24px;max-width:1400px;margin:0 auto}
+@media (max-width:900px){main{grid-template-columns:1fr;padding:16px}}
+section.group{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+section.group h2{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.card{border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;user-select:none;transition:border-color .12s,background .12s}
+.card:hover{border-color:var(--accent)}
+.card.sel{background:var(--chip);border-color:var(--accent)}
+.card .num{font-weight:700;color:var(--accent);margin-right:6px}
+.card .opts{font-size:12px;color:var(--muted);margin-top:4px}
+.card.missing{opacity:.6}
+.routines{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+button{font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:8px 14px;cursor:pointer}
+button:hover{border-color:var(--accent)}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+button:disabled{opacity:.5;cursor:default}
+aside{position:sticky;top:16px;align-self:start}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.panel h3{margin:0 0 12px;font-size:16px}
+label{display:block;font-size:13px;color:var(--muted);margin:10px 0 4px}
+input,select{width:100%;font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.row{display:flex;gap:10px}.row>*{flex:1}
+.check{display:flex;align-items:center;gap:8px;margin-top:10px;color:var(--ink);font-size:14px}
+.check input{width:auto}
+#picked{min-height:24px;display:flex;flex-wrap:wrap;gap:6px}
+#picked span{background:var(--chip);border-radius:6px;padding:2px 8px;font-size:13px}
+.actions{display:flex;gap:8px;margin-top:14px}.actions button{flex:1}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);width:min(640px,calc(100vw - 32px));max-height:90vh;overflow:auto}dialog::backdrop{background:rgba(0,0,0,.4)}
+.sub{color:var(--muted);font-size:13px}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;max-height:420px;overflow:auto;font-size:12.5px;white-space:pre-wrap;word-break:break-word;margin:8px 0 0}
+.status{font-weight:600}.status.running{color:var(--warn)}.status.done{color:var(--ok)}.status.failed,.status.stopped{color:var(--bad)}
+#jobs .job{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1>ONE_MENU</h1><span class="sub">Faith Through Physics pipelines</span>
+  <div id="healthbar"></div><button id="opensettings">Settings</button><button id="quit" title="Stop the ONE_MENU background program">Quit</button>
+</header>
+<main>
+  <div>
+    <div class="routines" id="routines"></div>
+    <div id="groups"></div>
+  </div>
+  <aside>
+    <div class="panel">
+      <h3>Run</h3>
+      <div id="picked"><span style="background:none;color:var(--muted)">Click stations or a routine</span></div>
+      <div class="row">
+        <div><label>Turbo</label><select id="turbo"><option value="low">Low</option><option value="normal" selected>Normal</option><option value="high">High</option></select></div>
+        <div><label>How many items</label><input id="limit" type="number" min="1" placeholder="all"></div>
+      </div>
+      <label>Provider</label><select id="provider"><option>deepseek</option><option>openai</option></select>
+      <label>Extra focus (optional)</label><input id="focus" placeholder="e.g. entropy, resurrection">
+      <label>Specific file or item (optional)</label><input id="item" placeholder="e.g. paper.md">
+      <div class="check"><input id="redo" type="checkbox"><span>Redo items already finished</span></div>
+      <div class="check"><input id="dry" type="checkbox"><span>Dry run (show plan, call no API)</span></div>
+      <div class="actions"><button id="clear">Clear</button><button class="primary" id="go" disabled>Run</button></div>
+    </div>
+    <div class="panel">
+      <h3>Output <span id="jobstatus" class="status"></span></h3>
+      <button id="stop" style="display:none">Stop</button>
+      <pre id="log">Nothing running yet.</pre>
+      <div id="jobs"></div>
+    </div>
+  </aside>
+</main>
+<dialog id="settings">
+  <h3>Settings</h3>
+  <p class="sub">Paste a folder path for each location. Blank = not used yet. Saved to config/paths.json.</p>
+  <div id="pathfields"></div>
+  <h3 style="margin-top:18px">API keys</h3>
+  <p class="sub">Saved to your Windows user environment, never to a file. Leave blank to keep the current key.</p>
+  <label>DeepSeek API key</label><input id="k_ds" type="password" autocomplete="off">
+  <label>OpenAI API key</label><input id="k_oa" type="password" autocomplete="off">
+  <div class="actions"><button id="closesettings">Cancel</button><button class="primary" id="savesettings">Save</button></div>
+  <p id="savemsg" class="sub"></p>
+</dialog>
+<script>
+const GROUPS=[["YouTube",0,19],["CKG",20,29],["Evidence",30,39],["Papers",40,49],["Lean & Axioms",50,59],["OpenAI stations",60,89],["System",90,99]];
+const picked=[];let current=null,missing=new Set();
+const $=id=>document.getElementById(id);
+const pretty=s=>s.replace(/_/g," ").toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
+async function api(p,b){const r=await fetch(p,b?{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}:{});return r.json()}
+function drawPicked(){
+  const el=$("picked");el.innerHTML="";
+  if(!picked.length){el.innerHTML='<span style="background:none;color:var(--muted)">Click stations or a routine</span>'}
+  picked.forEach(n=>{const s=document.createElement("span");s.textContent=n;el.appendChild(s)});
+  $("go").disabled=!picked.length;
+  document.querySelectorAll(".card").forEach(c=>c.classList.toggle("sel",picked.includes(c.dataset.n)));
+}
+function toggle(n){const i=picked.indexOf(n);i<0?picked.push(n):picked.splice(i,1);drawPicked()}
+async function init(){
+  const cfg=await api("/api/config");
+  Object.entries(cfg.routines).forEach(([k,r])=>{const b=document.createElement("button");b.textContent=`${k} · ${r.name}`;b.title=r.stations.join(", ");
+    b.onclick=()=>{picked.length=0;picked.push(k);drawPicked()};$("routines").appendChild(b)});
+  const live=cfg.stations.filter(s=>!s.retired);
+  GROUPS.forEach(([name,lo,hi])=>{
+    const items=live.filter(s=>+s.number>=lo&&+s.number<=hi);if(!items.length)return;
+    const sec=document.createElement("section");sec.className="group";sec.innerHTML=`<h2>${name}</h2><div class="grid"></div>`;
+    items.forEach(s=>{const c=document.createElement("div");c.className="card";c.dataset.n=s.number;
+      c.innerHTML=`<span class="num">${s.number}</span>${pretty(s.name)}<div class="opts">${s.options.length?s.options.join(" · "):"no options"}</div>`;
+      c.onclick=()=>toggle(s.number);sec.querySelector(".grid").appendChild(c)});
+    $("groups").appendChild(sec)});
+  loadHealth();
+}
+async function loadHealth(){
+  const h=await api("/api/health");const keys=h.filter(r=>r.kind==="key"),paths=h.filter(r=>r.kind==="path");
+  const ok=paths.filter(p=>p.ok).length;const bar=$("healthbar");bar.innerHTML="";
+  keys.forEach(k=>bar.insertAdjacentHTML("beforeend",`<span class="pill ${k.ok?"ok":"bad"}">${k.ok?"✓":"✕"} ${k.name.replace("_API_KEY","")}</span>`));
+  bar.insertAdjacentHTML("beforeend",`<span class="pill ${ok===paths.length?"ok":"bad"}" title="${paths.filter(p=>!p.ok).map(p=>p.name).join(", ")}">Folders ${ok}/${paths.length}</span>`);
+}
+$("clear").onclick=()=>{picked.length=0;drawPicked()};
+$("go").onclick=async()=>{
+  const body={selection:picked.slice(),turbo:$("turbo").value,limit:$("limit").value||null,provider:$("provider").value,focus:$("focus").value.trim(),items:$("item").value.trim()?[$("item").value.trim()]:[],redo:$("redo").checked,dry_run:$("dry").checked};
+  const r=await api("/api/run",body);if(r.error){alert(r.error);return}current=r.id;$("log").textContent="Starting…";poll();
+};
+$("stop").onclick=()=>current&&api("/api/stop",{id:current});
+async function poll(){
+  if(!current)return;const j=await api("/api/jobs/"+current);const log=$("log");
+  const atBottom=log.scrollTop+log.clientHeight>=log.scrollHeight-20;log.textContent=j.log||"…";if(atBottom)log.scrollTop=log.scrollHeight;
+  $("jobstatus").textContent=j.status;$("jobstatus").className="status "+j.status;$("stop").style.display=j.status==="running"?"inline-block":"none";
+  drawJobs();if(j.status==="running"||j.status==="stopping")setTimeout(poll,1000);
+}
+async function drawJobs(){
+  const jobs=await api("/api/jobs");const el=$("jobs");el.innerHTML="";
+  jobs.slice().reverse().forEach(j=>{const d=document.createElement("div");d.className="job";
+    d.innerHTML=`<span>${j.label||"run"}</span><span class="status ${j.status}">${j.status}</span>`;
+    d.onclick=()=>{current=j.id;poll()};el.appendChild(d)});
+}
+$("opensettings").onclick=async()=>{
+  const p=await api("/api/paths");const el=$("pathfields");el.innerHTML="";
+  Object.entries(p).forEach(([k,v])=>{el.insertAdjacentHTML("beforeend",`<label>${pretty(k)}</label><input data-k="${k}">`);el.lastElementChild.value=v});
+  $("savemsg").textContent="";$("settings").showModal();
+};
+$("closesettings").onclick=()=>$("settings").close();
+$("savesettings").onclick=async()=>{
+  const vals={};document.querySelectorAll("#pathfields input").forEach(i=>vals[i.dataset.k]=i.value);
+  const r=await api("/api/paths",vals);
+  await api("/api/keys",{DEEPSEEK_API_KEY:$("k_ds").value,OPENAI_API_KEY:$("k_oa").value});$("k_ds").value=$("k_oa").value="";
+  $("savemsg").textContent=r.not_found.length?"Saved, but these folders were not found: "+r.not_found.map(pretty).join(", "):"Saved.";
+  loadHealth();
+};
+$("quit").onclick=async()=>{if(!confirm("Quit ONE_MENU? Running jobs keep going until they finish."))return;await api("/api/quit",{});document.body.innerHTML="<p style='padding:40px'>ONE_MENU has stopped. You can close this window.</p>"};
+init();
+</script>
+</body>
+</html>

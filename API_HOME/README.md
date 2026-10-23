@@ -4,6 +4,10 @@ Portable orchestration for the gathered API pipelines. `ONE_MENU.bat` is the onl
 
 ## First use
 
+**Easiest:** double-click `INSTALL.bat` once. It adds ONE_MENU to the Start Menu and Desktop with its own icon (pin it to the taskbar from Start). ONE_MENU opens in its own app window with no console: click stations or a routine, set options, press Run, and watch output live. Folder locations and API keys can be set from its Settings button. `ONE_MENU.bat` stays as the text version.
+
+`INSTALL.bat` It installs Python if needed, installs packages, asks for your API keys, asks for folder locations, and puts a ONE_MENU shortcut on your desktop. The manual steps below do the same thing.
+
 1. Copy `config/paths.example.json` to the ignored `config/paths.json` (or run `RELOCATE.bat`) and enter external locations. Blank entries are reported, never guessed.
 2. Set `DEEPSEEK_API_KEY` and/or `OPENAI_API_KEY` in the environment. Never put keys in configuration files.
 3. Run `ONE_MENU.bat`, or use it non-interactively:
