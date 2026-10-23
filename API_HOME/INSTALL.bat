@@ -54,13 +54,18 @@ echo [4/5] Folder locations. For each MISSING entry paste the folder path,
 echo       or press Enter to skip it for now (rerun RELOCATE.bat any time).
 %PY% "%API_HOME%engine\relocate.py"
 
-rem ---- 5. Desktop shortcut --------------------------------------
+rem ---- 5. Shortcuts (Start Menu + Desktop, no console window) ---
 echo.
-echo [5/5] Creating desktop shortcut "ONE_MENU"...
-powershell -NoProfile -Command "$s=(New-Object -ComObject WScript.Shell).CreateShortcut([Environment]::GetFolderPath('Desktop')+'\ONE_MENU.lnk');$s.TargetPath='%API_HOME%ONE_MENU_WEB.bat';$s.WorkingDirectory='%API_HOME%';$s.Save()"
+echo [5/5] Installing ONE_MENU into your Start Menu and Desktop...
+for /f "delims=" %%P in ('%PY% -c "import sys,os;print(os.path.join(os.path.dirname(sys.executable),'pythonw.exe'))"') do set "PYW=%%P"
+if not exist "%PYW%" for /f "delims=" %%P in ('%PY% -c "import sys;print(sys.executable)"') do set "PYW=%%P"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%API_HOME%tools\make_shortcuts.ps1" -Pyw "%PYW%" -AppHome "%API_HOME:~0,-1%"
+echo.
+echo To pin it: press the Windows key, type ONE_MENU, right-click it, "Pin to taskbar".
+echo Opening ONE_MENU now...
+start "" "%PYW%" "%API_HOME%engine\web.py"
 
-echo.
 echo ==================================================
-echo   Done. Double-click ONE_MENU on your desktop.
+echo   Done. ONE_MENU is in your Start Menu and on your Desktop.
 echo ==================================================
 pause

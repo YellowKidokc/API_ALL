@@ -1,6 +1,6 @@
 """Browser front end for ONE_MENU. Serves web/index.html on 127.0.0.1 and runs menu.py jobs."""
 from __future__ import annotations
-import json,os,subprocess,sys,threading,uuid,webbrowser
+import json,os,shutil,socket,subprocess,sys,threading,uuid,webbrowser
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
 if __package__ in (None,''):
@@ -23,7 +23,7 @@ def command(plan:dict)->list[str]:
 
 def start(cmd:list[str],label:str='')->str:
  job_id=uuid.uuid4().hex[:8]
- proc=subprocess.Popen(cmd,cwd=API_HOME,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL,text=True,encoding='utf-8',errors='replace',bufsize=1)
+ proc=subprocess.Popen(cmd,cwd=API_HOME,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0),text=True,encoding='utf-8',errors='replace',bufsize=1)
  job={'id':job_id,'label':label,'cmd':cmd,'log':'','status':'running','code':None,'proc':proc}
  with LOCK: JOBS[job_id]=job
  def pump():
@@ -67,6 +67,7 @@ class Handler(BaseHTTPRequestHandler):
   self.send_response(code); self.send_header('Content-Type',ctype); self.send_header('Content-Length',str(len(data))); self.end_headers(); self.wfile.write(data)
  def do_GET(self):
   if self.path in ('/','/index.html'): return self.send((API_HOME/'web'/'index.html').read_bytes(),'text/html; charset=utf-8')
+  if self.path=='/icon.png': return self.send((API_HOME/'web'/'icon.png').read_bytes(),'image/png')
   if self.path=='/api/config': return self.send({'stations':load('stations.json'),'routines':load('routines.json'),'settings':load('settings.json')})
   if self.path=='/api/health': return self.send(health())
   if self.path=='/api/paths': return self.send(paths())
@@ -85,6 +86,8 @@ class Handler(BaseHTTPRequestHandler):
    return self.send({'id':start(command(body),' + '.join(map(str,body['selection'])))})
   if self.path=='/api/paths': return self.send(save_paths(body))
   if self.path=='/api/keys': return self.send(save_keys(body))
+  if self.path=='/api/quit':
+   self.send({'ok':True}); threading.Thread(target=self.server.shutdown,daemon=True).start(); return
   if self.path=='/api/stop':
    with LOCK: job=JOBS.get(body.get('id',''))
    if job and job['status']=='running':
@@ -93,10 +96,27 @@ class Handler(BaseHTTPRequestHandler):
    return self.send({'ok':True})
   self.send({'error':'not found'},code=404)
 
+def open_window(url:str)->None:
+ """Open as a standalone app window (Edge/Chrome --app); fall back to the default browser."""
+ candidates=[shutil.which(n) for n in ('msedge','chrome','google-chrome','chromium')]
+ for base in (os.environ.get('ProgramFiles(x86)',''),os.environ.get('ProgramFiles',''),os.environ.get('LOCALAPPDATA','')):
+  if base: candidates += [os.path.join(base,'Microsoft','Edge','Application','msedge.exe'),os.path.join(base,'Google','Chrome','Application','chrome.exe')]
+ for exe in candidates:
+  if exe and os.path.isfile(exe):
+   subprocess.Popen([exe,f'--app={url}','--window-size=1400,950'],creationflags=getattr(subprocess,'DETACHED_PROCESS',0)); return
+ webbrowser.open(url)
+
+def running()->bool:
+ with socket.socket() as s: return s.connect_ex(('127.0.0.1',PORT))==0
+
 def main()->int:
- ensure_runtime_dirs(); server=ThreadingHTTPServer(('127.0.0.1',PORT),Handler); url=f'http://127.0.0.1:{PORT}/'
- print(f'ONE_MENU is open at {url}\nKeep this window open while you use it. Close it to stop.')
- if '--no-browser' not in sys.argv: webbrowser.open(url)
+ url=f'http://127.0.0.1:{PORT}/'; show='--no-browser' not in sys.argv
+ if running():
+  if show: open_window(url)
+  return 0
+ ensure_runtime_dirs(); server=ThreadingHTTPServer(('127.0.0.1',PORT),Handler)
+ print(f'ONE_MENU is open at {url}')
+ if show: open_window(url)
  try: server.serve_forever()
  except KeyboardInterrupt: pass
  return 0
